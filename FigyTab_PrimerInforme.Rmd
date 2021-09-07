@@ -1,5 +1,5 @@
 ---
-title: "Figuras y Tablas para Primer Informe de sardina común Centro sur "
+title: "Figuras y Tablas para Tercer Informe de sardina común Centro sur "
 output:
   pdf_document: default
 ---
@@ -19,6 +19,7 @@ dir.Fig     <-"Figuras/" # carpeta de las figuras utilizadas y generadas en este
 fig         <-c("pdf") # formato de figuras generadas por este código
 dir.0       <-getwd() # directorio de trabajo 
 dir.1       <-paste(dir.0,"/codigos_admb",sep="") # carpeta de códigos ADMB 
+dir.2       <-paste(dir.0,"/codigos_admb_12.3_windows",sep="") # carpeta de códigos ADMB 
 dir.fun     <-paste(dir.0,"/funciones/",sep="") # carpeta de funciones utilizadas en este informe
 source(paste(dir.fun,"functions.R",sep="")) # funciones para leer .dat y .rep
 source(paste(dir.fun,"Fn_PBRs.R",sep="")) # funciones para leer .dat y .rep
@@ -33,6 +34,20 @@ system("~/admb-12.2/admb MAE0921")
 system("./MAE0921")
 ```
 
+```{r CORRE MODELO BASE MARZO, eval=FALSE, echo=FALSE, warning=FALSE,include=F}
+setwd(dir.1)
+#Asesoría de septiembre
+system("~/admb-12.2/admb MAE0321")
+system("./MAE0321")
+```
+
+```{r CORRE MODELO BASE JULIO, eval=FALSE, echo=FALSE, warning=FALSE,include=F}
+setwd(dir.1)
+#Asesoría de septiembre
+system("~/admb-12.2/admb MAE0721")
+system("./MAE0721")
+```
+
 
 ```{r  leer datos, echo=FALSE, warning=FALSE, include=T}
 setwd(dir.1)
@@ -44,9 +59,22 @@ dat1         <- data1
 rep1         <- reptoRlist("MAE0921.rep")
 std1         <- read.table("MAE0921.std",header=T,sep="",na="NA",fill=T) 
 
+# ASESORÍA DE MARZO
+data2        <- lisread("MAE0321.dat") 
+names(data2) <- str_trim(names(data2), side="right")
+dat2         <- data2
+rep2         <- reptoRlist("MAE0321.rep")
+std2         <- read.table("MAE0321.std",header=T,sep="",na="NA",fill=T) 
 
+# ASESORÍA DE JULIO
+data3        <- lisread("MAE0721.dat") 
+names(data3) <- str_trim(names(data3), side="right")
+dat3         <- data3
+rep3         <- reptoRlist("MAE0721.rep")
+std3         <- read.table("MAE0721.std",header=T,sep="",na="NA",fill=T) 
 
 ```
+
 
 ```{r Retrospectivo_sept, echo=F, warning=FALSE,eval=F, include=F}
 source(paste(dir.fun,"Fn_Retrospectivo.R",sep=""))
@@ -56,6 +84,25 @@ Retrospectivo("MAE0921",
               "/Retrospectivo_sept",
               system="mac") 
 ```
+
+```{r Retrospectivo_marzo, echo=F, warning=FALSE,eval=F, include=F}
+source(paste(dir.fun,"Fn_Retrospectivo.R",sep=""))
+Retrospectivo("MAE0321",
+              dir.0,
+              dir.1,
+              "/Retrospectivo_marz",
+              system="mac") 
+```
+
+```{r Retrospectivo_julio, echo=F, warning=FALSE,eval=F, include=F}
+source(paste(dir.fun,"Fn_Retrospectivo.R",sep=""))
+Retrospectivo("MAE0721",
+              dir.0,
+              dir.1,
+              "/Retrospectivo_jul",
+              system="mac") 
+```
+
 
 
 ```{r Verosimilitud_sept, echo=F, warning=F,eval=F, include=F}
@@ -73,6 +120,36 @@ Verosimilitud("MAE0921",
               system="mac") 
 ```
 
+```{r Verosimilitud_marz, echo=F, warning=F,eval=F, include=F}
+source(paste(dir.fun,"Fn_Verosimilitud.R",sep=""))
+logRo    <- 11.6
+factor    <- seq(0.2,2,0.08)
+priorRo  <- log(exp(logRo)*factor)
+
+Verosimilitud("MAE0321",
+              dir.0,
+              dir.1,
+              "/Verosimilitud_marz",
+              logRo,
+              priorRo,
+              system="mac") 
+```
+
+```{r Verosimilitud_jul, echo=F, warning=F,eval=F, include=F}
+source(paste(dir.fun,"Fn_Verosimilitud.R",sep=""))
+logRo    <- 11.6
+factor    <- seq(0.2,2,0.08)
+priorRo  <- log(exp(logRo)*factor)
+
+Verosimilitud("MAE0721",
+              dir.0,
+              dir.1,
+              "/Verosimilitud_jul",
+              logRo,
+              priorRo,
+              system="mac") 
+```
+
 
 
 
@@ -81,13 +158,47 @@ source(paste(dir.fun,"Fn_CBA.R",sep=""))
 CBA(dir.0,
     dir.1,
     Carpeta="/CBA_sept", #genera carpeta con escenarios de reclutamiento para el cálculo de CBA
-    admb="MAE0921", #códigos .dat y .tpl de asesoría de julio
+    admb="MAE0921", #códigos .dat y .tpl de asesoría de septiembre
     l_opt_proy=330, # línea  de opción de proyección que se debe cambiar
     l_opRec=336,    # línea  de opción de escenario de reclutamiento promedio que se debe cambiar 
     l_opt_wmed=342, # línea de opción de escenario de peso medio que se debe cambiar para la projección
     l_opt_Str=333,  # linea de opción de estrategia de captura 
     l_mf=345,       # línea de opción de multiplicador de F que se puede cambiar
-    opt_proy=2,     # IMPORTANTE!! Proyecta para el mismo año (1era y 2da revisión de CBA, asesorías de marzo y julio)
+    opt_proy=2,     # Proyecta de un año para otro (CBA inicial, asesoría de septiembre)
+    opt_wmed=3,     # peso promedio últimos 5 años de la serie
+    opt_Str=1,      # estrategia F constante
+    system="mac")   # denpende si estoy en computador de windows o mac
+```
+
+```{r PRIMER PASO CBA ASESORIA MARZO, eval=FALSE, echo=FALSE, warning=FALSE, include=F}
+source(paste(dir.fun,"Fn_CBA.R",sep=""))
+CBA(dir.0,
+    dir.1,
+    Carpeta="/CBA_marzo", #genera carpeta con escenarios de reclutamiento para el cálculo de CBA
+    admb="MAE0321", #códigos .dat y .tpl de asesoría de marzo
+    l_opt_proy=330, # línea  de opción de proyección que se debe cambiar
+    l_opRec=336,    # línea  de opción de escenario de reclutamiento promedio que se debe cambiar 
+    l_opt_wmed=342, # línea de opción de escenario de peso medio que se debe cambiar para la projección
+    l_opt_Str=333,  # linea de opción de estrategia de captura 
+    l_mf=345,       # línea de opción de multiplicador de F que se puede cambiar
+    opt_proy=1,     # IMPORTANTE!! Proyecta para el mismo año (1era y 2da revisión de CBA, asesorías de marzo y julio)
+    opt_wmed=3,     # peso promedio últimos 5 años de la serie
+    opt_Str=1,      # estrategia F constante
+    system="mac")   # denpende si estoy en computador de windows o mac
+```
+
+```{r PRIMER PASO CBA ASESORIA JULIO, eval=FALSE, echo=FALSE, warning=FALSE, include=F}
+source(paste(dir.fun,"Fn_CBA.R",sep=""))
+CBA(dir.0,
+    dir.1,
+    Carpeta="/CBA_julio", #genera carpeta con escenarios de reclutamiento para el cálculo de CBA
+    admb="MAE0721", #códigos .dat y .tpl de asesoría de julio
+    l_opt_proy=330, # línea  de opción de proyección que se debe cambiar
+    l_opRec=336,    # línea  de opción de escenario de reclutamiento promedio que se debe cambiar 
+    l_opt_wmed=342, # línea de opción de escenario de peso medio que se debe cambiar para la projección
+    l_opt_Str=333,  # linea de opción de estrategia de captura 
+    l_mf=345,       # línea de opción de multiplicador de F que se puede cambiar
+    opt_proy=1,     # IMPORTANTE!! Proyecta para el mismo año (1era y 2da revisión de CBA, asesorías de marzo y julio)
     opt_wmed=3,     # peso promedio últimos 5 años de la serie
     opt_Str=1,      # estrategia F constante
     system="mac")   # denpende si estoy en computador de windows o mac
@@ -267,7 +378,7 @@ kable(NM_Ian)
 ```{r Fig2, echo=T,warning=F, include=T,eval=F, message=F,fig.height=3.5,fig.width=6.5,fig.align="center",fig.path=dir.Fig,dev=fig}
 years<-seq(1990,2020,1)
 dataDesem  <- ant$des_oficialesvscorregidos
-Tdesem  <- data.frame(years,dataDesem[,1:2],rep(median(dataDesem[,2]),length(dataDesem[,2])))
+Tdesem     <- data.frame(years,dataDesem[,1:2],rep(median(dataDesem[,2]),length(dataDesem[,2])))
 colnames(Tdesem) <- c("Years", 
                       "Desembarques_oficiales", 
                       "Desembarques_oficales_corregidos",
@@ -326,7 +437,9 @@ ggplot(des_art_ind)+
 
 ```{r Fig4,warning=F, include=T, message=F, echo=T,fig.height=3.3,fig.width=5.8,fig.align="center",fig.path=dir.Fig,dev=fig}
 ano<-ant$desembarques_sernapesca[,1]
-des_mes<-data.frame(mes=rep(seq(1,12,1),27),ano=gl(27,12,labels=ano),desem=c(t(ant$desembarques_sernapesca[,2:13])))
+des_mes<-data.frame(mes=rep(seq(1,12,1),27),
+                    ano=gl(27,12,labels=ano),
+                    desem=c(t(ant$desembarques_sernapesca[,2:13])))
 
 par(mfcol=c(1,1),mar=c(4,4,1,1))
 boxplot(des_mes$desem[145:264]/10^3~des_mes$mes[145:264],las=1,xlab="Mes",
@@ -336,7 +449,7 @@ boxplot(des_mes$desem[145:264]/10^3~des_mes$mes[145:264],las=1,xlab="Mes",
 \pagebreak
 
 
-```{r Fig7, warning=F, include=T, message=F, echo=T,fig.height=3.5,fig.width=3.5,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig7, warning=F, include=T, message=F, echo=T,fig.height=4.5,fig.width=4.5,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 x<-rep1$reclasobs[rep1$reclasobs>0&rep1$pelacesobs>0]/10^6
 y<-rep1$pelacesobs[rep1$reclasobs>0&rep1$pelacesobs>0]/10^6
@@ -356,22 +469,49 @@ text(2.1,2.8, "R^2=0.00039",col=4,cex=0.8)
 ```
 \pagebreak
 
-```{r Fig8,warning=F, include=T, message=F, echo=T,fig.height=3.5,fig.width=6.5,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig8,warning=F, include=T, message=F, echo=T,fig.height=3.5,fig.width=10,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 anorecl<-ant$reclas_BT_BR_AT_AR[,1]
 BTreclas<-ant$reclas_BT_BR_AT_AR[,2]
 BRreclas<-ant$reclas_BT_BR_AT_AR[,3]
 ATreclas<-ant$reclas_BT_BR_AT_AR[,4]
+ARreclas<-ant$reclas_BT_BR_AT_AR[,5]
 anopela<-ant$pelaces_BT_AT[,1]
 BTpela<-ant$pelaces_BT_AT[,2]
 ATpela<-ant$pelaces_BT_AT[,3]
 
-par(mar=c(2,4,1,1)+0.5)
-plot(anorecl,BTreclas/1000000,ylim=c(0,5),xaxp=c(2000,2021,21),las=1,ylab="Biomasa acústica (millones de t.)",xlab="",type="o",pch=19,col=1,lwd=2,cex.lab=0.8,cex.axis=0.8)
-lines(anorecl,BRreclas/1000000,type="o",pch=19,col=2,lwd=2)
-legend(2000, 5,c("Biomasa Total","Biomasa Reclutas"),pch=19,lwd=2,col=c(1,2),bty="n",cex=0.8)
+par(mfcol=c(1,2),mar=c(4,4,1,1))
+plot(anorecl,BTreclas/1000,ylim=c(0,5000),xaxp=c(2000,2021,21),las=1,ylab="Biomasa (tx1000)",xlab="",type="o",pch=19,col=1,lwd=2,cex.lab=0.8,cex.axis=0.8)
+lines(anorecl,BRreclas/1000,type="o",pch=19,col=2,lwd=2)
+legend(2000, 5000,c("Biomada Total","Biomasa Reclutas"),pch=19,lwd=2,col=c(1,2),bty="n",cex=0.8)
+
+plot(anorecl,ATreclas/1000,ylim=c(0,2000),xaxp=c(2000,2021,21),las=1,ylab="Abundancia (nº ind x10^9)",xlab="",type="o",pch=19,col=1,lwd=2,cex.lab=0.8,cex.axis=0.8)
+lines(anorecl,ARreclas/1000,type="o",pch=19,col=2,lwd=2)
+legend(2000, 2000,c("Abundancia Total","Abundancia Reclutas"),pch=19,lwd=2,col=c(1,2),bty="n",cex=0.8)
 
 ```
+
+
+```{r Fig6b, echo=FALSE,fig.height=5,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
+years<-seq(1997,2021)
+sardina<-c(0.80,0.43,0.38,0.24,0.15,0.31,0.33,0.27,0.16,0.21,0.77,0.68,1.57,1.10,
+           1.15,1.42,1.36,1.07,1.57,1.28,1.04,1.13,1.62,1.06,0.62)
+anchoveta<-c(0.92,0.50,0.56,0.54,0.63,1.08,1.54,1.90,1.64,1.76,1.85,1.30,0.82,
+             0.43,0.18,0.15,0.16,0.21,0.27,0.30,0.46,0.57,0.7,0.99,1.30)
+
+dataEstatus <- data.frame(years,sardina,anchoveta) %>% mutate(type=c("Estatus")) %>% melt(id.var=c("years","type"))
+
+ggplot(dataEstatus )+
+  geom_line(aes(x = years, y = value, colour=variable)) +
+  scale_color_manual(values=c('black',"red")) +
+  labs(x = '', y = 'BD/BDrms',fill="",color="") +
+  scale_x_continuous(breaks = seq(from = 1997, to = 2022, by = 2)) +
+  theme_bw(base_size=11) + 
+  theme(plot.title = element_text(hjust = 0.5),legend.position="top")
+
+```
+
+
 
 \pagebreak
 
@@ -381,17 +521,24 @@ legend(2000, 5,c("Biomasa Total","Biomasa Reclutas"),pch=19,lwd=2,col=c(1,2),bty
 library(strucchange)
 years     <- rep1$years
 nyears    <- length(years)
-bp.nile   <- breakpoints(rep1$Reclutas ~ 1)
-fm0       <- lm(rep1$Reclutas ~ 1)
-fm1       <- lm(rep1$Reclutas ~ breakfactor(bp.nile, breaks = 2))
+bp.nile   <- breakpoints(rep1$Reclutas/1000 ~ 1)
+fm0       <- lm(rep1$Reclutas/1000 ~ 1)
+fm1       <- lm(rep1$Reclutas/1000 ~ breakfactor(bp.nile, breaks = 2))
 quiebres3 <- fitted(fm1)
 
 par(mfrow=c(1,1),mar=c(2,4,1,1))
-plot(years,rep1$Reclutas,type="l",lty=2,pch=19,ylim=c(0,700000),
-     xaxp=c(1990,2020,30),yaxs="i",xlab="",ylab="Reclutamientos",main="Análisis de quiebres",cex.main=0.8,cex.axis=0.8,cex.lab=0.8)
-points(years,rep1$Reclutas,col=1,pch=19)
+plot(years,rep1$Reclutas/1000,type="l",lty=2,pch=19,ylim=c(0,700),
+     xaxp=c(1990,2021,31),yaxs="i",xlab="",ylab="Reclutamientos (miles de millones de ind.)",main="Análisis de quiebres",cex.main=0.8,cex.axis=0.7,cex.lab=0.7)
+points(years,rep1$Reclutas/1000,col=1,pch=19)
 lines(years,quiebres3,lwd=2,col=4)
-text(c(1999,2010,2017),c(fitted(fm1)[1],fitted(fm1)[18],fitted(fm1)[23])+25000,round(c(fitted(fm1)[1],fitted(fm1)[18],fitted(fm1)[23]),0),col=2,font=1,cex=0.8)
+text(c(1999,2010,2017),
+     c(fitted(fm1)[1],
+      fitted(fm1)[18],
+      fitted(fm1)[23])+25,
+     round(c(fitted(fm1)[1],
+             fitted(fm1)[18],
+             fitted(fm1)[23]),0),
+     col=2,font=1,cex=0.8)
 ```
 
 \pagebreak
@@ -401,28 +548,31 @@ years1  <-rep1$years
 nyears1 <-length(years1)
 age     <-seq(0,4,1)                                            
 nage    <-length(age)
-pobsF   <-rep1$pf_obs 
+pobsF   <-rep3$pf_obs 
   
 #Proporcion observada                                        
 WmedF <-dat1$Wmed                                             
 WiniF <-dat1$Wini                                 
 #Proporciones                                                
-Wm    <-c(WmedF); Wm[Wm==0]  <-NA                     
-Wi    <-c(WiniF); Wi[Wi==0]  <-NA 
+Wm    <-c(WmedF); 
+Wm[Wm==0]  <-NA                     
+Wi    <-c(WiniF); 
+Wi[Wi==0]  <-NA 
 
 x1 <-c(years1[1],years1[nyears1]+1,nyears1+1/2)
 #Proporci?n de edad
 par(mar=c(4,4,2,1),mfrow=c(1,2))
 # pesos medios
-plot(years1,WmedF[,1],type="n",las=1,ylim=c(0,70),xlim=c(1990,years1[nyears1]),ylab="Pesos medios (grs)",xlab="",xaxp=x1,main="")
+plot(years1,WmedF[,1],type="n",las=1,ylim=c(0,75),xlim=c(1990,years1[nyears1]),
+     ylab="Pesos medios (grs)",xlab="",xaxp=x1,main="")
 for(i in 1:5){
 lines(years1,WmedF[,i],col=i,type="o", pch=19)}
 legend(1990,75,c("edad 0","edad 1","edad 2","edad 3","edad 4"),pch=19,lwd=1,col=1:5,bty="n")
- 
+
 
 plot(age,colMeans(WmedF),type="o",pch=19,ylab="Pesos medios (grs)",xlab="Edad (años)")
 lines(age,colMeans(WmedF[(nyears1-5):nyears1,]),col=2,type="o",pch=19)
-legend(0,39,c("peso medio histórico","peso medio últimos 5 años"),pch=19,lwd=1,col=c(1,2),bty="n")
+legend(0,35,c("peso medio histórico","peso medio últimos 5 años"),pch=19,lwd=1,col=c(1,2),bty="n")
 ```
 
 \pagebreak
@@ -505,28 +655,26 @@ bp_obs  <- data.frame(rep1$pelacesobs)
 yearc   <- rep1$years 
 nyearc  <-length(yearc)  
 
- obsC  <- as.data.frame(bc_obs) %>%
+ obsC  <- as.data.frame(bc_obs) %>% 
                         mutate(year=yearc) %>% 
                         melt(id.vars='year') %>% 
                         mutate(type='2.Cruceros de Verano')
- 
  obsP  <- as.data.frame(bp_obs) %>% 
                         mutate(year=yearc) %>% 
                         melt(id.vars='year') %>% 
                         mutate(type='3.Cruceros de Otoño')
- 
  obsD  <- as.data.frame(des_obs) %>% 
                         mutate(year=yearc) %>% 
                         melt(id.vars='year') %>% 
                         mutate(type='1.Desembarques')
- 
  Bcru  <-rbind(obsC,obsP,obsD)
 
 p <- ggplot()  +
-  geom_bar(data=Bcru, aes(x=year, y =value), stat="identity", fill='gray66', 
-                   color = 'gray28') + 
-    facet_wrap(~type,scale="free",dir = 'v', as.table = TRUE) + labs(x="Años", y="Toneladas")
-p +  theme(panel.background = element_rect(fill ="gray99")) + theme(panel.grid=element_line(color="gray66"))
+     geom_bar(data=Bcru, aes(x=year, y =value), stat="identity", fill='gray66',color = 'gray28') + 
+     facet_wrap(~type,scale="free",dir = 'v', as.table = TRUE) + 
+      labs(x="Años", y="Toneladas")
+p +  theme(panel.background = element_rect(fill ="gray99")) + 
+      theme(panel.grid=element_line(color="gray66"))
 
 
 ```
@@ -556,20 +704,22 @@ pobsF <- as.data.frame(pobsF) %>%
                       mutate(type='pobsF')
 
 
-f1<-ggplot(pobsF, aes(x = years, y = value, group=edad,colour=edad))+
+f1<-ggplot(pobsF, aes(x = years, y = value, group=variable,colour=variable))+
   geom_line() +
   geom_point( size=2, shape=21, fill="white") + 
   labs(x = '', y = 'Proporción de captura en N° a la edad',fill="",color=" grupos de edad") +
   scale_x_continuous(breaks = seq(from = 1990, to = 2020, by = 5)) +
+  scale_colour_discrete(name = "Grupos de edad",  labels = c('GE 0','GE 1','GE 2','GE 3','GE 4'))+
   ggtitle("FLOTA")+
   theme_bw(base_size=11) + 
   theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 
-f2<-ggplot(WmedF, aes(x = years, y = value, group=edad,colour=edad))+
+f2<-ggplot(WmedF, aes(x = years, y = value, group=variable,colour=variable))+
   geom_line() +
   geom_point( size=2, shape=21, fill="white") + 
   labs(x = '', y = 'Pesos medios (grs)',fill="",color=" grupos de edad") +
   scale_x_continuous(breaks = seq(from = 1990, to = 2020, by = 5)) +
+  scale_colour_discrete(name = "Grupos de edad",  labels = c('GE 0','GE 1','GE 2','GE 3','GE 4'))+
    ggtitle("FLOTA")+
   theme_bw(base_size=11) + 
   theme(plot.title = element_text(hjust = 0.5))
@@ -623,37 +773,39 @@ years    <- rep1$years
 nyears   <- dat1$nanos
 age      <- seq(0,4,1)                                            
 nage     <- length(age)
-pobsR    <- rep1$pobs_RECLAS                                               
-pobsP    <- rep1$pobs_PELACES 
+pobsR1    <- rep1$pobs_RECLAS                                               
+pobsP1    <- rep1$pobs_PELACES 
 
 
-pobsR <- as.data.frame(pobsR) %>% 
+pobsR <- as.data.frame(pobsR1) %>% 
                        mutate(years=years) %>% 
                        melt(id.vars='years') %>%            
                        mutate(edad = rep(age, each=nyears)) %>% 
                        mutate(type='pobsR')
 
-pobsP <- as.data.frame(pobsP) %>% 
+pobsP <- as.data.frame(pobsP1) %>% 
                        mutate(years=years) %>% 
                        melt(id.vars='years') %>%             
                        mutate(edad = rep(age, each=nyears)) %>% 
                        mutate(type='pobsP')
 
 
-f1<-ggplot(pobsR, aes(x = years, y = value, group=edad,colour=edad))+
+f1<-ggplot(pobsR, aes(x = years, y = value, group=variable,colour=variable))+
   geom_line() +
   geom_point( size=2, shape=21, fill="white") + 
   labs(x = '', y = 'Proporción de captura en N° a la edad',fill="",color=" grupos de edad") +
   scale_x_continuous(breaks = seq(from = 1990, to = 2020, by = 5)) +
+    scale_colour_discrete(name = "Grupos de edad",  labels = c('GE 0','GE 1','GE 2','GE 3','GE 4'))+
   ggtitle("CRUCERO DE VERANO")+
   theme_bw(base_size=11) + 
   theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 
-f2<-ggplot(pobsP, aes(x = years, y = value, group=edad,colour=edad))+
+f2<-ggplot(pobsP, aes(x = years, y = value, group=variable,colour=variable))+
   geom_line() +
   geom_point( size=2, shape=21, fill="white") + 
   labs(x = '', y = 'Proporción de captura en N° a la edad',fill="",color=" grupos de edad") +
   scale_x_continuous(breaks = seq(from = 1990, to = 2020, by = 5)) +
+    scale_colour_discrete(name = "Grupos de edad",  labels = c('GE 0','GE 1','GE 2','GE 3','GE 4'))+
   ggtitle("CRUCERO DE OTOÑO")+
   theme_bw(base_size=11) + 
   theme(plot.title = element_text(hjust = 0.5))
@@ -710,56 +862,71 @@ lasty <- yrs[nyrs]
 cvBcV   <-0.30
 cvBcO   <-0.30
 cvdes   <-0.01
-
-#--------------------------------------------------------------------------------------
+#=================================================================================
 ind_obs           <- cbind(c(rep1$reclasobs),
                            c(rep1$pelacesobs), 
-                           c(rep1$desembarqueobs)); ind_obs[ind_obs==0] <- NA
+                           c(rep1$desembarqueobs))
+ind_obs[ind_obs==0] <- NA
 colnames(ind_obs) <- c('Crucero_verano', 
                        'Crucero_otoño', 
                        'Desembarques') 
-#--------------------------------------------------------------------------------------
+#-----------------------------------------------------     
 ind_sept           <- cbind(c(rep1$reclaspred), 
                             c(rep1$pelacespred), 
                             c(rep1$desembarquepred)) 
 colnames(ind_sept) <- c('Crucero_verano', 
                         'Crucero_otoño', 
                         'Desembarques') 
+#-----------------------------------------------------
+ind_marzo           <- cbind(c(rep2$reclaspred),
+                             c(rep2$pelacespred), 
+                             c(rep2$desembarquepred)) 
+colnames(ind_marzo) <- c('Crucero_verano', 
+                         'Crucero_otoño', 
+                         'Desembarques') 
+#-----------------------------------------------------
+ind_julio           <- cbind(c(rep3$reclaspred),
+                             c(rep3$pelacespred), 
+                             c(rep3$desembarquepred)) 
+colnames(ind_julio) <- c('Crucero_verano', 
+                         'Crucero_otoño', 
+                         'Desembarques') 
 
-ind               <- data.frame(ind_obs) %>% 
-                     mutate(Asesoria='observado') %>% 
-                     mutate (yrs= yrs) %>% 
-                     melt(id.var=c('yrs', 'Asesoria'))  
-#================================================================
+#=================================================================================
+ind               <- data.frame(ind_obs) %>%
+                                mutate(Asesoria='observado') %>%
+                                mutate (yrs= yrs) %>% 
+                                melt(id.var=c('yrs', 'Asesoria'))  
+
 sept               <- data.frame(ind_sept) %>% 
-                      mutate (Asesoria='septiembre_2020') %>% 
-                      mutate (yrs= yrs)  %>% 
-                      melt(id.var=c('yrs', 'Asesoria'))
-#--------------------------------------------------------------------------------------
+                                 mutate (Asesoria='septiembre_2021') %>%
+                                 mutate (yrs= yrs)  %>% 
+                                 melt(id.var=c('yrs', 'Asesoria'))
+
+marzo              <- data.frame(ind_marzo) %>% 
+                                 mutate (Asesoria='marzo_2021') %>% 
+                                 mutate (yrs= yrs)  %>% 
+                                 melt(id.var=c('yrs', 'Asesoria'))
+
+julio              <- data.frame(ind_julio) %>% 
+                                 mutate (Asesoria='julio_2021') %>% 
+                                 mutate (yrs= yrs)  %>% 
+                                 melt(id.var=c('yrs', 'Asesoria'))
+
+#=================================================================================
+#base1 <- data.frame(rbind(ind, sept,marzo,julio))  
 base1 <- data.frame(rbind(ind, sept))  
-#########################################################################################################
-# FIGURAS
-#########################################################################################################
+#=================================================================================
+
+#GRÁFICOS
+
+#=================================================================================
+
 BcV <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Crucero_verano'), 
        aes(yrs,value/1000000)) + 
-       geom_line(aes(colour=Asesoria), size=0.8) +
+       geom_line(aes(colour=Asesoria,linetype = Asesoria), size=0.8) +
        scale_colour_manual(values=c('black')) +
-       geom_point(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_verano'),
-       aes(yrs,value/1000000), shape = 19, colour = 'gray30') +
-       geom_errorbar(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_verano'),
-       aes(ymin = value*exp(-1.96*cvBcO)*10^-6, ymax = value*exp(1.96*cvBcO)*10^-6), color = 'gray30') +
-       scale_x_continuous(breaks = seq(from = 1985, to = 2021, by = 5)) +
-       labs(x = '', y = 'Toneladas (millones)') +
-       theme_bw(base_size=9) + 
-       ggtitle('Crucero de verano')+
-       theme(plot.title = element_text(hjust = 0.5),legend.position="none")
-
-BcV2 <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Crucero_verano'), 
-       aes(yrs,value/1000000)) + 
-       geom_line(aes(linetype = Asesoria, color=Asesoria, size=Asesoria, stat='identity')) +
-       scale_linetype_manual(values=c( "solid")) +
-       scale_colour_manual(values=c('black')) +
-       scale_size_manual(values=c(1, 1, 1)) + 
+       scale_linetype_manual(values=c("solid"))+
        geom_point(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_verano'),
        aes(yrs,value/1000000), shape = 19, colour = 'gray30') +
        geom_errorbar(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_verano'),
@@ -772,9 +939,9 @@ BcV2 <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Crucero_verano
 
 BcP <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Crucero_otoño'), 
        aes(yrs,value/1000000)) + 
-       geom_line(aes(colour=Asesoria), size=0.8) +
+       geom_line(aes(colour=Asesoria,linetype = Asesoria), size=0.8) +
        scale_colour_manual(values=c('black'),name="Asesorías") +
-       scale_linetype_manual(values=c("solid")) +
+       scale_linetype_manual(values=c("solid"))+
        geom_point(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_otoño'),
        aes(yrs,value/1000000), shape = 19, colour = 'gray30') +
        geom_errorbar(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_otoño'),
@@ -785,26 +952,9 @@ BcP <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Crucero_otoño'
        ggtitle('Crucero de otoño')+
        theme(plot.title = element_text(hjust = 0.5))
 
-BcP2 <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Crucero_otoño'), 
-       aes(yrs,value/1000000)) + 
-       geom_line(aes(linetype = Asesoria, color=Asesoria, size=Asesoria, stat='identity'))+
-       scale_linetype_manual(values=c("solid")) +
-       scale_colour_manual(values=c('black')) +
-       scale_size_manual(values=c(1, 1, 1)) + 
-       geom_point(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_otoño'),
-       aes(yrs,value/1000000), shape = 19, colour = 'gray30') +
-       geom_errorbar(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_otoño'),
-       aes(ymin = value*exp(-1.96*cvBcV)*10^-6, ymax = value*exp(1.96*cvBcV)*10^-6), color = 'gray30') +
-       scale_x_continuous(breaks = seq(from = 1985, to = 2021, by = 5)) +
-       labs(x = '', y = 'Toneladas (millones)') +
-       theme_bw(base_size=10) + 
-       ggtitle('Crucero de otoño')+
-       theme(plot.title = element_text(hjust = 0.5))
-
-
 d   <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Desembarques'), 
        aes(yrs,value/1000)) +
-       geom_line(aes(colour=Asesoria), size=0.8) +
+       geom_line(aes(colour=Asesoria,linetype = Asesoria), size=0.8) +
        scale_colour_manual(values=c('black')) +
        scale_linetype_manual(values=c("solid"))+
        geom_point(data = base1 %>% filter(Asesoria=='observado', variable=='Desembarques'),
@@ -813,28 +963,11 @@ d   <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Desembarques'),
        aes(ymin = value*exp(-1.96*cvdes)*10^-3, ymax = value*exp(1.96*cvdes)*10^-3), color = 'gray30') +
        scale_x_continuous(breaks = seq(from = 1985, to = 2021, by = 5)) +
        labs(x = '', y = 'Toneladas (miles)') +
-       theme_bw(base_size=10) + 
+       theme_bw(base_size=9) + 
        ggtitle('Desembarques') +
        theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 
-d2   <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Desembarques'), 
-       aes(yrs,value/1000)) +
-       geom_line(aes(linetype = Asesoria, color=Asesoria, size=Asesoria, stat='identity')) +
-       scale_linetype_manual(values=c("solid")) +
-       scale_colour_manual(values=c('black')) +
-       scale_size_manual(values=c(1, 1, 1)) + 
-       geom_point(data = base1 %>% filter(Asesoria=='observado', variable=='Desembarques'),
-       aes(yrs,value/1000), shape = 19, colour = 'gray30') +
-       geom_errorbar(data = base1 %>% filter(Asesoria=='observado', variable=='Desembarques'),
-       aes(ymin = value*exp(-1.96*cvdes)*10^-3, ymax = value*exp(1.96*cvdes)*10^-3), color = 'gray30') +
-       scale_x_continuous(breaks = seq(from = 1985, to = 2021, by = 5)) +
-       labs(x = '', y = 'Toneladas (miles)') +
-       theme_bw(base_size=10) + 
-       ggtitle('Desembarques') +
-       theme(plot.title = element_text(hjust = 0.5),legend.position="none")
-
-
-BcV2/BcP2/d2 + plot_layout(guides="collect")
+BcV/BcP/d + plot_layout(guides="collect")
 
 ```
 \pagebreak
@@ -921,36 +1054,50 @@ age     <- seq(0,4,1)
 nage    <- length(age)   
 
 etcf1_obs <- data.frame(rep1$pf_obs)
-etcf1_pre <- rbind(rep1$pf_pred) 
+etcf1_pre <- rbind(rep1$pf_pred)
+etcf2_pre <- rep2$pf_pred 
+etcf3_pre <- rep3$pf_pred 
 
-
- obs     <- as.data.frame(etcf1_obs) %>% 
-            mutate(year=years) %>% 
-            melt(id.vars='year') %>%
-            mutate(edad = rep(age, each=nyears)) %>%
-            mutate(type='obs')
+ obs  <- as.data.frame(etcf1_obs) %>% 
+                       mutate(year=years) %>% 
+                       melt(id.vars='year') %>%
+                       mutate(edad = rep(age, each=nyears)) %>%
+                       mutate(type='obs')
  
  pred_sep <- as.data.frame(etcf1_pre) %>% 
-             mutate(year=years) %>% 
-             melt(id.vars='year') %>%
-             mutate(edad = rep(age, each=nyears)) %>% 
-             mutate(type='septiembre_2021')
-
-  
-  mat  <- rbind(obs,pred_sep)
+                            mutate(year=years) %>%
+                            melt(id.vars='year') %>%
+                            mutate(edad = rep(age, each=nyears)) %>%
+                            mutate(type='septiembre_2021')
  
+ pred_marzo <- as.data.frame(etcf2_pre) %>% 
+                              mutate(year=years) %>%
+                              melt(id.vars='year') %>%
+                              mutate(edad = rep(age, each=nyears)) %>% 
+                              mutate(type='marzo_2021')
+ 
+  pred_julio <- as.data.frame(etcf3_pre) %>% 
+                              mutate(year=years) %>%
+                              melt(id.vars='year') %>%
+                              mutate(edad = rep(age, each=nyears)) %>% 
+                              mutate(type='julio_2021')
+  
+   
+  #mat  <- rbind(obs,pred_sep,pred_marzo,pred_julio)
+  mat  <- rbind(obs,pred_sep)
+  
   fig1 <- ggplot(filter(mat, type=='obs')) + 
           geom_bar(aes(x = edad, y = value), stat="identity", fill='gray66', color = 'gray28') + 
           facet_wrap(~year, dir = 'v', as.table = TRUE) + 
           labs(x = 'Edad', y = 'Proporción') +
-          geom_line(data = mat %>% filter(type != 'obs'), aes(x = edad, y = value, colour=type, 
-          linetype = type, stat='identity')) +
-          scale_linetype_manual(values=c('solid')) +
+          geom_line(data = mat %>% filter(type != 'obs'), aes(x = edad, y = value, colour=type,linetype =type)) +
           scale_colour_manual(values=c('black'),name="Asesorías") +
+          scale_linetype_manual(values=c("solid"))+
           theme(panel.background = element_rect(fill ="gray99")) + 
           theme(panel.grid=element_line(color=NA)) +
           ggtitle("FLOTA") + theme(plot.title = element_text(size = 12))
   fig1
+  
   
 ```
 \pagebreak
@@ -964,33 +1111,44 @@ nage    <- length(age)
 
 etcf1_obs <- data.frame(rep1$pobs_RECLAS)
 etcf1_pre <- rbind(rep1$ppred_RECLAS) 
+etcf2_pre <- rep2$ppred_RECLAS
+etcf3_pre <- rep3$ppred_RECLAS
 
-
- obs        <- as.data.frame(etcf1_obs) %>%
-               mutate(year=years) %>% 
-               melt(id.vars='year') %>%
-               mutate(edad = rep(age, each=nyears)) %>% 
-               mutate(type='obs')
+ obs  <- as.data.frame(etcf1_obs) %>% 
+                        mutate(year=years) %>% 
+                        melt(id.vars='year') %>%
+                        mutate(edad = rep(age, each=nyears)) %>%
+                        mutate(type='obs')
  
- pred_sep   <- as.data.frame(etcf1_pre) %>% 
-               mutate(year=years) %>% 
-               melt(id.vars='year') %>%
-               mutate(edad = rep(age, each=nyears)) %>% 
-               mutate(type='septiembre_2021')
+ pred_sep <- as.data.frame(etcf1_pre) %>%
+                            mutate(year=years) %>% 
+                            melt(id.vars='year') %>%
+                            mutate(edad = rep(age, each=nyears)) %>%
+                            mutate(type='septiembre_2021')
  
+ pred_marzo <- as.data.frame(etcf2_pre) %>%
+                            mutate(year=years) %>% 
+                            melt(id.vars='year') %>%
+                            mutate(edad = rep(age, each=nyears)) %>% 
+                            mutate(type='marzo_2021')
+ 
+ pred_julio <- as.data.frame(etcf3_pre) %>%
+                            mutate(year=years) %>% 
+                            melt(id.vars='year') %>%
+                            mutate(edad = rep(age, each=nyears)) %>% 
+                            mutate(type='julio_2021')
   
+ 
+  #mat  <- rbind(obs,pred_sep,pred_marzo,pred_julio)
   mat  <- rbind(obs,pred_sep)
  
   fig1 <- ggplot(filter(mat, type=='obs')) + 
           geom_bar(aes(x = edad, y = value), stat="identity", fill='gray66', color = 'gray28') + 
-          facet_wrap(~year, dir = 'v', as.table = TRUE) + 
-          labs(x = 'Edad', y = 'Proporción') +
-          geom_line(data = mat %>% filter(type != 'obs'), aes(x = edad, y = value, colour=type,
-          linetype = type, stat='identity')) +
-          scale_linetype_manual(values=c('solid')) +
+          facet_wrap(~year, dir = 'v', as.table = TRUE) + labs(x = 'Edad', y = 'Proporción') +
+          geom_line(data = mat %>% filter(type != 'obs'), aes(x = edad, y = value, colour=type,linetype =type)) +
           scale_colour_manual(values=c('black'),name="Asesorías") +
-          theme(panel.background = element_rect(fill ="gray99")) + 
-          theme(panel.grid=element_line(color=NA)) +
+          scale_linetype_manual(values=c("solid"))+
+          theme(panel.background = element_rect(fill ="gray99")) + theme(panel.grid=element_line(color=NA)) +
           ggtitle("CRUCEROS DE VERANO") + theme(plot.title = element_text(size = 12))
   fig1
   
@@ -1007,33 +1165,43 @@ nage    <- length(age)
 
 etcf1_obs <- data.frame(rep1$pobs_PELACES)
 etcf1_pre <- rbind(rep1$ppred_PELACES) 
+etcf2_pre <- rep2$ppred_PELACES
+etcf3_pre <- rep3$ppred_PELACES
 
-
- obs       <- as.data.frame(etcf1_obs) %>% 
-              mutate(year=years) %>% 
-              melt(id.vars='year') %>%
-              mutate(edad = rep(age, each=nyears)) %>% 
-              mutate(type='obs')
+ obs  <- as.data.frame(etcf1_obs) %>% 
+                        mutate(year=years) %>% 
+                        melt(id.vars='year') %>%
+                        mutate(edad = rep(age, each=nyears)) %>%
+                        mutate(type='obs')
  
- pred_sep   <- as.data.frame(etcf1_pre) %>% 
-               mutate(year=years) %>% 
-               melt(id.vars='year') %>%
-               mutate(edad = rep(age, each=nyears)) %>% 
-               mutate(type='septiembre_2021')
+ pred_sep <- as.data.frame(etcf1_pre) %>% 
+                        mutate(year=years) %>% 
+                        melt(id.vars='year') %>%
+                        mutate(edad = rep(age, each=nyears)) %>% 
+                        mutate(type='septiembre_2021')
  
+ pred_marzo <- as.data.frame(etcf2_pre) %>% 
+                          mutate(year=years) %>% 
+                          melt(id.vars='year') %>%
+                          mutate(edad = rep(age, each=nyears)) %>% 
+                          mutate(type='marzo_2021')
+ 
+  pred_julio <- as.data.frame(etcf3_pre) %>% 
+                          mutate(year=years) %>% 
+                          melt(id.vars='year') %>%
+                          mutate(edad = rep(age, each=nyears)) %>% 
+                          mutate(type='julio_2021')
   
+  #mat  <- rbind(obs,pred_sep,pred_marzo,pred_julio)
   mat  <- rbind(obs,pred_sep)
- 
+  
   fig1 <- ggplot(filter(mat, type=='obs')) + 
           geom_bar(aes(x = edad, y = value), stat="identity", fill='gray66', color = 'gray28') + 
-          facet_wrap(~year, dir = 'v', as.table = TRUE) + 
-          labs(x = 'Edad', y = 'Proporción') +
-          geom_line(data = mat %>% filter(type != 'obs'), aes(x = edad, y = value, colour=type,
-          linetype = type, stat='identity')) +
-          scale_linetype_manual(values=c('solid')) +
+          facet_wrap(~year, dir = 'v', as.table = TRUE) + labs(x = 'Edad', y = 'Proporción') +
+          geom_line(data = mat %>% filter(type != 'obs'), aes(x = edad, y = value, colour=type,linetype =type)) +
           scale_colour_manual(values=c('black'),name="Asesorías") +
-          theme(panel.background = element_rect(fill ="gray99")) + 
-          theme(panel.grid=element_line(color=NA)) +
+          scale_linetype_manual(values=c("solid"))+
+          theme(panel.background = element_rect(fill ="gray99")) + theme(panel.grid=element_line(color=NA)) +
           ggtitle("CRUCEROS DE OTOÑO") + theme(plot.title = element_text(size = 12))
   fig1
   
@@ -1141,7 +1309,7 @@ box()
 
 ## 3.2. Comparación con asesorías previas
 
-```{r VariablesSeptiembre_std, echo=T,message=FALSE, warning=FALSE, include=T}
+```{r VariablesSept_std, echo=T,message=FALSE, warning=FALSE, include=T}
 
 years<-rep1$years
 nyears<-length(years)
@@ -1311,11 +1479,11 @@ dir<-paste(dir.0,"/Retrospectivo_sept",sep="")
 setwd(dir)
 admb<-"MAE0921"
 
-years<-rep1$years
-nyears<-length(years)
-retros<-seq(1,5)
-nretros<-length(retros)
-year_retros<-as.factor(years[(nyears-(nretros-1)):nyears])
+years       <-rep1$years
+nyears      <-length(years)
+retros      <-seq(1,5)
+nretros     <-length(retros)
+year_retros <-as.factor(years[(nyears-(nretros-1)):nyears])
                       
 retroR      <- matrix(0,nrow=nyears,ncol=nretros+1)
 retroBD     <- matrix(0,nrow=nyears,ncol=nretros+1)
@@ -1323,7 +1491,7 @@ retroF      <- matrix(0,nrow=nyears,ncol=nretros+1)
 
 for(i in 1:length(retros)){
   rep<- reptoRlist(paste(admb,"s",i,".rep",sep=""))
-  retroR[,i+1] <- c(rep$Reclutas,rep(NA,i-1))
+  retroR[,i+1]  <- c(rep$Reclutas,rep(NA,i-1))
   retroBD[,i+1] <- c(rep$SSB,rep(NA,i-1))
   retroF[,i+1]  <- c(rep$Ftot,rep(NA,i-1)) }
 
@@ -1337,8 +1505,8 @@ for(i in 1:length(retros)){
     rel.diff.f   <- matrix(NA, nrow=nyears, ncol=(nretros))
 
     for(j in 1:nretros){
-      rel.diff.r[,j] <- (retroR[,(j+1)]-retroR[,2])/retroR[,2]
-      mohn.r[j]      <- rel.diff.r[(nyears-j),j]
+      rel.diff.r[,j]   <- (retroR[,(j+1)]-retroR[,2])/retroR[,2]
+      mohn.r[j]        <- rel.diff.r[(nyears-j),j]
       rel.diff.ssb[,j] <- (retroBD[,(j+1)]-retroBD[,2])/retroBD[,2]
       mohn.ssb[j]      <- rel.diff.ssb[(nyears-j),j]
       rel.diff.f[,j]   <- (retroF[,(j+1)]-retroF[,2])/retroF[,2]
@@ -1559,13 +1727,77 @@ BD1std   <- c(subset(std1,name=="SSB")$std)
 Ft1      <- c(subset(std1,name=="log_Ft")$value)   
 Ft1std   <- c(subset(std1,name=="log_Ft")$std)
 
-VarPobSep<- data.frame(x=years1, Rt1=Rt1,BT1=BT1,BD1=BD1,Ft1=exp(Ft1), 
+VarPobSep<- data.frame(x=years1,
+                       Rt1=Rt1,
+                       BT1=BT1,
+                       BD1=BD1,
+                       Ft1=exp(Ft1), 
          lowerRt1 = (Rt1 -1.96*Rt1std), upperRt1 = (Rt1+1.96*Rt1std),
          lowerBT1 = (BT1 -1.96*BT1std), upperBT1 = (BT1+1.96*BT1std),
          lowerBD1 = (BD1 -1.96*BD1std), upperBD1 = (BD1+1.96*BD1std),
          lowerFt1 = exp(Ft1 -1.96*Ft1std), upperFt1 = exp(Ft1+1.96*Ft1std))
 ```
 
+\pagebreak
+
+```{r Variables_marzo, echo=T,message=FALSE, warning=FALSE, include=T}
+
+years2<-rep2$years
+nyears2<-length(years2)
+
+Rt2      <- subset(std2,name=="Reclutas")$value 
+Rt2std   <- subset(std2,name=="Reclutas")$std
+BT2      <- subset(std2,name=="BT")$value   
+BT2std   <- subset(std2,name=="BT")$std
+BD2      <- subset(std2,name=="SSB")$value   
+BD2std   <- subset(std2,name=="SSB")$std
+Ft2      <- subset(std2,name=="log_Ft")$value   
+Ft2std   <- subset(std2,name=="log_Ft")$std
+
+VarPobMar<- data.frame(x=years2, 
+                       Rt2=Rt2,
+                       BT2=BT2,
+                       BD2=BD2,
+                       Ft2=exp(Ft2), 
+         lowerRt2 = (Rt2 -1.96*Rt2std), 
+         upperRt2 = (Rt2+1.96*Rt2std),
+         lowerBT2 = (BT2 -1.96*BT2std), 
+         upperBT2 = (BT2+1.96*BT2std),
+         lowerBD2 = (BD2 -1.96*BD2std), 
+         upperBD2 = (BD2+1.96*BD2std),
+         lowerFt2 = exp(Ft2 -1.96*Ft2std), 
+         upperFt2 = exp(Ft2+1.96*Ft2std))
+```
+
+
+```{r Variables_julio, echo=T,message=FALSE, warning=FALSE, include=T}
+
+years3   <- rep3$years
+nyears3  <- length(years3)
+
+Rt3      <- subset(std3,name=="Reclutas")$value 
+Rt3std   <- subset(std3,name=="Reclutas")$std
+BT3      <- subset(std3,name=="BT")$value   
+BT3std   <- subset(std3,name=="BT")$std
+BD3      <- subset(std3,name=="SSB")$value   
+BD3std   <- subset(std3,name=="SSB")$std
+Ft3      <- subset(std3,name=="log_Ft")$value   
+Ft3std   <- subset(std3,name=="log_Ft")$std
+
+VarPobJul<- data.frame(x=years3, 
+                       Rt3=Rt3,
+                       BT3=BT3,
+                       BD3=BD3,
+                       Ft3=exp(Ft3), 
+         lowerRt3 = (Rt3 -1.96*Rt3std), 
+         upperRt3 = (Rt3 +1.96*Rt3std),
+         lowerBT3 = (BT3 -1.96*BT3std), 
+         upperBT3 = (BT3 +1.96*BT3std),
+         lowerBD3 = (BD3 -1.96*BD3std), 
+         upperBD3 = (BD3 +1.96*BD3std),
+         lowerFt3 = exp(Ft3 -1.96*Ft3std), 
+         upperFt3 = exp(Ft3 +1.96*Ft3std))
+```
 
 \pagebreak
 
@@ -1573,54 +1805,74 @@ VarPobSep<- data.frame(x=years1, Rt1=Rt1,BT1=BT1,BD1=BD1,Ft1=exp(Ft1),
 
 
 Rt <- ggplot() + 
-    geom_line(data=VarPobSep,aes(y=Rt1, x=x, colour = "septiembre 2021"), size=0.5)+
-    geom_ribbon(data=VarPobSep,aes(ymin=lowerRt1, ymax=upperRt1, x=x, fill = ""), alpha = 0.2)+
+    #geom_line(data=VarPobJul,aes(y=Rt3, x=x, colour = "julio 2021"),linetype="solid", size=0.5)+
+    #geom_line(data=VarPobMar,aes(y=Rt2, x=x, colour = "marzo 2021"),linetype="dashed",size=0.5)+
+    geom_line(data=VarPobSep,aes(y=Rt1, x=x, colour = "septiembre 2021"),linetype="solid", size=0.5)+
+    #geom_ribbon(data=VarPobJul,aes(ymin=lowerRt3, ymax=upperRt3, x=x, fill = "IC_julio2021"), alpha = 0.2)+
+   # geom_ribbon(data=VarPobMar,aes(ymin=lowerRt2, ymax=upperRt2, x=x, fill = ""), alpha = 0.2)+
+    geom_ribbon(data=VarPobSep,aes(ymin=lowerRt1, ymax=upperRt1, x=x, fill = "IC"), alpha = 0.2)+
     geom_hline(yintercept = mean(VarPobSep$Rt1),colour='black',lty=2) +
      annotate("text", x=2000, y=mean(VarPobSep$Rt1)*1.3,label=expression("R"[promedio])) +
     labs(x = '', y = 'Reclutamientos',colour='Asesorías')  +
      scale_x_continuous(breaks = seq(from = 1990, to = 2022, by = 4)) +
     scale_colour_manual("",values=c("black"))+
-    scale_fill_manual("",values=c('gray75'))+
-    theme_bw(base_size=9) +
+     scale_linetype_manual(values=c("solid"))+
+    scale_fill_manual("",values=c('gray60'))+
+    theme_bw(base_size=10) +
      ggtitle('')+
      theme(plot.title = element_text(hjust = 0.5),legend.position="top",legend.text = element_text(size=5))
 
 BT <- ggplot() + 
-     geom_line(data=VarPobSep,aes(y=BT1, x=x, colour = "septiembre 2021"), size=0.5)+
+     #geom_line(data=VarPobJul,aes(y=BT3, x=x, colour = "julio 2021"),linetype="solid", size=0.5)+
+     #geom_line(data=VarPobMar,aes(y=BT2, x=x, colour = "marzo 2021"),linetype="dashed", size=0.5)+
+     geom_line(data=VarPobSep,aes(y=BT1, x=x, colour = "septiembre 2021"),linetype="solid", size=0.5)+
+     #geom_ribbon(data=VarPobJul,aes(ymin=lowerBT3, ymax=upperBT3, x=x, fill = ""), alpha = 0.2)+
+     #geom_ribbon(data=VarPobMar,aes(ymin=lowerBT2, ymax=upperBT2, x=x, fill = ""), alpha = 0.2)+
      geom_ribbon(data=VarPobSep,aes(ymin=lowerBT1, ymax=upperBT1, x=x, fill = ""), alpha = 0.2)+
    geom_hline(data=VarPobSep,yintercept = mean(BT1),colour='black',lty=2) +
      annotate("text", x=2000, y=mean(BT1)*1.2,label=expression("BT"[promedio])) +
     labs(x = '', y = 'Biomasa total (t)',colour='Asesorías')  +
      scale_x_continuous(breaks = seq(from = 1990, to = 2022, by = 4)) +
     scale_colour_manual("",values=c("black"))+
-    scale_fill_manual("",values=c('gray75'))+
-    theme_bw(base_size=9) +
+     scale_linetype_manual(values=c("solid"))+
+     scale_fill_manual("",values=c("grey60"))+
+     theme_bw(base_size=10) +
      ggtitle('')+
      theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 
 BD <- ggplot() + 
-     geom_line(data=VarPobSep,aes(y=BD1, x=x, colour = "septiembre 2021"), size=0.5)+
+     #geom_line(data=VarPobJul,aes(y=BD3, x=x, colour = "julio 2021"),linetype="solid", size=0.5)+
+     #geom_line(data=VarPobMar,aes(y=BD2, x=x, colour = "marzo 2021"),linetype="dashed", size=0.5)+
+     geom_line(data=VarPobSep,aes(y=BD1, x=x, colour = "septiembre 2021"),linetype="solid", size=0.5)+
+     #geom_ribbon(data=VarPobJul,aes(ymin=lowerBD3, ymax=upperBD3, x=x, fill = "IC_julio2021"), alpha = 0.2)+
+     #geom_ribbon(data=VarPobMar,aes(ymin=lowerBD2, ymax=upperBD2, x=x, fill = ""), alpha = 0.2)+
      geom_ribbon(data=VarPobSep,aes(ymin=lowerBD1, ymax=upperBD1, x=x, fill = ""), alpha = 0.2)+
      geom_hline(data=VarPobSep,yintercept = mean(BD1),colour='black',lty=2) +
      annotate("text", x=2000, y=mean(BD1)*1.3,label=expression("BD"[promedio])) +
      labs(x = '', y = 'Biomasa desovante (t)',colour='Asesorías')  +
      scale_x_continuous(breaks = seq(from = 1990, to = 2022, by = 4)) +
      scale_colour_manual("",values=c("black"))+
-     scale_fill_manual("",values=c('gray75'))+
-     theme_bw(base_size=9) +
+      scale_linetype_manual(values=c("solid"))+
+     scale_fill_manual("",values=c("grey60"))+
+     theme_bw(base_size=10) +
      ggtitle('')+
-     theme(plot.title = element_text(hjust = 0.5),legend.position="top",legend.text = element_text(size=5))
+     theme(plot.title = element_text(hjust = 0.5),legend.position="top",legend.text = element_text(size=7))
 
 Ft <- ggplot() + 
-    geom_line(data=VarPobSep,aes(y=Ft1, x=x, colour = "septiembre 2021"), size=0.5)+
+    #geom_line(data=VarPobJul,aes(y=Ft3, x=x, colour = "julio 2021"),linetype="solid", size=0.5)+
+    #geom_line(data=VarPobMar,aes(y=Ft2, x=x, colour = "marzo 2021"),linetype="dashed", size=0.5)+
+    geom_line(data=VarPobSep,aes(y=Ft1, x=x, colour = "septiembre 2021"),linetype="solid", size=0.5)+
+    #geom_ribbon(data=VarPobJul,aes(ymin=lowerFt3, ymax=upperFt3, x=x, fill = ""), alpha = 0.2)+
+    #geom_ribbon(data=VarPobMar,aes(ymin=lowerFt2, ymax=upperFt2, x=x, fill = ""), alpha = 0.2)+
     geom_ribbon(data=VarPobSep,aes(ymin=lowerFt1, ymax=upperFt1, x=x, fill = ""), alpha = 0.2)+
      geom_hline(yintercept = median(VarPobSep$Ft1),colour='black',lty=2) +
      annotate("text", x=2018, y=median(VarPobSep$Ft1)*1.3,label=expression("F"[mediana])) +
     labs(x = '', y = 'Mortalidad por pesca (1/año)',colour='Asesorías')  +
     scale_x_continuous(breaks = seq(from = 1990, to = 2022, by = 4)) +
     scale_colour_manual("",values=c("black"))+
-    scale_fill_manual("",values=c('gray75'))+
-    theme_bw(base_size=9) +
+     scale_linetype_manual(values=c("solid"))+
+     scale_fill_manual("",values=c("grey60"))+
+     theme_bw(base_size=10) +
      ggtitle('')+
      theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 
@@ -1644,15 +1896,43 @@ Ft1      <- c(subset(std1,name=="log_Ft")$value)
 Ft1std   <- c(subset(std1,name=="log_Ft")$std)
 
 
+Rt2      <- subset(std2,name=="Reclutas")$value 
+Rt2std   <- subset(std2,name=="Reclutas")$std
+BT2      <- subset(std2,name=="BT")$value   
+BT2std   <- subset(std2,name=="BT")$std
+BD2      <- subset(std2,name=="SSB")$value   
+BD2std   <- subset(std2,name=="SSB")$std
+Ft2      <- subset(std2,name=="log_Ft")$value   
+Ft2std   <- subset(std2,name=="log_Ft")$std
+
+
+Rt3      <- rep3$Reclutas
+Rt3std   <- subset(std3,name=="Reclutas")$std
+BT3      <- rep3$BT 
+BT3std   <- subset(std3,name=="BT")$std
+BD3      <- rep3$SSB  
+BD3std   <- subset(std3,name=="SSB")$std
+Ft3      <- log(rep3$Ftot) 
+Ft3std   <- subset(std3,name=="log_Ft")$std
+
+
 VarPobl1<- cbind('Año'=yearsb,
                  "$BD_{sept}$"=c(BD1),
+                 "$BD_{marzo}$"=c(BD2),
+                 "$BD_{julio}$"=c(BD3),
                  "$BT_{sept}$"=c(BT1),
+                 "$BT_{marzo}$"=c(BT2),
+                 "$BT_{julio}$"=c(BT3),
                  "$R_{sept}$"=c(Rt1),
-                 "$F_{sept}$"=c(round(exp(Ft1),3)))
+                 "$R_{marzo}$"=c(Rt2),
+                 "$R_{julio}$"=c(Rt3),
+                 "$F_{sept}$"=c(round(exp(Ft1),3)),
+                 "$F_{marzo}$"=c(round(exp(Ft2),3)),
+                 "$F_{julio}$"=c(round(exp(Ft3),3)))
 kable(VarPobl1)
 
 #setwd(dir.basedatos)
-write.csv(VarPobl1, file="Tabla_20_indicadorespoblacionales.csv")
+write.csv(VarPobl1, file="Tablas/Tabla_20_indicadorespoblacionales.csv")
 #setwd(dir.1)
 ```
 
@@ -1746,7 +2026,7 @@ diferencias<-cbind(difR,difBT,difBD,Rprom,BTprom,BDprom)
 colnames(diferencias)<-c("difRt","difBT","difBD","Rprom","BTprom","BDprom")
 diferencias
 
-write.csv(diferencias, file="Tabla_20_diferencias.csv")
+write.csv(diferencias, file="Tablas/Tabla_20_diferencias.csv")
 
 
 ```
@@ -1813,6 +2093,66 @@ SPRcurv1 		<- SPRFmort(R0,Fmort,Amax,Dat)
 \pagebreak
 
 
+```{r Data_PBR_biologico_marzo, echo=T}
+#PBR año biologico
+Amax        <- dat2$nedades 
+Fmort 	    <- seq(0,3.5,0.02)           
+nf          <- length(Fmort) 
+R0 		      <- 1  
+#datos de entrada 
+Dat<-list()
+Dat$M		    <- dat2$par[5]             
+Dat$Tspw	  <- dat2$Dt[3]              
+Dat$Mad	    <- dat2$madurezsexual        
+Dat$Wmed	  <- colMeans(dat2$Wmed)      
+Dat$Wini	  <- colMeans(dat2$Wini) 
+Dat$Sel     <- rep2$Sel_flota[1,] 
+
+Rmed2        <- mean(Rt2)           
+Bmed2        <- mean(BD2)         
+Fmedian2     <- exp(median(Ft2))
+
+Bobj        <-c(.85,.80,.60,.55,.52,.50,.45,.40,.30,.325,0.425)
+Fobj      	<- optim(par=rep(0.,11),fn=SPRFpbr,method='BFGS')
+
+SPR2 		    <- SPRFmort(Rmed2,c(0,Fobj$par,Fmedian2,rep2$Ftot[25]),Amax,Dat) 
+pSPR_Fmh2    <- as.numeric(SPR2[13,4])                     # Paso 2: Cálculo de la curva SPR
+pB_Fmh2      <- pSPR_Fmh2-0.05                             # Paso 3: Aproximación obtención de %BD(Fmh)
+SPRcurv2 		<- SPRFmort(R0,Fmort,Amax,Dat) 
+```
+
+\pagebreak
+
+
+```{r Data_PBR_biologico_julio, echo=T}
+#PBR año biologico
+Amax        <- dat3$nedades 
+Fmort 	    <- seq(0,3.5,0.02)           
+nf          <- length(Fmort) 
+R0 		      <- 1  
+#datos de entrada 
+Dat<-list()
+Dat$M		    <- dat3$par[5]             
+Dat$Tspw	  <- dat3$Dt[3]              
+Dat$Mad	    <- dat3$madurezsexual        
+Dat$Wmed	  <- colMeans(dat3$Wmed)      
+Dat$Wini	  <- colMeans(dat3$Wini) 
+Dat$Sel     <- rep3$Sel_flota[1,] 
+
+Rmed3        <- mean(Rt3)           
+Bmed3        <- mean(BD3)         
+Fmedian3     <- exp(median(Ft3))
+
+Bobj        <-c(.85,.80,.60,.55,.52,.50,.45,.40,.30,.325,0.425)
+Fobj      	<- optim(par=rep(0.,11),fn=SPRFpbr,method='BFGS')
+
+SPR3 		    <- SPRFmort(Rmed3,c(0,Fobj$par,Fmedian3,rep3$Ftot[25]),Amax,Dat) 
+pSPR_Fmh3    <- as.numeric(SPR3[13,4])                     # Paso 2: Cálculo de la curva SPR
+pB_Fmh3      <- pSPR_Fmh3-0.05                             # Paso 3: Aproximación obtención de %BD(Fmh)
+SPRcurv3 		<- SPRFmort(R0,Fmort,Amax,Dat) 
+```
+
+
 ```{r pbrs septiembre, echo=T}
 # ASESORÍA DE SEPTIEMBRE
 Bo1           <- rep1$SSBpbr[1]                         # Paso 4: Obtenci?n de Bo
@@ -1826,25 +2166,74 @@ ln_Fyr1       <- Ft1                                    # logaritmo de Ft
 ln_FSE1       <- Ft1std                                 # logaritmo de la desviaci?n standar de Ft
 ```
 
+\pagebreak
+
+
+```{r pbrs marzo, echo=T}
+# ASESORÍA DE SEPTIEMBRE
+Bo2           <- rep2$SSBpbr[1]                         # Paso 4: Obtenci?n de Bo
+BRMS2         <- rep2$SSBpbr[3]                         # Paso 5: Obtenci?n de Brms = 60%SPRo = 55%Bo
+FRMS2         <- rep2$Fs[2]
+BLIM2         <- Bo2*0.275                              # Paso 6: Obtenci?n de Blim = 20%Bo 
+FLIM2         <- rep2$Fs[3]                             # Paso 6: Obtenci?n de Flim = 30%SPRo
+SpB2          <- BD2                                  # BD serie hist?rica de evaluaci?n de stock 
+SpBSE2        <- BD2std                               # desviaci?n estandar BD
+ln_Fyr2       <- Ft2                                    # logaritmo de Ft
+ln_FSE2       <- Ft2std                                 # logaritmo de la desviaci?n standar de Ft
+```
+
+\pagebreak
+
+
+```{r pbrs julio, echo=T}
+# ASESORÍA DE SEPTIEMBRE
+Bo3           <- rep3$SSBpbr[1]                         # Paso 4: Obtenci?n de Bo
+BRMS3         <- rep3$SSBpbr[3]                         # Paso 5: Obtenci?n de Brms = 60%SPRo = 55%Bo
+FRMS3         <- rep3$Fs[2]
+BLIM3         <- Bo3*0.275                              # Paso 6: Obtenci?n de Blim = 20%Bo 
+FLIM3         <- rep3$Fs[3]                             # Paso 6: Obtenci?n de Flim = 30%SPRo
+SpB3          <- BD3                                  # BD serie hist?rica de evaluaci?n de stock 
+SpBSE3        <- BD3std                               # desviaci?n estandar BD
+ln_Fyr3       <- Ft3                                    # logaritmo de Ft
+ln_FSE3       <- Ft3std                                 # logaritmo de la desviaci?n standar de Ft
+```
 
 \pagebreak
 
 
 ```{r Tabla_17 PBRs, echo=T,eval=F}
-Tabla3.1<-rbind( "BDpromedio"=c(round(Bmed1/10^3,0)),
-                 "Fmh"=c(round(Fmedian1,2)), 
-                 "%BDPR_Fmh"=c(pSPR_Fmh1*100), 
-                 "%BDPR_F~RMS~"=c(60),
-                 "%BD_Fmh"=c(pB_Fmh1*100),
-                 "%BD_F~RMS~"=c(55),
-                 "BDo"=c(round(Bo1/10^3,0)),
-                 "BD55%"=c(round(BRMS1/10^3,0)),
-                 "BD27.5%"=c(round(BLIM1/10^3,0)))
+Tabla3.1<-rbind( "BDpromedio"=c(round(Bmed1/10^3,0),
+                                round(Bmed2/10^3,0),
+                                round(Bmed3/10^3,0)),
+                 "Fmh"=c(round(Fmedian1,2),
+                         round(Fmedian2,2),
+                         round(Fmedian3,2)), 
+                 "%BDPR_Fmh"=c(pSPR_Fmh1*100,
+                               pSPR_Fmh2*100,
+                               pSPR_Fmh3*100), 
+                 "%BDPR_F~RMS~"=c(60,
+                                  60,
+                                  60),
+                 "%BD_Fmh"=c(pB_Fmh1*100,
+                             pB_Fmh2*100,
+                             pB_Fmh3*100),
+                 "%BD_F~RMS~"=c(55,
+                                55,
+                                55),
+                 "BDo"=c(round(Bo1/10^3,0),
+                         round(Bo2/10^3,0),
+                         round(Bo3/10^3,0)),
+                 "BD55%"=c(round(BRMS1/10^3,0),
+                           round(BRMS2/10^3,0),
+                           round(BRMS3/10^3,0)),
+                 "BD27.5%"=c(round(BLIM1/10^3,0),
+                             round(BLIM2/10^3,0),
+                             round(BLIM3/10^3,0)))
 
-colnames(Tabla3.1)<-c("Septiembre")
+colnames(Tabla3.1)<-c("Septiembre","Marzo","Julio")
 kable(Tabla3.1, align = 'c')
 
-write.csv(Tabla3.1, file="Tabla21_PBRsporasesoria.csv")
+write.csv(Tabla3.1, file="Tablas/Tabla21_PBRsporasesoria.csv")
 
 
 ```
@@ -1854,7 +2243,11 @@ write.csv(Tabla3.1, file="Tabla21_PBRsporasesoria.csv")
 ```{r Fig37,warning=F, include=T, message=F, echo=T,fig.height=4.5,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 BD <- ggplot() + 
-     geom_line(data=VarPobSep,aes(y=BD1, x=x, colour = "septiembre 2021"), size=0.5)+
+     #geom_line(data=VarPobJul,aes(y=BD3, x=x, colour = "julio 2021"), linetype="solid",size=0.5)+
+     #geom_line(data=VarPobMar,aes(y=BD2, x=x, colour = "marzo 2021"), linetype="dashed",size=0.5)+
+     geom_line(data=VarPobSep,aes(y=BD1, x=x, colour = "septiembre 2021"), linetype="solid",size=0.5)+
+     #geom_ribbon(data=VarPobJul,aes(ymin=lowerBD3, ymax=upperBD3, x=x, fill = "IC_julio2021"), alpha = 0.2)+
+     #geom_ribbon(data=VarPobMar,aes(ymin=lowerBD2, ymax=upperBD2, x=x, fill = ""), alpha = 0.2)+
      geom_ribbon(data=VarPobSep,aes(ymin=lowerBD1, ymax=upperBD1, x=x, fill = ""), alpha = 0.2)+
      geom_hline(yintercept = c(BRMS1,BLIM1,Bo1,Bmed1),colour=c('green3','red','blue','black'))+
      annotate("text", x=c(rep(2000,3),2012), y=c(BRMS1*1.1,BLIM1*1.1,Bo1*1.1,Bmed1*1.1),
@@ -1862,21 +2255,27 @@ BD <- ggplot() +
      labs(x = '', y = 'Biomasa desovante (t)',colour='Asesorías')  +
      scale_x_continuous(breaks = seq(from = 1960, to = 2022, by = 4)) +
      scale_colour_manual("",values=c("black"))+
-     scale_fill_manual("",values=c('gray75'))+
-     theme_bw(base_size=12) +
+     scale_linetype_manual(values=c("solid"))+
+     scale_fill_manual("",values=c("grey60"))+
+     theme_bw(base_size=10) +
      ggtitle('')+
-     theme(plot.title = element_text(hjust = 0.5),legend.position="top",legend.text = element_text(size=6))
+     theme(plot.title = element_text(hjust = 0.5),legend.position="top",legend.text = element_text(size=7))
 
 Ft <- ggplot() + 
-    geom_line(data=VarPobSep,aes(y=Ft1, x=x, colour = "septiembre 2021"), size=0.5)+
-    geom_ribbon(data=VarPobSep,aes(ymin=lowerFt1, ymax=upperFt1, x=x, fill = ""), alpha = 0.2)+
+    #geom_line(data=VarPobJul,aes(y=Ft3, x=x, colour = "julio 2021"),linetype="solid", size=0.5)+
+    #geom_line(data=VarPobMar,aes(y=Ft2, x=x, colour = "marzo 2021"), linetype="dashed",size=0.5)+
+    geom_line(data=VarPobSep,aes(y=Ft1, x=x, colour = "septiembre 2021"), linetype="solid",size=0.5)+
+    #geom_ribbon(data=VarPobJul,aes(ymin=lowerFt3, ymax=upperFt3, x=x, fill = "IC_julio2021"), alpha = 0.2)+
+    #geom_ribbon(data=VarPobMar,aes(ymin=lowerFt2, ymax=upperFt2, x=x, fill = ""), alpha = 0.2)+
+    geom_ribbon(data=VarPobSep,aes(ymin=lowerFt1, ymax=upperFt1, x=x, fill = "IC"), alpha = 0.2)+
      geom_hline(yintercept = c(FRMS1,median(VarPobSep$Ft1)),colour=c('green3','black')) +
      annotate("text", x=c(2016,2003), y=c(FRMS1*1.02, median(exp(ln_Fyr1)))*1.2, label=c(expression("F"[RMS]), expression("F"[mh]))) +
     labs(x = '', y = 'Mortalidad por pesca (1/año)',colour='Asesorías')  +
     scale_x_continuous(breaks = seq(from = 1960, to = 2022, by = 4)) +
     scale_colour_manual("",values=c("black"))+
-    scale_fill_manual("",values=c('gray75'))+
-    theme_bw(base_size=12) +
+    scale_linetype_manual(values=c("solid"))+
+     scale_fill_manual("",values=c("grey60"))+
+     theme_bw(base_size=10) +
      ggtitle('')+
      theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 
@@ -1941,10 +2340,10 @@ EstatusSep<- data.frame(x=years1,
                         upperFrpr1 = (Frpr1 +1.96*Frpr1std))
 
 #Para densidad de probabilidad
-rprSEPT     <-subset(std1,name=="RPRequ3")$value[nyears1-1]
-rprSEPTstd  <-subset(std1,name=="RPRequ3")$std[nyears1-1]
-FrprSEPT    <-subset(std1,name=="Frpr")$value[nyears1-1]
-FrprSEPTstd <-subset(std1,name=="Frpr")$std[nyears1-1]
+rprSEPT     <-subset(std1,name=="RPRequ3")$value[nyears1]
+rprSEPTstd  <-subset(std1,name=="RPRequ3")$std[nyears1]
+FrprSEPT    <-subset(std1,name=="Frpr")$value[nyears1]
+FrprSEPTstd <-subset(std1,name=="Frpr")$std[nyears1]
 
 # biomasa desovante vs BDrms
 xbs1 <-rnorm(1000, mean = rprSEPT, sd = rprSEPTstd)
@@ -1993,56 +2392,203 @@ pe_sept<-1-pnorm(1.1,FrprSEPT,FrprSEPTstd,lower.tail = TRUE,log.p = F)
 
 \pagebreak
 
+## 3.7. Estatus
+
+```{r Estatus_marzo, echo=T,message=FALSE, warning=FALSE, include=T}
+
+years2<-rep2$years
+nyears2<-length(years2)
+
+#para serie histórica indicadores del estatus
+Rpr2     <- subset(std2,name=="RPRequ3")$value; 
+Rpr2std  <- subset(std2,name=="RPRequ3")$std
+Frpr2    <- subset(std2,name=="Frpr")$value; 
+Frpr2std <- subset(std2,name=="Frpr")$std
+
+EstatusMar<- data.frame(x=years2, 
+                        Rpr2=Rpr2,
+                        Frpr2=Frpr2,
+         lowerRpr2  = (Rpr2 - 1.96*Rpr2std ),
+         upperRpr2   = (Rpr2 +1.96*Rpr2std ),
+         lowerFrpr2 = (Frpr2 -1.96*Frpr2std), 
+         upperFrpr2 = (Frpr2+1.96*Frpr2std))
+
+#Para densidad de probabilidad
+rprMARZO     <-subset(std2,name=="RPRequ3")$value[nyears2]
+rprMARZOstd  <-subset(std2,name=="RPRequ3")$std[nyears2]
+FrprMARZO    <-subset(std2,name=="Frpr")$value[nyears2]
+FrprMARZOstd <-subset(std2,name=="Frpr")$std[nyears2]
+# biomasa desovante vs BDrms - densidad de probabilidad
+xbm1 <-rnorm(1000, mean = rprMARZO, sd = rprMARZOstd)
+xbm  <-seq(min(xbm1),max(xbm1),0.005)
+ybm  <-dnorm(xbm, mean = rprMARZO, sd =rprMARZOstd)
+icbm <-qnorm(c(0.05,0.95,0.5),rprMARZO,rprMARZOstd)
+# mortalidad por pesca vs Frms - densidad de probabilidad
+xfm1 <- rnorm(1000, mean = FrprMARZO, sd = FrprMARZOstd)
+xfm  <-seq(min(xfm1),max(xfm1),0.005)
+yfm  <-dnorm(xfm, mean = FrprMARZO, sd =FrprMARZOstd)
+icfm <-qnorm(c(0.05,0.95,0.5),FrprMARZO,FrprMARZOstd)
+#distribución probabilidad
+xxbm      <- c(xbm[xbm>=icbm[1]&xbm<=icbm[2]],
+               rev(xbm[xbm>=icbm[1]&xbm<=icbm[2]]))
+
+yybm      <- c(ybm[xbm>=icbm[1]&xbm<=icbm[2]],
+               rep(0,length(ybm[xbm>=icbm[1]&xbm<=icbm[2]])))
+
+xxfm      <- c(xfm[xfm>=icfm[1]&xfm<=icfm[2]],
+               rev(xfm[xfm>=icfm[1]&xfm<=icfm[2]]))
+
+yyfm      <- c(yfm[xfm>=icfm[1]&xfm<=icfm[2]],
+               rep(0,length(yfm[xfm>=icfm[1]&xfm<=icfm[2]])))
+
+densb_bm  <- data.frame(x=xxbm, y=yybm , t=rep('a', length(xxbm)), r=seq(1,length(xxbm),1))
+densb_fm  <- data.frame(x=xxfm, y=yyfm , t=rep('a', length(xxfm)), r=seq(1,length(xxfm),1))
+
+### *Probabilidad de estar bajo BRMS*
+#Asesoría marzo #P(BD<BDrms) 
+pa_mar<-pnorm(1,rprMARZO,rprMARZOstd,lower.tail = TRUE,log.p = F)
+### *Probabilidad de estar bajo FRMS*
+#Asesoría marzo #P(F>Frms)
+pb_mar<-1-pnorm(1,FrprMARZO,FrprMARZOstd,lower.tail = TRUE,log.p = F)
+### *Probabilidad de estar en zona de sobreexplotacion*
+#Asesoría marzo #P(BD<BDrms) 
+pc_mar<-pnorm(0.9,rprMARZO,rprMARZOstd,lower.tail = TRUE,log.p = F)
+### *Probabilidad de estar en zona de colapso*
+#Asesoría marzo #P(BD<BDrms) 
+pd_mar<-pnorm(0.5,rprMARZO,rprMARZOstd,lower.tail = TRUE,log.p = F)
+### *Probailidad de sobrepesca*
+#Asesoría marzo #P(F>Frms)
+pe_mar<-1-pnorm(1.1,FrprMARZO,FrprMARZOstd,lower.tail = TRUE,log.p = F)
+
+```
+
+```{r Estatus_julio, echo=T,message=FALSE, warning=FALSE, include=T}
+
+years3  <-rep3$years
+nyears3 <-length(years3)
+
+#para serie histórica indicadores del estatus
+Rpr3     <- subset(std3,name=="RPRequ3")$value; 
+Rpr3std  <- subset(std3,name=="RPRequ3")$std
+Frpr3    <- subset(std3,name=="Frpr")$value; 
+Frpr3std <- subset(std3,name=="Frpr")$std
+
+EstatusJul<- data.frame(x=years3,
+                        Rpr3=Rpr3,
+                        Frpr3=Frpr3,
+         lowerRpr3   = (Rpr3  -1.96*Rpr3std ), 
+         upperRpr3   = (Rpr3 +1.96*Rpr3std ),
+         lowerFrpr3  = (Frpr3 -1.96*Frpr3std), 
+         upperFrpr3  = (Frpr3 +1.96*Frpr3std))
+
+#Para densidad de probabilidad
+rprJULIO     <-subset(std3,name=="RPRequ3")$value[nyears3]
+rprJULIOstd  <-subset(std3,name=="RPRequ3")$std[nyears3]
+FrprJULIO    <-subset(std3,name=="Frpr")$value[nyears3]
+FrprJULIOstd <-subset(std3,name=="Frpr")$std[nyears3]
+# biomasa desovante vs BDrms - densidad de probabilidad
+xbj1 <-rnorm(1000, mean = rprJULIO, sd = rprJULIOstd)
+xbj  <-seq(min(xbj1),max(xbj1),0.005)
+ybj  <-dnorm(xbj, mean = rprJULIO, sd =rprJULIOstd)
+icbj <-qnorm(c(0.05,0.95,0.5),rprJULIO,rprJULIOstd)
+# mortalidad por pesca vs Frms - densidad de probabilidad
+xfj1 <- rnorm(1000, mean = FrprJULIO, sd = FrprJULIOstd)
+xfj  <-seq(min(xfj1),max(xfj1),0.005)
+yfj  <-dnorm(xfj, mean = FrprJULIO, sd =FrprJULIOstd)
+icfj <-qnorm(c(0.05,0.95,0.5),FrprJULIO,FrprJULIOstd)
+#distribución probabilidad
+xxbj      <- c(xbj[xbj>=icbj[1]&xbj<=icbj[2]],rev(xbj[xbj>=icbj[1]&xbj<=icbj[2]]))
+yybj      <- c(ybj[xbj>=icbj[1]&xbj<=icbj[2]],rep(0,length(ybj[xbj>=icbj[1]&xbj<=icbj[2]])))
+xxfj      <- c(xfj[xfj>=icfj[1]&xfj<=icfj[2]],rev(xfj[xfj>=icfj[1]&xfj<=icfj[2]]))
+yyfj      <- c(yfj[xfj>=icfj[1]&xfj<=icfj[2]],rep(0,length(yfj[xfj>=icfj[1]&xfj<=icfj[2]])))
+
+densb_bj  <- data.frame(x=xxbj, y=yybj , t=rep('a', length(xxbj)), r=seq(1,length(xxbj),1))
+densb_fj  <- data.frame(x=xxfj, y=yyfj , t=rep('a', length(xxfj)), r=seq(1,length(xxfj),1))
+
+### *Probabilidad de estar bajo BRMS*
+#Asesoría julio #P(BD<BDrms) 
+pa_jul<-pnorm(1,rprJULIO,rprJULIOstd,lower.tail = TRUE,log.p = F)
+### *Probabilidad de estar bajo FRMS*
+#Asesoría julio#P(F>Frms)
+pb_jul<-1-pnorm(1,FrprJULIO,FrprJULIOstd,lower.tail = TRUE,log.p = F)
+### *Probabilidad de estar en zona de sobreexplotacion*
+#Asesoría julio #P(BD<BDrms) 
+pc_jul<-pnorm(0.9,rprJULIO,rprJULIOstd,lower.tail = TRUE,log.p = F)
+### *Probabilidad de estar en zona de colapso*
+#Asesoría julio #P(BD<BDrms) 
+pd_jul<-pnorm(0.5,rprJULIO,rprJULIOstd,lower.tail = TRUE,log.p = F)
+### *Probailidad de sobrepesca*
+#Asesoría julio #P(F>Frms)
+pe_jul<-1-pnorm(1.1,FrprJULIO,FrprJULIOstd,lower.tail = TRUE,log.p = F)
+
+```
+
 \pagebreak
 
 
 ```{r Fig39,warning=F, include=T, message=F, echo=T,fig.height=6.5,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
 
-BD_BDrms <- ggplot() +
-     geom_line(data=EstatusSep,aes(y=Rpr1, x=x, colour = "septiembre 2021"), size=0.5)+
+BD_BDrms <- ggplot() + 
+     #geom_line(data=EstatusJul,aes(y=Rpr3, x=x, colour = "julio 2021"), linetype="solid", size=0.5)+
+     #geom_line(data=EstatusMar,aes(y=Rpr2, x=x, colour = "marzo 2021"), linetype="dashed",size=0.5)+
+     geom_line(data=EstatusSep,aes(y=Rpr1, x=x, colour = "septiembre 2021"), linetype="solid",size=0.5)+
+     #geom_ribbon(data=EstatusJul,aes(ymin=lowerRpr3, ymax=upperRpr3, x=x, fill = "IC_julio2021"), alpha = 0.2)+
+    # geom_ribbon(data=EstatusMar,aes(ymin=lowerRpr2, ymax=upperRpr2, x=x, fill = ""), alpha = 0.2)+
      geom_ribbon(data=EstatusSep,aes(ymin=lowerRpr1, ymax=upperRpr1, x=x, fill = ""), alpha = 0.2)+
      geom_hline(yintercept = c(1,0.5),colour=c('green3','red'))+
      annotate("text", x=c(2012,2012), y=c(1,0.5)+0.06,
-     label=c(expression("BD"[RMS]),expression("BD"[LIM]))) +
+              label=c(expression("BD"[RMS]),expression("BD"[LIM]))) +
      labs(x = '', y = expression("BD/BD"[RMS]),colour='Asesorías',tag="a)")  +
      scale_x_continuous(breaks = seq(from = 1960, to = 2062, by = 2)) +
      scale_colour_manual("",values=c("black"))+
-     scale_fill_manual("",values=c('gray75'))+
+     scale_linetype_manual(values=c("solid"))+
+     scale_fill_manual("",values=c("grey60"))+
      theme_bw(base_size=10) +
      ggtitle('')+
      theme(plot.title = element_text(hjust = 0.5),legend.position="top")
 
 F_Frms <- ggplot() + 
-     geom_line(data=EstatusSep,aes(y=Frpr1, x=x, colour = "septiembre 2021"), size=0.5)+
-     geom_ribbon(data=EstatusSep,aes(ymin=lowerFrpr1, ymax=upperFrpr1, x=x, fill = ""), alpha = 0.2)+
+    #geom_line(data=EstatusJul,aes(y=Frpr3, x=x, colour = "julio 2021"), linetype="solid",size=0.5)+
+    #geom_line(data=EstatusMar,aes(y=Frpr2, x=x, colour = "marzo 2021"), linetype="dashed",size=0.5)+
+    geom_line(data=EstatusSep,aes(y=Frpr1, x=x, colour = "septiembre 2021"), linetype="solid",size=0.5)+
+    #geom_ribbon(data=EstatusJul,aes(ymin=lowerFrpr3, ymax=upperFrpr3, x=x, fill = "IC_julio2021"), alpha = 0.2)+
+    #geom_ribbon(data=EstatusMar,aes(ymin=lowerFrpr2, ymax=upperFrpr2, x=x, fill = ""), alpha = 0.2)+
+    geom_ribbon(data=EstatusSep,aes(ymin=lowerFrpr1, ymax=upperFrpr1, x=x, fill = "IC"), alpha = 0.2)+
      geom_hline(yintercept = 1,colour=c('green3')) +
      annotate("text", x=2012, y=1+0.25,label=c(expression("F"[RMS]))) +
-     labs(x = '', y = expression("F/F"[RMS]),colour='Asesorías',tag="c)")  +
-     scale_x_continuous(breaks = seq(from = 1960, to = 2062, by = 2)) +
-     scale_colour_manual("",values=c("black"))+
-     scale_fill_manual("",values=c('gray75'))+
+    labs(x = '', y = expression("F/F"[RMS]),colour='Asesorías',tag="c)")  +
+    scale_x_continuous(breaks = seq(from = 1960, to = 2062, by = 2)) +
+    scale_colour_manual("",values=c("black"))+
+     scale_linetype_manual(values=c("solid"))+
+     scale_fill_manual("",values=c("grey60"))+
      theme_bw(base_size=10) +
      ggtitle('')+
      theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 
 fig_desnb<- ggplot() + lims(y=c(0,4)) +
-     geom_polygon(data=densb_bs,aes(x=x, y=y, group=t,alpha=0.9),fill="gray35")+
-     geom_line(aes(xbs,ybs), size=0.3,color="black")+
-     annotate("text", x=c(1), y=c(3.35), colour = c("black"), size = 2.5,
-     label=c(paste("IC95%_sept2021 = [",round(icbs[1],3),"-",round(icbs[2],3),"]",sep=" "))) +
+     #geom_polygon(data=densb_bj,aes(x=x, y=y, group=t,alpha=0.9),fill="gray80")+
+     #geom_polygon(data=densb_bm,aes(x=x, y=y, group=t,alpha=0.9),fill="gray70")+
+     geom_polygon(data=densb_bs,aes(x=x, y=y, group=t,alpha=0.9),fill="gray55")+
+     #geom_line(aes(xbj,ybj), size=0.3,color="blue",linetype="solid")+
+     #geom_line(aes(xbm,ybm), size=0.3,color="red",linetype="dashed")+
+     geom_line(aes(xbs,ybs), size=0.3,color="black",linetype="solid")+
+     annotate("text", x=c(0.5), y=c(3.9), colour = c("black"), size = 2.5,
+              label=c(paste("IC95%_sept2021 = [",round(icbs[1],3),"-",round(icbs[2],3),"]",sep=" "))) +
      labs(x = expression("BD"[2021]*"/BD"[RMS]), y = 'Densidad de probabilidad',tag="b)")  +
-     scale_colour_manual("",values=c("black"))+
-     scale_fill_manual("",values=c('gray75'))+
-     theme_bw(base_size=10) + 
+     theme_bw(base_size=10) +
      theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 
-fig_desnf<- ggplot() + lims(y=c(0,3))+
-     geom_polygon(data=densb_fs,aes(x=x, y=y, group=t,alpha=0.9),fill="gray35")+
-     geom_line(aes(xfs,yfs), size=0.3,color="black")+
-     annotate("text", x=c(0.9), y=c(2.6), colour = c("black"), size = 2.5,
-     label=c(paste("IC95%_sept2021  = [",round(icfs[1],3),"-",round(icfs[2],3),"]",sep=" "))) +
+fig_desnf<- ggplot() + lims(y=c(0,2))+
+     #geom_polygon(data=densb_fj,aes(x=x, y=y, group=t,alpha=0.9),fill="gray80")+
+     #geom_polygon(data=densb_fm,aes(x=x, y=y, group=t,alpha=0.9),fill="gray70")+
+     geom_polygon(data=densb_fs,aes(x=x, y=y, group=t,alpha=0.9),fill="gray55")+
+     #geom_line(aes(xfj,yfj), size=0.3,color="blue",linetype="solid")+
+     #geom_line(aes(xfm,yfm), size=0.3,color="red",linetype="dashed")+
+     geom_line(aes(xfs,yfs), size=0.3,color="black",linetype="solid")+
+     annotate("text", x=c(0.9), y=c(1.9), colour = c("black"), size = 2.5,
+              label=c(paste("IC95%_sept2021  = [",round(icfs[1],3),"-",round(icfs[2],3),"]",sep=" "))) +
      labs(x = expression("F"[2021]*"/F"[RMS]), y = 'Densidad de probabilidad',tag="d)")  +
-     theme_bw(base_size=10) + 
+     theme_bw(base_size=10) +
      theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 
 
@@ -2059,11 +2605,15 @@ yearsb<-c("1990/91","1991/92","1992/93","1993/94","1994/95","1995/96","1996/97",
 
 VarPobl2<- cbind('Años'=yearsb,
                  "$F/F_{RMS_{sept}}$"=c(round(exp(Ft1)/FRMS1,3)),
-                 "$BD/BD_{RMS_{sept}}$"=c(round(BD1/BRMS1,3)))
+                 "$F/F_{RMS_{marzo}}$"=c(round(exp(Ft2)/FRMS2,3)),
+                 "$F/F_{RMS_{julio}}$"=c(round(exp(Ft3)/FRMS3,3)),
+                 "$BD/BD_{RMS_{sept}}$"=c(round(BD1/BRMS1,3)),
+                 "$BD/BD_{RMS_{marzo}}$"=c(round(BD2/BRMS2,3)),
+                 "$BD/BD_{RMS_{julio}}$"=c(round(BD3/BRMS3,3)))
 kable(VarPobl2, align = 'c')
 
 #setwd(dir.basedatos)
-write.csv(VarPobl2, file="Tabla_22_indicesReduccion.csv")
+write.csv(VarPobl2, file="Tablas/Tabla_22_indicesReduccion.csv")
 #setwd(dir.1)
 
 ```
@@ -2074,11 +2624,15 @@ yearsb<-c("1990/91","1991/92","1992/93","1993/94","1994/95","1995/96","1996/97",
 
 VarPobl2b<- cbind('Años'=yearsb,
                  "$Y/BT_{sept}$"=c(round(rep1$desembarquepred/BT1,3)),
-                 "$C/N_{sept}$"=c(round(c(rowSums(rep1$pred_Ctot)/rowSums(rep1$N),NA),3)))
+                  "$Y/BT_{marzo}$"=c(round(rep2$desembarquepred/BT2,3)),
+                 "$Y/BT_{julio}$"=c(round(rep3$desembarquepred/BT3,3)),
+                 "$C/N_{sept}$"=c(round(c(rowSums(rep1$pred_Ctot)/rowSums(rep1$N)),3)),
+                  "$C/N_{marzo}$"=c(round(rowSums(rep2$pred_Ctot)/rowSums(rep2$N),3)),
+                 "$C/N_{julio}$"=c(round(rowSums(rep3$pred_Ctot)/rowSums(rep3$N),3)))
 kable(VarPobl2b, align = 'c')
 
 #setwd(dir.basedatos)
-write.csv(VarPobl2b, file="Tabla_23_tasasExplotacion.csv")
+write.csv(VarPobl2b, file="Tablas/Tabla_23_tasasExplotacion.csv")
 #setwd(dir.1)
 
 ```
@@ -2116,41 +2670,124 @@ text(c(SpB1[1]/BRMS1,SpB1[nyears1]/BRMS1,SpB1[nyears1-1]/BRMS1),
 
 ```
 
+\pagebreak
+
+```{r Fig41, warning=F, include=T, message=F, echo=T,fig.height=4,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
+source(paste(dir.fun,"Fn_DiagramaFase2.R",sep=""))
+name2<-"Asesoría de Marzo 2021"
+years2<-rep2$years
+nyears2<-length(years2)
+
+DiagramaFase2(name2,
+             years2[1:nyears2-1],
+             SpB2[1:nyears2-1],
+             SpBSE2[1:nyears2-1],
+             ln_Fyr2[1:nyears2-1],
+             ln_FSE2[1:nyears2-1],
+             SpB2[nyears2],
+             SpBSE2[nyears2],
+             ln_Fyr2[nyears2],
+             ln_FSE2[nyears2],
+             FRMS2,
+             BRMS2,
+             BLIM2,
+             FLIM2,
+             color=F,
+             dir.1,
+             etiqueta=F,
+             preliminar=T,
+             completo=F)
+
+text(c(SpB2[1]/BRMS2,SpB2[nyears2]/BRMS2,SpB2[nyears2-1]/BRMS2),
+     c(exp(ln_Fyr2[1])/FRMS2-0.05,exp(ln_Fyr2[nyears2])/FRMS2-0.05,exp(ln_Fyr2[nyears2-1])/FRMS2+0.05), c("1990/91","2020/21","2019/20"),cex=1.2)
+
+```
+
+\pagebreak
+
+```{r Fig41b, warning=F, include=T, message=F, echo=T,fig.height=4,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
+source(paste(dir.fun,"Fn_DiagramaFase2.R",sep=""))
+name3<-"Asesoría de Julio 2021"
+years3<-rep3$years
+nyears3<-length(years3)
+
+DiagramaFase2(name3,
+             years3[1:nyears3-1],
+             SpB3[1:nyears3-1],
+             SpBSE3[1:nyears3-1],
+             ln_Fyr3[1:nyears3-1],
+             ln_FSE3[1:nyears3-1],
+             SpB3[nyears3],
+             SpBSE3[nyears3],
+             ln_Fyr3[nyears3],
+             ln_FSE3[nyears3],
+             FRMS3,
+             BRMS3,
+             BLIM3,
+             FLIM3,
+             color=F,
+             dir.1,
+             etiqueta=F,
+             preliminar=F,
+             completo=T)
+
+text(c(SpB3[1]/BRMS3,SpB3[nyears3]/BRMS3,SpB3[nyears3-1]/BRMS3),
+     c(exp(ln_Fyr3[1])/FRMS3-0.05,exp(ln_Fyr3[nyears3])/FRMS3-0.05,exp(ln_Fyr3[nyears3-1])/FRMS3+0.05), c("1990/91","2020/21","2019/20"),cex=1.2)
+
+```
 
 \pagebreak
 
 
 ```{r Tabla26, echo=T}
-Tabla4.1<-rbind("Año biológico"=c("2020/21"),
-                "$F_{RMS}$"=c(round(FRMS1,2)),
-                "$BD_{RMS}$"=c(round(BRMS1/10^3,0)),
-                "$BD_{LIM}$"=c(round(BLIM1/10^3,0)),
-                "$p(BD_{last}<BD_{RMS})$"=round(c(pa_sept),2),
-                "$p(F_{last}>F_{RMS})$"=round(c(pb_sept),2),
-                "$p(sobre-explotación)$"=round(c(pc_sept),2),
-                "$p(agotado/colapsado)$"=round(c(pd_sept),2),
-                "$p(sobrepesca)$"=round(c(pe_sept),2))
-colnames(Tabla4.1)<-c("Septiembre 2021")
+Tabla4.1<-rbind("Año biológico"=c("2020/21",
+                                  "2020/21",
+                                  "2020/21"),
+                "$F_{RMS}$"=c(round(FRMS1,2),
+                              round(FRMS2,2),
+                              round(FRMS3,2)),
+                "$BD_{RMS}$"=c(round(BRMS1/10^3,0),
+                               round(BRMS2/10^3,0),
+                               round(BRMS3/10^3,0)),
+                "$BD_{LIM}$"=c(round(BLIM1/10^3,0),
+                               round(BLIM2/10^3,0),
+                               round(BLIM3/10^3,0)),
+                "$p(BD_{last}<BD_{RMS})$"=round(c(pa_sept,
+                                                  pa_mar,
+                                                  pa_jul),2),
+                "$p(F_{last}>F_{RMS})$"=round(c(pb_sept,
+                                                pb_mar,
+                                                pb_jul),2),
+                "$p(sobre-explotación)$"=round(c(pc_sept,
+                                                 pc_mar,
+                                                 pc_jul),2),
+                "$p(agotado/colapsado)$"=round(c(pd_sept,
+                                                 pd_mar,
+                                                 pd_jul),2),
+                "$p(sobrepesca)$"=round(c(pe_sept,
+                                          pe_mar,
+                                          pe_jul),2))
+colnames(Tabla4.1)<-c("Septiembre 2021","Marzo 2021","Julio 2021")
 kable(Tabla4.1,align='c')
 ```
 
-## 3.8. CBA 2021 Inicial (Asesoría de septiembre 2020)
+## 3.8. CBA 2021 Inicial (Asesoría de septiembre 2021)
 
 ```{r Fig42,  warning=F, include=T, message=F, echo=FALSE,fig.height=3,fig.width=5,fig.align="center",fig.path=dir.Fig,dev=fig}
 library(strucchange)
 years1<-rep1$years
 nyears1<-length(years1)
-bp.nile <- breakpoints(rep1$Reclutas ~ 1)
-fm0 <- lm(rep1$Reclutas ~ 1)
-fm1 <- lm(rep1$Reclutas ~ breakfactor(bp.nile, breaks = 2))
+bp.nile <- breakpoints(rep1$Reclutas/1000 ~ 1)
+fm0 <- lm(rep1$Reclutas/1000 ~ 1)
+fm1 <- lm(rep1$Reclutas/1000 ~ breakfactor(bp.nile, breaks = 2))
 quiebres3<-fitted(fm1)
 
 par(mfrow=c(1,1),mar=c(2,4,1,1))
-plot(years1,rep1$Reclutas,type="l",lty=2,pch=19,ylim=c(0,700000),
-     xaxp=c(1990,2020,30),yaxs="i",xlab="",ylab="Reclutamientos",main="Escenarios de reclutamiento proyectado",cex.main=0.8,cex.axis=0.8,cex.lab=0.8)
-points(years1,rep1$Reclutas,col=1,pch=19)
+plot(years1,rep1$Reclutas/1000,type="l",lty=2,pch=19,ylim=c(0,700),
+     xaxp=c(1990,2020,30),yaxs="i",xlab="",ylab="Reclutamientos (miles de millones de ind.)",main="Escenarios de reclutamiento proyectado",cex.main=0.8,cex.axis=0.8,cex.lab=0.8)
+points(years1,rep1$Reclutas/1000,col=1,pch=19)
 lines(years1,quiebres3,lwd=2,col=4)
-text(c(1999,2010,2017),c(fitted(fm1)[1],fitted(fm1)[18],fitted(fm1)[23])+20000,round(c(fitted(fm1)[1],fitted(fm1)[18],fitted(fm1)[23]),0),col=2,font=1,cex=0.8)
+text(c(1999,2010,2017),c(fitted(fm1)[1],fitted(fm1)[18],fitted(fm1)[23])+20,round(c(fitted(fm1)[1],fitted(fm1)[18],fitted(fm1)[23]),0),col=2,font=1,cex=0.8)
 
 ```
 
@@ -2211,6 +2848,221 @@ row.names(descarte)<-c("1991-2007","2008-2012","2013-2020")
 kable(t(descarte))
 ```
 
+## 3.9.  Primera revisión CBA 2021  (Asesoría de marzo 2021)
+
+```{r Fig43,  warning=F, include=T, message=F, echo=FALSE,fig.height=3,fig.width=5,fig.align="center",fig.path=dir.Fig,dev=fig}
+library(strucchange)
+years1<-rep2$years
+nyears1<-length(years1)
+bp.nile <- breakpoints(rep2$Reclutas/1000 ~ 1)
+fm0 <- lm(rep2$Reclutas/1000 ~ 1)
+fm1 <- lm(rep2$Reclutas/1000 ~ breakfactor(bp.nile, breaks = 2))
+quiebres3<-fitted(fm1)
+
+par(mfrow=c(1,1),mar=c(2,4,1,1))
+plot(years1,rep2$Reclutas/1000,type="l",lty=2,pch=19,ylim=c(0,700),
+     xaxp=c(1990,2021,31),yaxs="i",xlab="",ylab="Reclutamientos (miles de millones de ind.)",main="Escenarios de reclutamiento proyectado",cex.main=0.8,cex.axis=0.8,cex.lab=0.8)
+points(years1,rep2$Reclutas/1000,col=1,pch=19)
+lines(years1,quiebres3,lwd=2,col=4)
+text(c(1999,2010,2017),c(fitted(fm1)[1],fitted(fm1)[18],fitted(fm1)[23])+20,round(c(fitted(fm1)[1],fitted(fm1)[18],fitted(fm1)[23]),0),col=2,font=1,cex=0.8)
+```
+
+
+```{r CBAinicial_marzo, eval=T, echo=FALSE, warning=F, include=T, message=F}
+
+dir.4<-paste(dir.0,"/CBA_marzo/",sep="")
+
+EscRecl<-seq(1,3,1) #escenarios de reclutamiento basado en anÃ¡lisis de quiebres
+nes<-length(EscRecl)
+q       <- seq(0.1,0.5,0.1)  # niveles de riesgo (cuantiles)                            
+nq      <- length(q)                                                                    
+CBA_marzo     <- matrix(ncol=nq,nrow=nes)
+CBAp_marzo    <- matrix(ncol=1,nrow=1)
+CBApstd_marzo <- matrix(ncol=1,nrow=1)
+
+buffer   <- matrix(ncol=nq,nrow=nes)
+descarte <- matrix(ncol=nq,nrow=nes)
+
+for(i in 1:nes){
+	std     <- read.table(paste(dir.4,"MAE03211",i,".std",sep=""),header=T,sep="",na="NA",fill=T)  
+	CBAp_marzo[i]    <-subset(std,name=="CBA_c0")$value[1]
+	CBApstd_marzo[i] <-subset(std,name=="CBA_c0")$std[1]
+	for(j in 1:nq){	CBA_marzo[i,j]<-qnorm(q[j],CBAp_marzo[i],CBApstd_marzo[i])}}
+
+```
+
+```{r Tabla29a_CBAinicial_marzo,eval=T, echo=FALSE, warning=F, include=T, message=F}
+tCBA_marzo<-cbind(CBAp_marzo,CBApstd_marzo,CBA_marzo)
+colnames(tCBA_marzo)<-c("mean","std",c("10%","20%","30%","40%","50%"))
+row.names(tCBA_marzo)<-c("1991-2007","2008-2012","2013-2021")
+kable(t(round(tCBA_marzo,0)))
+```
+
+```{r Tabla30_resguardo_marzo, eval=T,echo=FALSE, warning=F, include=T, message=F}
+for(i in 1:nes){for(j in 1:nq){	
+buffer[i,j]<-round(1-CBA_marzo[i,j]/CBA_marzo[i,5],2)}}
+colnames(buffer)<-c("10%","20%","30%","40%","50%")
+row.names(buffer)<-c("1991-2007","2008-2012","2013-2021")
+kable(t(buffer))
+```
+
+```{r Tabla31_descarte_marzo, eval=T, echo=FALSE, warning=F, include=T, message=F}
+for(i in 1:nes){for(j in 1:nq){	
+descarte[i,j]<-round(CBA_marzo[i,j]*0.96,0)}} # descarte 4% (1-0.04 = 0.94)
+colnames(descarte)<-c("10%","20%","30%","40%","50%")
+row.names(descarte)<-c("1991-2007","2008-2012","2013-2021")
+kable(t(descarte))
+```
+
+```{r Tabla31b_diferenciasdescarte_marzo, eval=T, echo=FALSE, warning=F, include=T, message=F}
+
+descarte_marzo <- matrix(ncol=nq,nrow=nes)
+descarte_sept <- matrix(ncol=nq,nrow=nes)
+
+for(i in 1:nes){for(j in 1:nq){	
+descarte_marzo[i,j]<-round(CBA_marzo[i,j]*0.96,0)}} # descarte 4% (1-0.04 = 0.94)
+for(i in 1:nes){for(j in 1:nq){	
+descarte_sept[i,j]<-round(CBA_sept[i,j]*0.94,0)}} # descarte 2% (1-0.06 = 0.94)
+
+tablaincrementos<--round(1-(descarte_marzo/descarte_sept),2)*100
+colnames(tablaincrementos)<-c("10%","20%","30%","40%","50%")
+row.names(tablaincrementos)<-c("1991-2007","2008-2012","2013-2021")
+kable(t(tablaincrementos))
+
+```
+
+\pagebreak
+
+## 4.0.  Segunda revisión CBA 2021  (Asesoría de julio 2021)
+
+```{r Fig44,  warning=F, include=T, message=F, echo=FALSE,fig.height=3,fig.width=5,fig.align="center",fig.path=dir.Fig,dev=fig}
+library(strucchange)
+years1<-rep3$years
+nyears1<-length(years1)
+bp.nile <- breakpoints(rep3$Reclutas/1000 ~ 1)
+fm0 <- lm(rep3$Reclutas/1000 ~ 1)
+fm1 <- lm(rep3$Reclutas/1000 ~ breakfactor(bp.nile, breaks = 2))
+quiebres3<-fitted(fm1)
+
+#fs.nile <- Fstats(rep3$Reclutas/1000 ~ 1)
+#plot(fs.nile)
+#sctest(fs.nile)
+#plot(rep3$Reclutas/1000)
+#lines(breakpoints(fs.nile))
+
+par(mfrow=c(1,1),mar=c(2,4,1,1))
+
+plot(years1,rep3$Reclutas/1000,type="l",lty=2,pch=19,ylim=c(0,700),
+     xaxp=c(1990,2021,31),yaxs="i",
+     xlab="",
+     ylab="Reclutamientos (miles de millones de ind.)",
+     main="Escenarios de reclutamiento proyectado",
+     cex.main=0.8,cex.axis=0.8,cex.lab=0.8)
+
+points(years1,rep3$Reclutas/1000,col=1,pch=19)
+
+lines(years1,quiebres3,lwd=2,col=4)
+
+text(c(1999,2010,2017),c(fitted(fm1)[1],
+                         fitted(fm1)[18],
+                         fitted(fm1)[23])+20,
+                 round(c(fitted(fm1)[1],
+                         fitted(fm1)[18],
+                         fitted(fm1)[23]),0),
+                 col=2,font=1,cex=0.8)
+```
+
+
+
+```{r}
+
+library(strucchange)
+library(tidyverse)
+library(lubridate)
+
+
+x1 <- arima.sim(model = list(ar = 0.9), n = 100)
+x2 <- arima.sim(model = list(ma = 0.1), n = 100)
+x3 <- arima.sim(model = list(ar = 0.5, ma = 0.3), n = 100)
+
+y <- c((1 + x1), x2,(0.5 - x3))
+
+plot.ts(y)
+
+dat <- tibble(ylag0 = y,ylag1 = lag(y))
+
+  qlr <- Fstats(ylag0 ~ ylag1, data = dat)
+
+sctest(qlr, type = "supF")
+
+```
+
+```{r CBAinicial_julio, eval=T, echo=FALSE, warning=F, include=T, message=F}
+
+dir.4<-paste(dir.0,"/CBA_julio/",sep="")
+
+EscRecl<-seq(1,3,1) #escenarios de reclutamiento basado en anÃ¡lisis de quiebres
+nes<-length(EscRecl)
+q       <- seq(0.1,0.5,0.1)  # niveles de riesgo (cuantiles)                            
+nq      <- length(q)                                                                    
+CBA_julio     <- matrix(ncol=nq,nrow=nes)
+CBAp_julio    <- matrix(ncol=1,nrow=1)
+CBApstd_julio <- matrix(ncol=1,nrow=1)
+
+buffer   <- matrix(ncol=nq,nrow=nes)
+descarte <- matrix(ncol=nq,nrow=nes)
+
+for(i in 1:nes){
+	std     <- read.table(paste(dir.4,"MAE07211",i,".std",sep=""),header=T,sep="",na="NA",fill=T)  
+	CBAp_julio[i]    <-subset(std,name=="CBA_c0")$value[1]
+	CBApstd_julio[i] <-subset(std,name=="CBA_c0")$std[1]
+	for(j in 1:nq){	CBA_julio[i,j]<-qnorm(q[j],CBAp_julio[i],CBApstd_julio[i])}}
+
+```
+
+```{r Tabla29a_CBAinicial_julio,eval=T, echo=FALSE, warning=F, include=T, message=F}
+tCBA_julio<-cbind(CBAp_julio,CBApstd_julio,CBA_julio)
+colnames(tCBA_julio)<-c("mean","std",c("10%","20%","30%","40%","50%"))
+row.names(tCBA_julio)<-c("1991-2007","2008-2012","2013-2021")
+kable(t(round(tCBA_julio,0)))
+```
+
+```{r Tabla30_resguardo_julio, eval=T,echo=FALSE, warning=F, include=T, message=F}
+for(i in 1:nes){for(j in 1:nq){	
+buffer[i,j]<-round(1-CBA_julio[i,j]/CBA_julio[i,5],2)}}
+colnames(buffer)<-c("10%","20%","30%","40%","50%")
+row.names(buffer)<-c("1991-2007","2008-2012","2013-2021")
+kable(t(buffer))
+```
+
+```{r Tabla31_descarte_julio, eval=T, echo=FALSE, warning=F, include=T, message=F}
+for(i in 1:nes){for(j in 1:nq){	
+descarte[i,j]<-round(CBA_julio[i,j]*0.96,0)}} # descarte 4% (1-0.04 = 0.94)
+colnames(descarte)<-c("10%","20%","30%","40%","50%")
+row.names(descarte)<-c("1991-2007","2008-2012","2013-2021")
+kable(t(descarte))
+```
+
+```{r Tabla31b_diferenciasdescarte_julio, eval=T, echo=FALSE, warning=F, include=T, message=F}
+
+descarte_julio <- matrix(ncol=nq,nrow=nes)
+descarte_sept <- matrix(ncol=nq,nrow=nes)
+
+for(i in 1:nes){for(j in 1:nq){	
+descarte_julio[i,j]<-round(CBA_julio[i,j]*0.96,0)}} # descarte 4% (1-0.04 = 0.94)
+for(i in 1:nes){for(j in 1:nq){	
+descarte_sept[i,j]<-round(CBA_sept[i,j]*0.94,0)}} # descarte 2% (1-0.06 = 0.94)
+
+tablaincrementos<--round(1-(descarte_julio/descarte_sept),2)*100
+colnames(tablaincrementos)<-c("10%","20%","30%","40%","50%")
+row.names(tablaincrementos)<-c("1991-2007","2008-2012","2013-2021")
+kable(t(tablaincrementos))
+
+```
+
+\pagebreak
+
+
 
 ```{r Densidad_CBA2021,warning=F, include=T, message=F,eval=T, echo=T,fig.height=4,fig.width=8,fig.align="center",fig.path="Figuras/",dev=c('pdf')}
 
@@ -2263,7 +3115,7 @@ text(904.3,0.0022,"Crms")
 
 \pagebreak
 
-## 4.0.  Proyección del stock (Asesoría de septiembre 2020)
+## 4.0.  Proyección del stock (Asesoría de septiembre 2021)
 
 ```{r Tabla32_CBA1eraRevision_septiembre, echo=FALSE, warning=F, include=T, message=F}
 dir.4<-paste(dir.0,"/CBA_sept/",sep="")
@@ -2292,14 +3144,14 @@ source(paste(dir.fun,"Fn_Estatus_proy.R",sep=""))
 setwd(paste(dir.0,"/CBA_sept/",sep=""))
 mfyr<-c(11,21,31)
 escR<-"1991-2007"
-Estatusproy_sept("MAE0921",mfyr,escR,year1="2018/19",year2="2020/21",year3="2021/22")
+Estatusproy_sept("MAE0921",mfyr,escR,year1="2018/19",year2="2019/20",year3="2020/21")
 ```
 
 ```{r Tabla_32b,eval=T, warning=F, include=T, message=F, echo=FALSE}
 setwd(paste(dir.0,"/CBA_sept/",sep=""))
 mfyr<-c(12,22,32)
 escR<-"2008-2012"
-Estatusproy_sept("MAE0921",mfyr,escR,year1="2018/19",year2="2020/21",year3="2021/22")
+Estatusproy_sept("MAE0921",mfyr,escR,year1="2018/19",year2="2019/20",year3="2020/21")
 
 ```
 
@@ -2307,7 +3159,7 @@ Estatusproy_sept("MAE0921",mfyr,escR,year1="2018/19",year2="2020/21",year3="2021
 setwd(paste(dir.0,"/CBA_sept/",sep=""))
 mfyr<-c(13,23,33)
 escR<-"2013-2020"
-Estatusproy_sept("MAE0921",mfyr,escR,year1="2018/19",year2="2020/21",year3="2021/22")
+Estatusproy_sept("MAE0921",mfyr,escR,year1="2018/19",year2="2019/20",year3="2020/21")
 ```
 
 ```{r DF_proysept, eval=T,warning=F, include=T, message=F, echo=FALSE,fig.height=2.7,fig.width=2.7}
@@ -2340,7 +3192,9 @@ Fyr        <- exp(subset(std1,name=="log_Ft")$value)
 source(paste(dir.fun,"Fn_DiagramaFase_proy.R",sep=""))
 source(paste(dir.fun,"Fn_ProbEstatus_proy.R",sep=""))
 
-escR<-c(rep("Reclprom 1991-2007",1), rep("Reclprom 2008-2012",1),rep("Reclprom 2013-2020",1))
+escR<-c(rep("Reclprom 1991-2007",1), 
+        rep("Reclprom 2008-2012",1),
+        rep("Reclprom 2013-2020",1))
 pF<-rep(c("Frms*1","Frms*0.9","Frms*0.7"),3)
 n<-3
 nesc<-c(11,21,31)
@@ -2359,9 +3213,9 @@ Frmsp    <-rep$Fref
 
 lines(c(rprSEPT,SpBp[1]/BRMS),c(FrprSEPT,Frmsp/FRMS))
 points(c(SpBp[1]/BRMS),c(Frmsp/FRMS),pch=19,col=c(2),cex=c(1))
-text((SpBp[1]/BRMS),c(Frmsp/FRMS-0.07),c("2021/22"),cex=c(0.8,0.8))
+text((SpBp[1]/BRMS),c(Frmsp/FRMS-0.07),c("2020/21"),cex=c(0.8,0.8))
 text(c(SpB[1]/BRMS,SpB[nyears]/BRMS,SpB[nyears-1]/BRMS),c(Fyr[1]/FRMS-0.05,Fyr[nyears]/FRMS-0.05,Fyr[nyears-1]/FRMS+0.05),
-     c("1990/91","2020/21","2019/20"),cex=0.8)
+     c("1990/91","2019/20","2018/19"),cex=0.8)
 text(1.7,1.9,pF[i],cex=0.8,col=1)
 }
 
@@ -2374,7 +3228,9 @@ text(1.7,1.9,pF[i],cex=0.8,col=1)
 ```
 
 ```{r Fig45b_sept, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
-escR<-c(rep("Reclprom 1991-2007",1), rep("Reclprom 2008-2012",1),rep("Reclprom 2013-2020",1))
+escR<-c(rep("Reclprom 1991-2007",1), 
+        rep("Reclprom 2008-2012",1),
+        rep("Reclprom 2013-2020",1))
 pF<-rep(c("Frms*1","Frms*0.9","Frms*0.7"),3)
 n<-3
 nesc<-c(12,22,32)
@@ -2393,7 +3249,7 @@ Frmsp    <-rep$Fref
 
 lines(c(rprSEPT,SpBp[1]/BRMS),c(FrprSEPT,Frmsp/FRMS))
 points(c(SpBp[1]/BRMS),c(Frmsp/FRMS),pch=19,col=c(2),cex=c(1))
-text((SpBp[1]/BRMS),c(Frmsp/FRMS-0.07),c("2021/22"),cex=c(0.8,0.8))
+text((SpBp[1]/BRMS),c(Frmsp/FRMS-0.07),c("2020/21"),cex=c(0.8,0.8))
 text(c(SpB[1]/BRMS,SpB[nyears]/BRMS,SpB[nyears-1]/BRMS),c(Fyr[1]/FRMS-0.05,Fyr[nyears]/FRMS-0.05,Fyr[nyears-1]/FRMS+0.05),
      c("1990/91","2019/20","2018/19"),cex=0.8)
 text(1.7,1.9,pF[i],cex=0.8,col=1)
@@ -2407,7 +3263,9 @@ text(1.7,1.9,pF[i],cex=0.8,col=1)
 ```
 
 ```{r Fig45c_sept, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
-escR<-c(rep("Reclprom 1991-2007",1), rep("Reclprom 2008-2012",1),rep("Reclprom 2013-2020",1))
+escR<-c(rep("Reclprom 1991-2007",1), 
+        rep("Reclprom 2008-2012",1),
+        rep("Reclprom 2013-2020",1))
 pF<-rep(c("Frms*1","Frms*0.9","Frms*0.7"),3)
 n<-3
 nesc<-c(13,23,33)
@@ -2426,7 +3284,7 @@ Frmsp    <-rep$Fref
 
 lines(c(rprSEPT,SpBp[1]/BRMS),c(FrprSEPT,Frmsp/FRMS))
 points(c(SpBp[1]/BRMS),c(Frmsp/FRMS),pch=19,col=c(2),cex=c(1))
-text((SpBp[1]/BRMS),c(Frmsp/FRMS-0.07),c("2021/22"),cex=c(0.8,0.8))
+text((SpBp[1]/BRMS),c(Frmsp/FRMS-0.07),c("2020/21"),cex=c(0.8,0.8))
 text(c(SpB[1]/BRMS,SpB[nyears]/BRMS,SpB[nyears-1]/BRMS),c(Fyr[1]/FRMS-0.05,Fyr[nyears]/FRMS-0.05,Fyr[nyears-1]/FRMS+0.05),
      c("1990/91","2019/20","2018/19"),cex=0.8)
 text(1.7,1.9,pF[i],cex=0.8,col=1)
@@ -2439,7 +3297,563 @@ text(1.7,1.9,pF[i],cex=0.8,col=1)
 #ProbEstatusproy_sept("MAE0920",nesc,name,pF,nyears=30)
 ```
 
+\pagebreak
 
+```{r Tabla33_CBA1eraRevision_marzo, echo=FALSE, warning=F, include=T, message=F}
+dir.4<-paste(dir.0,"/CBA_marzo/",sep="")
+
+EscRecl<-seq(1,3,1) #escenarios de reclutamiento basado en anÃ¡lisis de quiebres
+nes<-length(EscRecl)
+q       <- seq(0.1,0.5,0.1)  # niveles de riesgo (cuantiles)                            
+nq      <- length(q)                                                                    
+CBA     <- matrix(ncol=nq,nrow=nes)
+CBAp    <- matrix(ncol=1,nrow=1)
+CBApstd <- matrix(ncol=1,nrow=1)
+
+buffer   <- matrix(ncol=nq,nrow=nes)
+descarte <- matrix(ncol=nq,nrow=nes)
+
+for(i in 1:nes){
+	std     <- read.table(paste(dir.4,"MAE03211",i,".std",sep=""),header=T,sep="",na="NA",fill=T)  
+	CBAp[i]    <-subset(std,name=="CBA_c0")$value[1]
+	CBApstd[i] <-subset(std,name=="CBA_c0")$std[1]
+	for(j in 1:nq){	CBA[i,j]<-qnorm(q[j],CBAp[i],CBApstd[i])}}
+
+```
+
+
+```{r Tabla_33a,eval=T, warning=F, include=T, message=F, echo=FALSE}
+source(paste(dir.fun,"Fn_Estatus_proy.R",sep=""))
+setwd(paste(dir.0,"/CBA_marzo/",sep=""))
+mfyr<-c(11,21,31)
+escR<-"1991-2007"
+Estatusproy_marzo("MAE0321",mfyr,escR,year2="2020/21",year3="2021/22")
+```
+
+\vspace{-0.7cm}
+
+```{r Tabla_33b,eval=T, warning=F, include=T, message=F, echo=FALSE}
+setwd(paste(dir.0,"/CBA_marzo/",sep=""))
+mfyr<-c(12,22,32)
+escR<-"2008-2012"
+Estatusproy_marzo("MAE0321",mfyr,escR,year2="2020/21",year3="2021/22")
+
+```
+
+\vspace{-0.7cm}
+
+```{r Tabla_33c,eval=T, warning=F, include=T, message=F, echo=FALSE}
+setwd(paste(dir.0,"/CBA_marzo/",sep=""))
+mfyr<-c(13,23,33)
+escR<-"2013-2021"
+Estatusproy_marzo("MAE0321",mfyr,escR,year2="2020/21",year3="2021/22")
+```
+
+```{r DF_proymarzo, eval=T,warning=F, include=T, message=F, echo=FALSE,fig.height=2.7,fig.width=2.7}
+setwd(paste(dir.0,"/CBA_marzo/",sep=""))
+
+admb_marzo<-"MAE0321"
+data2        <- lisread(paste(admb_marzo,".dat",sep=""))#lee los datos de la ultima evaluacion
+names(data2) <- str_trim(names(data2), side="right")
+dat2         <- data
+rep2         <- reptoRlist(paste(admb_marzo,".rep",sep=""))
+std2         <- read.table(paste(admb_marzo,".std",sep=""),header=T,sep="",na="NA",fill=T)  
+
+years      <- rep2$years                                                              
+nyears     <- length(years)   
+Bo         <- rep2$SSBpbr[1]                         # Paso 4: Obtención de Bo
+BRMS       <- rep2$SSBpbr[3]                         # Paso 5: Obtención de Brms = 60%SPRo = 55%Bo
+FRMS       <- rep2$Fs[2]
+BLIM       <- Bo*0.275                              # Paso 6: Obtención de Blim = 20%Bo 
+FLIM       <- rep2$Fs[3]                             # Paso 6: Obtención de Flim = 30%SPRo
+SpB        <- subset(std2,name=="SSB")$value                                # BD serie histórica de evaluación de stock 
+SpBSE      <- subset(std2,name=="SSB")$std                           # desviación estandar BD
+ln_Fyr     <- subset(std2,name=="log_Ft")$value                                # logaritmo de Ft
+ln_FSE     <- subset(std2,name=="log_Ft")$std                                 # logaritmo de la desviación standar de Ft
+Fyr        <- exp(subset(std2,name=="log_Ft")$value)
+
+```
+
+```{r Fig46a_marzo, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
+
+source(paste(dir.fun,"Fn_DiagramaFase_proy_marzo.R",sep=""))
+source(paste(dir.fun,"Fn_ProbEstatus_proy.R",sep=""))
+
+escR<-c(rep("Reclprom 1991-2007",1),
+        rep("Reclprom 2008-2012",1),
+        rep("Reclprom 2013-2021",1))
+
+pF<-rep(c("Frms*1",
+          "Frms*0.9",
+          "Frms*0.7"),3)
+
+n<-3
+nesc<-c(11,21,31)
+admb_marzo<-"MAE0321"
+
+for(i in 1:n){
+name<-escR[1]
+DiagramaFase_proy(name,
+                  years[30:31],
+                  SpB[30:31],
+                  SpBSE[30:31],
+                  ln_Fyr[30:31],
+                  ln_FSE[30:31],
+                  FRMS,
+                  BRMS,
+                  BLIM,
+                  FLIM,
+                  color=F,
+                  dir.0,
+                  etiqueta=F)
+
+setwd(paste(dir.0,"/CBA_marzo",sep=""))
+
+rep     <- reptoRlist(paste(admb_marzo,nesc[i],".rep",sep=""))
+std     <- read.table(paste(admb_marzo,nesc[i],".std",sep=""),header=T,sep="",na="NA",fill=T) 
+
+SpBp    <- subset(std,name=="BD_p0")$value[1]                              
+SpBSEp  <- subset(std,name=="BD_p0")$std[1]    
+Frmsp    <-rep$Fref
+
+lines(c(rprMARZO,SpBp[1]/BRMS),
+      c(FrprMARZO,Frmsp/FRMS))
+
+points(c(SpBp[1]/BRMS),
+       c(Frmsp/FRMS),
+       pch=19,col=c(3),cex=c(1))
+
+text((SpBp[1]/BRMS),
+     c(Frmsp/FRMS-0.07),
+     c("2021/22"),
+     cex=c(0.8,0.8))
+
+text(c(SpB[1]/BRMS,
+       SpB[nyears]/BRMS,
+       SpB[nyears-1]/BRMS),
+     c(Fyr[1]/FRMS-0.05,
+       Fyr[nyears]/FRMS-0.05,
+       Fyr[nyears-1]/FRMS+0.05),
+     c("1990/91","2020/21","2019/20"),cex=0.8)
+
+text(1.7,1.9,pF[i],cex=0.8,col=1)
+}
+
+#setwd(paste(dir.0,"/CBA_marzo",sep=""))
+#nesc<-c(11,21,31)
+#pF<-c("Frms*1","Frms*0.9","Frms*0.7")
+#name<-"Reclprom 1991-2007"
+#ProbEstatusproy_marzo("MAE0321",nesc,name,pF,nyears=31)
+
+```
+
+```{r Fig46b_marzo, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
+
+
+source(paste(dir.fun,"Fn_DiagramaFase_proy_marzo.R",sep=""))
+
+escR<-c(rep("Reclprom 1991-2007",1), 
+        rep("Reclprom 2008-2012",1),
+        rep("Reclprom 2013-2021",1))
+
+pF<-rep(c("Frms*1",
+          "Frms*0.9",
+          "Frms*0.7"),3)
+
+n<-3
+nesc<-c(12,22,32)
+admb_marzo<-"MAE0321"
+
+for(i in 1:n){
+name<-escR[2]
+DiagramaFase_proy(name,
+                  years[30:31],
+                  SpB[30:31],
+                  SpBSE[30:31],
+                  ln_Fyr[30:31],
+                  ln_FSE[30:31],
+                  FRMS,
+                  BRMS,
+                  BLIM,
+                  FLIM,
+                  color=F,
+                  dir.0,
+                  etiqueta=F)
+
+setwd(paste(dir.0,"/CBA_marzo",sep=""))
+
+rep     <- reptoRlist(paste(admb_marzo,nesc[i],".rep",sep=""))
+std     <- read.table(paste(admb_marzo,nesc[i],".std",sep=""),header=T,sep="",na="NA",fill=T) 
+
+SpBp    <- subset(std,name=="BD_p0")$value[1]                              
+SpBSEp  <- subset(std,name=="BD_p0")$std[1]    
+Frmsp    <-rep$Fref
+
+lines(c(rprMARZO,SpBp[1]/BRMS),
+      c(FrprMARZO,Frmsp/FRMS))
+
+points(c(SpBp[1]/BRMS),
+       c(Frmsp/FRMS),
+       pch=19,col=c(3),cex=c(1))
+
+text((SpBp[1]/BRMS),
+     c(Frmsp/FRMS-0.07),
+     c("2021/22"),cex=c(0.8,0.8))
+
+text(c(SpB[1]/BRMS,
+       SpB[nyears]/BRMS,
+       SpB[nyears-1]/BRMS),
+     c(Fyr[1]/FRMS-0.05,
+       Fyr[nyears]/FRMS-0.05,
+       Fyr[nyears-1]/FRMS+0.05),
+     c("1990/91","2020/21","2019/20"),cex=0.8)
+
+text(1.7,1.9,pF[i],cex=0.8,col=1)
+}
+
+```
+
+```{r Fig46c_marzo, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
+
+source(paste(dir.fun,"Fn_DiagramaFase_proy_marzo.R",sep=""))
+
+
+escR<-c(rep("Reclprom 1991-2007",1), 
+        rep("Reclprom 2008-2012",1),
+        rep("Reclprom 2013-2021",1))
+
+pF<-rep(c("Frms*1",
+          "Frms*0.9",
+          "Frms*0.7"),3)
+
+n<-3
+nesc<-c(13,23,33)
+admb_marzo<-"MAE0321"
+
+for(i in 1:n){
+name<-escR[3]
+
+DiagramaFase_proy(name,
+                  years[30:31],
+                  SpB[30:31],
+                  SpBSE[30:31],
+                  ln_Fyr[30:31],
+                  ln_FSE[30:31],
+                  FRMS,
+                  BRMS,
+                  BLIM,
+                  FLIM,
+                  color=F,dir.0,etiqueta=F)
+
+setwd(paste(dir.0,"/CBA_marzo",sep=""))
+
+rep     <- reptoRlist(paste(admb_marzo,nesc[i],".rep",sep=""))
+std     <- read.table(paste(admb_marzo,nesc[i],".std",sep=""),header=T,sep="",na="NA",fill=T) 
+
+SpBp    <- subset(std,name=="BD_p0")$value[1]                              
+SpBSEp  <- subset(std,name=="BD_p0")$std[1]    
+Frmsp    <-rep$Fref
+
+lines(c(rprMARZO,SpBp[1]/BRMS),
+      c(FrprMARZO,Frmsp/FRMS))
+
+points(c(SpBp[1]/BRMS),
+       c(Frmsp/FRMS),
+       pch=19,col=c(3),cex=c(1))
+
+text((SpBp[1]/BRMS),
+     c(Frmsp/FRMS-0.07),
+     c("2021/22"),cex=c(0.8,0.8))
+
+text(c(SpB[1]/BRMS,
+       SpB[nyears]/BRMS,
+       SpB[nyears-1]/BRMS),
+     c(Fyr[1]/FRMS-0.05,
+       Fyr[nyears]/FRMS-0.05,
+       Fyr[nyears-1]/FRMS+0.05),
+     c("1990/91","2020/21","2019/20"),cex=0.8)
+
+text(1.7,1.9,pF[i],cex=0.8,col=1)
+}
+
+```
+
+
+\pagebreak
+
+```{r Tabla34_CBA1eraRevision_julio, echo=FALSE, warning=F, include=T, message=F}
+dir.4<-paste(dir.0,"/CBA_julio/",sep="")
+
+EscRecl<-seq(1,3,1) #escenarios de reclutamiento basado en anÃ¡lisis de quiebres
+nes<-length(EscRecl)
+q       <- seq(0.1,0.5,0.1)  # niveles de riesgo (cuantiles)                            
+nq      <- length(q)                                                                    
+CBA     <- matrix(ncol=nq,nrow=nes)
+CBAp    <- matrix(ncol=1,nrow=1)
+CBApstd <- matrix(ncol=1,nrow=1)
+
+buffer   <- matrix(ncol=nq,nrow=nes)
+descarte <- matrix(ncol=nq,nrow=nes)
+
+for(i in 1:nes){
+	std     <- read.table(paste(dir.4,"MAE07211",i,".std",sep=""),header=T,sep="",na="NA",fill=T)  
+	CBAp[i]    <-subset(std,name=="CBA_c0")$value[1]
+	CBApstd[i] <-subset(std,name=="CBA_c0")$std[1]
+	for(j in 1:nq){	CBA[i,j]<-qnorm(q[j],CBAp[i],CBApstd[i])}}
+
+```
+
+
+```{r Tabla_34a,eval=T, warning=F, include=T, message=F, echo=FALSE}
+source(paste(dir.fun,"Fn_Estatus_proy.R",sep=""))
+setwd(paste(dir.0,"/CBA_julio/",sep=""))
+mfyr<-c(11,21,31)
+escR<-"1991-2007"
+Estatusproy_marzo("MAE0721",mfyr,escR,year2="2020/21",year3="2021/22")
+```
+
+\vspace{-0.7cm}
+
+```{r Tabla_34b,eval=T, warning=F, include=T, message=F, echo=FALSE}
+setwd(paste(dir.0,"/CBA_julio/",sep=""))
+mfyr<-c(12,22,32)
+escR<-"2008-2012"
+Estatusproy_marzo("MAE0721",mfyr,escR,year2="2020/21",year3="2021/22")
+
+```
+
+\vspace{-0.7cm}
+
+```{r Tabla_34c,eval=T, warning=F, include=T, message=F, echo=FALSE}
+setwd(paste(dir.0,"/CBA_julio/",sep=""))
+mfyr<-c(13,23,33)
+escR<-"2013-2021"
+Estatusproy_marzo("MAE0721",mfyr,escR,year2="2020/21",year3="2021/22")
+```
+
+```{r DF_proyjulio, eval=T,warning=F, include=T, message=F, echo=FALSE,fig.height=2.7,fig.width=2.7}
+setwd(paste(dir.0,"/CBA_julio/",sep=""))
+
+admb_julio<-"MAE0721"
+data3        <- lisread(paste(admb_julio,".dat",sep=""))#lee los datos de la ultima evaluacion
+names(data3) <- str_trim(names(data3), side="right")
+dat3         <- data
+rep3         <- reptoRlist(paste(admb_julio,".rep",sep=""))
+std3         <- read.table(paste(admb_julio,".std",sep=""),header=T,sep="",na="NA",fill=T)  
+
+years      <- rep3$years                                                              
+nyears     <- length(years)   
+Bo         <- rep3$SSBpbr[1]                         # Paso 4: Obtención de Bo
+BRMS       <- rep3$SSBpbr[3]                         # Paso 5: Obtención de Brms = 60%SPRo = 55%Bo
+FRMS       <- rep3$Fs[2]
+BLIM       <- Bo*0.275                              # Paso 6: Obtención de Blim = 20%Bo 
+FLIM       <- rep3$Fs[3]                             # Paso 6: Obtención de Flim = 30%SPRo
+SpB        <- subset(std3,name=="SSB")$value                                # BD serie histórica de evaluación de stock 
+SpBSE      <- subset(std3,name=="SSB")$std                           # desviación estandar BD
+ln_Fyr     <- subset(std3,name=="log_Ft")$value                                # logaritmo de Ft
+ln_FSE     <- subset(std3,name=="log_Ft")$std                                 # logaritmo de la desviación standar de Ft
+Fyr        <- exp(subset(std3,name=="log_Ft")$value)
+
+```
+
+```{r Fig47a_julio, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
+
+source(paste(dir.fun,"Fn_DiagramaFase_proy_marzo.R",sep=""))
+source(paste(dir.fun,"Fn_ProbEstatus_proy.R",sep=""))
+
+escR<-c(rep("Reclprom 1991-2007",1), 
+        rep("Reclprom 2008-2012",1),
+        rep("Reclprom 2013-2021",1))
+
+pF<-rep(c("Frms*1",
+          "Frms*0.9",
+          "Frms*0.7"),3)
+
+n<-3
+nesc<-c(11,21,31)
+
+
+for(i in 1:n){
+name<-escR[1]
+DiagramaFase_proy(name,
+                  years[30:31],
+                  SpB[30:31],
+                  SpBSE[30:31],
+                  ln_Fyr[30:31],
+                  ln_FSE[30:31],
+                  FRMS,
+                  BRMS,
+                  BLIM,
+                  FLIM,
+                  color=F,dir.0,etiqueta=F)
+
+setwd(paste(dir.0,"/CBA_julio",sep=""))
+
+admb_julio<-"MAE0721"
+rep     <- reptoRlist(paste(admb_julio,nesc[i],".rep",sep=""))
+std     <- read.table(paste(admb_julio,nesc[i],".std",sep=""),header=T,sep="",na="NA",fill=T) 
+
+SpBp    <- subset(std,name=="BD_p0")$value[1]                              
+SpBSEp  <- subset(std,name=="BD_p0")$std[1]    
+Frmsp    <-rep$Fref
+
+lines(c(rprJULIO,SpBp[1]/BRMS),
+      c(FrprJULIO,Frmsp/FRMS))
+
+points(c(SpBp[1]/BRMS),
+       c(Frmsp/FRMS),
+       pch=19,col=c(3),cex=c(1))
+
+text((SpBp[1]/BRMS),
+     c(Frmsp/FRMS-0.07),
+     c("2021/22"),cex=c(0.8,0.8))
+
+text(c(SpB[1]/BRMS,
+       SpB[nyears]/BRMS,
+       SpB[nyears-1]/BRMS),
+     c(Fyr[1]/FRMS-0.05,
+       Fyr[nyears]/FRMS-0.05,
+       Fyr[nyears-1]/FRMS+0.05),
+     c("1990/91","2020/21","2019/20"),cex=0.8)
+
+text(1.7,1.9,pF[i],cex=0.8,col=1)
+}
+
+#setwd(paste(dir.0,"/CBA_marzo",sep=""))
+#nesc<-c(11,21,31)
+#pF<-c("Frms*1","Frms*0.9","Frms*0.7")
+#name<-"Reclprom 1991-2007"
+#ProbEstatusproy_marzo("MAE0321",nesc,name,pF,nyears=31)
+
+```
+
+```{r Fig47b_julio, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
+
+source(paste(dir.fun,"Fn_DiagramaFase_proy_marzo.R",sep=""))
+
+escR<-c(rep("Reclprom 1991-2007",1), 
+        rep("Reclprom 2008-2012",1),
+        rep("Reclprom 2013-2021",1))
+
+pF<-rep(c("Frms*1",
+          "Frms*0.9",
+          "Frms*0.7"),3)
+n<-3
+nesc<-c(12,22,32)
+admb_julio<-"MAE0721"
+
+for(i in 1:n){
+name<-escR[2]
+DiagramaFase_proy(name,
+                  years[30:31],
+                  SpB[30:31],
+                  SpBSE[30:31],
+                  ln_Fyr[30:31],
+                  ln_FSE[30:31],
+                  FRMS,
+                  BRMS,
+                  BLIM,
+                  FLIM,
+                  color=F,
+                  dir.0,
+                  etiqueta=F)
+
+setwd(paste(dir.0,"/CBA_julio",sep=""))
+
+rep     <- reptoRlist(paste(admb_julio,nesc[i],".rep",sep=""))
+std     <- read.table(paste(admb_julio,nesc[i],".std",sep=""),header=T,sep="",na="NA",fill=T) 
+
+SpBp    <- subset(std,name=="BD_p0")$value[1]                              
+SpBSEp  <- subset(std,name=="BD_p0")$std[1]    
+Frmsp    <-rep$Fref
+
+lines(c(rprJULIO,SpBp[1]/BRMS),
+      c(FrprJULIO,Frmsp/FRMS))
+
+points(c(SpBp[1]/BRMS),
+       c(Frmsp/FRMS),
+       pch=19,col=c(3),cex=c(1))
+
+text((SpBp[1]/BRMS),
+     c(Frmsp/FRMS-0.07),
+     c("2021/22"),cex=c(0.8,0.8))
+
+text(c(SpB[1]/BRMS,
+       SpB[nyears]/BRMS,
+       SpB[nyears-1]/BRMS),
+     c(Fyr[1]/FRMS-0.05,
+       Fyr[nyears]/FRMS-0.05,
+       Fyr[nyears-1]/FRMS+0.05),
+     c("1990/91","2020/21","2019/20"),cex=0.8)
+text(1.7,1.9,pF[i],cex=0.8,col=1)
+}
+
+```
+
+```{r Fig47c_julio, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
+
+source(paste(dir.fun,"Fn_DiagramaFase_proy_marzo.R",sep=""))
+
+
+escR<-c(rep("Reclprom 1991-2007",1), 
+        rep("Reclprom 2008-2012",1),
+        rep("Reclprom 2013-2021",1))
+
+pF<-rep(c("Frms*1",
+          "Frms*0.9",
+          "Frms*0.7"),3)
+n<-3
+nesc<-c(13,23,33)
+admb_julio<-"MAE0721"
+
+for(i in 1:n){
+name<-escR[3]
+DiagramaFase_proy(name,
+                  years[30:31],
+                  SpB[30:31],
+                  SpBSE[30:31],
+                  ln_Fyr[30:31],
+                  ln_FSE[30:31],
+                  FRMS,
+                  BRMS,
+                  BLIM,
+                  FLIM,
+                  color=F,
+                  dir.0,
+                  etiqueta=F)
+
+setwd(paste(dir.0,"/CBA_julio",sep=""))
+
+rep     <- reptoRlist(paste(admb_julio,nesc[i],".rep",sep=""))
+std     <- read.table(paste(admb_julio,nesc[i],".std",sep=""),header=T,sep="",na="NA",fill=T) 
+
+SpBp    <- subset(std,name=="BD_p0")$value[1]                              
+SpBSEp  <- subset(std,name=="BD_p0")$std[1]    
+Frmsp    <-rep$Fref
+
+lines(c(rprJULIO,SpBp[1]/BRMS),
+      c(FrprJULIO,Frmsp/FRMS))
+
+points(c(SpBp[1]/BRMS),
+       c(Frmsp/FRMS),
+       pch=19,col=c(3),cex=c(1))
+
+text((SpBp[1]/BRMS),
+     c(Frmsp/FRMS-0.07),
+     c("2021/22"),cex=c(0.8,0.8))
+
+text(c(SpB[1]/BRMS,
+       SpB[nyears]/BRMS,
+       SpB[nyears-1]/BRMS),
+     c(Fyr[1]/FRMS-0.05,
+       Fyr[nyears]/FRMS-0.05,
+       Fyr[nyears-1]/FRMS+0.05),
+     c("1990/91","2020/21","2019/20"),cex=0.8)
+
+text(1.7,1.9,pF[i],cex=0.8,col=1)
+}
+
+```
 
 \pagebreak
 
@@ -2456,9 +3870,9 @@ legend(1998,2.5,c("anchoveta centro-sur","sardina común"),col=c(2,1),lwd=c(2,2)
 ```
 
 
-u`ñ``'pñl'kñ0kñ3plñpñ
+
 \normalsize
-o0
+
 \normalsize
 
 - ¿Cuánto se sobrepasa el RMS en la captura 2020/21?
