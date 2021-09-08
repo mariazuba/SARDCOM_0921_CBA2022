@@ -375,7 +375,7 @@ kable(NM_Ian)
 \footnotesize
 # 1. ANTECEDENTES
 
-```{r Fig2, echo=T,warning=F, include=T,eval=F, message=F,fig.height=3.5,fig.width=6.5,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig2, echo=F,warning=F, include=T,eval=F, message=F,fig.height=3.5,fig.width=6.5,fig.align="center",fig.path=dir.Fig,dev=fig}
 years<-seq(1990,2020,1)
 dataDesem  <- ant$des_oficialesvscorregidos
 Tdesem     <- data.frame(years,dataDesem[,1:2],rep(median(dataDesem[,2]),length(dataDesem[,2])))
@@ -400,7 +400,7 @@ ggplot(des_Of_corr)+
 
 \pagebreak
 
-```{r Fig3, echo=T,warning=F, include=T, message=F,fig.height=3.3,fig.width=6,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig3, echo=F,warning=F, include=T, message=F,fig.height=3.3,fig.width=6,fig.align="center",fig.path=dir.Fig,dev=fig}
 dataDesem2  <- data.frame(ant$year_cuota,ant$des_art,ant$des_ind)
 colnames(dataDesem2) <- c("Years", 
                       "Desembarque_artesanal", 
@@ -449,7 +449,7 @@ boxplot(des_mes$desem[145:264]/10^3~des_mes$mes[145:264],las=1,xlab="Mes",
 \pagebreak
 
 
-```{r Fig7, warning=F, include=T, message=F, echo=T,fig.height=4.5,fig.width=4.5,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig7, warning=F, include=T, message=F, echo=F,fig.height=4.5,fig.width=4.5,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 x<-rep1$reclasobs[rep1$reclasobs>0&rep1$pelacesobs>0]/10^6
 y<-rep1$pelacesobs[rep1$reclasobs>0&rep1$pelacesobs>0]/10^6
@@ -469,7 +469,7 @@ text(2.1,2.8, "R^2=0.00039",col=4,cex=0.8)
 ```
 \pagebreak
 
-```{r Fig8,warning=F, include=T, message=F, echo=T,fig.height=3.5,fig.width=10,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig8,warning=F, include=T, message=F, echo=F,fig.height=3.5,fig.width=10,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 anorecl<-ant$reclas_BT_BR_AT_AR[,1]
 BTreclas<-ant$reclas_BT_BR_AT_AR[,2]
@@ -517,7 +517,7 @@ ggplot(dataEstatus )+
 
 # 2. METODOLOGÍA
 
-```{r Fig15,  warning=F, include=T, message=F, echo=T,fig.height=3,fig.width=5,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig15,  warning=F, include=T, message=F, echo=F,fig.height=3,fig.width=5,fig.align="center",fig.path=dir.Fig,dev=fig}
 library(strucchange)
 years     <- rep1$years
 nyears    <- length(years)
@@ -543,7 +543,7 @@ text(c(1999,2010,2017),
 
 \pagebreak
 
-```{r Fig16,warning=F, include=T, message=F, echo=T,fig.height=4.5,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig16,warning=F, include=T, message=F, echo=F,fig.height=4.5,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
 years1  <-rep1$years
 nyears1 <-length(years1)
 age     <-seq(0,4,1)                                            
@@ -607,7 +607,7 @@ kable(data, align = 'c')
 # 3. RESULTADOS
 
 
-```{r Fig19, warning=F, include=T, message=F, echo=T,fig.height=4.5,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig19, warning=F, include=T, message=F, echo=F,fig.height=4.5,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
 setwd(dir.1)
 years  <- rep1$years 
 nyears <- dat1$nanos                                                                
@@ -647,7 +647,7 @@ box()
 
 \pagebreak
 
-```{r Fig20, warning=F, include=T, message=F, echo=T,fig.height=8,fig.width=5,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig20, warning=F, include=T, message=F, echo=F,fig.height=8,fig.width=5,fig.align="center",fig.path=dir.Fig,dev=fig}
  
 des_obs <- data.frame(rep1$desembarqueobs)
 bc_obs  <- data.frame(rep1$reclasobs)
@@ -681,7 +681,7 @@ p +  theme(panel.background = element_rect(fill ="gray99")) +
 
 \pagebreak
 
-```{r Fig21, warning=F, include=T, message=F,eval=T, echo=T,fig.height=4,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig21, warning=F, include=T, message=F,eval=T, echo=F,fig.height=4,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 years    <- rep1$years 
 nyears   <- length(years)
@@ -729,7 +729,7 @@ f1 + f2
 ```
 \pagebreak
 
-```{r Fig22,warning=F, include=T, message=F, echo=T,fig.height=6,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig22,warning=F, include=T, message=F, echo=F,fig.height=6,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
 pobsF    <- rep1$pf_obs      
 pF       <- c(pobsF); pF[pF==0]  <-NA
 WmedF    <- dat1$Wmed    
@@ -767,7 +767,7 @@ g1 + g2
 ```
 \pagebreak
 
-```{r Fig23, warning=F, include=T, message=F, echo=T,fig.height=4,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig23, warning=F, include=T, message=F, echo=F,fig.height=4,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 years    <- rep1$years 
 nyears   <- dat1$nanos
@@ -815,7 +815,7 @@ f1 + f2
 ```
 
 \pagebreak
-```{r Fig24,warning=F, include=T, message=F, echo=T,fig.height=6,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig24,warning=F, include=T, message=F, echo=F,fig.height=6,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
 pobsR    <- rep1$pobs_RECLAS        
 pR       <- c(pobsR); pR[pR==0]  <-NA
 pobsP    <- rep1$pobs_PELACES      
@@ -851,10 +851,10 @@ g2 <- ggplot (datosPropP,aes(x,y)) +
 g1 + g2
 
 ```
-\pagebreak
+
 ## 3.1. Ajuste del modelo a los datos
 
-```{r Fig26,warning=F, include=T, message=F, echo=T,fig.height=6.7,fig.width=6.5,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig26,warning=F, include=T, message=F, echo=F,fig.height=6.7,fig.width=6.5,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 yrs   <- rep1$years
 nyrs  <- length(yrs)
@@ -972,7 +972,7 @@ BcV/BcP/d + plot_layout(guides="collect")
 ```
 \pagebreak
 
-```{r datos_ajustes, echo=T }
+```{r datos_ajustes, echo=F }
 
 # I. INDICES DE ABUNDANCIA                                                       #
 years  <- dat1$Ind[,1]                                                              
@@ -1015,7 +1015,7 @@ obsD95s <- obsD*exp(1.96*cvdes)
 
 \pagebreak
 
-```{r Fig27, warning=F, include=T, message=F, echo=T,fig.height=7,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig27, warning=F, include=T, message=F, echo=F,fig.height=7,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
 par(mfcol=c(3,3),mar=c(2,4,1,1)+0.5)
 
  plot(years,Res_reclas,xaxp=x1,cex.axis=0.8,ylim=c(-1.1,1.1),type="h",main="Cruceros de Verano",ylab="Residuales (escala log)",xlab="")
@@ -1046,7 +1046,7 @@ par(mfcol=c(3,3),mar=c(2,4,1,1)+0.5)
 
 \pagebreak
 
-```{r Fig28,warning=F, include=T, message=F, echo=T,fig.height=7,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig28,warning=F, include=T, message=F, echo=F,fig.height=7,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 years   <- dat1$Ind[,1] 
 nyears  <- length(years)  
@@ -1102,7 +1102,7 @@ etcf3_pre <- rep3$pf_pred
 ```
 \pagebreak
 
-```{r Fig29,warning=F, include=T, message=F, echo=T,fig.height=7,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig29,warning=F, include=T, message=F, echo=F,fig.height=7,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 years   <- dat1$Ind[,1] 
 nyears  <- length(years)  
@@ -1156,7 +1156,7 @@ etcf3_pre <- rep3$ppred_RECLAS
 
 \pagebreak
 
-```{r Fig30,warning=F, include=T, message=F, echo=T,fig.height=7,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig30,warning=F, include=T, message=F, echo=F,fig.height=7,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 years   <- dat1$Ind[,1] 
 nyears  <- length(years)  
@@ -1209,7 +1209,7 @@ etcf3_pre <- rep3$ppred_PELACES
 
 \pagebreak
 
-```{r Fig31, echo=T, warning=F, include=T, message=F,fig.height=5,fig.width=10,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig31, echo=F, warning=F, include=T, message=F,fig.height=5,fig.width=10,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 ppredF<-rep1$pf_pred                                          
 ppredR<-rep1$ppred_RECLAS                                     
@@ -1305,11 +1305,11 @@ box()
 
 ```
 
-\pagebreak
+
 
 ## 3.2. Comparación con asesorías previas
 
-```{r VariablesSept_std, echo=T,message=FALSE, warning=FALSE, include=T}
+```{r VariablesSept_std, echo=F,message=FALSE, warning=FALSE, include=T}
 
 years<-rep1$years
 nyears<-length(years)
@@ -1339,9 +1339,9 @@ VarPob<- data.frame(x=years,
 
 ```
 
-\pagebreak
 
-```{r Fig32_data, eval=T, warning=F, include=T, message=F, echo=T,fig.height=7,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
+
+```{r Fig32_data, eval=T, warning=F, include=T, message=F, echo=F,fig.height=7,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 dir<-paste(dir.0,"/rep_AsesoriasPrevias",sep="")
 setwd(dir)
@@ -1408,9 +1408,9 @@ x2 <-c(years[1]-1,years[nyears]+1) #xlim
   
 ```
 
-\pagebreak
 
-```{r Fig32, echo=T, message=FALSE, warning=FALSE, include=T, fig.align="center", fig.height=7, fig.width=7,fig.path=dir.Fig,dev=fig}
+
+```{r Fig32, echo=F, message=FALSE, warning=FALSE, include=T, fig.align="center", fig.height=7, fig.width=7,fig.path=dir.Fig,dev=fig}
 
 year_retros <- c("2021_julio","2021_marzo","2020_sept","2020_julio","2020_marzo","2019_sept")
 nretros <-6
@@ -1470,11 +1470,10 @@ Rt/BD/Ft
 
 ```
 
-\pagebreak
 
 ## 3.3. Análisis retrospectivo
 
-```{r Dat_RetrospectivoJulio, echo=T, message=FALSE, warning=FALSE, include=T}
+```{r Dat_RetrospectivoJulio, echo=F, message=FALSE, warning=FALSE, include=T}
 dir<-paste(dir.0,"/Retrospectivo_sept",sep="")
 setwd(dir)
 admb<-"MAE0921"
@@ -1566,9 +1565,9 @@ Ft_retroRel<- data.frame(x=years,
 
 ```
 
-\pagebreak
 
-```{r Fig33, echo=T, message=FALSE, warning=FALSE, include=T, fig.align="center", fig.height=10, fig.width=10,fig.path=dir.Fig,dev=fig}
+
+```{r Fig33, echo=F, message=FALSE, warning=FALSE, include=T, fig.align="center", fig.height=10, fig.width=10,fig.path=dir.Fig,dev=fig}
 
 #Retrospectivo tradicional
 Rt <- ggplot(Rt_retro) + 
@@ -1666,12 +1665,12 @@ Rt/BD/Ft |Rtrel/BDrel/Ftrel
 
 ```
 
-\pagebreak
+
 
 ## 3.4. Perfil de verosimilitud
 
 
-```{r Fig34,eval=T, warning=F, include=T, message=F, echo=T,fig.height=4,fig.width=5,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig34,eval=T, warning=F, include=T, message=F, echo=F,fig.height=4,fig.width=5,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 dir<-paste(dir.0,"/Verosimilitud_sept",sep="")
 setwd(dir)
@@ -1709,11 +1708,11 @@ legend(210000,2.9,names[c(17,2:8)],col=1:8,lty=c(1,rep(2,7)),lwd=2,bty="n",cex=0
 
 ```
 
-\pagebreak
+
 
 ## 3.5. Variables poblacionales
 
-```{r Variables_sept, echo=T,message=FALSE, warning=FALSE, include=T}
+```{r Variables_sept, echo=F,message=FALSE, warning=FALSE, include=T}
 
 years1<-rep1$years
 nyears1<-length(years1)
@@ -1738,9 +1737,9 @@ VarPobSep<- data.frame(x=years1,
          lowerFt1 = exp(Ft1 -1.96*Ft1std), upperFt1 = exp(Ft1+1.96*Ft1std))
 ```
 
-\pagebreak
 
-```{r Variables_marzo, echo=T,message=FALSE, warning=FALSE, include=T}
+
+```{r Variables_marzo, echo=F,message=FALSE, warning=FALSE, include=T}
 
 years2<-rep2$years
 nyears2<-length(years2)
@@ -1770,7 +1769,7 @@ VarPobMar<- data.frame(x=years2,
 ```
 
 
-```{r Variables_julio, echo=T,message=FALSE, warning=FALSE, include=T}
+```{r Variables_julio, echo=F,message=FALSE, warning=FALSE, include=T}
 
 years3   <- rep3$years
 nyears3  <- length(years3)
@@ -1799,7 +1798,7 @@ VarPobJul<- data.frame(x=years3,
          upperFt3 = exp(Ft3 +1.96*Ft3std))
 ```
 
-\pagebreak
+
 
 ```{r Fig35, echo=FALSE, message=FALSE, warning=FALSE, include=T, fig.align="center", fig.height=6, fig.width=8,fig.path=dir.Fig,dev=fig}
 
@@ -1883,7 +1882,7 @@ Rt/BT | (BD/Ft)
 \pagebreak
 \footnotesize
 
-```{r Tabla_20, echo=T,warning=FALSE,include=T}
+```{r Tabla_20, echo=F,warning=FALSE,include=T}
 yearsb<-c("1990/91","1991/92","1992/93","1993/94","1994/95","1995/96","1996/97","1997/98","1998/99","1999/00","2000/01","2001/02","2002/03","2003/04","2004/05","2005/06","2006/07","2007/08","2008/09","2009/10","2010/11","2011/12","2012/13","2013/14","2014/15","2015/16","2016/17","2017/18","2018/19","2019/20",'2020/21')
 
 Rt1      <- c(subset(std1,name=="Reclutas")$value) 
@@ -1936,10 +1935,10 @@ write.csv(VarPobl1, file="Tablas/Tabla_20_indicadorespoblacionales.csv")
 #setwd(dir.1)
 ```
 
-\pagebreak
 
 
-```{r Tabla_20_promedios, echo=T,warning=FALSE,include=T,eval=F}
+
+```{r Tabla_20_promedios, echo=F,warning=FALSE,include=T,eval=F}
 
 # Reclutimientos asesoría marzo 2021
 Rprom_1991_2007<-mean(Rt1[1:17])
@@ -2031,10 +2030,10 @@ write.csv(diferencias, file="Tablas/Tabla_20_diferencias.csv")
 
 ```
 
-\pagebreak
 
 
-```{r Fig36,warning=F, include=T, message=F, echo=T,fig.height=3.5,fig.width=3.5,fig.align="center",fig.path=dir.Fig,dev=fig}
+
+```{r Fig36,warning=F, include=T, message=F, echo=F,fig.height=3.5,fig.width=3.5,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 sel_Flota<-rep1$Sel_flota[1,]
 sel_CruV <-rep1$Sel_reclas[1,]
@@ -2062,7 +2061,7 @@ g1
 
 ## 3.6. Puntos biológicos de referencia
 
-```{r Data_PBR_biologico_sept, echo=T}
+```{r Data_PBR_biologico_sept, echo=F}
 #PBR año biologico
 Amax        <- dat1$nedades 
 Fmort 	    <- seq(0,3.5,0.02)           
@@ -2090,10 +2089,10 @@ pB_Fmh1      <- pSPR_Fmh1-0.05                             # Paso 3: Aproximaci�
 SPRcurv1 		<- SPRFmort(R0,Fmort,Amax,Dat) 
 ```
 
-\pagebreak
 
 
-```{r Data_PBR_biologico_marzo, echo=T}
+
+```{r Data_PBR_biologico_marzo, echo=F}
 #PBR año biologico
 Amax        <- dat2$nedades 
 Fmort 	    <- seq(0,3.5,0.02)           
@@ -2121,10 +2120,10 @@ pB_Fmh2      <- pSPR_Fmh2-0.05                             # Paso 3: Aproximaci�
 SPRcurv2 		<- SPRFmort(R0,Fmort,Amax,Dat) 
 ```
 
-\pagebreak
 
 
-```{r Data_PBR_biologico_julio, echo=T}
+
+```{r Data_PBR_biologico_julio, echo=F}
 #PBR año biologico
 Amax        <- dat3$nedades 
 Fmort 	    <- seq(0,3.5,0.02)           
@@ -2153,7 +2152,7 @@ SPRcurv3 		<- SPRFmort(R0,Fmort,Amax,Dat)
 ```
 
 
-```{r pbrs septiembre, echo=T}
+```{r pbrs septiembre, echo=F}
 # ASESORÍA DE SEPTIEMBRE
 Bo1           <- rep1$SSBpbr[1]                         # Paso 4: Obtenci?n de Bo
 BRMS1         <- rep1$SSBpbr[3]                         # Paso 5: Obtenci?n de Brms = 60%SPRo = 55%Bo
@@ -2166,10 +2165,10 @@ ln_Fyr1       <- Ft1                                    # logaritmo de Ft
 ln_FSE1       <- Ft1std                                 # logaritmo de la desviaci?n standar de Ft
 ```
 
-\pagebreak
 
 
-```{r pbrs marzo, echo=T}
+
+```{r pbrs marzo, echo=F}
 # ASESORÍA DE SEPTIEMBRE
 Bo2           <- rep2$SSBpbr[1]                         # Paso 4: Obtenci?n de Bo
 BRMS2         <- rep2$SSBpbr[3]                         # Paso 5: Obtenci?n de Brms = 60%SPRo = 55%Bo
@@ -2185,7 +2184,7 @@ ln_FSE2       <- Ft2std                                 # logaritmo de la desvia
 \pagebreak
 
 
-```{r pbrs julio, echo=T}
+```{r pbrs julio, echo=F}
 # ASESORÍA DE SEPTIEMBRE
 Bo3           <- rep3$SSBpbr[1]                         # Paso 4: Obtenci?n de Bo
 BRMS3         <- rep3$SSBpbr[3]                         # Paso 5: Obtenci?n de Brms = 60%SPRo = 55%Bo
@@ -2198,10 +2197,10 @@ ln_Fyr3       <- Ft3                                    # logaritmo de Ft
 ln_FSE3       <- Ft3std                                 # logaritmo de la desviaci?n standar de Ft
 ```
 
-\pagebreak
 
 
-```{r Tabla_17 PBRs, echo=T,eval=F}
+
+```{r Tabla_17 PBRs, echo=F,eval=T}
 Tabla3.1<-rbind( "BDpromedio"=c(round(Bmed1/10^3,0),
                                 round(Bmed2/10^3,0),
                                 round(Bmed3/10^3,0)),
@@ -2238,9 +2237,9 @@ write.csv(Tabla3.1, file="Tablas/Tabla21_PBRsporasesoria.csv")
 
 ```
 
-\pagebreak
 
-```{r Fig37,warning=F, include=T, message=F, echo=T,fig.height=4.5,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
+
+```{r Fig37,warning=F, include=T, message=F, echo=F,fig.height=4.5,fig.width=9,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 BD <- ggplot() + 
      #geom_line(data=VarPobJul,aes(y=BD3, x=x, colour = "julio 2021"), linetype="solid",size=0.5)+
@@ -2283,10 +2282,10 @@ BD + Ft
 
 ```
 
-\pagebreak
 
 
-```{r Fig38,warning=F, include=T, message=F, echo=T,fig.height=3.5,fig.width=7.5,fig.align="center",fig.path=dir.Fig,dev=fig}
+
+```{r Fig38,warning=F, include=T, message=F, echo=F,fig.height=3.5,fig.width=7.5,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 sel_Flota <- rep1$Sel_flota[1,]
 madurez   <- dat1$madurezsexual
@@ -2319,9 +2318,9 @@ g2 <- ggplot () +
 g1 + g2
 ```
 
-\pagebreak
 
-```{r Estatus_sept, echo=T,message=FALSE, warning=FALSE, include=T}
+
+```{r Estatus_sept, echo=F,message=FALSE, warning=FALSE, include=T}
 
 years1<-rep1$years
 nyears1<-length(years1)
@@ -2390,11 +2389,11 @@ pd_sept<-pnorm(0.5,rprSEPT,rprSEPTstd,lower.tail = TRUE,log.p = F)
 pe_sept<-1-pnorm(1.1,FrprSEPT,FrprSEPTstd,lower.tail = TRUE,log.p = F)
 ```
 
-\pagebreak
+
 
 ## 3.7. Estatus
 
-```{r Estatus_marzo, echo=T,message=FALSE, warning=FALSE, include=T}
+```{r Estatus_marzo, echo=F,message=FALSE, warning=FALSE, include=T}
 
 years2<-rep2$years
 nyears2<-length(years2)
@@ -2462,7 +2461,7 @@ pe_mar<-1-pnorm(1.1,FrprMARZO,FrprMARZOstd,lower.tail = TRUE,log.p = F)
 
 ```
 
-```{r Estatus_julio, echo=T,message=FALSE, warning=FALSE, include=T}
+```{r Estatus_julio, echo=F,message=FALSE, warning=FALSE, include=T}
 
 years3  <-rep3$years
 nyears3 <-length(years3)
@@ -2526,7 +2525,7 @@ pe_jul<-1-pnorm(1.1,FrprJULIO,FrprJULIOstd,lower.tail = TRUE,log.p = F)
 \pagebreak
 
 
-```{r Fig39,warning=F, include=T, message=F, echo=T,fig.height=6.5,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
+```{r Fig39,warning=F, include=T, message=F, echo=F,fig.height=6.5,fig.width=8,fig.align="center",fig.path=dir.Fig,dev=fig}
 
 BD_BDrms <- ggplot() + 
      #geom_line(data=EstatusJul,aes(y=Rpr3, x=x, colour = "julio 2021"), linetype="solid", size=0.5)+
@@ -2597,10 +2596,10 @@ fig_desnf<- ggplot() + lims(y=c(0,2))+
 
 ```
 
-\pagebreak
 
 
-```{r Tabla_29, echo=T,warning=FALSE}
+
+```{r Tabla_29, echo=F,warning=FALSE}
 yearsb<-c("1990/91","1991/92","1992/93","1993/94","1994/95","1995/96","1996/97","1997/98","1998/99","1999/00","2000/01","2001/02","2002/03","2003/04","2004/05","2005/06","2006/07","2007/08","2008/09","2009/10","2010/11","2011/12","2012/13","2013/14","2014/15","2015/16","2016/17","2017/18","2018/19","2019/20",'2020/21')
 
 VarPobl2<- cbind('Años'=yearsb,
@@ -2619,7 +2618,7 @@ write.csv(VarPobl2, file="Tablas/Tabla_22_indicesReduccion.csv")
 ```
 
 
-```{r Tabla_29b, echo=T,warning=FALSE}
+```{r Tabla_29b, echo=F,warning=FALSE}
 yearsb<-c("1990/91","1991/92","1992/93","1993/94","1994/95","1995/96","1996/97","1997/98","1998/99","1999/00","2000/01","2001/02","2002/03","2003/04","2004/05","2005/06","2006/07","2007/08","2008/09","2009/10","2010/11","2011/12","2012/13","2013/14","2014/15","2015/16","2016/17","2017/18","2018/19","2019/20",'2020/21')
 
 VarPobl2b<- cbind('Años'=yearsb,
@@ -2637,9 +2636,9 @@ write.csv(VarPobl2b, file="Tablas/Tabla_23_tasasExplotacion.csv")
 
 ```
 
-\pagebreak
 
-```{r Fig40, warning=F, include=T, message=F, echo=T,fig.height=4,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
+
+```{r Fig40, warning=F, include=T, message=F, echo=F,fig.height=4,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
 source(paste(dir.fun,"Fn_DiagramaFase2.R",sep=""))
 name1<-"Asesoría de Septiembre 2021"
 years1<-rep1$years
@@ -2670,9 +2669,9 @@ text(c(SpB1[1]/BRMS1,SpB1[nyears1]/BRMS1,SpB1[nyears1-1]/BRMS1),
 
 ```
 
-\pagebreak
 
-```{r Fig41, warning=F, include=T, message=F, echo=T,fig.height=4,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
+
+```{r Fig41, warning=F, include=T, message=F, echo=F,fig.height=4,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
 source(paste(dir.fun,"Fn_DiagramaFase2.R",sep=""))
 name2<-"Asesoría de Marzo 2021"
 years2<-rep2$years
@@ -2703,9 +2702,9 @@ text(c(SpB2[1]/BRMS2,SpB2[nyears2]/BRMS2,SpB2[nyears2-1]/BRMS2),
 
 ```
 
-\pagebreak
 
-```{r Fig41b, warning=F, include=T, message=F, echo=T,fig.height=4,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
+
+```{r Fig41b, warning=F, include=T, message=F, echo=F,fig.height=4,fig.width=4,fig.align="center",fig.path=dir.Fig,dev=fig}
 source(paste(dir.fun,"Fn_DiagramaFase2.R",sep=""))
 name3<-"Asesoría de Julio 2021"
 years3<-rep3$years
@@ -2736,10 +2735,10 @@ text(c(SpB3[1]/BRMS3,SpB3[nyears3]/BRMS3,SpB3[nyears3-1]/BRMS3),
 
 ```
 
-\pagebreak
 
 
-```{r Tabla26, echo=T}
+
+```{r Tabla26, echo=F}
 Tabla4.1<-rbind("Año biológico"=c("2020/21",
                                   "2020/21",
                                   "2020/21"),
@@ -2931,7 +2930,7 @@ kable(t(tablaincrementos))
 
 ```
 
-\pagebreak
+
 
 ## 4.0.  Segunda revisión CBA 2021  (Asesoría de julio 2021)
 
@@ -3060,7 +3059,7 @@ kable(t(tablaincrementos))
 
 ```
 
-\pagebreak
+
 
 
 
@@ -3113,7 +3112,7 @@ text(904.3,0.0022,"Crms")
 
 
 
-\pagebreak
+
 
 ## 4.0.  Proyección del stock (Asesoría de septiembre 2021)
 
@@ -3297,7 +3296,6 @@ text(1.7,1.9,pF[i],cex=0.8,col=1)
 #ProbEstatusproy_sept("MAE0920",nesc,name,pF,nyears=30)
 ```
 
-\pagebreak
 
 ```{r Tabla33_CBA1eraRevision_marzo, echo=FALSE, warning=F, include=T, message=F}
 dir.4<-paste(dir.0,"/CBA_marzo/",sep="")
@@ -3579,7 +3577,7 @@ text(1.7,1.9,pF[i],cex=0.8,col=1)
 ```
 
 
-\pagebreak
+
 
 ```{r Tabla34_CBA1eraRevision_julio, echo=FALSE, warning=F, include=T, message=F}
 dir.4<-paste(dir.0,"/CBA_julio/",sep="")
