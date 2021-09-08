@@ -38,16 +38,14 @@ header-includes:
 - \fancyhead[LO,LE]{ }
 - \fancyhead[RO,RE]{ }
 - \renewcommand{\headrulewidth}{0.5pt}
-- \fancyfoot[C]{\cincopuntos \thepage \\ \vspace{-0.2cm} ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ \\ \vspace{-0.2cm} \cincopuntos CONVENIO DE DESEMPEÑO 2020 IFOP/SUBSECRETARÍA DE ECONOMíA Y EMT \\ \vspace{-0.1cm} TERCER INFORME (FINAL). SARDINA COMÚN DE LA REGIÓN DE VALPARAÍSO A LA REGIÓN DE LOS LAGOS, 2021}
+- \fancyfoot[C]{\cincopuntos \thepage \\ \vspace{-0.2cm} ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ \\ \vspace{-0.2cm} \cincopuntos CONVENIO DE DESEMPEÑO 2021 IFOP/SUBSECRETARÍA DE ECONOMíA Y EMT \\ \vspace{-0.1cm} PRIMER INFORME. SARDINA COMÚN DE LA REGIÓN DE VALPARAÍSO A LA REGIÓN DE LOS LAGOS, 2022}
 ---
 
 **7. ANEXOS**
 
-**ANEXO I.** Proceso de actualización de datos de entrada al modelo de evaluación de stock de sardina común de la Región de Valparaíso a la Región de Los Lagos.
-
 **ANEXO II.** Programa de Mejoramiento Continuo de la Calidad en la Asesoría Científica (PMCCAC) de la evaluación de stock de Anchoveta y Sardina común de la Región de Valparaíso a la Región de Los Lagos.
 
-**ANEXO III.** Procedimiento transitorio de incorporación del descarte en la evaluación de stock y descuento en la proyección de la Captura Biológicamente Aceptable de peces pelágicos pequeños de Chile.
+
 
 
 
@@ -77,7 +75,7 @@ El rango de Captura Biológicamente Aceptable (CBA) para el año calendario 2021
 
 ## 1.1. Objetivo general
 
-Proveer la asesoría científica necesaria para la determinación del estado de explotación y la Captura Biológicamente Aceptable (CBA) que deberá llevar o mantener al Rendimiento Máximo Sostenible (RMS), la pesquería de sardina común de la Región de Valparaíso a la Región de Los Lagos, bajo condiciones de riesgo e incertidumbre, cuantificando las distintas fuentes e integrando la mejor información científica-técnica disponible.
+Proveer la asesoría científica necesaria para la determinación del estado de explotación y la Captura Biológicamente Aceptable (CBA) que deberá llevar o mantener al Rendimiento Máximo Sostenible (RMS), pesquería de sardina común de la Región de Valparaíso a la Región de Los Lagos, bajo condiciones de riesgo e incertidumbre, cuantificando las distintas fuentes e integrando la mejor información científica-técnica disponible.
 
 ## 1.2. Objetivos específicos
 
@@ -648,10 +646,10 @@ Desembarques totales anuales & Desde julio 1990- junio 1991       & Estadística
                              &                                    & \\
 1. Flota                     & Desde julio 1990- junio 1991       & Monitoreo de la pesquería, de sardina común  \\
                              & hasta el año biológico             & de la V-X Regiones realizado por el           \\
-                             & julio 2019- junio 2021             & Proyecto Investigación Situación Pesquerías    \\
+                             & julio 2020 - junio 2021             & Proyecto Investigación Situación Pesquerías    \\
                              &                                    & de Peces Pelágicos                              \\ 
 2. Cruceros de verano        & Desde enero 2001 hasta enero 2021  &                                             \\
-3. Cruceros de otoño         & Desde mayo 2007 hasta mayo 2021    & Evaluaciones hidroacústicas de los stocks    \\
+3. Cruceros de otoño         & Desde mayo 2007 hasta junio 2021    & Evaluaciones hidroacústicas de los stocks    \\
                              &                                    & \\
 \textbf{Biomasa acústica}    &                                    & de anchoveta y sardina común entre            \\
                              &                                    & \\
@@ -661,7 +659,7 @@ Desembarques totales anuales & Desde julio 1990- junio 1991       & Estadística
                              &                                    & \\
 Pesos medios a la edad       & Desde julio 1990- junio 1991       & Monitoreo de la pesquería, de sardina común de la \\   
                              & hasta el año biológico             & V-X Regiones realizado por el Proyecto Investigación \\
-                             & julio 2019- junio 2021             & Situación Pesquerías de Peces Pelágicos               \\ 
+                             & julio 2020 - junio 2021             & Situación Pesquerías de Peces Pelágicos               \\ 
                              &                                    &                                                  \\ \hline
 Madurez sexual a la edad     & Constante                          & Aranís \textit{et al}. (2005)                          \\ \hline
 Mortalidad natural           & Constante                          & Cubillos \textit{et al}. (1998)                         \\ \hline 
@@ -1183,7 +1181,7 @@ La pesquería de sardina común ha sido manejada históricamente de manera monoe
 
 De acuerdo al ciclo de manejo histórico de esta pesquería (\textbf{Figura \ref{Fig14}}), la recomendación de CBA comienza después de la veda reproductiva, donde se reporta la CBA inicial, y que permitirá al CCT-PP establecer el estatus y recomendar el rango de CBA para el año siguiente. En enero de cada año, el crucero de evaluación hidroacústico permite estimar la abundancia y biomasa de reclutas (crucero de verano, RECLAS), esta información junto a datos provenientes de la pesquería es utilizada para la primera revisión de la CBA. En marzo se inicia el período de extracción y en mayo se realiza el segundo crucero de evaluación acústica (crucero de otoño, PELACES) para actualizar el estatus y revisar una vez más la CBA.
 
-La \textbf{Tabla \ref{Tab13}} detalla la información disponible en cada etapa de cálculo de CBA 2021, destacando que en la primera etapa de estimación (CBA inicial) no se cuenta con información actualizada de los años biológicos 2020-2021 y 2021-2022, por lo tanto, la población debe ser proyectada dos años biológicos hacia el futuro (a inicios de julio de un año a junio del año siguiente) para realizar el cálculo de la CBA 2021 en año calendario. En la segunda etapa (1era revisión) contamos con información parcial del año biológico 2020-2021 y en la tercera etapa (2da revisión) con información casi completa del año biológico 2020-2021. Sin embargo, para realizar el cálculo de la CBA 2021 en año calendario, en ambas etapas es necesario proyectar un año biológico hacia el futuro (2021-2022).
+La \textbf{Tabla \ref{Tab13}} detalla la información disponible en cada etapa de cálculo de CBA 2022, destacando que en la primera etapa de estimación (CBA inicial) no se cuenta con información actualizada de los años biológicos 2021-2022 y 2022-2023, por lo tanto, la población debe ser proyectada dos años biológicos hacia el futuro (a inicios de julio de un año a junio del año siguiente) para realizar el cálculo de la CBA 2022 en año calendario. En la segunda etapa (1era revisión) contamos con información parcial del año biológico 2021-2022 y en la tercera etapa (2da revisión) con información casi completa del año biológico 2021-2022. Sin embargo, para realizar el cálculo de la CBA 2022 en año calendario, en ambas etapas es necesario proyectar un año biológico hacia el futuro (2022-2023).
 
 ```{=tex}
 \begin{figure}
@@ -1193,39 +1191,40 @@ La \textbf{Tabla \ref{Tab13}} detalla la información disponible en cada etapa d
 \label{Fig14}
 \end{figure}
 ```
+
 ```{=tex}
 \begin{table}[h!]
-\caption{nformación relevante para el cálculo de CBA 2021 en cada una de las etapas de estimación.}
+\caption{nformación relevante para el cálculo de CBA 2022 en cada una de las etapas de estimación.}
  \label{Tab13}
  \small
     \centering
     \resizebox{16cm}{!} {
     \begin{tabular}{|l|c|c|c|}
     \hline
-  Datos de entrada  & CBA INICIAL                & 1ERA REVISIÓN                   & 2DA REVISIÓN  \\ 
-  al modelo         & Septiembre 2020          & Marzo 2021                      & Julio 2021 \\ \hline
-  Desembarques      &                            & Julio 1991- junio 2020 +        & Julio 1991 - \\
-                    & Julio 1991 - junio 2020  & Supuesto de captura 2020/2021   & preliminar a junio 2021 \\
-                    &                          &                                   &  \\ \hline
-  Biomasa acústica  & 2000 – 2020                & 2000 – 2021                     &    2000 – 2021 \\
-  Crucero de verano &                          &                                 & \\ \hline
-  Biomasa acústica  & 2003 – 2020              & 2003 – 2020                     & 2003 – 2021 \\
-  Crucero de otoño  &                          &                                 & \\ \hline
-  Composición de    & Julio 1991 - junio 2020  & Julio 1991 - junio 2020         & Julio 1991 - mayo 2021  \\
-  edad Flota        &                          &                                 & \\ \hline
-  Composición de    & 2001 – 2020              & 2001 – 2021                       & 2001 – 2021 \\
-  edad Cruceros de verano&                     &                                 & \\ \hline
-  Composición de    & 2007 – 2020              & 2007 – 2020                     & 2007 – 2021 \\
-  edad Cruceros de otoño&                      &                                 & \\ \hline
-                    &                          & Julio 1990 - junio 2020         & \\
-  Pesos medios      & Julio 1991 - junio 2020  & Promedio de los últimos 5 años  & Julio 1990 - mayo 2021 \\
-  a la edad         &                          & de la serie histórica para      & \\ 
-                    &                          & julio 2020-junio 2021           & \\ \hline
-  Madurez sexual    & Constante                & Constante                       & Constante \\
-  a la edad         &                          &                                 & \\ \hline
-  Mortalidad natural& Constante                & Constante                       & Constante \\ \hline
-  Proyección del    & 2 años biológicos        & 1 año biológico                 & 1 año biológico \\
-  reclutamiento     & (años 2020/21 y 2021/22) & (año 2021/22)                   & (año 2021/22) \\ \hline
+  Datos de entrada  & CBA INICIAL              & 1ERA REVISIÓN                   & 2DA REVISIÓN    \\ 
+  al modelo         & Septiembre 2021          & Marzo 2022                      & Julio 2022       \\ \hline
+  Desembarques      &                          & Julio 1991- junio 2021 +        & Julio 1991 -     \\
+                    & Julio 1991 - junio 2021  & Supuesto de captura 2021/2022   & a junio 2022     \\
+                    &                          &                                 &                   \\ \hline
+  Biomasa acústica  & 2000 – 2021              & 2000 – 2022                     & 2000 – 2022       \\
+  Crucero de verano &                          &                                 &                   \\ \hline
+  Biomasa acústica  & 2003 – 2021              & 2003 – 2021                     & 2003 – 2022       \\
+  Crucero de otoño  &                          &                                 &                   \\ \hline
+  Composición de    & Julio 1991 - junio 2021  & Julio 1991 - junio 2021         & Julio 1991 - mayo 2022  \\
+  edad Flota        &                          &                                 &                   \\ \hline
+  Composición de    & 2001 – 2021              & 2001 – 2022                     & 2001 – 2022       \\
+  edad Cruceros de verano&                     &                                 &                   \\ \hline
+  Composición de    & 2007 – 2021              & 2007 – 2021                     & 2007 – 2022       \\
+  edad Cruceros de otoño&                      &                                 &                   \\ \hline
+                    &                          & Julio 1990 - junio 2021         &                   \\
+  Pesos medios      & Julio 1991 - junio 2021  & Promedio de los últimos 5 años  & Julio 1990 - mayo 2022 \\
+  a la edad         &                          & de la serie histórica para      &                   \\ 
+                    &                          & julio 2021-junio 2022           &                   \\ \hline
+  Madurez sexual    & Constante                & Constante                       & Constante         \\
+  a la edad         &                          &                                 &                   \\ \hline
+  Mortalidad natural& Constante                & Constante                       & Constante         \\ \hline
+  Proyección del    & 2 años biológicos        & 1 año biológico                 & 1 año biológico   \\
+  reclutamiento     & (años 2021/22 y 2022/23) & (año 2022/23)                   & (año 2022/23)     \\ \hline
     \end{tabular}}
         \end{table}
 ```
@@ -1233,7 +1232,7 @@ La \textbf{Tabla \ref{Tab13}} detalla la información disponible en cada etapa d
 
 \normalsize
 
-El proceso de cálculo de la CBA 2021 para las tres etapas del ciclo de manejo de sardina común (\textbf{Tabla \ref{Tab14}}) consistirá en los siguientes pasos:
+El proceso de cálculo de la CBA 2022 para las tres etapas del ciclo de manejo de sardina común (\textbf{Tabla \ref{Tab14}}) consistirá en los siguientes pasos:
 
 **Paso 1**: Estimación de la captura proyectada (Yp~RMS~) en año biológico aplicando los siguientes supuestos:
 
@@ -1255,7 +1254,7 @@ El proceso de cálculo de la CBA 2021 para las tres etapas del ciclo de manejo d
 
 ```{=tex}
 \begin{table}[h!]
-\caption{Métodos de estimación de la CBA 2021 para las tres etapas del ciclo de manejo de sardina común.}
+\caption{Métodos de estimación de la CBA 2022 para las tres etapas del ciclo de manejo de sardina común.}
  \label{Tab14}
  \small
   \centering
@@ -1263,9 +1262,9 @@ El proceso de cálculo de la CBA 2021 para las tres etapas del ciclo de manejo d
   \begin{tabular}{|l|c|c|}
   \hline
   Mes de Asesoría & Etapas de cálculo      & Métodos de estimación \\ \hline
-  Septiembre 2020 & $CBA_{inicial}$      & $p_{s1} * Yp_{RMS(t+1)} + p_{s2} * Yp_{RMS(t+2)}$ \\
-  Marzo 2021      & $CBA_{1eraRevisión}$ & $p_{s1} * Y_{RMS(t)} + p_{s2} * Yp_{RMS(t+1)}$ \\
-  Julio 2021      & $CBA_{2daRevisión}$  & $p_{s1} * Y_{RMS(t)} + p_{s2} * Yp_{RMS(t+1)}$ \\ \hline
+  Septiembre 2021 & $CBA_{inicial}$      & $p_{s1} * Yp_{RMS(t+1)} + p_{s2} * Yp_{RMS(t+2)}$ \\
+  Marzo 2022      & $CBA_{1eraRevisión}$ & $p_{s1} * Y_{RMS(t)} + p_{s2} * Yp_{RMS(t+1)}$ \\
+  Julio 2022      & $CBA_{2daRevisión}$  & $p_{s1} * Y_{RMS(t)} + p_{s2} * Yp_{RMS(t+1)}$ \\ \hline
   \end{tabular}}
     \end{table}
 ```
@@ -1403,7 +1402,7 @@ Donde la Captura(i) es la captura estimada para cada percentil de probabilidad (
 
 La actual Ley General de Pesca y Acuicultura (LGPA, N° 18.892) persigue la conservación y el uso sustentable de los recursos pesqueros mediante la aplicación del enfoque precautorio y ecosistémico, garantizando el resguardo de los ecosistemas marinos. En este contexto, el Artículo 7°B de la LGPA indica que no podrá realizarse el descarte de individuos de una especie objetivo, cualquiera sea su régimen de acceso, y su fauna acompañante, salvo que se i) haya fijado una cuota global anual de captura para la especie objetivo y, ii) que en el proceso de establecimiento de la cuota global anual de captura se haya considerado el descarte, entre otras restricciones indicadas por el citado artículo.
 
-Para dar cumplimiento a esta normativa se estima una $CBA_{total}$ que da cuenta de toda la mortalidad por pesca incluido el descarte. El CCT-PP debe establecer el rango de CBA que se construye a partir de una CBA máxima ($CBA_{max}$), es decir, el rango por ley es ($0,8*CBA_{max}; CBA_{max}$). Esta $CBA_{max}$, deberá estimarse a partir de la $CBA_{total}$ descontando el porcentaje de descarte supuesto para el año 2021. La proporción del descarte (pd) supuesto para el año 2021 y que deberá ser descontado de la $CBA_{total}$ para establecer la $CBA_{max}$.
+Para dar cumplimiento a esta normativa se estima una $CBA_{total}$ que da cuenta de toda la mortalidad por pesca incluido el descarte. El CCT-PP debe establecer el rango de CBA que se construye a partir de una CBA máxima ($CBA_{max}$), es decir, el rango por ley es ($0,8*CBA_{max}; CBA_{max}$). Esta $CBA_{max}$, deberá estimarse a partir de la $CBA_{total}$ descontando el porcentaje de descarte supuesto para el año 2022. La proporción del descarte (pd) supuesto para el año 2022 y que deberá ser descontado de la $CBA_{total}$ para establecer la $CBA_{max}$.
 
 ```{=tex}
 \vspace{0.5cm}
@@ -1460,7 +1459,7 @@ A continuación, se detalla el contenido presentado la **Sección 4.4** de este 
 
 ### 4.1.1. Datos de entrada al modelo de evaluación de stock
 
-El período de análisis de la evaluación de stock comienza en 1990/91 hasta el año 2020/21. A continuación, se detalla los datos actualizados en la asesoría de julio 2021. La información es agrupada en año biológico, es decir, el inicio de la serie (1991) contiene los datos registrados entre julio de 1990 a junio de 1991, mientras que el último año (2021), contiene la información regsitrada durante el año biológico julio 2020 a junio 2021 (\textbf{Figura \ref{Fig19}}). \vspace{-0.2cm}
+El período de análisis de la evaluación de stock comienza en 1990/91 hasta el año 2020/21. A continuación, se detalla los datos actualizados en la asesoría de septiembre 2021. La información es agrupada en año biológico, es decir, el inicio de la serie (1991) contiene los datos registrados entre julio de 1990 a junio de 1991, mientras que el último año (2021), contiene la información regsitrada durante el año biológico julio 2020 a junio 2021 (\textbf{Figura \ref{Fig19}}). \vspace{-0.2cm}
 
 ```{=tex}
 \begin{figure}[h!]
@@ -1493,7 +1492,7 @@ El período de análisis de la evaluación de stock comienza en 1990/91 hasta el
 
 \vspace{-0.2cm}
 
-#### Supuestos de proyección de 1 año biológico 2021/2022
+#### Supuestos de proyección de 2 años biológicos 2021/2022 y 2022/2023
 
 \quad
 
@@ -1807,6 +1806,83 @@ Talcahuano  & Hoening (1983)             & 1,2 [0,50 - 2,39]    &            & B
 
 ### 4.1.2. Diagnóstico del modelo de evaluación de stock
 
+#### Proceso de actualización de datos
+\quad
+
+Cada proceso de revisión de CBA involucra la actualización y/o supuestos de datos para evaluar el impacto en las variables de estado asociado a la incorporación incremental de piezas de información. Al respecto, la actualización de datos de la asesoría actual corresponde principalmente a la información de la flota del año biológico 2020/21 (desembarques, descarte, composición de edad, pesos medios) y la incorporación de datos del crucero acústico de otoño 2021 correspondiente a la biomasa total y composición de edad.
+
+La información actualizada en la presente evaluación es presentada en la \textbf{Figura \ref{Fig25a}}.  La composición de edad registrada por la flota comercial durante el año biológico 2020/21, muestra que la captura estuvo sostenida principalmente por peces de edad 1, registrándose una baja proporción de peces capturados de edad 0 (menor al 10%) \textbf{Figura \ref{Fig25a}}. Respecto a la actualización de los pesos medios a la edad registrados durante el año 2020/21 \textbf{Figura \ref{Fig25a}}, se observa un incremento de un 38% en el peso de individuos de edad 0 y una disminución del 5% apróx. en peces de edad 1 a 3 años, registrándose una mayor diferencia en el grupo de edad 4, 16% menor respecto a los pesos medios supuestos en la asesoría de marzo 2021. No obstante, el aporte de los grupos de edad 3 y 4, la abundancia total es menor al 10%. 
+
+Para mantener la consistencia en el proceso de evaluación del stock y estimación de CBA, se utilizó un modelo edad estructurado igual al usado en las asesorías previas (septiembre 2020 y marzo 2021). Con objeto de evaluar el impacto en las variables de estado debido a la incorporación de nuevos datos, se realizó un proceso incremental de incorporación de piezas de información de acuerdo a la \textbf{Tabla \ref{Tab19a}}.
+
+En la \textbf{Tabla \ref{Tab19b}} y \textbf{Figura \ref{Fig25b}} se muestra el impacto de la incorporación y actualización de la información en las principales variables de estado para el caso 1 ( asesoría de julio 2021, MAE0721b). La incoporación de la composición de edad de la flota a junio 2021 (caso 2), tiene un efecto principal en el reclutamiento, mostrando una disminución del 8%. La actualización de los pesos medios del año 2020/21 (caso 5), generan una disminución del 6% de la BD y $BD/BD_{RMS}$ y un incremento del 11% de la mortalidad por pesca, producto de la disminución de los pesos medios del grupo de edad 3 y 4 principalmente \textbf{Figura \ref{Fig25b}}. 
+
+\pagebreak
+
+```{=tex}
+\begin{figure}
+\centering
+\includegraphics[width=0.75\textwidth]{Figuras/Fig3_anexoI-1.pdf}
+\caption{ Comparación entre la proporción de edad de la flota y los pesos medios a la edad de sardina común de las Regiones de Valparaíso a Los Lagos. Se compara la información utilizada en la asesoría de julio y septiembre 2021.}
+\label{Fig25a}
+\end{figure}
+```
+
+\vspace{0.8cm}
+
+```{=tex}
+\begin{table}[h!]
+\caption{Escenarios de que permiten evaluar el impacto de la incorporación de datos actualizados en el proceso de actualización}
+ \label{Tab19a}
+ \small
+    \centering
+    \resizebox{12cm}{!} {
+    \begin{tabular}{|c|l|}
+    \hline \rowcolor{Gray3}
+ Casos         & Descripción                                                            \\ \hline
+ \textbf{$1_{MAE0721}$} & Caso base asesoría julio 2021                                      \\
+ 2             & Actualiza composición de edad de la flota a junio 2021    \\ \rowcolor{Gray4}
+ 3             & Actualiza pesos medios e iniciales a la edad a junio 2021 \\ \hline
+    \end{tabular}}
+        \end{table}
+```
+\normalsize
+
+\pagebreak
+
+```{=tex}
+\begin{table}[h!]
+\caption{Estimaciones de las principales variables de estado para el caso 1 (asesoría julio 2021, MAE0721b) comparado con los resultados según la incorporación de cada pieza de información y en su conjunto (caso 3, asesoría septiembre 2021, MAE0921b). Se presenta el valor de estimación central y la diferencia en términos porcentuales. R= Reclutamiento, BD= Biomasa desovante, $BD/BD_{RMS}$= Reducción de la población respecto el RMS y F= Mortalidad por pesca.}
+ \label{Tab19b}
+ \small
+    \centering
+    \resizebox{15cm}{!} {
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline \rowcolor{Gray3}
+ Casos & R     & BD     & $BD/BD_{RMS}$ & F     & R.diff & BD.diff  & $BD/BD_{RMS}$.diff & F.diff \\ \hline
+ 1     & 25,4  & 686,8  & 1,41          & 0,34  &        &          &                    &        \\  \rowcolor{Gray4}
+ 2     & 25,4  & 686,8  & 1,41          & 0,34  & 0      & 0        & 0                  & 0  \\
+ 3     & 25,4  & 687,1  & 1,41          & 0,36  & 0      & 0        & 0                  & 0,05   \\ \rowcolor{Gray4} \hline
+    \end{tabular}}
+        \end{table}
+```
+
+\normalsize
+\vspace{0.8cm}
+
+```{=tex}
+\begin{figure}
+\centering
+\includegraphics[width=0.86\textwidth]{Figuras/Fig4_anexoI-1.pdf}
+\caption{ Diferencias relativas de las estimaciones de las principales variables de estado para el caso base (Asesoría de julio 2021) comparado con los resultados según la incorporación de cada pieza de información. }
+\label{Fig25b}
+\end{figure}
+```
+
+
+\pagebreak
+
+
 #### Ajuste del modelo a los datos y análisis de residuos
 \quad
 
@@ -1965,146 +2041,56 @@ Por su parte, las selectividades de la flota y cruceros de otoño indican que el
 ```
 \pagebreak
 
-\small
 
-+---------+-------------+------------+------------+-------------+------------+------------+
-| Año     | $BD_{sept}$ | $BD_{mar}$ | $BD_{jul}$ | $BT_{sept}$ | $BT_{mar}$ | $BT_{jul}$ |
-+:=======:+:===========:+:==========:+:==========:+:===========:+:==========:+:==========:+
-| 1990/91 | 2.008.700   | 2.030.000  | 2.015.480  | 2.844.200   | 287.0400   | 2.854.570  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 1991/92 | 1.344.500   | 1.358.500  | 1.351.070  | 1.949.500   | 196.6700   | 1.957.010  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 1992/93 | 645.250     | 652.550    |   648.897  | 955.290     | 964.360    |   960.132  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 1993/94 | 358.150     | 362.070    |   360.662  | 902.180     | 909.000    |   908.707  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 1994/95 | 390.940     | 395.090    |   395.593  | 761.620     | 767.170    |   769.117  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 1995/96 | 469.770     | 473.120    |   475.138  | 151.8000    | 151.7100   | 1.526.620  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 1996/97 | 648.700     | 647.450    |   653.825  | 1.080.200   | 1.077.600  | 1.086.140  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 1997/98 | 348.370     | 346.010    |   351.479  | 746.840     | 741.130    |   749.454  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 1998/99 | 314.830     | 311.640    |   316.169  | 653.870     | 646.260    |   654.159  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 1999/00 | 198.580     | 194.090    |   198.246  | 475.590     | 465.230    |   473.346  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2000/01 | 123.590     | 118.470    |   122.362  | 457.800     | 444.970    |   453.525  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2001/02 | 254.560     | 246.340    |   251.598  | 725.490     | 713.020    |   722.233  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2002/03 | 272.510     | 264.590    |   270.551  | 766.550     | 753.550    |   765.101  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2003/04 | 221.470     | 215.090    |   221.022  | 773.620     | 767.100    |   775.923  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2004/05 | 132.870     | 130.190    |   133.954  | 629.360     | 626.840    |   634.685  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2005/06 | 167.690     | 166.450    |   170.388  | 1.310.300   | 1.299.600  | 1.321.650  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2006/07 | 621.470     | 612.730    |   630.224  | 1.074.400   | 1.058.400  | 1.091.760  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2007/08 | 546.580     | 533.910    |   560.080  | 3.087.000   | 3.029.800  | 3.125.370  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2008/09 | 1.263.800   | 123.0300   | 1.285.730  | 2.846.100   | 2.794.700  | 2.875.880  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2009/10 | 894.040     | 867.720    |   906.147  | 1.877.000   | 1.828.600  | 1.852.850  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2010/11 | 974.810     | 936.800    |   942.980  | 3.000.800   | 2.926.400  | 2.963.710  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2011/12 | 1.189.500   | 1.147.700  | 1.167.280  | 2.747.600   | 2.690.600  | 2.728.000  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2012/13 | 1.116.600   | 1.088.100  | 1.111.240  | 1.869.900   | 1.824.500  | 1.862.960  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2013/14 | 883.910     | 857.790    |   881.823  | 3.164.100   | 3.096.700  | 3.165.820  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2014/15 | 1.284.500   | 1.250.400  | 1.286.070  | 2.252.000   | 2.202.700  | 2.254.280  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2015/16 | 1.047.700   | 1.021.300  | 1.049.280  | 1.916.400   | 1.876.300  | 1.921.390  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2016/17 | 851.980     | 831.090    |   853.911  | 2.728.000   | 2.663.200  | 2.726.220  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2017/18 | 934.650     | 907.150    |   928.190  | 2.809.100   | 2.763.000  | 2.826.010  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2018/19 | 1.331.300   | 130.7200   | 1.331.900  | 1.841.000   | 1.811.000  | 1.855.990  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2019/20 | 849.310     | 832.960    |   866.506  | 1.333.000   | 1.305.400  | 1.352.630  |
-+---------+-------------+------------+------------+-------------+------------+------------+
-| 2020/21 | NA          | 430.060    |   511.108  | NA          | 1.782.600  | 2.000.590  |
-+---------+-------------+------------+------------+-------------+------------+------------+
+```{=tex}
 
-: \label{Tab20a} Comparación de las variables poblacionales estimadas en la evaluación de septiembre 2020, marzo y julio 2021 de sardina común de las Regiones de Valparaíso a Los Lagos.
+\begin{table}[h!]
+\caption{Variables poblacionales estimadas en la evaluación de septiembre 2021 de sardina común de las Regiones de Valparaíso a Los Lagos.}
+ \label{Tab20a}
+ \small
+    \centering
+    \resizebox{9cm}{!} {
+    \begin{tabular}{ccccc}
+    \hline \rowcolor{Gray3}
+Año     & $BD_{sept}$ & $BT_{sept}$ & $R_{sept}$ & $F_{sept}$ \\ 
+\hline  \rowcolor{Gray4}
+1990/91	&2.007.000	&2.844.200	 &170.470	  &0,209  \\ 
+1991/92	&1.345.500	&1.950.300	 &93.630	  &0,386  \\ \rowcolor{Gray4}
+1992/93	&646.070	  &956.570	   &94.588	  &0,378  \\ 
+1993/94	&359.110	  &906.560	   &143.530	  &0,574  \\ \rowcolor{Gray4}
+1994/95	&394.340	  &767.360	   &116.190	  &0,191  \\ 
+1995/96	&474.070	  &1.524.800	 &213.000	  &0,346   \\ \rowcolor{Gray4}
+1996/97	&652.790	  &1.084.700	 &83.143	  &0,797   \\ 
+1997/98	&350.640	  &747.860	   &35.196	  &0,137   \\ \rowcolor{Gray4}
+1998/99	&315.340	  &652.660	   &34.570	  &0,55    \\
+1999/00	&197.450	  &471.920	   &46.684	  &0,773   \\ \rowcolor{Gray4}
+2000/01	&121.680	  &451.930	   &87.216	  &0,17    \\
+2001/02	&250.610	  &720.530	   &126.870	  &0,679   \\ \rowcolor{Gray4}
+2002/03	&269.460	  &763.250	   &106.090	  &0,635   \\
+2003/04	&220.060	  &774.220	   &74.079	  &1,107   \\ \rowcolor{Gray4}
+2004/05	&133.220	  &632.780	   &67.948	  &0,807   \\
+2005/06	&169.440	  &1.317.900	 &366.140	  &0,629   \\ \rowcolor{Gray4}
+2006/07	&627.440	  &1.088.000	 &73.946	  &0,407   \\
+2007/08	&557.470	  &3.116.600	 &590.530	  &0,386   \\ \rowcolor{Gray4}
+2008/09	&1.280.800	&2.868.400	 &333.050	  &0,54    \\
+2009/10	&902.390	  &1.846.800	 &259.120	  &0,506   \\ \rowcolor{Gray4}
+2010/11	&938.520	  &2.954.600	 &363.670	  &0,397   \\
+2011/12	&1.162.100	&2.719.300	 &497.560	  &0,499   \\ \rowcolor{Gray4}
+2012/13	&1.106.300	&1.855.800	 &97.047	  &0,298   \\
+2013/14	&877.460	  &3.155.500	 &289.110	  &0,265   \\ \rowcolor{Gray4}
+2014/15	&1.280.800	&2.246.000	 &242.630	  &0,263   \\
+2015/16	&1.044.600	&1.914.100	 &107.730	  &0,213   \\ \rowcolor{Gray4}
+2016/17	&850.040	  &2.717.300	 &243.040	  &0,265   \\
+2017/18	&924.370	  &2.811.400	 &272.200	  &0,224   \\ \rowcolor{Gray4}
+2018/19	&1.323.200	&1.842.500	 &79.600	  &0,205   \\
+2019/20	&858.050	  &1.346.200	 &58.944	  &0,307   \\ \rowcolor{Gray4}
+2020/21	&492.050	  &2.011.100	 &229.910	  &0,331   \\ \hline 
+  \end{tabular}}
+        \end{table}
+```
 
-\pagebreak
-\small
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| Año     | $R_{sept}$ | $R_{mar}$ | $R_{jul}$ | $F_{sept}$ | $F_{mar}$ | $F_{jul}$ |
-+:=======:+:==========:+:=========:+:=========:+:==========:+:=========:+:=========:+
-| 1990/91 | 169.670    | 170.120   | 170.639   | 0,209      | 0,207     | 0,208     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 1991/92 | 93.768     | 94.041    |  93.685   | 0,386      | 0,382     | 0,384     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 1992/93 | 94.409     | 94.707    |  94.732   | 0,379      | 0,375     | 0,377     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 1993/94 | 142.470    | 143.180   | 143.611   | 0,576      | 0,57      | 0,573     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 1994/95 | 115.500    | 115.760   | 116.301   | 0,192      | 0,19      | 0,19      |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 1995/96 | 212.650    | 211.490   | 213.115   | 0,347      | 0,347     | 0,346     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 1996/97 | 83.311     | 82.828    |  83.214   | 0,8        | 0,803     | 0,796     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 1997/98 | 35.378     | 35.062    |  35.261   | 0,137      | 0,138     | 0,137     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 1998/99 | 34.847     | 34.292    |  34.643   | 0,547      | 0,555     | 0,548     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 1999/00 | 47.251     | 46.073    |  46.792   | 0,764      | 0,786     | 0,77      |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2000/01 | 88.252     | 86.319    |  87.440   | 0,167      | 0,172     | 0,169     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2001/02 | 126.940    | 126.130   | 127.032   | 0,671      | 0,686     | 0,678     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2002/03 | 105.990    | 105.110   | 106.224   | 0,63       | 0,643     | 0,633     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2003/04 | 73.689     | 73.955    |  74.160   | 1,104      | 1,12      | 1,104     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2004/05 | 67.496     | 67.638    |  68.098   | 0,809      | 0,813     | 0,804     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2005/06 | 364.340    | 361.230   | 366.988   | 0,631      | 0,636     | 0,628     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2006/07 | 72.290     | 70.839    |  74.055   | 0,412      | 0,419     | 0,406     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2007/08 | 586.530    | 576.230   | 591.892   | 0,389      | 0,397     | 0,385     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2008/09 | 332.590    | 329.460   | 333.486   | 0,545      | 0,557     | 0,539     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2009/10 | 275.020    | 268.470   | 259.700   | 0,494      | 0,509     | 0,505     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2010/11 | 364.240    | 358.290   | 364.438   | 0,386      | 0,398     | 0,395     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2011/12 | 495.590    | 492.960   | 498.579   | 0,493      | 0,504     | 0,498     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2012/13 | 97.434     | 95.115    |  97.326   | 0,296      | 0,303     | 0,297     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2013/14 | 289.240    | 284.180   | 289.821   | 0,263      | 0,269     | 0,264     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2014/15 | 243.240    | 240.020   | 243.378   | 0,262      | 0,268     | 0,262     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2015/16 | 107.500    | 106.000   | 108.023   | 0,212      | 0,217     | 0,212     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2016/17 | 244.410    | 238.570   | 243.660   | 0,258      | 0,264     | 0,264     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2017/18 | 270.150    | 267.990   | 273.830   | 0,213      | 0,216     | 0,223     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2018/19 | 75.649     | 75.099    |  80.727   | 0,207      | 0,21      | 0,202     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2019/20 | 58.067     | 56.309    |  58.188   | 0,319      | 0,326     | 0,306     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
-| 2020/21 | NA         | 257.750   | 220.797   | NA         | 0,183     | 0,326     |
-+---------+------------+-----------+-----------+------------+-----------+-----------+
 
-: \label{Tab20b} Comparación de las variables poblacionales estimadas en la evaluación de septiembre 2020, marzo y julio 2021 de sardina común de las Regiones de Valparaíso a Los Lagos.
- 
+
 \normalsize
 
 \pagebreak
@@ -2128,25 +2114,25 @@ En la \textbf{Tabla \ref{Tab21}} se muestran los valores calculados en la asesor
 
 ```{=tex}
 \begin{table}[h]
-\caption{Puntos Biológicos de Referencia de biomasa (miles t) estimada en la asesoría de septiembre 2020, marzo y julio 2021 para sardina común, calculados siguiendo los pasos descritos en la metodología de este informe.}
+\caption{Puntos Biológicos de Referencia de biomasa (miles t) estimada en la asesoría de septiembre 2021 para sardina común, calculados siguiendo los pasos descritos en la metodología de este informe.}
  \label{Tab21}
  \small
     \centering
     \resizebox{15cm}{!} {
-    \begin{tabular}{|c|l|l|c|c|c|}
+    \begin{tabular}{|c|l|l|c|}
     \hline
- Etapas & Cálculo                               & Aproximación       & Sept 2020   & Marzo 2021          & Julio 2021 \\ \hline
-        & Promedio de la serie histórica entre  & $BD_{promedio}$    & 723 mil t   & 702 mil t          &     718 mil t   \\
- Paso 1 & 1991-2020 de la evaluación de stock   &                    &             &                     &            \\
-        & Mediana de la serie histórica entre   & $F_{mh}$           & 0,39        & 0,38                &    0,38    \\ 
-        & 1991-2020 de la evaluación de stock   &                    &             &                     &            \\ \hline     
- Paso 2 & Cálculo de la curva de biomasa        & $\%BDPR (F_{mh})$  & 52,5\%      &  52,9\%             &    52,8   \\
-        & por recluta (BDPR)                    & $\%BDPR (F_{RMS})$ & 60\%        &  60\%               &    60\%   \\ \hline
- Paso 3 & $\%BDPR (F_{mh}) - 5\%$               & $\%BD (F_{mh})$    & 47,5\%      &  47,9\%             &    47,8\% \\
-        & $\%BDPR (F_{RMS}) - 5\%$              & $\%BD (F_{RMS})$   & 55\%        &  55\%               &  55\%     \\ \hline
- Paso 4 & $BD_0=BD_{promedio} / \%BD_{Fmh}$     & $BD_0$             & 1,51 millón de t & 1,46 millón t. & 1,49 millón t.\\ \hline
- Paso 5 & $BD_{RMS} = BD_0*\%BD(F_{RMS})$       & $BD_{55\%}$        &  830 mil t  &  801 mil t.         & 820 mil t.  \\ \hline
- Paso 6 & $BD_{LIM} = BD_0 * \%BD(F_{LIM})$     & $BD_{27,5\%}$      &  415 mil t  &  401 mil t.         & 410 mil t. \\ \hline
+ Etapas & Cálculo                               & Aproximación       & Sept 2021    \\ \hline
+        & Promedio de la serie histórica entre  & $BD_{promedio}$    & 714 mil t     \\
+ Paso 1 & 1991-2020 de la evaluación de stock   &                    &              \\
+        & Mediana de la serie histórica entre   & $F_{mh}$           & 0,39        \\ 
+        & 1991-2020 de la evaluación de stock   &                    &             \\ \hline     
+ Paso 2 & Cálculo de la curva de biomasa        & $\%BDPR (F_{mh})$  & 52,6\%      \\
+        & por recluta (BDPR)                    & $\%BDPR (F_{RMS})$ & 60\%         \\ \hline
+ Paso 3 & $\%BDPR (F_{mh}) - 5\%$               & $\%BD (F_{mh})$    & 47,6\%      \\
+        & $\%BDPR (F_{RMS}) - 5\%$              & $\%BD (F_{RMS})$   & 55\%       \\ \hline
+ Paso 4 & $BD_0=BD_{promedio} / \%BD_{Fmh}$     & $BD_0$             & 1,49 millón de t \\ \hline
+ Paso 5 & $BD_{RMS} = BD_0*\%BD(F_{RMS})$       & $BD_{55\%}$        &  818 mil t  \\ \hline
+ Paso 6 & $BD_{LIM} = BD_0 * \%BD(F_{LIM})$     & $BD_{27,5\%}$      &  409 mil t  \\ \hline
   \end{tabular}}
         \end{table}
 \normalsize
@@ -2199,147 +2185,55 @@ Con respecto a la razón entre F~2020/21~ y F~RMS~ fue de 1,09, siendo un 9% may
 
 \pagebreak
 
-\footnotesize
 
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| Año     | $F/F_{RMS_{sept}}$ | $F/F_{RMS_{mar}}$ | $F/F_{RMS_{jul}}$ | $BD/BD_{RMS_{sept}}$ | $BD/BD_{RMS_{mar}}$ | $BD/BD_{RMS_{jul}}$ |
-+=========+====================+===================+===================+======================+=====================+=====================+
-| 1990/91 | 0,7                | 0,693             | 0,696             | 2,419                | 2,534               |   2,457             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 1991/92 | 1,293              | 1,279             | 1,283             | 1,619                | 1,696               |   1,647             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 1992/93 | 1,27               | 1,256             | 1,259             | 0,777                | 0,815               |   0,791             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 1993/94 | 1,931              | 1,911             | 1,913             | 0,431                | 0,452               |   0,44              |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 1994/95 | 0,643              | 0,637             | 0,635             | 0,471                | 0,493               |   0,482             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 1995/96 | 1,164              | 1,161             | 1,155             | 0,566                | 0,591               |   0,579             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 1996/97 | 2,682              | 2,689             | 2,658             | 0,781                | 0,808               |   0,797             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 1997/98 | 0,461              | 0,464             | 0,458             | 0,42                 | 0,432               |   0,429             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 1998/99 | 1,835              | 1,859             | 1,831             | 0,379                | 0,389               |   0,385             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 1999/00 | 2,561              | 2,632             | 2,573             | 0,239                | 0,242               |   0,242             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2000/01 | 0,56               | 0,576             | 0,566             | 0,149                | 0,148               |   0,149             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2001/02 | 2,249              | 2,299             | 2,263             | 0,307                | 0,308               |   0,307             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2002/03 | 2,111              | 2,155             | 2,116             | 0,328                | 0,33                |   0,33              |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2003/04 | 3,701              | 3,751             | 3,687             | 0,267                | 0,269               |   0,269             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2004/05 | 2,713              | 2,724             | 2,685             | 0,16                 | 0,163               |   0,163             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2005/06 | 2,116              | 2,131             | 2,096             | 0,202                | 0,208               |   0,208             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2006/07 | 1,383              | 1,405             | 1,355             | 0,748                | 0,765               |   0,768             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2007/08 | 1,305              | 1,331             | 1,286             | 0,658                | 0,667               |   0,683             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2008/09 | 1,825              | 1,865             | 1,799             | 1,522                | 1,536               |   1,568             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2009/10 | 1,657              | 1,707             | 1,685             | 1,077                | 1,083               |   1,105             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2010/11 | 1,295              | 1,335             | 1,321             | 1,174                | 1,17                |   1,15              |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2011/12 | 1,651              | 1,688             | 1,662             | 1,433                | 1,433               |   1,423             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2012/13 | 0,991              | 1,016             | 0,992             | 1,345                | 1,358               |   1,355             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2013/14 | 0,881              | 0,901             | 0,881             | 1,065                | 1,071               |   1,075             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2014/15 | 0,878              | 0,898             | 0,875             | 1,547                | 1,561               |   1,568             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2015/16 | 0,71               | 0,726             | 0,707             | 1,262                | 1,275               |   1,279             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2016/17 | 0,865              | 0,886             | 0,883             | 1,026                | 1,038               |   1,041             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2017/18 | 0,713              | 0,725             | 0,746             | 1,126                | 1,133               |   1,132             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2018/19 | 0,693              | 0,705             | 0,679             | 1,603                | 1,632               |   1,624             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2019/20 | 1,068              | 1,091             | 1,021             | 1,023                | 1,04                |   1,056             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
-| 2020/21 | NA                 | 0,613             | 1,088             | NA                   | 0,537               |   0,623             |
-+---------+--------------------+-------------------+-------------------+----------------------+---------------------+---------------------+
 
-: \label{Tab22} Comparación de los índices de reducción de F respecto de $F_{RMS}$ ($F/F_{RMS}$), BD respecto de $BD_{RMS}$ ($BD/BD_{RMS}$) estimados en la asesoría de septiembre 2020, marzo y julio 2021 de sardina común de las Regiones de Valparaíso a Los Lagos.
+```{=tex}
 
-\normalsize
+\begin{table}[h!]
+\caption{Índices de reducción de F respecto de $F_{RMS}$ ($F/F_{RMS}$), BD respecto de $BD_{RMS}$ ($BD/BD_{RMS}$), tasas de explotación anual referidos a la biomasa ($Y/BT$) y a la abundancia estimada ($C\#/N\#$), estimadas en la evaluación de septiembre 2021 de sardina común de las Regiones de Valparaíso a Los Lagos.}
+ \label{Tab19}
+ \small
+    \centering
+    \resizebox{12cm}{!} {
+    \begin{tabular}{ccccc}
+    \hline \rowcolor{Gray3}
+Año     & $F/F_{RMS_{sept}}$ & $BD/BD_{RMS_{sept}}$ & $Y/BT_{sept}$ & $C/N_{sept}$   \\ \hline  \rowcolor{Gray4}
+1990/91	&0,699	&2,452	&0,174	&0,101 \\
+1991/92	&1,289	&1,644	&0,263	&0,179 \\ \rowcolor{Gray4}
+1992/93	&1,265	&0,789	&0,262	&0,168 \\
+1993/94	&1,92	  &0,439	&0,396	&0,23  \\ \rowcolor{Gray4}
+1994/95	&0,637	&0,482	&0,157	&0,088 \\
+1995/96	&1,157	&0,579	&0,237	&0,148 \\ \rowcolor{Gray4}
+1996/97	&2,665	&0,798	&0,509	&0,321 \\
+1997/98	&0,459	&0,428	&0,099	&0,069 \\ \rowcolor{Gray4}
+1998/99	&1,837	&0,385	&0,326	&0,234 \\
+1999/00	&2,586	&0,241	&0,436	&0,293 \\ \rowcolor{Gray4}
+2000/01	&0,568	&0,149	&0,116	&0,075 \\
+2001/02	&2,272	&0,306	&0,441	&0,263 \\ \rowcolor{Gray4}
+2002/03	&2,124	&0,329	&0,385	&0,253 \\
+2003/04	&3,702	&0,269	&0,501	&0,39  \\ \rowcolor{Gray4}
+2004/05	&2,697	&0,163	&0,399	&0,301 \\
+2005/06	&2,104	&0,207	&0,392	&0,236 \\ \rowcolor{Gray4}
+2006/07	&1,362	&0,767	&0,329	&0,19  \\
+2007/08	&1,291	&0,681	&0,238	&0,156 \\ \rowcolor{Gray4}
+2008/09	&1,807	&1,565	&0,328	&0,227 \\
+2009/10	&1,693	&1,103	&0,34	  &0,214 \\ \rowcolor{Gray4}
+2010/11	&1,327	&1,147	&0,28	  &0,167 \\
+2011/12	&1,669	&1,42	  &0,316	&0,204 \\ \rowcolor{Gray4}
+2012/13	&0,998	&1,352	&0,226	&0,148 \\
+2013/14	&0,885	&1,072	&0,165	&0,116 \\ \rowcolor{Gray4}
+2014/15	&0,88	  &1,565	&0,186	&0,12  \\
+2015/16	&0,711	&1,276	&0,157	&0,104 \\ \rowcolor{Gray4}
+2016/17	&0,887	&1,039	&0,153	&0,117 \\
+2017/18	&0,751	&1,13	  &0,133	&0,101 \\ \rowcolor{Gray4}
+2018/19	&0,685	&1,617	&0,172	&0,104 \\
+2019/20	&1,028	&1,048	&0,211	&0,147 \\ \rowcolor{Gray4}
+2020/21	&1,108	&0,601	&0,195	&0,139 \\  \hline 
+  \end{tabular}}
+        \end{table}
+```
 
-\pagebreak
-\footnotesize
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| Año     | $Y/BT_{sept}$ | $Y/BT_{mar}$ | $Y/BT_{jul}$ | $C\#/N\#_{sept}$ | $C\#/N\#_{mar}$ | $C\#/N\#_{jul}$ |
-+=========+===============+==============+==============+==================+=================+=================+
-| 1990/91 | 0,174         | 0,172        | 0,173        | 0,102            | 0,101           | 0,101           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 1991/92 | 0,264         | 0,261        | 0,263        | 0,179            | 0,178           | 0,179           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 1992/93 | 0,262         | 0,26         | 0,261        | 0,169            | 0,167           | 0,167           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 1993/94 | 0,398         | 0,395        | 0,395        | 0,232            | 0,23            | 0,23            |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 1994/95 | 0,158         | 0,157        | 0,157        | 0,088            | 0,088           | 0,087           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 1995/96 | 0,238         | 0,238        | 0,237        | 0,148            | 0,149           | 0,147           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 1996/97 | 0,512         | 0,513        | 0,509        | 0,323            | 0,324           | 0,321           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 1997/98 | 0,099         | 0,1          | 0,099        | 0,069            | 0,069           | 0,069           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 1998/99 | 0,326         | 0,33         | 0,326        | 0,233            | 0,236           | 0,233           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 1999/00 | 0,432         | 0,442        | 0,435        | 0,291            | 0,298           | 0,292           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2000/01 | 0,115         | 0,118        | 0,116        | 0,074            | 0,076           | 0,074           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2001/02 | 0,438         | 0,445        | 0,44         | 0,261            | 0,266           | 0,262           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2002/03 | 0,383         | 0,39         | 0,384        | 0,252            | 0,256           | 0,252           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2003/04 | 0,501         | 0,505        | 0,499        | 0,39             | 0,394           | 0,389           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2004/05 | 0,401         | 0,403        | 0,398        | 0,302            | 0,304           | 0,3             |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2005/06 | 0,394         | 0,397        | 0,391        | 0,237            | 0,239           | 0,235           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2006/07 | 0,334         | 0,339        | 0,328        | 0,193            | 0,196           | 0,189           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2007/08 | 0,24          | 0,245        | 0,237        | 0,158            | 0,161           | 0,155           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2008/09 | 0,331         | 0,337        | 0,327        | 0,229            | 0,234           | 0,227           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2009/10 | 0,334         | 0,343        | 0,339        | 0,209            | 0,215           | 0,213           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2010/11 | 0,276         | 0,283        | 0,279        | 0,164            | 0,169           | 0,167           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2011/12 | 0,313         | 0,319        | 0,315        | 0,202            | 0,206           | 0,203           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2012/13 | 0,224         | 0,229        | 0,225        | 0,147            | 0,15            | 0,147           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2013/14 | 0,165         | 0,168        | 0,164        | 0,116            | 0,119           | 0,116           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2014/15 | 0,185         | 0,189        | 0,185        | 0,119            | 0,122           | 0,119           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2015/16 | 0,157         | 0,16         | 0,156        | 0,104            | 0,107           | 0,104           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2016/17 | 0,149         | 0,153        | 0,152        | 0,114            | 0,117           | 0,116           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2017/18 | 0,127         | 0,129        | 0,132        | 0,097            | 0,098           | 0,101           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2018/19 | 0,174         | 0,176        | 0,171        | 0,105            | 0,107           | 0,103           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2019/20 | 0,217         | 0,222        | 0,21         | 0,152            | 0,155           | 0,146           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
-| 2020/21 | NA            | 0,123        | 0,196        | NA               | 0,08            | 0,137           |
-+---------+---------------+--------------+--------------+------------------+-----------------+-----------------+
 
-: \label{Tab23} Comparación de las tasas de explotación anual referidos a la biomasa ($Y/BT$) y a la abundancia estimada ($C\#/N\#$), estimadas en la evaluación de septiembre 2020, marzo y julio 2021 de sardina común de las Regiones de Valparaíso a Los Lagos.
 
 \normalsize
 
@@ -2348,10 +2242,8 @@ Con respecto a la razón entre F~2020/21~ y F~RMS~ fue de 1,09, siendo un 9% may
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=0.4\textwidth]{Figuras/Fig40-1.pdf}
-\includegraphics[width=0.4\textwidth]{Figuras/Fig41-1.pdf}
-\includegraphics[width=0.8\textwidth]{Figuras/Fig41b-1.pdf}
-\caption{Diagrama de fases de explotación de la biomasa desovante respecto de la mortalidad por pesca de la asesoría de septiembre 2020, marzo 2021 (panel superior) y julio 2021 (panel inferior). Los ejes están estandarizados a los valores que generan el RMS proxy. Cruz azul corresponde a los intervalos de confianza de la razón $BD/BD_{RMS}$ y $F/F_{RMS}$. El año con cruz continua corresponde a "\textit{Estatus completo}" y la cruz con línea discontinua a "\textit{Estatus preliminar}".}
+\includegraphics[width=1\textwidth]{Figuras/Fig40-1.pdf}
+\caption{Diagrama de fases de explotación de la biomasa desovante respecto de la mortalidad por pesca de la asesoría de septiembre 2021. Los ejes están estandarizados a los valores que generan el RMS proxy. Cruz azul corresponde a los intervalos de confianza de la razón $BD/BD_{RMS}$ y $F/F_{RMS}$. El año con cruz continua corresponde a "\textit{Estatus completo}" y la cruz con línea discontinua a "\textit{Estatus preliminar}".}
 \label{Fig40}
 \end{figure}
 ```
@@ -2359,17 +2251,17 @@ Con respecto a la razón entre F~2020/21~ y F~RMS~ fue de 1,09, siendo un 9% may
 
 \pagebreak
 
-|                           | Septiembre 2020 | Marzo 2021 | Julio 2021 |
-|---------------------------|-----------------|------------|------------|
-| Año biológico             | 2019/20         | 2020/21    | 2020/21    |
-| $F_{RMS}$                 | 0,3             | 0,3        | 0,3        |
-| $BD_{RMS}$                | 830 mil t       | 801 mil t  | 820 mil t  |
-| $BD_{LIM}$                | 415 mil t       | 401 mil t  | 410 mil t  |
-| $p(BD_{last} < BD_{RMS})$ | 0,45            | 1          |  1         |
-| $p(F_{last} > F_{RMS})$   | 0,6             | 0,02       | 0,62       |
-| $p(sobre-explotación)$    | 0,26            | 1          | 0,98       |
-| $p(agotado/colapsado)$    | 0               | 0,38       | 0,18       |
-| $p(sobrepesca)$           | 0,45            | 0          | 0,48       |
+|                           | Septiembre 2021 | 
+|---------------------------|-----------------|
+| Año biológico             | 2020/21         | 
+| $F_{RMS}$                 | 0,3             | 
+| $BD_{RMS}$                | 818 mil t       | 
+| $BD_{LIM}$                | 409 mil t       | 
+| $p(BD_{2021} < BD_{RMS})$ | 1,00            | 
+| $p(F_{2021} > F_{RMS})$   | 0,64            | 
+| $p(sobre-explotación)$    | 0,99            | 
+| $p(agotado/colapsado)$    | 0,22            | 
+| $p(sobrepesca)$           | 0,51            |
 
 : \label{Tab24} Puntos Biológicos de referencia (PBRs) y probabilidades de estar bajo $BD_{RMS}$ y sobre $F_{RMS}$ y en sobreexplotación, colapsado o sobrepesca.
 
@@ -2377,11 +2269,11 @@ Con respecto a la razón entre F~2020/21~ y F~RMS~ fue de 1,09, siendo un 9% may
 \vspace{-0.5cm}
 \scriptsize
 ```
--   $p(BD_{last}<BD_{RMS})$ = Probabilidad de que BD del año más reciente sea menor a $BD_{RMS}$
--   $p(F_{last}>F_{RMS})$ = Probabilidad que la Ft del año más reciente sea menor a $F_{RMS}$
--   Probabilidad de estar en sobreexplotación = $p(BD_{last}<0,9BD_{RMS})$
--   Probabilidad de estar en colapso = $p(BD_{last}<BD_{LIM})$
--   Probabilidad de estar en sobrepesca = $p(F_{last}>1,1F_{RMS})$
+-   $p(BD_{2021}<BD_{RMS})$ = Probabilidad de que BD del año más reciente sea menor a $BD_{RMS}$
+-   $p(F_{2021}>F_{RMS})$ = Probabilidad que la Ft del año más reciente sea menor a $F_{RMS}$
+-   Probabilidad de estar en sobreexplotación = $p(BD_{2021}<0,9BD_{RMS})$
+-   Probabilidad de estar en colapso = $p(BD_{2021}<BD_{LIM})$
+-   Probabilidad de estar en sobrepesca = $p(F_{2021}>1,1F_{RMS})$
 
 \normalsize
 
@@ -2393,9 +2285,9 @@ Con respecto a la razón entre F~2020/21~ y F~RMS~ fue de 1,09, siendo un 9% may
 
 *"Determinar niveles de Captura Biológicamente Aceptable (CBA) que lleven y/o mantenga la pesquería en torno al Rendimiento Máximo Sostenible (RMS), a partir de un análisis de riesgo en condiciones de incertidumbre de no alcanzar los objetivos de conservación y sostenibilidad conforme lo establece la LGPA y contenidos en el Plan de Manejo y/o en el Programa de Recuperación respectivo, según corresponda."*
 
-### CBA 2021 Inicial (Asesoría de septiembre 2020)
+### CBA 2022 Inicial (Asesoría de septiembre 2021)
 
-Para el cálculo CBA 2021 se proyectó la población 2 años biológicos hacia el futuro (julio2020-junio2021 y julio2021-junio2022) en base a tres escenarios de reclutamiento: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (113 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (411 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2020 (173 mil millones de ind.) (\textbf{Figura \ref{Fig42}}).
+Para el cálculo CBA 2022 se proyectó la población 2 años biológicos hacia el futuro (julio2020-junio2021 y julio2021-junio2022) en base a tres escenarios de reclutamiento: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (113 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (411 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2020 (173 mil millones de ind.) (\textbf{Figura \ref{Fig42}}).
 
 \vspace{0.5cm}
 
@@ -2404,7 +2296,7 @@ Para el cálculo CBA 2021 se proyectó la población 2 años biológicos hacia e
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{Figuras/Fig42-1.pdf}
-\caption{Escenarios de reclutamiento proyectado asesoría de septiembre 2020.}
+\caption{Escenarios de reclutamiento proyectado asesoría de septiembre 2021.}
 \label{Fig42}
 \end{figure}
 ```
@@ -2426,7 +2318,7 @@ En la secta sesión del CCT-PP 2020 (Acta de Sesión Nº6, octubre 2020 [^6]) se
 
 \small
 
-|      | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2020}$ |
+|      | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
 |------|-----------------|-----------------|-----------------|
 | mean | 250.260         | 447.840         | 300.810         |
 | sd   |  42.769         | 73.667          | 60.397          |
@@ -2441,7 +2333,7 @@ En la secta sesión del CCT-PP 2020 (Acta de Sesión Nº6, octubre 2020 [^6]) se
 
 \vspace{-0.5cm}
 
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2020}$ |
+|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
 |-----|-----------------|-----------------|-----------------|
 | 10% |     0,22        |    0,21         |    0,26         |
 | 20% |     0,14        |    0,14         |    0,17         |
@@ -2454,7 +2346,7 @@ En la secta sesión del CCT-PP 2020 (Acta de Sesión Nº6, octubre 2020 [^6]) se
 
 \vspace{-0.5cm}
 
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2020}$ |
+|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
 |-----|-----------------|-----------------|-----------------|
 | 10% | 191.540         | 346.363         | 218.940         |
 | 20% | 209.979         | 378.123         | 244.979         |
@@ -2467,7 +2359,7 @@ En la secta sesión del CCT-PP 2020 (Acta de Sesión Nº6, octubre 2020 [^6]) se
 
 \vspace{-0.5cm}
 
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2020}$ |
+|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
 |-----|-----------------|-----------------|-----------------|
 | 10% | 183.722         | 332.226         | 210.004         |
 | 20% | **201.409**     | 362.690         | 234.980         |
@@ -2482,171 +2374,11 @@ En la secta sesión del CCT-PP 2020 (Acta de Sesión Nº6, octubre 2020 [^6]) se
 
 \normalsize
 
-### Primera revisión CBA 2021 (Asesoría de marzo 2021)
-
-Para el cálculo CBA 2021 se proyectó la población 1 año biológico hacia el futuro (julio 2021-junio 2022) en base a tres escenarios de reclutamiento: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (113 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (405 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2021 (180 mil millones de ind.) (\textbf{Figura \ref{Fig43}}).
-
-\vspace{0.5cm}
-
-
-```{=tex}
-\begin{figure}
-\centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig43-1.pdf}
-\caption{Escenarios de reclutamiento proyectado asesoría de marzo 2021. }
-\label{Fig43}
-\end{figure}
-```
-
-\normalsize
-
-El cálculo de la primera revisión de la CBA para el año calendario 2021 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70% para el primer semestre y 30% para el segundo semestre, bajo un criterio de explotación de F60%SPR, sujeto a percentiles de probabilidad de captura entre el 10% y 50%.
-
-La \textbf{Tabla \ref{Tab29}} muestra los rangos de capturas para el año 2021 estimada bajo un escenario de Rprom(1990-2007) podría situarse entre 234 mil t y 272 mil t; bajo un escenario de Rprom(2008-2012) entre 269 mil t y 313 mil t y, bajo un escenario de Rprom(2013-2021) entre 236 mil t y 279 mil t.
-
-Para evaluar el efecto que tiene la decisión de la CBA en base a los percentiles (10%-50%) que en general son menores a la captura al RMS (percentil del 50%), se calculó el resguardo a lo cual equivale cada percentil (\textbf{Tabla \ref{Tab30}}). Esos niveles variaron entre un 3% para un percentil del 40% hasta un 16% para un percentil de probabilidad del 10%, considerando tres escenarios de reclutamiento.
-
-En la primera sesión del CCT-PP 2021 (febrero 2021) se acordó utilizar un 4% de descarte para el supuesto de descarte proyectado de sardina común, en base a esto, la \textbf{Tabla \ref{Tab31}} muestra los rangos de captura menos el 4% de descarte. La \textbf{Tabla \ref{Tab31b}} muestra las diferencias porcentuales entre la CBA inicial menos el 6% de descarte y la primera revisión de CBA 2021 menos el 4%.
-
-En la segunda sesión del CCT-PP 2021 (Acta de Sesión Nº2, marzo 2021 [^7]) se recomendó una CBA máxima 2021 de 251.316 toneladas correspondiente al escenario de reclutamiento promedio recientes (2013-2021) que refleja con mayor realidad la presencia de juveniles durante el 2021 y un 30% de percentil de captura (equivalente a un 6% resguardo) y el descuento del 4% de descarte (\textbf{Tabla \ref{Tab31}}).
-
-[^7]: <https://www.subpesca.cl/portal/616/articles-110469_documento.pdf>
-
-
-
-\small
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| mean| 271.720         | 313.030         | 279.570         |
-| sd  |  29.384         |  34.291         |  33.911         |
-| 10% | 234.063         | 269.084         | 236.111         |
-| 20% | 246.990         | 284.170         | 251.030         |
-| 30% | 256.311         | 295.048         | 261.787         |
-| 40% | 264.276         | 304.342         | 270.979         |
-| 50% | 271.720         | 313.030         | 279.570         |
-
-: \label{Tab29} Primera revisión de CBA 2021 de sardina común calculada bajo $F_{RMS}$ , con sus respectivos percentiles de captura entre 10\% y 50\% y tres escenarios de reclutamientos.
-\vspace{-0.2cm}
-
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% | 0,14            | 0,14            | 0,16            |
-| 20% | 0,09            | 0,09            | 0,10            |
-| 30% | 0,06            | 0,06            | 0,06            |
-| 40% | 0,03            | 0,03            | 0,03            |
-| 50% | 0,00            | 0,00            | 0,00            |
-
-: \label{Tab30} Reguardo de la Captura al RMS.
-\vspace{-0.2cm}
-
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% | 224.700         | 258.321         |   226.667       |
-| 20% | 237.110         | 272.803         |   240.989       |
-| 30% | 246.059         | 283.246         |   **251.316**   |
-| 40% | 253.705         | 292.169         |   260.140       |
-| 50% | 260.851         | 300.509         |   268.387       |
-
-: \label{Tab31} CBA 2021 menos el 4\%descarte. *CBA máxima recomendada por el CCT-PP = 251.316 t.
-\vspace{-0.2cm}
-
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% |      22         |  -22            |  8              |
-| 20% |      18         |  -25            |  3              |
-| 30% |      15         |  -26            | -1              |
-| 40% |      13         |  -28            | -3              |
-| 50% |      11         |  -29            | -5              |
-
-: \label{Tab31b} Diferencia porcentuales entre la CBA inicial menos el 6\%descarte y la primera revisión de CBA 2021 menos el 4\%descarte. (1-(1erarevisiónCBA/CBAinicial)*100)
-\vspace{-0.2cm}
-
-\normalsize
-
-\pagebreak
-\normalsize
-
-### Segunda revisión CBA 2021 (Asesoría de julio 2021)
-
-Para el cálculo CBA 2021 se proyectó la población 1 año biológico hacia el futuro (julio 2021-junio 2022) en base a tres escenarios de reclutamiento: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (114 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (410 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2021 (180 mil millones de ind.) (\textbf{Figura \ref{Fig44}}).
-
-
-```{=tex}
-\begin{figure}
-\centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig44-1.pdf}
-\caption{Escenarios de reclutamiento proyectado asesoría de julio 2021.}
-\label{Fig44}
-\end{figure}
-```
-
-
-El cálculo de la segunda revisión de la CBA para el año calendario 2021 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70% para el primer semestre y 30% para el segundo semestre, bajo un criterio de explotación de F60%SPR, sujeto a percentiles de probabilidad de captura entre el 10% y 50%.
-
-La \textbf{Tabla \ref{Tab32}} muestra los rangos de capturas para el año 2021 estimada bajo un escenario de Rprom(1990-2007) podría situarse entre 350 mil t y 379 mil t; bajo un escenario de Rprom(2008-2012) entre 384 mil t y 420 mil t y, bajo un escenario de Rprom(2013-2021) entre 352 mil t y 385 mil t.
-
-Para evaluar el efecto que tiene la decisión de la CBA en base a los percentiles (10%-50%) que son menores a la captura al RMS (percentil del 50%), se calculó el resguardo a lo cual equivale cada percentil (\textbf{Tabla \ref{Tab33}}). Esos niveles variaron entre un 1% para un percentil del 40% hasta un 9% para un percentil de probabilidad del 10%, considerando los tres escenarios de reclutamiento.
-
-En la primera sesión del CCT-PP 2021 (febrero 2021) se acordó utilizar un 4% de descarte para el supuesto de descarte proyectado de sardina común, en base a esto, la \textbf{Tabla \ref{Tab34}} muestra los rangos de captura menos el 4% de descarte. La \textbf{Tabla \ref{Tab35}} muestra las diferencias porcentuales entre la CBA inicial menos el 6% de descarte y la segunda revisión de CBA 2021 menos el 4%.
-\vspace{0.5cm}
-\pagebreak
-
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| mean|  378.670        | 419.950         | 385.460         |
-| sd  |   22.259        |  28.186         |  25.850         |
-| 10% |  350.144        | 383.828         | 352.332         |
-| 20% |  359.936        | 396.228         | 363.704         |
-| 30% |  366.997        | 405.169         | 371.904         |
-| 40% |  373.031        | 412.809         | 378.911         |
-| 50% |  378.670        | 419.950         | 385.460         |
-
-: \label{Tab32} Segunda revisión de CBA 2021 de sardina común calculada bajo $F_{RMS}$ , con sus respectivos percentiles de captura entre 10\% y 50\% y tres escenarios de reclutamientos.
-\vspace{-0.2cm}
-
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% | 0,08            | 0,09            | 0,09            |
-| 20% | 0,05            | 0,06            | 0,06            |
-| 30% | 0,03            | 0,04            | 0,04            |
-| 40% | 0,01            | 0,02            | 0,02            |
-| 50% | 0,00            | 0,00            | 0,00            |
-
-: \label{Tab33} Resguardo de la Captura al RMS.
-\vspace{-0.5cm}
-
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% | 336.138         | 368.475         |  338.239        |
-| 20% | 345.539         | 380.379         |  349.156        |
-| 30% | 352.317         | 388.962         |  357.028        |
-| 40% | 358.110         | 396.297         |  363.755        |
-| 50% | 363.523         | 403.152         |  370.042        |
-
-: \label{Tab34} CBA 2021 menos el 4\%descarte.
-\vspace{-0.2cm}
-
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% |   83            | 11              |   61            |
-| 20% |   72            |  5              |   49            |
-| 30% |   65            |  1              |   41            |
-| 40% |   59            | -2              |   36            |
-| 50% |   55            | -4              |   31            |
-
-: \label{Tab35} Diferencia porcentuales entre la CBA inicial menos el 6\%descarte y la segunda revisión de CBA 2021 menos el 4\%descarte. (1-(2darevisiónCBA/CBAinicial)*100)
 
 \normalsize
 \pagebreak
 
-### 4.3.2. Proyección del stock (Asesoría de septiembre 2020)
+### 4.3.2. Proyección del stock (Asesoría de septiembre 2021)
 
 En relación con estatus 2020/21, se proyectó el stock bajo tres escenarios reclutamientos 2021 que representan los períodos más relevantes de la historia conocida de sardina común y con una mortalidad por pesca en torno al F~RMS~ (ponderadores de F~RMS~). Al respecto, si bien la sardina se ha mantenido en una condición de plena-explotación a partir del 2013 a la fecha, la disminución del reclutamiento los años 2019 y 2020 junto a la disminución de la biomasa adulta (1+ años) el 2020 generan una alta probabilidad (100 %) de sobreexplotación y un 42 % de probabilidad de colapso de sardina común para el año 2020/21 (\textbf{Tabla \ref{Tab32}}) independiente de los escenario de reclutamiento futuros y ponderadores de F~RMS~ (\textbf{Figura \ref{Fig44}}). En base a esta proyección, era recomendable considerar un escenario de reclutamiento precautorio en torno al promedio del período de reclutamientos bajos (1991-2007) para la determinación de una captura 2021 biológicamente sustentable para sardina común a la espera de la actualización de marzo y julio 2021.
 
@@ -2712,132 +2444,7 @@ Reclutamiento   & biológico   &  Estatus         &               &             
 
 \pagebreak
 \normalsize
-### 4.3.3. Proyección del stock (Asesoría de marzo 2021)
 
-En la asesoría previa (septiembre 2020) la proyección mostraba una alta probabilidad (100 %) de sobreexplotación y un 42 % de probabilidad de colapso de sardina común para el año 2020/21, producto de la disminución del reclutamiento los años 2019 y 2020 junto a la disminución de la biomasa adulta (1+ años) el 2020, independiente del escenario de reclutamiento futuro y ponderador de F~RMS~ (\textbf{Tabla \ref{Tab32}} y \textbf{Figura \ref{Fig44}}). La primera actualización del estatus 2020/21 con información del crucero de verano 2021 (asesoría de marzo 2021) confirman una condición de sobreexplotación (100% de probabilidad) y un 38% de probabilidad de colapso (\textbf{Tabla \ref{Tab33}}).
-
-No obstante, dado los altos niveles de reclutamiento estimados para el 2021 en base a la actualización de la información de biomasa total y composición de edad del crucero de verano 2021 se proyecta una recuperación del estatus para el año biológico 2021/22, retornando a una condición de plena-explotación con un 26% a 27% de probabilidad de sobre-explotación y entre un 3% y 4% de probabilidad de colapso (\textbf{Tabla \ref{Tab33}} y \textbf{Figura \ref{Fig45}}) para los distintos escenarios de reclutamiento proyectado.
-
-\vspace{0.5cm}
-
-```{=tex}
-
-\begin{table}[h!]
-\caption{Incertidumbre del estatus actual 2020/21 y proyectado 2021/22 bajo tres escenarios de reclutamiento y ponderadores de $F_{RMS}$. \textbf{Asesoría de marzo 2021}.}
- \label{Tab33}
- \small
-    \centering
-    \resizebox{15cm}{!} {
-    \begin{tabular}{|l|l|l|c|c|c|}
-    \hline \rowcolor{Gray3}
-Escenario       & Año         & Probabilidad de  & $F_{RMS}*1,0$ & $F_{RMS}*0,9$ & $F_{RMS}*0,7$ \\  \rowcolor{Gray3}
-Reclutamiento   & biológico   &  Estatus         &               &               &                \\ \hline
-\multirow{4}{1cm}{$R_{1991-2007}$} & \multirow{2}{1cm}{2020/21} &$p(sobre-explotación)$   & 1,00    & 1,00    & 1,00 \\
-                &             & $p(colapso)$     & 0,38          & 0,38  & 0,38 \\ 
-                & \multirow{2}{1cm}{2021/22} & $p(sobre-explotación)$    & 0,27   & 0,26  & 0,26 \\
-                &             & $p(colapso)$     & 0,04          & 0,03  & 0,03 \\ \hline
-\multirow{4}{1cm}{$R_{2008-2012}$} & \multirow{2}{1cm}{2020/21} &$p(sobre-explotación)$   & 1,00    & 1,00    & 1,00 \\
-                &             & $p(colapso)$     & 0,38          & 0,38  & 0,38 \\ 
-                & \multirow{2}{1cm}{2021/22} & $p(sobre-explotación)$    & 0,27   & 0,26  & 0,26 \\
-                &             & $p(colapso)$     & 0,04          & 0,03  & 0,03 \\ \hline
-\multirow{4}{1cm}{$R_{2013-2021}$} & \multirow{2}{1cm}{2020/21} &$p(sobre-explotación)$   & 1,00    & 1,00    & 1,00 \\
-                &             & $p(colapso)$     & 0,38          & 0,38  & 0,38 \\ 
-                & \multirow{2}{1cm}{2021/22} & $p(sobre-explotación)$    & 0,27   & 0,26  & 0,26 \\
-                &             & $p(colapso)$     & 0,04          & 0,03  & 0,03 \\ \hline
-  \end{tabular}}
-        \end{table}
-```
-```{=tex}
-\vspace{-0.3cm}
-\scriptsize
-```
--   p[BD\<0,9BD~RMS~] = probabilidad de sobre-explotación
--   p[BD\<0,5BD~RMS~] = probabilidad de colapso
-
-\pagebreak
-\normalsize
-```{=tex}
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.3\textwidth]{Figuras/Fig46a_marzo-1.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig46a_marzo-2.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig46a_marzo-3.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig46b_marzo-1.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig46b_marzo-2.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig46b_marzo-3.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig46c_marzo-1.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig46c_marzo-2.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig46c_marzo-3.pdf}
-\caption{Diagramas de fases de explotación de la biomasa desovante respecto de la mortalidad por pesca mostrando el estatus de sardina común para el año previo 2019/2020 (punto naranjo), año actual 2020/21 (punto y cruz rojo) y año proyectado 2021/22 (punto verde) bajo un escenario de reclutamiento promedio bajo [1991-2007] (panel superior), reclutamiento promedio alto [2008-2012] (panel intermedio), reclutamiento promedio reciente [2013-2021] (panel inferior) y ponderadores de $F_{RMS}$ (1;0,9 y 0,7) \textbf{Asesoría de marzo 2021}.}
-\label{Fig45}
-\end{figure}
-```
-
-\normalsize
-\pagebreak
-
-### 4.3.4. Proyección del stock (Asesoría de julio 2021)
-
-En la asesoría de marzo 2021, la proyección del estatus la probabilidad de sobreexplotación se estimó en un 100% con un 38 % de probabilidad de colapso de sardina común para el año 2020/21 producto de la disminución del reclutamiento los años 2019 y 2020 junto a la disminución de la biomasa adulta (1+ años) el 2020 independiente de los escenario de reclutamiento futuros y ponderadores de F~RMS~ (\textbf{Tabla \ref{Tab33}} y \textbf{Figura \ref{Fig45}}). La segunda revisión del estatus 2020/21 con información del crucero de otoño 2021 (asesoría de julio 2021) mantiene la condición de sobreexplotación (98% de probabilidad) pero disminuye la probabilidad de colapso a un 18% (\textbf{Tabla \ref{Tab34}}).
-
-A su vez, dado los altos niveles de reclutamiento estimados para el 2021 en base a la actualización de la información de biomasa total y composición de edad del crucero de otoño 2021 se proyecta una recuperación del estatus para el año biológico 2021/22, cercana a la condición de plena-explotación con probabilidades entre 46% y 49% de continuar en sobre-explotación y una probabilidad de colapso del 3% a 4% (\textbf{Tabla \ref{Tab34}} y \textbf{Figura \ref{Fig46}}), según el escenario de reclutamiento proyectado.
-
-\vspace{0.5cm}
-```{=tex}
-
-\begin{table}[h!]
-\caption{Incertidumbre del estatus actual 2020/21 y proyectado 2021/22 bajo tres escenarios de reclutamiento y ponderadores de $F_{RMS}$. \textbf{Asesoría de julio 2021}.}
- \label{Tab34}
- \small
-    \centering
-    \resizebox{15cm}{!} {
-    \begin{tabular}{|l|l|l|c|c|c|}
-    \hline \rowcolor{Gray3}
-Escenario       & Año         & Probabilidad de  & $F_{RMS}*1,0$ & $F_{RMS}*0,9$ & $F_{RMS}*0,7$ \\  \rowcolor{Gray3}
-Reclutamiento   & biológico   &  Estatus         &               &               &                \\ \hline
-\multirow{4}{1cm}{$R_{1991-2007}$} & \multirow{2}{1cm}{2020/21} &$p(sobre-explotación)$   & 0,98    & 0,98    & 0,98 \\
-                &             & $p(colapso)$     & 0,18          & 0,18  & 0,18 \\ 
-                & \multirow{2}{1cm}{2021/22} & $p(sobre-explotación)$    & 0,49   & 0,48  & 0,46 \\
-                &             & $p(colapso)$     & 0,04          & 0,03  & 0,03 \\ \hline
-\multirow{4}{1cm}{$R_{2008-2012}$} & \multirow{2}{1cm}{2020/21} &$p(sobre-explotación)$   & 0,98    & 0,98    & 0,98 \\
-                &             & $p(colapso)$     & 0,18          & 0,18  & 0,18 \\ 
-                & \multirow{2}{1cm}{2021/22} & $p(sobre-explotación)$    & 0,49   & 0,48  & 0,46 \\
-                &             & $p(colapso)$     & 0,04          & 0,03  & 0,03 \\ \hline
-\multirow{4}{1cm}{$R_{2013-2021}$} & \multirow{2}{1cm}{2020/21} &$p(sobre-explotación)$   & 0,98    & 0,98    & 0,98 \\
-                &             & $p(colapso)$     & 0,18          & 0,18  & 0,18 \\ 
-                & \multirow{2}{1cm}{2021/22} & $p(sobre-explotación)$    & 0,49   & 0,48  & 0,46 \\
-                &             & $p(colapso)$     & 0,04          & 0,03  & 0,03 \\ \hline
-  \end{tabular}}
-        \end{table}
-```
-```{=tex}
-\vspace{-0.3cm}
-\scriptsize
-```
--   p[BD\<0,9BD~RMS~] = probabilidad de sobre-explotación
--   p[BD\<0,5BD~RMS~] = probabilidad de colapso
-
-\pagebreak
-
-```{=tex}
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.3\textwidth]{Figuras/Fig47a_julio-1.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig47a_julio-2.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig47a_julio-3.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig47b_julio-1.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig47b_julio-2.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig47b_julio-3.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig47c_julio-1.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig47c_julio-2.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig47c_julio-3.pdf}
-\caption{Diagramas de fases de explotación de la biomasa desovante respecto de la mortalidad por pesca mostrando el estatus de sardina común para el año previo 2019/2020 (punto naranjo), año actual 2020/21 (punto y cruz rojo) y año proyectado 2021/22 (punto verde) bajo un escenario de reclutamiento promedio bajo [1991-2007] (panel superior), reclutamiento promedio alto [2008-2012] (panel intermedio), reclutamiento promedio reciente [2013-2021] (panel inferior) y ponderadores de $F_{RMS}$ (1;0,9 y 0,7) \textbf{Asesoría de julio 2021}.}
-\label{Fig46}
-\end{figure}
-```
-
-\normalsize
-\pagebreak
 ## 4.4. Objetivo específico 4:
 
 \vspace{-0.2cm}
