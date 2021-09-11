@@ -248,6 +248,7 @@ private:
   param_vector BD_p1;
   param_vector RPR_p1;
   param_stddev_number CBA_c0;
+  param_stddev_number CBA_c0d;
   param_stddev_number CBA_c1;
   param_vector log_Reclutas;
   param_vector Rpred;
