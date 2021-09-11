@@ -1,7 +1,8 @@
 #********************************************************
 # DIAGRAMA DE FASE  EQUILIBRIO 
 #********************************************************
-DiagramaFase2<-function(name,Year,SpB,SpBSE,ln_Fyr,ln_FSE,BD2019,sdbd2019,F2019,sdf2019,Ftarg,BRMS,BLIM,FLIM,color,Salida3,etiqueta,preliminar,completo){
+DiagramaFase2<-function(name,Year,SpB,SpBSE,ln_Fyr,ln_FSE,BD2019,sdbd2019,F2019,sdf2019,
+                        Ftarg,BRMS,BLIM,FLIM,color,Salida3,etiqueta,preliminar,completo){
 
 	fLim     <- FLIM/tail(Ftarg,1)
 	Fval     <- exp(ln_Fyr)/Ftarg

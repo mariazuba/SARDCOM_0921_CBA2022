@@ -29,7 +29,7 @@ CBA<-function(dir.0,dir.1,Carpeta,admb,l_opt_proy,l_opRec,l_opt_wmed,l_opt_Str,l
   rep_admb<-paste(admb,".rep",sep="")
   
   opRec<-seq(4,6,1) #//ESCENARIO DE RECLUTAMIENTO PROMEDIO
-  mf<-c(1,0.9,0.7)
+  mf<-c(1,0.9,1.1)
   
   data_file<-(paste(admb,".dat",sep="")) #// archivos de datos originales
   S<-readLines(data_file,encoding="UTF-8")
