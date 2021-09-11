@@ -630,6 +630,7 @@ model_parameters::model_parameters(int sz,int argc,char * argv[]) :
     RPR_p1.initialize();
   #endif
   CBA_c0.allocate("CBA_c0");
+  CBA_c0d.allocate("CBA_c0d");
   CBA_c1.allocate("CBA_c1");
   log_Reclutas.allocate(1,nanos+nedades-1,"log_Reclutas");
   #ifndef NO_AD_INITIALIZE
@@ -1063,9 +1064,9 @@ void model_parameters::Eval_CTP(void)
   if(oprec==1){Np(1)=mean(Reclutas(nanos-11,nanos));} // Reclutamiento promedio desde 2008-2019 (recientes) 
   if(oprec==2){Np(1)=mfexp(log_Ro+0.5*square(sigmaR));} // Reclutamiento promedio hist?rico (hist?rico + error)
   if(oprec==3){Np(1)=mean(Reclutas);} // Reclutamiento promedio desde 1991-2019 (hist?rico)
-  if(oprec==4){Np(1)=mean(Reclutas(1,nanos-12));} //115218; // promedio 1991-2007// 1er quiebre (inicios de la serie)
-  if(oprec==5){Np(1)=mean(Reclutas(nanos-11,nanos-7));} //412683 // promedio 2008-2012 // 2do quiebre (a mitad de la serie)
-  if(oprec==6){Np(1)=mean(Reclutas(nanos-6,nanos));} //188921// promedio entre 2013-2019 " 3er quiebre (al final de la serie)"
+  if(oprec==4){Np(1)=mean(Reclutas(1,nanos-14));} //115218; // promedio 1991-2007// 1er quiebre (inicios de la serie)
+  if(oprec==5){Np(1)=mean(Reclutas(nanos-13,nanos-9));} //412683 // promedio 2008-2012 // 2do quiebre (a mitad de la serie)
+  if(oprec==6){Np(1)=mean(Reclutas(nanos-8,nanos));} //188921// promedio entre 2013-2019 " 3er quiebre (al final de la serie)"
   Npp = elem_prod(prop_est,Np);
   if(opWmed==1){Wmedp=Wmed(nanos);        Winp=Win(nanos);} //peso medio igual al ?ltimo a?o de evaluaci?n
   if(opWmed==2){Wmedp=colsum(Wmed)/nanos; Winp=colsum(Win)/nanos;} //peso medio igual al promedio hist?rico
@@ -1127,6 +1128,7 @@ void model_parameters::Eval_CTP(void)
     if(opProy==2) // Opci?n 2: CBA inicial (proyecci?n de un a?o calendario)
     {
      CBA_c0=prop(1)*YTP_p0(1)+prop(2)*YTP_p0(2); 
+     CBA_c0d=prop(1)*(YTP_p0(1)*0.96)+prop(2)*(YTP_p0(2)*0.96); 
 	 CBA_c1=prop(1)*YTP_p1(1)+prop(2)*YTP_p1(2); 
     }
 }
