@@ -43,7 +43,7 @@ header-includes:
 
 **7. ANEXOS**
 
-**ANEXO II.** Programa de Mejoramiento Continuo de la Calidad en la Asesoría Científica (PMCCAC) de la evaluación de stock de Anchoveta y Sardina común de la Región de Valparaíso a la Región de Los Lagos.
+**ANEXO I.** Programa de Mejoramiento Continuo de la Calidad en la Asesoría Científica (PMCCAC) de la evaluación de stock de Anchoveta y Sardina común de la Región de Valparaíso a la Región de Los Lagos.
 
 
 
@@ -53,7 +53,7 @@ header-includes:
 
 # RESUMEN EJECUTIVO
 
-El presente informe contiene la segunda actualización del Estatus del año biológico 2020/21 y de la Captura Biológicamente Aceptable (CBA) del año calendario 2021 para el stock de sardina común en la Unidad de Pesquería Centro-Sur (UPCS) de Chile, Región de Valparaíso a Región de Los Lagos. El estudio es actualizado con la información disponible a junio de 2021: (1) Estadísticas de desembarques SERNAPESCA desde 1990/91 hasta 2020/21; (2) El porcentaje de descarte proveniente del Programa de Descarte de IFOP corresponde al período 2015-2019; (3) Información de captura a la edad y pesos individuales a la edad provenientes del "Programa de Seguimiento de las Principales Pesquerías Nacionales (Pesquerías Pelágicas)" desde 1990/91 hasta 2020/21; (4) Series de biomasas acústicas de verano (años 2000 a 2021) y otoño (años 2003 a 2021) provenientes del programa de cruceros IFOP "Evaluación hidroacústica de los stocks de anchoveta y sardina común
+El presente informe contiene la actualización del Estatus del año biológico 2020/21 y la proyección de la Captura Biológicamente Aceptable (CBA) del año calendario 2022 para el stock de sardina común en la Unidad de Pesquería Centro-Sur (UPCS) de Chile, Región de Valparaíso a Región de Los Lagos. El estudio es actualizado con la información disponible a junio de 2021: (1) Estadísticas de desembarques SERNAPESCA desde 1990/91 hasta 2020/21; (2) El porcentaje de descarte proveniente del Programa de Descarte de IFOP corresponde al período 2015-2019; (3) Información de captura a la edad y pesos individuales a la edad provenientes del "Programa de Seguimiento de las Principales Pesquerías Nacionales (Pesquerías Pelágicas)" desde 1990/91 hasta 2020/21; (4) Series de biomasas acústicas de verano (años 2000 a 2021) y otoño (años 2003 a 2021) provenientes del programa de cruceros IFOP "Evaluación hidroacústica de los stocks de anchoveta y sardina común
 entre las Regiones de Valparaíso y Los Lagos".; (5) publicaciones científicas y técnicas relacionadas con los parámetros del ciclo de vida (mortalidad natural y madurez).
 
 En relación con los datos de entrada al modelo de evaluación de stock de sardina común, desde 2015 las biomasas acústicas de verano se mantienen en niveles en torno a 2 millones de toneladas (t), mientras las capturas se mantienen en torno a las 350 mil t promedio. Las biomasas acústicas de otoño reflejan el efecto de la remoción ejercidas por la pesca y causas naturales, con biomasas en general menores a las estimadas en el crucero de verano (1,3 millones de t). No obstante, para el año 2020 la biomasa estimada por el crucero acústico de verano se redujo a un millón de toneladas (54% menor al 2019), la biomasa del crucero de otoño disminuye un 40% respecto al 2019 y las capturas 2019/20 se redujeron un 10% respecto al año previo. El desembarque 2020 alcanzó las 258 mil t, equivalente a un 80% de la Cuota establecida (321.307 toneladas). Para el año 2021, la biomasa total estimada por el crucero de enero retornó a los niveles observados entre el 2015 al 2019 (~ 2 millones de t), incrementando un 125 % respecto a lo estimado para el año 2020. El crucero de otoño 2021, estimó un nivel de biomasa superior en 27% respecto del año anterior. En relación con la captura 2020/21, se resgistró un aumento del 38% respecto del año biológico 2019/20. El modelo de evaluación de stock reproduce adecuadamente la tendencia general de los niveles de biomasa que han presentado las estimaciones de cruceros acústicos de verano y otoño, en particular durante los últimos 7 años, considerando que estos contienen un importante nivel de variabilidad interanual.
@@ -398,6 +398,7 @@ El modelo de evaluación de stock de sardina común se basa en un análisis esta
 \label{Fig11}
 \end{figure}
 ```
+
 En la implementación del procedimiento de evaluación de stock se utilizan protocolos científicos basados en la determinación de un sistema de niveles o "tiers" que permiten clasificar la información disponible de las especies y su pesquería, los cuales se han convertido en una herramienta de uso común en la asesoría orientada al manejo pesquero en la actualidad. Para estimar el RMS se utiliza la estrategia de niveles y de acuerdo con la clasificación del estándar de información se definen los PBR o "proxy" que serán usados para determinar el estatus del recurso. La definición de los procedimientos de cálculo de los PBR y del marco de referencia especie específicos se basan en el estudio "Revisión de los puntos Biológicos de referencia (Rendimiento Máximo Sostenible) en las pesquerías nacionales" (Paya *et al*. 2014), en cuyo primer taller, se desarrolló en conjunto con expertos internacionales, un sistema de tres niveles para derivar al RMS específico para las pesquerías en Chile (\textbf{Figura \ref{Fig12}}). Además, para determinar el estatus de los recursos selectos, se considera lo establecido por el Comité Científico Técnico de Pelágicos Pequeños (CCT-PP) sobre los requerimientos técnicos que define los estándares de análisis y evaluación para las pesquerías analizadas, conforme a los niveles de conocimiento, información y calidad de los datos disponibles para esos fines.
 
 ```{=tex}
@@ -430,7 +431,7 @@ Existen algunos antecedentes que señalan que los desembarques del primer semest
 
 \quad
 
-El año 2016 la Pontificia Universidad Católica de Chile desarrolló un proyecto orientado a la corrección de las capturas totales históricas de la pesquería de sardina común y anchoveta V-X Regiones (Proyecto CUI 2015-72-DAP-27) y recientemente IFOP realizó un estudio de remociones totales en la flota artesanal que opera con red de cerco entre la Región de Valparaíso y la Región de los Ríos orientando sus capturas a pequeños pelágicos (Vega *et al*. 2018). Para propósitos de la evaluación de stock, esta información será analizada en el transcurso de este proyecto, con el objeto de definir la metodología a utilizar para la corrección de las capturas y de este modo disminuir la incertidumbre respecto al nivel real de captura de estos recursos. Al respecto, actualmente se están desarrollando reuniones de trabajo colaborativas entre los equipos técnicos de seguimiento y evaluación de stock de IFOP, INPESCA y SUBPESCA, para trabajar en una propuesta de desembarques corregidos para anchoveta y sardina común de la zona centro-sur. Adicionalmente, en **ANEXO II** de este informe se presenta el Programa de mejoramiento continuo que incluirá en las próximas asesorías un análisis de sensibilidad utilizando la serie de captura corregida del Wiff *et al* (2017), como análisis preliminar para evaluar el efecto en las tendencias y magnitudes poblacionales de anchoveta.
+El año 2016 la Pontificia Universidad Católica de Chile desarrolló un proyecto orientado a la corrección de las capturas totales históricas de la pesquería de sardina común y anchoveta V-X Regiones (Proyecto CUI 2015-72-DAP-27) y recientemente IFOP realizó un estudio de remociones totales en la flota artesanal que opera con red de cerco entre la Región de Valparaíso y la Región de los Ríos orientando sus capturas a pequeños pelágicos (Vega *et al*. 2018). Para propósitos de la evaluación de stock, esta información será analizada en el transcurso de este proyecto, con el objeto de definir la metodología a utilizar para la corrección de las capturas y de este modo disminuir la incertidumbre respecto al nivel real de captura de estos recursos. Al respecto, actualmente se están desarrollando reuniones de trabajo colaborativas entre los equipos técnicos de seguimiento y evaluación de stock de IFOP, INPESCA y SUBPESCA, para trabajar en una propuesta de desembarques corregidos para anchoveta y sardina común de la zona centro-sur. Adicionalmente, en **ANEXO I** de este informe se presenta el Programa de mejoramiento continuo que incluirá en las próximas asesorías un análisis de sensibilidad utilizando la serie de captura corregida del Wiff *et al* (2017), como análisis preliminar para evaluar el efecto en las tendencias y magnitudes poblacionales de anchoveta.
 
 #### Descarte:
 \quad
@@ -455,7 +456,6 @@ En este informe se actualiza el descarte  correspondiente a los años biógicos 
 
 [^2]: <http://www.subpesca.cl/portal/616/articles-98715_documento.pdf>
 
-Mayores detalles del procedimiento transitorio de incorporación del descarte a los desembarques y Captura Biológicamente Aceptable de la pesquería de cerco de peces pelágicos pequeños se encuentra en **ANEXO III**.
 \pagebreak
 
 ```{=tex}
@@ -515,17 +515,17 @@ Mayores detalles del procedimiento transitorio de incorporación del descarte a 
     \resizebox{9cm}{!} {
     \begin{tabular}{|l|c|c|c|c|}
     \hline \rowcolor{Gray3}
-               &              & Captura  & Captura     & \%         \\ \rowcolor{Gray3}
- Año biológico & Año/Semestre & total    & descartada  & descarte   \\ \rowcolor{Gray3}
-               &              & (t)      & (t)         &            \\ \hline
-               & 2017,0       & 215.828  & 2.023       & 1\% \\ \hline
+               &              & Captura  & Captura     & \%              \\ \rowcolor{Gray3}
+ Año biológico & Año/Semestre & total    & descartada  & descarte        \\ \rowcolor{Gray3}
+               &              & (t)      & (t)         &                 \\ \hline
+               & 2017,0       & 215.828  & 2.023       & 1\%             \\ \hline
 \multirow{2}{1cm}{2017/2018}  & \textbf{2017,5}* & 73.176 & 5.198 & 7\%  \\ 
-               & 2018,0       & 246.131  & 18.103      & 7\% \\ \hline
-\multirow{2}{1cm}{2018/2019}  & 2018,5   & 46.326 & 2.835 & 6\%  \\ 
-               & \textbf{2019,0}** & 101.285 & 4.546 & 4\% \\  \hline
-\multirow{2}{1cm}{2019/2020}  & 2019,5   & 35.877 & 719 & 2\%  \\ 
-               & \textbf{2020,0}*** & 187.748 & 8.224 & 4\% \\ \hline
-               & 2020,5       &          &        &   \\ \hline
+               & 2018,0       & 246.131  & 18.103      & 7\%             \\ \hline
+\multirow{2}{1cm}{2018/2019}  & 2018,5   & 46.326 & 2.835 & 6\%          \\ 
+               & \textbf{2019,0}** & 101.285 & 4.546 & 4\%               \\  \hline
+\multirow{2}{1cm}{2019/2020}  & 2019,5   & 35.877 & 719 & 2\%            \\ 
+               & \textbf{2020,0}*** & 187.748 & 8.224 & 4\%              \\ \hline
+               & 2020,5       &          &        &                      \\ \hline
    \end{tabular}}
         \end{table}
 ```
@@ -570,7 +570,7 @@ El monitoreo de la pesquería de sardina común entre las regiones de Valparaís
 
 \quad
 
-Denominada también como estructura de edad, corresponde a la expansión de la captura mediante la clave edad-talla determinada. Así esta composición corresponde a la matriz que representa la distribución de los ejemplares que están presentes en la captura, por grupo de edad y por estrato de tamaño, a través de un diseño de muestreo de otolitos estratificado por clase de tallas. A pesar de que se dispone de una composición por zona, trimestre y flota, para efecto de la evaluación se considera la estimación global para la unidad de pesquería y agregadas entre flotas, estando disponible una serie construida desde el año 1990 hasta junio 2020. Esta información es empleada en el proceso de evaluación de stock a objeto de evaluar los supuestos de la mortalidad por pesca diferenciada por grupos de edad, además de entregar señales de la fuerza de las clases anuales que han atravesado por la pesquería.
+Denominada también como estructura de edad, corresponde a la expansión de la captura mediante la clave edad-talla determinada. Así esta composición corresponde a la matriz que representa la distribución de los ejemplares que están presentes en la captura, por grupo de edad y por estrato de tamaño, a través de un diseño de muestreo de otolitos estratificado por clase de tallas. A pesar de que se dispone de una composición por zona, trimestre y flota, para efecto de la evaluación se considera la estimación global para la unidad de pesquería y agregadas entre flotas, estando disponible una serie construida desde el año 1990 hasta junio 2021. Esta información es empleada en el proceso de evaluación de stock a objeto de evaluar los supuestos de la mortalidad por pesca diferenciada por grupos de edad, además de entregar señales de la fuerza de las clases anuales que han atravesado por la pesquería.
 
 La estructura de tallas del desembarque o captura corresponde al número de ejemplares, por rango de talla, capturados por la flota. En términos generales, el diseño de muestreo asociado a la estructura de tallas del desembarque corresponde a un diseño en dos etapas, donde la primera son los viajes y la segunda los ejemplares. También y con menos frecuencia, se lleva a cabo un muestreo en tres etapas, es decir, un muestreo dentro de un viaje, lance y ejemplares. El indicador se obtiene por estratos de zona y mes inicialmente, a través de la ponderación de la estructura de talla con la captura diaria o temporal evaluada de las embarcaciones.
 
@@ -620,7 +620,7 @@ Para la implementación del procedimiento de evaluación se recoge el conocimien
 
 \quad
 
-El modelo de evaluación de stock de sardina común se basa en el análisis estadístico de la dinámica de estructuras de edad anual y pesos medios a la edad estimados del muestreo de tallas de los desembarques (período 1990 - junio 2021) y de los cruceros acústicos de verano (RECLAS, desde 2001 - 2021) y otoño (PELACES, período desde 2007 hasta 2021), de los índices de biomasa de los cruceros acústicos (biomasa de reclutas en verano, período desde 2000 hasta 2021 y biomasa vulnerable en otoño, desde 2003 al 2021 y los desembarques totales (período 1990 - junio 2021), estos últimos convertidos a temporada de pesca considerando la estacionalidad de la pesquería. Las fuentes de información utilizados en la evaluación de sardina común se resumen en la \textbf{Tabla \ref{Tab4}}. Adicionalmente, en la **Sección 3.3.1.** de este informe se detallan los datos y supuestos utilizados en las distintas etapas de estimación de la CBA 2021.
+El modelo de evaluación de stock de sardina común se basa en el análisis estadístico de la dinámica de estructuras de edad anual y pesos medios a la edad estimados del muestreo de tallas de los desembarques (período 1990 - junio 2021) y de los cruceros acústicos de verano (RECLAS, desde 2001 - 2021) y otoño (PELACES, período desde 2007 hasta 2021), de los índices de biomasa de los cruceros acústicos (biomasa de reclutas en verano, período desde 2000 hasta 2021 y biomasa vulnerable en otoño, desde 2003 al 2021 y los desembarques totales (período 1990 - junio 2021), estos últimos convertidos a temporada de pesca considerando la estacionalidad de la pesquería. Las fuentes de información utilizados en la evaluación de sardina común se resumen en la \textbf{Tabla \ref{Tab4}}. Adicionalmente, en la **Sección 3.3.1.** de este informe se detallan los datos y supuestos utilizados en las distintas etapas de estimación de la CBA 2022.
 
 La población de sardina común centro-sur constituye una unidad de stock en la cual las variaciones se explican por capturas, reclutamientos, mortalidad natural y por pesca, la información es agregada en año biológico de manera que los cruceros de verano (enero) representan la situación de la población a mitad del año y los de otoño, a la biomasa poco antes del término del período anual (mayo). Por otra parte, el peso a mitad del año biológico (peso medio) es empleado para generar las estimaciones tanto del crucero de verano como de los desembarques, mientras que el peso calculado a inicios del año biológico (inicios de julio) representaría el peso de la biomasa desovante que ocurre en agosto y los cruceros de otoño que ocurren en mayo (\textbf{Tabla \ref{Tab5}}). En la actualidad el método ha sido empleado bajo un enfoque en edades agrupado en año biológico y que incorpora los siguientes elementos:
 
@@ -805,38 +805,38 @@ de otoño                   &                                                   
     \resizebox{17cm}{!} {
     \begin{tabular}{|l|l|l|l|}
     \hline
-Variable                & Error       & Ecuación                                                                          & Descripción \\ \hline
+Variable              & Error       & Ecuación                                                                          & Descripción \\ \hline
 Índice de abundancia  &             &                                                                                   & \\
-crucero de verano       & Lognormal   & $-l(I^{cv})=\frac{1}{2\sigma_{cv}^2} \sum_t (ln \hat B_t^{cv}-lnB_t^{cv} )^2+cte$ & $\sigma_{cv}$ es la desviación estándar del \\
+crucero de verano     & Lognormal   & $-l(I^{cv})=\frac{1}{2\sigma_{cv}^2} \sum_t (ln \hat B_t^{cv}-lnB_t^{cv} )^2+cte$ & $\sigma_{cv}$ es la desviación estándar del \\
                       &             &                                                                                   & índice $I^{cv}$ en escala logarítmica. \\
 Índice de abundancia  &             &                                                                                   & \\ \hline
-crucero de otoño        & Lognormal   & $-l(I^{co})=\frac{1}{2\sigma_{co}^2} \sum_t (ln \hat B_t^{co}-lnB_t^{co} )^2+cte$ & $\sigma_{co}$ es la desviación estándar del \\
+crucero de otoño      & Lognormal   & $-l(I^{co})=\frac{1}{2\sigma_{co}^2} \sum_t (ln \hat B_t^{co}-lnB_t^{co} )^2+cte$ & $\sigma_{co}$ es la desviación estándar del \\
                       &             &                                                                                   & índice $I^{co}$ en escala logarítmica. \\ \hline
-Desembarque             & Lognormal   & $-l(Y)=\frac{1}{2\sigma_{f}^2} \sum_t (ln \hat Y_t-lnY_t )^2+cte$                 & $\sigma_{f}$ es la desviación estándar del \\
+Desembarque           & Lognormal   & $-l(Y)=\frac{1}{2\sigma_{f}^2} \sum_t (ln \hat Y_t-lnY_t )^2+cte$                 & $\sigma_{f}$ es la desviación estándar del \\
                       &             &                                                                                   & índice $Y$ en escala logarítmica.\\
 Proporción de la      &             &                                                                                   & \\ \hline
-captura a la edad de  & Multinomial &   $-l(p^f )=n^f p_{a,t}^f  ln \hat p_{a,t}^f$                                       & $p_{a,t}^f$ corresponde a la captura a la \\
+captura a la edad de  & Multinomial &   $-l(p^f )=n^f p_{a,t}^f  ln \hat p_{a,t}^f$                                     & $p_{a,t}^f$ corresponde a la captura a la \\
 la flota              &             &                                                                                   & edad de la flota. $n^f$ es el tamaño de \\
                       &             &                                                                                   & muestra efectivo.\\ \hline
 Proporción de la      &             &                                                                                   & \\
-abundancia a la       & Multinomial &   $-l(p^{cv} )=n^{cv} p_{a,t}^{cv}  ln \hat p_{a,t}^{cv}$                           & $p_{a,t}^{cv}$ corresponde a la captura a la \\
+abundancia a la       & Multinomial &   $-l(p^{cv} )=n^{cv} p_{a,t}^{cv}  ln \hat p_{a,t}^{cv}$                         & $p_{a,t}^{cv}$ corresponde a la captura a la \\
 edad del crucero de   &             &                                                                                   & edad del crucero de verano. $n^{cv}$ es el \\
 verano                &             &                                                                                   & tamaño de muestra efectivo.\\ \hline
 Proporción de la      &             &                                                                                   & \\
-abundancia a la       & Multinomial &   $-l(p^{co} )=n^{co} p_{a,t}^{co}  ln \hat p_{a,t}^{co}$                           & $p_{a,t}^{co}$ corresponde a la captura a la \\
+abundancia a la       & Multinomial &   $-l(p^{co} )=n^{co} p_{a,t}^{co}  ln \hat p_{a,t}^{co}$                         & $p_{a,t}^{co}$ corresponde a la captura a la \\
 edad del crucero de   &             &                                                                                   & edad del crucero de otoño. $n^{co}$ es el \\
 otoño                 &             &                                                                                   & tamaño de muestra efectivo.\\ \hline
 Prior                 &             &                                                                                   & \\ \hline
 Desvíos del           &             &                                                                                   & \\
-reclutamiento           & Lognormal   & $-l(R)=\frac{1}{2\sigma_R^2} \sum_t \varepsilon_t^2 +cte$                           & $\varepsilon_t$ desvíos del reclutamiento\\
+reclutamiento         & Lognormal   & $-l(R)=\frac{1}{2\sigma_R^2} \sum_t \varepsilon_t^2 +cte$                         & $\varepsilon_t$ desvíos del reclutamiento\\
                       &             &                                                                                   & $\sigma_R$ es la desviación estándar de los \\
                       &             &                                                                                   & reclutamientos \\ \hline
 Capturabilidad de     &             &                                                                                   & \\
-los cruceros            & Lognormal   & $-(q^{cv})=\frac{1}{2 \sigma_{q^{cv}}^2} ln(q^{cv})^2+cte$                        & $\sigma_q^{cv}$ es la desviación estándar de la \\  
+los cruceros          & Lognormal   & $-(q^{cv})=\frac{1}{2 \sigma_{q^{cv}}^2} ln(q^{cv})^2+cte$                        & $\sigma_q^{cv}$ es la desviación estándar de la \\  
                       &             & $-(q^{co})=\frac{1}{2\sigma_{q^{co}}^2} ln(q^{co})^2+cte$                         & capturabilidad del crucero de verano.\\
                       &             &                                                                                   & $\sigma_q^{co}$ es la desviación estándar de la    \\
                       &             &                                                                                   & capturabilidad del crucero de otoño.\\ \hline
-Mortalidad por pesca  & Lognormal     & $-l(F_{1991,1992})=1000*((logF_{1991}-\bar F)^2+(logF_{1992}-\bar F)^2)$          & En esos años hubo estimaciones\\
+Mortalidad por pesca  & Lognormal   & $-l(F_{1991,1992})=1000*((logF_{1991}-\bar F)^2+(logF_{1992}-\bar F)^2)$          & En esos años hubo estimaciones\\
                       &             &                                                                                   & muy bajas de reclutamiento y del \\
                       &             &                                                                                   & stock desovante asociados con \\
                       &             &                                                                                   & estos altos niveles de F1991,1992,\\ 
@@ -1287,7 +1287,7 @@ fm1 <- lm(Reclutamientos ~ breakfactor(bp.nile, breaks = 2))
 puntos_quiebres<-fitted(fm1)
 ```
 
-La \textbf{Figura \ref{Fig15}} muestra tres niveles de reclutamiento detectados por el análisis de quiebres de la serie histórica: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (113 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (405 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2021 (180 mil millones de ind.).
+La \textbf{Figura \ref{Fig15}} muestra tres niveles de reclutamiento detectados por el análisis de quiebres de la serie histórica: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (114 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (409 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2021 (180 mil millones de ind.).
 
 ```{=tex}
 \begin{figure}
@@ -1325,13 +1325,13 @@ Los pasos siguientes son proyectar la población para la estimación de la Captu
 +=======================================================================================================================================+========================================================================================+
 | Condición de partida para la proyección                                                                                               | $N_p=N_{naños}$, $S_p=S_{naños}$                                                       |
 +---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
-| Escenario de reclutamientos:R reclutamiento promedio de los años iniciales entre los años 1991-2007, n es el número de años iniciales | $Rp_{(a=0)}=\frac{\sum{R_{(1991-2007)}}}{n_{(1991-2007)}}$                             |
+| Escenario de reclutamientos:R reclutamiento promedio de los años iniciales entre los años 1991-2007, $n$ es el número de años iniciales | $Rp_{(a=0)}=\frac{\sum{R_{(1991-2007)}}}{n_{(1991-2007)}}$                             |
 +---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
-| Escenario de reclutamiento:R reclutamiento promedio entre los años 2008-2012, n es el número de años del período                      | $Rp_{(a=0)}=\frac{\sum{R_{(2008-2012)}}}{n_{(2008-2012)}}$                             |
+| Escenario de reclutamiento:R reclutamiento promedio entre los años 2008-2012, $n$ es el número de años del período                      | $Rp_{(a=0)}=\frac{\sum{R_{(2008-2012)}}}{n_{(2008-2012)}}$                             |
 +---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
-| Escenario de reclutamientos:R reclutamiento promedio entre los años 2013 - año actual, n es el número de años del período             | $Rp_{(a=0)}=\frac{\sum{R_{(2013-añoactual)}}}{n_{(2013-año actual)}}$                  |
+| Escenario de reclutamientos:R reclutamiento promedio entre los años 2013 - año actual, $n$ es el número de años del período             | $Rp_{(a=0)}=\frac{\sum{R_{(2013-añoactual)}}}{n_{(2013-año actual)}}$                  |
 +---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
-| Mortalidad por pesca y total al RMS                                                                                                   | $F_{RMS}=sel_{naños} F60(%BDPR)$, $Z_{RMS}=F_{RMS}+M$, $Sp=exp(-Z_{RMS} )$             |
+| Mortalidad por pesca y total al RMS                                                                                                   | $F_{RMS}=sel_{naños} F60(\%BDPR)$, $Z_{RMS}=F_{RMS}+M$, $Sp=exp(-Z_{RMS} )$             |
 +---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
 | Dinámica de la abundancia proyectada                                                                                                  | $Np_(a=0)=Rp$, $Np_{(a+1)}=Np_{(a-1)} S_p$, $Np_{(a=4)}=Np_{(a-1)} S_p+Np_{(a=4)} S_p$ |
 +---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
@@ -1488,7 +1488,7 @@ El período de análisis de la evaluación de stock comienza en 1990/91 hasta el
 
 \quad
 
--   *Porcentaje de Descarte 2020/21*: Se asume igual a un 4% de descarte (acordado en sesión del 25 de febrero del CCT-PP) lo que equivale a una captura descartada de **15.050 t**. (\textbf{Tabla \ref{Tab17}})
+-   *Porcentaje de Descarte 2020/21*: Se asume igual a un 4% de descarte (acordado en sesión del 25 de febrero del CCT-PP) lo que equivale a una captura descartada de 15.050 t. (\textbf{Tabla \ref{Tab17}})
 
 \vspace{-0.2cm}
 
@@ -1690,7 +1690,7 @@ Los resultados del crucero de verano 2021 muestran un incremento significativo e
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig21-1.pdf}
+\includegraphics[width=0.95\textwidth]{Figuras/Fig21-1.pdf}
 \caption{Variabilidad interanual de la proporción de la captura de la flota (panel izquierdo) y pesos medios (panel derecho) de cada grupo de edad (edad 0 a 4) de sardina común de las Regiones de Valparaíso a Los Lagos.}
 \label{Fig21}
 \end{figure}
@@ -1699,7 +1699,7 @@ Los resultados del crucero de verano 2021 muestran un incremento significativo e
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig22-1.pdf}
+\includegraphics[width=0.95\textwidth]{Figuras/Fig22-1.pdf}
 \caption{Composición de edad de la captura de la flota (panel izquierdo) y pesos medios (panel derecho) utilizados en la evaluación de stock de sardina común de las Regiones de Valparaíso a Los Lagos.}
 \label{Fig22}
 \end{figure}
@@ -1708,7 +1708,7 @@ Los resultados del crucero de verano 2021 muestran un incremento significativo e
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig23-1.pdf}
+\includegraphics[width=0.95\textwidth]{Figuras/Fig23-1.pdf}
 \caption{Variabilidad interanual de la proporción de la captura del crucero de verano (panel izquierdo) y crucero de otoño (panel derecho) de cada grupo de edad (edad 0 a 4).}
 \label{Fig23}
 \end{figure}
@@ -1888,17 +1888,21 @@ En la \textbf{Tabla \ref{Tab19b}} y \textbf{Figura \ref{Fig25b}} se muestra el i
 
 Los índices de abundancia de los cruceros acústicos de verano y otoño contienen un importante nivel de variabilidad que se resume en la amplitud de los intervalos de confianza supuestos con coeficiente de variación cv=0,3. El modelo reproduce la tendencia general de la variabilidad en los niveles de biomasa que han presentado las estimaciones de cruceros, siendo los valores más altos los que se escapan del ajuste, lo cual es consistente con la distribución de probabilidades empleada log-normal que considera sesgo positivo en su distribución. La \textbf{Figura \ref{Fig26}} muestra que a partir del 2014 el modelo ajusta muy bien la señal de los cruceros acústicos de verano y otoño.
 
-Se destaca que mientras por una parte los residuales del modelo no sugieren tendencias, es decir, la varianza residual es relativamente constante y homogénea entre años, el diagrama QQ indica que en términos generales la linealidad en la escala log se verifica en todos los índices. Sin perjuicio de esto, la serie de cruceros de verano son los que tienen mayor variabilidad y lejanía relativa respecto de la línea esperada (\textbf{Figura \ref{Fig27}}). Los datos observados de captura (desembarques) se asumen insesgados y precisos con un CV de residuos de 0,01 lo cual se refleja en un buen ajuste del modelo a los datos observados.
 
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=1\textwidth]{Figuras/Fig26-1.pdf}
+\includegraphics[width=0.9\textwidth]{Figuras/Fig26-1.pdf}
 \caption{Ajustes del modelo anual en edades a los valores de biomasas de cruceros de verano, otoño y desembarques. Las barras corresponden al intervalo de confianza asintótico y el círculo al valor del estimador central. Los años de la serie de desembarques corresponden a año biológico.}
 \label{Fig26}
 \end{figure}
 ```
 
+\pagebreak
+
+Se destaca que mientras por una parte los residuales del modelo no sugieren tendencias, es decir, la varianza residual es relativamente constante y homogénea entre años, el diagrama QQ indica que en términos generales la linealidad en la escala log se verifica en todos los índices. Sin perjuicio de esto, la serie de cruceros de verano son los que tienen mayor variabilidad y lejanía relativa respecto de la línea esperada (\textbf{Figura \ref{Fig27}}). Los datos observados de captura (desembarques) se asumen insesgados y precisos con un CV de residuos de 0,01 lo cual se refleja en un buen ajuste del modelo a los datos observados.
+
+\vspace{0.5cm}
 
 ```{=tex}
 \begin{figure}
@@ -1909,11 +1913,14 @@ Se destaca que mientras por una parte los residuales del modelo no sugieren tend
 \end{figure}
 ```
 
-\vspace{0.5cm}
+\pagebreak
+
 #### Composición de edad
 \quad
 
-El ajuste del modelo a la información de composición de edades en general presenta un buen desempeño, particularmente en representar de mejor forma la composición de edades de los cruceros de verano (\textbf{Figura \ref{Fig28}}, \textbf{\ref{Fig29}} y \textbf{\ref{Fig30}}). El supuesto de invariabilidad anual de los patrones de explotación como medida de parsimonia, genera algunos desajustes en las composiciones de edades de las capturas, principalmente al inicio de la serie histórica y grupo de edad 0.
+El ajuste del modelo a la información de composición de edades en general presenta un buen desempeño, particularmente en representar de mejor forma la composición de edades de los cruceros de verano (\textbf{Figura \ref{Fig28}}, \textbf{\ref{Fig29}} y \textbf{\ref{Fig30}}). El supuesto de invariabilidad anual de los patrones de explotación como medida de parsimonia, genera algunos desajustes en las composiciones de edades de las capturas, principalmente al inicio de la serie histórica y grupo de edad 0. El comportamiento de los residuales de las composiciones de edades de los cruceros sugiere ciertos patrones que se reflejan principalmente en una tendencia a la subestimación de los grupos de edad 0 en los cruceros de verano y otoño. (\textbf{Figura \ref{Fig31}}).
+
+\vspace{0.5cm}
 
 ```{=tex}
 \begin{figure}
@@ -1943,9 +1950,6 @@ El ajuste del modelo a la información de composición de edades en general pres
 ```
 \pagebreak
 
-El comportamiento de los residuales de las composiciones de edades de los cruceros sugiere ciertos patrones que se reflejan principalmente en una tendencia a la subestimación de los grupos de edad 0 en los cruceros de verano y otoño. (\textbf{Figura \ref{Fig31}}).
-\vspace{0.2cm}
-
 ```{=tex}
 \begin{figure}
 \centering
@@ -1960,22 +1964,25 @@ El comportamiento de los residuales de las composiciones de edades de los crucer
 #### Comparación con evaluaciones anteriores
 \quad
 
-Se comparan los resultados de los principales indicadores de estatus del modelo base actual (julio 2021: MAE0721), con versiones anteriores (marzo 2021, sept 2020, julio 2020, marzo 2020, sept 2019) para evaluar la consistencia de la evaluación presente (\textbf{Figura \ref{Fig32}}). Al respecto, el análisis muestra mayor incertidumbre en los tres últimos años de las series, con una tendencia a subestimar los niveles de biomasa desovante y sobre-estimar los niveles de mortalidad por pesca, no obstante, las diferencias no son significativas.
+Se comparan los resultados de los principales indicadores de estatus del modelo base actual (septiembre 2021: MAE0921), con versiones anteriores (julio 2021, marzo 2021, sept 2020, julio 2020, marzo 2020, sept 2019) para evaluar la consistencia de la evaluación presente (\textbf{Figura \ref{Fig32}}). Al respecto, el análisis muestra mayor incertidumbre en los tres últimos años de las series, con una tendencia a subestimar los niveles de biomasa desovante y sobre-estimar los niveles de mortalidad por pesca, no obstante, las diferencias no son significativas.
+
 \vspace{0.5cm}
+
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig32-1.pdf}
+\includegraphics[width=0.9\textwidth]{Figuras/Fig32-1.pdf}
 \caption{Comparación con asesorías anteriores del reclutamiento, biomasa desovante y mortalidad por pesca ($F año^{-1}$) de la sardina común. Los años en el eje x corresponden a año biológico. }
 \label{Fig32}
 \end{figure}
 ```
+
 \pagebreak
 
 #### Análisis retrospectivo
 \quad
 
-En la \textbf{Figura \ref{Fig33}} se muestra el patrón retrospectivo estándar y relativo de los reclutas, biomasa desovante y de la mortalidad por pesca de sardina común para el caso base de julio 2021 (MAE0721). El análisis retrospectivo del modelo de evaluación muestra que en términos de rho (promedio de anomalías retrospectivas) la reducción de información genera un patrón de subestimación de los reclutas y de la biomasa desovante (rho = -0,1 y rho = -0,01, respectivamente), con una sobreestimación de la mortalidad por pesca (rho = +0,04). En general, los últimos años de las series pueden variar sustancialmente entre las sucesivas actualizaciones, mientras que hacia los primeros años tienden a converger a valores estables. La varianza estadística de las variables utilizadas para medidas de manejo tiende a aumentar en los últimos años de la serie, por lo tanto, son considerados estimaciones menos confiables.
+En la \textbf{Figura \ref{Fig33}} se muestra el patrón retrospectivo estándar y relativo de los reclutas, biomasa desovante y de la mortalidad por pesca de sardina común para el caso base de septiembre 2021 (MAE0921). El análisis retrospectivo del modelo de evaluación muestra que en términos de rho (promedio de anomalías retrospectivas) la reducción de información genera un patrón de subestimación de los reclutas y de la biomasa desovante (rho = -0,1 y rho = -0,01, respectivamente), con una sobreestimación de la mortalidad por pesca (rho = +0,04). En general, los últimos años de las series pueden variar sustancialmente entre las sucesivas actualizaciones, mientras que hacia los primeros años tienden a converger a valores estables. La varianza estadística de las variables utilizadas para medidas de manejo tiende a aumentar en los últimos años de la serie, por lo tanto, son considerados estimaciones menos confiables.
 
 ```{=tex}
 \begin{figure}
@@ -1990,7 +1997,7 @@ En la \textbf{Figura \ref{Fig33}} se muestra el patrón retrospectivo estándar 
 #### Perfil de verosimilitud
 \quad
 
-La \textbf{Figura \ref{Fig34}} muestra el perfil de verosimilitud realizado para la asesoría de julio 2021 de cada fuente de dato cuyo mínimo representa la estimación máxima a posteriori del reclutamiento medio ($R_0$) para cada fuente de error del caso base. El perfil muestran que los datos cuyos perfiles estuvieron más próximos entre si y la diferencia del log verosimilitud respecto del mínimo se elevó por sobre el criterio estadístico $X^2=1,92$ fueron la biomasa acústica de verano (Reclas), la proporción de edad del crucero de verano (propRecl). Mientras que, el dato proveniente de los cruceros acústicos de otoño no estaría aportando información relevante para la definición del reclutamiento medio.
+La \textbf{Figura \ref{Fig34}} muestra el perfil de verosimilitud realizado para la asesoría de septiembre 2021 de cada fuente de dato cuyo mínimo representa la estimación máxima a posteriori del reclutamiento medio ($R_0$) para cada fuente de error del caso base. El perfil muestran que los datos cuyos perfiles estuvieron más próximos entre si y la diferencia del log verosimilitud respecto del mínimo se elevó por sobre el criterio estadístico $X^2=1,92$ fueron la biomasa acústica de verano (Reclas), la proporción de edad del crucero de verano (propRecl). Mientras que, el dato proveniente de los cruceros acústicos de otoño no estaría aportando información relevante para la definición del reclutamiento medio.
 
 ```{=tex}
 \begin{figure}
