@@ -158,7 +158,7 @@ El desembarque de sardina común se ha caracterizado por presentar un comportami
 ```
 \normalsize
 
-## 2.3. Reclutamiento
+## 2.4. Reclutamiento
 
 Las áreas de reclutamiento se ubican principalmente frente a la Región del Biobío, concentrándose fundamentalmente al norte de Isla Mocha. Las condiciones ambientales que afectan a este proceso se vinculan con ciertas masas de agua, anomalías de las variables (Temperatura, Salinidad, Oxígeno disuelto, gradientes, etc.), intensidad de los vientos y el nivel de los procesos vinculados (índice de surgencia, índices de turbulencia, transporte de Ekman, etc) (Yáñez *et al*. 2005; Castillo *et al*. 2013).
 
@@ -191,7 +191,7 @@ Se ha observado una gran variabilidad interanual asociada a la fortaleza del pul
 
 \pagebreak
 
-## 2.4. Reproducción
+## 2.5. Reproducción
 
 Los peces pelágicos pequeños adaptan su ciclo reproductivo desovando en zonas protegidas y/o períodos del año favorables para la sobrevivencia y desarrollo de estadíos tempranos (Parrish *et al*. 1983, Hutchings *et al*. 1998, Cubillos *et al*. 2001). El área de desove de sardina común y anchoveta de las regiones de Valparaíso a Los Lagos, se ubica principalmente en la zona de Lebu-Corral, la cual correspondería a una zona de pre-reclutamiento/desove con un alto nivel de retención (\textbf{Figura \ref{Fig9}}), producto de una alternancia entre convergencias costeras producidas por vientos norte que favorecerían la concentración y retención en la costa y vientos sur que promoverían el enriquecimiento de aguas costeras con eventos de surgencia de moderada intensidad (Cubillos *et al*. 2011, Parada *et al*. 2012, Soto-Mendosa *et al*. 2012).
 
@@ -2044,7 +2044,7 @@ Por su parte, las selectividades de la flota y cruceros de otoño indican que el
  \small
     \centering
     \resizebox{9cm}{!} {
-    \begin{tabular}{ccccc}
+    \begin{tabular}{|c|c|c|c|c|}
     \hline \rowcolor{Gray3}
 Año     & $BD_{sept}$ & $BT_{sept}$ & $R_{sept}$ & $F_{sept}$ \\ 
 \hline  \rowcolor{Gray4}
@@ -2243,7 +2243,7 @@ Año     & $F/F_{RMS_{sept}}$ & $BD/BD_{RMS_{sept}}$ & $Y/BT_{sept}$ & $C/N_{sep
 ```
  \normalsize
 
-\pagebreak
+
 
 |                           | Septiembre 2021 | 
 |---------------------------|-----------------|
@@ -2279,37 +2279,20 @@ Año     & $F/F_{RMS_{sept}}$ & $BD/BD_{RMS_{sept}}$ & $Y/BT_{sept}$ & $C/N_{sep
 
 *"Determinar niveles de Captura Biológicamente Aceptable (CBA) que lleven y/o mantenga la pesquería en torno al Rendimiento Máximo Sostenible (RMS), a partir de un análisis de riesgo en condiciones de incertidumbre de no alcanzar los objetivos de conservación y sostenibilidad conforme lo establece la LGPA y contenidos en el Plan de Manejo y/o en el Programa de Recuperación respectivo, según corresponda."*
 
-
+\vspace{0.5cm}
 
 ### 4.3.1. Proyección del stock (Asesoría de septiembre 2021)
 
-La  proyección de la población se realizó 2 años biológicos hacia el futuro (julio2021-junio2022 y julio2022-junio2023) en base a tres escenarios de reclutamiento: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (114 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (409 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2020 (180 mil millones de ind.) (\textbf{Figura \ref{Fig44a} a}), con una mortalidad por pesca en torno al $F_{RMS}$ y pesos medios igual al promedio de los últimos 5 años. Las \textbf{Figuras \ref{Fig44a} b)} y \textbf{\ref{Fig44a} c)} indican que independiente del escenario de reclutamiento, en términos de biomasa desovante 2021/2022 se observa un incremento del **x%** respecto al año 2020/2021. Mientras que la biomasa desovante proyectada hacia el 2022/2023 depende del reclutamiento proyectado hacia el 2022 y 2023.
+\vspace{0.3cm}
 
-La probabilidad de sobreexplotación disminuye a un 46% para el año biológico 2021/2022, mientras que para el año 2022/2023, dependiendo del escenario de reclutamiento, la probabilidad de sobreexplotación puede disminuir a un 26% si los reclutamientos se encuentran en torno al promedio de los años recientes 2013-2021. Mientras que la probabilidad puede aumentar a un 90% si los reclutamientos son bajos (1991-2007) (**Tabla 29** y **Figura 44 y 45**)
+La  proyección de la población se realizó 2 años biológicos hacia el futuro (julio 2021-junio 2022 y julio 2022-junio 2023) en base a tres escenarios de reclutamiento: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (114 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (409 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2021 (180 mil millones de ind.) (\textbf{Figura \ref{Fig44a} a}), con una mortalidad por pesca en torno al $F_{RMS}$ y pesos medios igual al promedio de los últimos 5 años. 
 
- La **Tabla 30** muestra la  captura proyectada para los años biológicos 2021/2022 y 2022/2023 considerando una mortalidad por pesca igual al $F_{RMS}$ y el descuento del 4% de descarte, con sus respectivos escenarios de reclutamientos. El cálculo de la Captura para el año calendario 2022 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70% para el primer semestre y 30% para el segundo semestre.
+Las \textbf{Figuras \ref{Fig44a} b,c} y \textbf{Tabla \ref{Tab25}} indican que independiente del escenario de reclutamiento, en términos de biomasa desovante proyectada al 2021/2022 (755 mil t) se observa un incremento del 53% respecto al año previo 2020/2021 (492 mil t), de este modo la probabilidad de sobreexplotación disminuye a un 46% para el año biológico 2021/2022. Mientras que la biomasa desovante proyectada hacia el 2022/2023 depende del reclutamiento proyectado hacia el 2022 y 2023, la probabilidad de sobreexplotación puede disminuir a un 26% si los reclutamientos se encuentran en torno al promedio de los años recientes 2013-2021. Mientras que la probabilidad puede aumentar a un 90% si los reclutamientos son bajos (1991-2007) (\textbf{Tabla \ref{Tab25}} y \textbf{Figura \ref{Fig44b}}).
+
+La \textbf{Tabla \ref{Tab25}} muestra la  captura proyectada para los años biológicos 2021/2022 y 2022/2023 considerando una mortalidad por pesca igual al $F_{RMS}$ y el descuento del 4% de descarte, con sus respectivos escenarios de reclutamientos. El cálculo de la Captura al RMS ($C_{RMS}$) para el año calendario 2022 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70% para el primer semestre ($C_{1erSem2022}$) y 30% para el segundo semestre ($C_{2doSem2022}$). De este modo, la captura al RMS para el año biológico 2021/2022 ($C_{2021/2022}$) puede varian según el escenario de reclutamiento entre 303 mil t a 560 mil t. Si el 70% de la captura 2021/2022 se realiza durante el primer semestre 2022, la captura puede variar entre 212 mil t a 392 mil t, dependiendo del reclutamiento 2022, considerando un resguardo del 4% por causa del descarte. 
  
+El aporte del reclutamiento en la estimación de captura 2021/2022 es de un 63% para un escenario de reclutamiento alto (R_2008-2012), de un 43% para un escenario de reclutamientos recientes (R_2013-2021) y de un 33% para un escenario de reclutamiento bajos (R_1991-2007) (\textbf{Figura \ref{Fig44c} a)}). En el caso de la captura proyectada para el año 2022/2023, los escenarios de reclutamientos tienen un efecto en el grupo de edad 0 y 1, por lo tanto, es una estimación con mayor incertidumbre (\textbf{Figura \ref{Fig44c} b)}). 
 
-### 4.3.2. CBA 2022 Inicial (Asesoría de septiembre 2021)
-
- \normalsize
-
-El cálculo de la CBA inicial para el año calendario 2022 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70% para el primer semestre y 30% para el segundo semestre, bajo un criterio de explotación de F60%SPR, sujeto a percentiles de probabilidad entre el 10% y 50%.
-
-La \textbf{Tabla \ref{Tab25}} muestra los rangos de capturas para el año 2022 estimada bajo un escenario de Rprom(1991-2007) podría situarse entre 195 mil t y 250 mil t; bajo un escenario de Rprom(2008-2012) entre 353 mil t y 448 mil t y, bajo un escenario de Rprom(2013-2020) entre 223 mil t y 301 mil t.
-
-
-Dado que no se cuenta con el % de descarte actualizado al 2020, para la asesoría de septiembre 2020 se muestran 2 escenarios de descarte, la \textbf{Tabla \ref{Tab27}} muestra los rangos de captura menos el 2% correspondiente al descarte 2017 y la \textbf{Tabla \ref{Tab28}} muestra los rangos de captura con el descuento del 6% (descarte 2019).
-
-
-Para evaluar el efecto que tiene la decisión de la CBA en base a los percentiles (10%-50%) que en general son menores a la captura al RMS (percentil del 50%), se calculó el resguardo a lo cual equivale cada percentil (\textbf{Tabla \ref{Tab26}}). Esos niveles variaron entre un 4% para un percentil del 40% hasta un 26% para un percentil de probabilidad del 10%, considerando tres escenarios de reclutamiento.
-
-
-
-
-
-
-\pagebreak
 
 ```{=tex}
 \begin{figure}[h!]
@@ -2391,6 +2374,26 @@ $p(agotado/colapsado)$       & 0,03   & 0,03   & 0,03                 & 0,01   &
 
 
 ```{=tex}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.75\textwidth]{Figuras/Fig27_CBA-1.pdf}
+\caption{Captura 2021/2022 y 2022/2023 a la edad bajo tres escenarios de reclutamiento proyectado en el hito 1. Asesoría Septiembre 2021. }
+\label{Fig44c}
+\end{figure}
+```
+
+\pagebreak
+
+### 4.3.2. CBA 2022 Inicial (Asesoría de septiembre 2021)
+
+\vspace{0.3cm}
+ \normalsize
+
+El cálculo de la CBA inicial para el año calendario 2022 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70% para el primer semestre y 30% para el segundo semestre, bajo un criterio de explotación de F60%SPR, sujeto a percentiles de probabilidad entre el 10% y 50%. La \textbf{Tabla \ref{Tab26}} y \textbf{Figura \ref{Fig44d}} muestran los rangos de capturas para el año 2022 estimada bajo un escenario de Rprom(1991-2007) podría situarse entre 225 mil t y 302 mil t; bajo un escenario de Rprom(2008-2012) entre 510 mil t y 637 mil t y, bajo un escenario de Rprom(2013-2020) entre 277 mil t y 378 mil t. Considerando el descuento del 4% de descarte 2022, los rangos de capturas para el año 2022 estimada bajo un escenario de Rprom(1991-2007) podría situarse entre 215 mil t y 290 mil t; bajo un escenario de Rprom(2008-2012) entre 489 mil t y 612 mil t y, bajo un escenario de Rprom(2013-2020) entre 266 mil t y 363 mil t. Para evaluar el efecto que tiene la decisión de la CBA en base a los percentiles (10%-50%) que en general son menores a la captura al RMS (percentil del 50%), se calculó el resguardo a lo cual equivale cada percentil (\textbf{Tabla \ref{Tab27}}). Esos niveles variaron entre un 5% para un percentil del 40% hasta un 26% para un percentil de probabilidad del 10%, considerando tres escenarios de reclutamiento.
+
+\vspace{0.5cm}
+
+```{=tex}
 \begin{table}[h!]
 \caption{CBA inicial año calendario 2022 de sardina común calculada bajo $F_{RMS}$ y el descuento del 4\% de descarte, con sus respectivos percentiles de captura entre 10\% y 50\% y tres escenarios de reclutamientos.}
  \label{Tab26}
@@ -2415,7 +2418,7 @@ $p(agotado/colapsado)$       & 0,03   & 0,03   & 0,03                 & 0,01   &
 
 
 
-\vspace{-0.5cm}
+\vspace{0.5cm}
 
 
 ```{=tex}
@@ -2444,9 +2447,9 @@ $p(agotado/colapsado)$       & 0,03   & 0,03   & 0,03                 & 0,01   &
 ```{=tex}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.95\textwidth]{Figuras/Fig27_CBA-1.pdf}
-\caption{Captura 2021/2022 y 2022/2023 a la edad (a y b), distribución de probabilidad de la Captura al RMS proyectada al 2022 bajo tres escenarios de reclutamiento proyectado en el hito 1 (c). La zona sombreada corresponde a la zona de percentiles de probabilidad de captura (*P) entre el 10 \% - 50 \%. La CBA estimada para cada *P (d). }
-\label{Fig44c}
+\includegraphics[width=0.95\textwidth]{Figuras/Fig27_CBA-2.pdf}
+\caption{a) Distribución de probabilidad de la Captura al RMS proyectada al 2022 bajo tres escenarios de reclutamiento proyectado en el hito 1. La zona sombreada corresponde a la zona de percentiles de probabilidad de captura (*P) entre el 10 \% - 50 \%. b) La CBA estimada para cada *P. }
+\label{Fig44d}
 \end{figure}
 ```
 
@@ -3392,12 +3395,14 @@ En relación al descarte de peces pelágicos, se han identificado problemáticas
 [^7]: <https://www.subpesca.cl/portal/616/articles-109471_documento.pdf>
 
 
-===
-De acuerdo al ciclo de manejo histórico de esta pesquería, este estudio entrega la información base para el tercer hito correspondiente al cálculo de la segunda revisión de la CBA que permite al Comité Científico Técnico de Pesquerías Pelágicas (CCT-PP), revisar el estatus 2020/21 y el rango de CBA para el año 2021. El rango se CBA se obtiene bajo un criterio de explotación de mortalidad por pesca constante igual al F~RMS~, sujeto a percentiles de probabilidad entre el 10% y 50% de sobrepasar dicho criterio. Se asume que el 70% de la captura se obtendrá durante el primer semestre 2021 y que ocurrirá un 4% de descarte.
+De acuerdo al ciclo de manejo histórico de esta pesquería, este estudio entrega la información base para el primer hito correspondiente al cálculo de la CBA inicial 2022 que permite al Comité Científico Técnico de Pesquerías Pelágicas (CCT-PP), revisar el estatus 2020/21 y el rango de CBA proyectado para el año calendario  2022. El rango se CBA se obtiene bajo un criterio de explotación de mortalidad por pesca constante igual al F~RMS~, sujeto a percentiles de probabilidad entre el 10% y 50% de sobrepasar dicho criterio. Se asume que el 70% de la captura se obtendrá durante el primer semestre 2022 y que ocurrirá un 4% de descarte.
 
-De este modo, la captura para el año 2021, descontando el 4% de descarte y estimada bajo un escenario de reclutamientos bajos (período 1991-2007) se encuentra entre 336 mil t y 363 mil t. Bajo un escenario de reclutamientos altos (período 2008-2012), alcanza un rango entre 368 mil t y 403 mil toneladas y bajo un escenario de reclutamientos recientes (período 2013-2021), entre 338 mil t y 370 mil t.
+De este modo, la captura proyectada para los años biológicos 2021/2022 y 2022/2023 puede varian según el escenario de reclutamiento entre 303 mil t a 560 mil t. Si el 70 % de la captura 2021/2022 se realiza durante el primer semestre 2022, la $C_{RMS}$ entre marzo a junio 2022 puede variar entre 212 mil t a 392 mil t, dependiendo del reclutamiento 2022. El aporte del reclutamiento en la estimación de captura 2021/2022 es de un 63 % para un escenario de reclutamiento alto (R_2008-2012), de un 43 % para un escenario de reclutamientos recientes (R_2013-2021) y de un 33 % para un escenario de reclutamiento bajos (R_1991-2007). En el caso de la captura proyectada para el año 2022/2023, los escenarios de reclutamientos tienen un efecto en el grupo de edad 0 y 1, por lo tanto, es una estimación con mayor incertidumbre.
 
-Respecto al efecto de la cuota remanente 2020 en el estatus 2020/21 de sardina común, la captura registrada por Sernapesca para el año biológico 2020/21 fue de 376 mil toneladas. Considerando la captura descartada supuesta para el mismo año (15 mil t, equivante al 4% de descarte) como una causa de mortalidad por pesca adicional, la remoción total ocurrida durante el 2020/21 fue de 391 mil t, lo cual equivale a una mortalidad por pesca de 0,326 año^-1^. Dado que, la mortalidad por pesca objetivo ($F_{RMS}$) es igual a 0,3 año^-1^, la $F_{2020/21}$ fue un 9% mayor al $F_{RMS}$ (\textbf{Figura \ref{Fig51b}}).  La captura 2020/21 al RMS debería estar en torno a las 359 mil t ($C_{RMS}$), si descontamos la captura descartada (14 mil t equivalente al 4%descarte), la captura 2020/21 debería ser 344,8 mil t. Al respecto, si consideramos que la captura registrada por Sernapesca durante el segundo semestre 2020 fue de 69,8 mil t, la captura del primer semestre que hubiera permitido estar en $F_{RMS}$, sería 275 mil t. Es decir, la $C_{RMS}$ se sobrepasó en 31 mil t, valor muy cercano a la cuota remanente capturada de 30.600 t  (http://www.sernapesca.cl/informacion-utilidad/consumo-de-cuotas).
+Finalmente, la $C_{RMS}$ para el año calendario 2022, descontando el 4% de descarte $C_{RMS}$ y estimada bajo un escenario de Rprom(1991-2007) podría situarse entre 215 mil t y 290 mil t; bajo un escenario de Rprom(2008-2012) entre 489 mil t y 612 mil t y, bajo un escenario de Rprom(2013-2020) entre 266 mil t y 363 mil t. 
+
+Respecto al efecto de la cuota remanente 2020 en el estatus 2020/21 de sardina común, la captura registrada por Sernapesca para el año biológico 2020/21 fue de 376 mil toneladas. Considerando la captura descartada supuesta para el mismo año (15 mil t, equivante al 4% de descarte) como una causa de mortalidad por pesca adicional, la remoción total ocurrida durante el 2020/21 fue de 391 mil t, lo cual equivale a una mortalidad por pesca de 0,326 año^-1^. Dado que, la mortalidad por pesca objetivo ($F_{RMS}$) es igual a 0,3 año^-1^, la $F_{2020/21}$ fue un 9% mayor al $F_{RMS}$ (\textbf{Figura \ref{Fig51b}}).  La captura 2020/21 al RMS debería estar en torno a las 359 mil t ($C_{RMS}$), si descontamos la captura descartada (14 mil t equivalente al 4%descarte), la captura 2020/21 debería ser 344,8 mil t. Al respecto, si consideramos que la captura registrada por Sernapesca durante el segundo semestre 2020 fue de 69,8 mil t, la captura del primer semestre que hubiera permitido estar en $F_{RMS}$, sería 275 mil t. Es decir, la $C_{RMS}$ se sobrepasó en 31 mil t, valor muy cercano a la cuota remanente capturada de 30.600 t  (http://www.sernapesca.cl/informacion-utilidad/consumo-de-cuotas). La \textbf{Figura \ref{Fig51c}} muestra el efecto de sobrepasar el objetivo de manejo $F_{RMS}$ en un 10% el año 2021/2022 y 2022/2023, considerando tres supuestos de reclutamiento. Al respecto, se recomienda considerar una captura inferior a la $C_{RMS}$  para disminuir el riesgo de sobrepesca y sobreexplotación para el año 2021/2022.
+
 
 \vspace{0.5cm}
 
@@ -3412,19 +3417,15 @@ Respecto al efecto de la cuota remanente 2020 en el estatus 2020/21 de sardina c
 ```
 
 \normalsize
-
+\pagebreak
 
 ```{=tex}
 \begin{figure}[h!]
 \centering
-
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45a_sept-2.pdf}
 \includegraphics[width=0.3\textwidth]{Figuras/Fig45a_sept-3.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45b_sept-2.pdf}
 \includegraphics[width=0.3\textwidth]{Figuras/Fig45b_sept-3.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45c_sept-2.pdf}
 \includegraphics[width=0.3\textwidth]{Figuras/Fig45c_sept-3.pdf}
-\caption{Diagramas de fases de explotación de la biomasa desovante respecto de la mortalidad por pesca mostrando el estatus de sardina común para el año previo 2019/20 (punto verde), año actual 2020/21 (punto y cruz naranjo) y años proyectados 2021/22 y 2022/23 (punto rojo) bajo un escenario de reclutamiento promedio bajo [1991-2007] (panel superior), reclutamiento promedio alto [2008-2012] (panel intermedio), reclutamiento promedio reciente [2013-2021] (panel inferior) y ponderadores de $F_{RMS}$ (0,9 y 1,1) \textbf{Asesoría de septiembre 2021}.}
+\caption{Diagramas de fases de explotación de la biomasa desovante respecto de la mortalidad por pesca mostrando el estatus de sardina común para el año previo 2019/20 (punto verde), año actual 2020/21 (punto y cruz naranjo) y años proyectados 2021/22 y 2022/23 (punto rojo) bajo un escenario de reclutamiento promedio bajo [1991-2007] (panel superior), reclutamiento promedio alto [2008-2012] (panel intermedio), reclutamiento promedio reciente [2013-2021] (panel inferior) y ponderadores de $F_{RMS}$  de 1,1) \textbf{Asesoría de septiembre 2021}.}
 \label{Fig51c}
 \end{figure}
 ```
