@@ -1000,7 +1000,7 @@ Al respecto, en el taller de Revisión Por Pares (RPP) se discutió sobre los pr
 
 El modelo de la dinámica poblacional fue programado en la plataforma AD Model Builder (Fournier *et al*. 2012). Todos los códigos fuente y datos empleados en la evaluación son debidamente documentados e informados detalladamente, incluyendo su versión digital, estableciéndose una numeración específica para cada versión. Cualquier modificación del modelo y/o de su correspondiente código es reportada en el informe respectivo, dejando constancia de las versiones que se emplearon hasta la fecha en que se emite el informe y definiendo específicamente la versión que se empleará en éste, para fines de revisiones posteriores. El código MAE0921, fue compilados en "macOS Big Sur Versión 11,4" y en "ADMB Versión 12,2". Los parámetros del modelo MAE0921 fueron = 78 Objective function value = 510.934747776300  Maximum gradient component = 3.90598558424591e-05.
 
-Respecto a la convergencia de los modelos, hemos encontrado diferencias en los modelos compilados en los Software Windows y MAC, principalmente relacionada con las fases de estimación de algunos parámetros. Se adjunta la base de datos que considera los códigos .dat y .tpl compilados en Windows y MAC, junto a los reportes (.rep, .std y .par). La diferencia entre los códigos tiene relación con la fase de estimación de los parámetros relacionados con los desvíos del reclutamiento, que en MAC se estiman en fase 2 y en Windows en fase 1. Las diferencias en las fases de estimación  no mostraron diferencias entre las salidas de los reportes.
+Respecto a la convergencia de los modelos, hemos encontrado diferencias en los modelos compilados en los Software Windows y MAC, principalmente relacionada con las fases de estimación de algunos parámetros. Se adjunta la base de datos que considera los códigos .dat y .tpl compilados en Windows y MAC, junto a los reportes (.rep, .std y .par). El código MAE0921 no presentó diferencias entre softwares.
   
  \vspace{0.5cm}
  
@@ -2285,22 +2285,27 @@ Año     & $F/F_{RMS_{sept}}$ & $BD/BD_{RMS_{sept}}$ & $Y/BT_{sept}$ & $C/N_{sep
 
 La  proyección de la población se realizó 2 años biológicos hacia el futuro (julio2021-junio2022 y julio2022-junio2023) en base a tres escenarios de reclutamiento: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (114 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (409 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2020 (180 mil millones de ind.) (\textbf{Figura \ref{Fig44a} a}), con una mortalidad por pesca en torno al $F_{RMS}$ y pesos medios igual al promedio de los últimos 5 años. Las \textbf{Figuras \ref{Fig44a} b)} y \textbf{\ref{Fig44a} c)} indican que independiente del escenario de reclutamiento, en términos de biomasa desovante 2021/2022 se observa un incremento del **x%** respecto al año 2020/2021. Mientras que la biomasa desovante proyectada hacia el 2022/2023 depende del reclutamiento proyectado hacia el 2022 y 2023.
 
+La probabilidad de sobreexplotación disminuye a un 46% para el año biológico 2021/2022, mientras que para el año 2022/2023, dependiendo del escenario de reclutamiento, la probabilidad de sobreexplotación puede disminuir a un 26% si los reclutamientos se encuentran en torno al promedio de los años recientes 2013-2021. Mientras que la probabilidad puede aumentar a un 90% si los reclutamientos son bajos (1991-2007) (**Tabla 29** y **Figura 44 y 45**)
+
+ La **Tabla 30** muestra la  captura proyectada para los años biológicos 2021/2022 y 2022/2023 considerando una mortalidad por pesca igual al $F_{RMS}$ y el descuento del 4% de descarte, con sus respectivos escenarios de reclutamientos. El cálculo de la Captura para el año calendario 2022 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70% para el primer semestre y 30% para el segundo semestre.
+ 
 
 ### 4.3.2. CBA 2022 Inicial (Asesoría de septiembre 2021)
 
  \normalsize
 
-El cálculo de la CBA inicial para el año calendario 2021 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70% para el primer semestre y 30% para el segundo semestre, bajo un criterio de explotación de F60%SPR, sujeto a percentiles de probabilidad entre el 10% y 50%.
+El cálculo de la CBA inicial para el año calendario 2022 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70% para el primer semestre y 30% para el segundo semestre, bajo un criterio de explotación de F60%SPR, sujeto a percentiles de probabilidad entre el 10% y 50%.
 
-La \textbf{Tabla \ref{Tab25}} muestra los rangos de capturas para el año 2021 estimada bajo un escenario de Rprom(1991-2007) podría situarse entre 195 mil t y 250 mil t; bajo un escenario de Rprom(2008-2012) entre 353 mil t y 448 mil t y, bajo un escenario de Rprom(2013-2020) entre 223 mil t y 301 mil t.
+La \textbf{Tabla \ref{Tab25}} muestra los rangos de capturas para el año 2022 estimada bajo un escenario de Rprom(1991-2007) podría situarse entre 195 mil t y 250 mil t; bajo un escenario de Rprom(2008-2012) entre 353 mil t y 448 mil t y, bajo un escenario de Rprom(2013-2020) entre 223 mil t y 301 mil t.
 
-Para evaluar el efecto que tiene la decisión de la CBA en base a los percentiles (10%-50%) que en general son menores a la captura al RMS (percentil del 50%), se calculó el resguardo a lo cual equivale cada percentil (\textbf{Tabla \ref{Tab26}}). Esos niveles variaron entre un 4% para un percentil del 40% hasta un 26% para un percentil de probabilidad del 10%, considerando tres escenarios de reclutamiento.
 
 Dado que no se cuenta con el % de descarte actualizado al 2020, para la asesoría de septiembre 2020 se muestran 2 escenarios de descarte, la \textbf{Tabla \ref{Tab27}} muestra los rangos de captura menos el 2% correspondiente al descarte 2017 y la \textbf{Tabla \ref{Tab28}} muestra los rangos de captura con el descuento del 6% (descarte 2019).
 
-En la secta sesión del CCT-PP 2020 (Acta de Sesión Nº6, octubre 2020 [^6]) se recomendó una CBA máxima 2021 de 201.409 toneladas correspondiente al escenario de reclutamiento promedio bajo (1991-2007), 20% de percentil de captura (equivalente a un 14% resguardo) y el descuento del 6% de descarte (\textbf{Tabla \ref{Tab28}}).
 
-[^6]: <https://www.subpesca.cl/portal/616/articles-108975_documento.pdf>
+Para evaluar el efecto que tiene la decisión de la CBA en base a los percentiles (10%-50%) que en general son menores a la captura al RMS (percentil del 50%), se calculó el resguardo a lo cual equivale cada percentil (\textbf{Tabla \ref{Tab26}}). Esos niveles variaron entre un 4% para un percentil del 40% hasta un 26% para un percentil de probabilidad del 10%, considerando tres escenarios de reclutamiento.
+
+
+
 
 
 
