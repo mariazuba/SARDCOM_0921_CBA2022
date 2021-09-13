@@ -600,6 +600,8 @@ data<-data.frame("Año biológico"=bioyear,
 
 kable(data, align = 'c')
 
+write.csv(data, file="Tablas/DatosCapturaydescarte.csv")
+
 ```
 
 
@@ -676,6 +678,15 @@ p <- ggplot()  +
 p +  theme(panel.background = element_rect(fill ="gray99")) + 
       theme(panel.grid=element_line(color="gray66"))
 
+
+
+```
+
+```{r indices, echo=FALSE,eval=T}
+
+dataInd<-dat1$Ind
+write.csv(dataInd, file="Tablas/Datosindices.csv")
+dataInd
 
 ```
 
@@ -1942,7 +1953,7 @@ write.csv(VarPobl1, file="Tablas/Tabla_20_indicadorespoblacionales.csv")
 
 
 
-```{r Tabla_20_promedios, echo=F,warning=FALSE,include=T,eval=F}
+```{r Tabla_20_promedios, echo=F,warning=FALSE,include=T,eval=T}
 
 # Reclutimientos asesoría marzo 2021
 Rprom_1991_2007<-mean(Rt1[1:17])
@@ -2843,6 +2854,10 @@ pd3<-pnorm(0.5,RpRps3[1],RpRps3std[1],lower.tail = TRUE,log.p = F)
 #######################################################################################
 probEstatus<-round(rbind("BD~RMS~ (mil t)"=c(BRMS1)/1000,
                    'BD~2022~ (mil t)'=round(c(bds1[1],bds2[1],bds3[1])/1000,0),
+                   'C~2022~ (mil t)'=round(c(cs1[1],cs2[1],cs3[1])/1000,0),
+                   'C~1erS2022~ ( mil t)'=round(c((cs1[1])*0.7,(cs2[1])*0.7,(cs3[1])*0.7)/1000,0),
+                   'C~2022~ (-descarte mil t)'=round(c(cs1[1]*0.96,cs2[1]*0.96,cs3[1]*0.96)/1000,0),
+                   'C~1erS2022~ (-descarte mil t)'=round(c((cs1[1]*0.96)*0.7,(cs2[1]*0.96)*0.7,(cs3[1]*0.96)*0.7)/1000,0),
                    'BD~2022~/BD~RMS~'=round(c(RpRps1[1],RpRps2[1],RpRps3[1]),2),
                    "*p(BD~2022~<BD~RMS~)*"=round(c(pa1,pa2,pa3),2),
                   "*p(sobreexplotación)*"=round(c(pc1,pc2,pc3),2),
@@ -2876,6 +2891,10 @@ pd32<-pnorm(0.5,RpRps3[2],RpRps3std[2],lower.tail = TRUE,log.p = F)
 #######################################################################################
 probEstatus2y<-round(rbind("BD~RMS~ (mil t)"=c(BRMS1)/1000,
                    'BD~2023~ (mil t)'=round(c(bds1[2],bds2[2],bds3[2])/1000,0),
+                    'C~2023~ (mil t)'=round(c(cs1[2],cs2[2],cs3[2])/1000,0),
+                   'C~2doS2022~ ( mil t)'=round(c((cs1[2])*0.3,(cs2[2])*0.3,(cs3[2])*0.3)/1000,0),
+                   'C~2023~ (-descarte mil t)'=round(c(cs1[2]*0.96,cs2[2]*0.96,cs3[2]*0.96)/1000,0),
+                   'C~2doS2022~ (-descarte mil t)'=round(c((cs1[2]*0.96)*0.3,(cs2[2]*0.96)*0.3,(cs3[2]*0.96)*0.3)/1000,0),
                    'BD~2023~/BD~RMS~'=round(c(RpRps1[2],RpRps2[2],RpRps3[2]),2),
                    "*p(BD~2023~<BD~RMS~)*"=round(c(pa12,pa22,pa32),2),
                   "*p(sobreexplotación)*"=round(c(pc12,pc22,pc32),2),
@@ -2938,7 +2957,7 @@ lines(c(rep1$years,yearProy),
       c(rep1$SSB,bds1),type="o",col=1,pch=19)
 
 abline(v=yearProy[1]-1,lty=2)
-legend(2011,2000000,c("R1","R2","R3"),pch=19,lwd=1,col=c(2,1,3),bty="n")
+legend(2000,2000000,c("Reclprom 1991-2007","Reclprom 2008-2012","Reclprom 2013-2021"),pch=19,lwd=1,col=c(2,1,3),bty="n")
 text(2024,2000000,"b)")
 #=======================================================
 # plot bd/BDrms
@@ -3058,7 +3077,7 @@ source(paste(dir.fun,"Fn_ProbEstatus_proy.R",sep=""))
 
 escR<-c(rep("Reclprom 1991-2007",1), 
         rep("Reclprom 2008-2012",1),
-        rep("Reclprom 2013-2020",1))
+        rep("Reclprom 2013-2021",1))
 
 pF<-rep(c("Frms*1","Frms*0.9","Frms*1.1"),3)
 n<-3
@@ -3121,7 +3140,7 @@ text(1.7,1.9,pF[i],cex=0.8,col=1)
 ```{r Fig45b_sept, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
 escR<-c(rep("Reclprom 1991-2007",1), 
         rep("Reclprom 2008-2012",1),
-        rep("Reclprom 2013-2020",1))
+        rep("Reclprom 2013-2021",1))
 pF<-rep(c("Frms*1","Frms*0.9","Frms*1.1"),3)
 n<-3
 nesc<-c(12,22,32)
@@ -3183,7 +3202,7 @@ text(1.7,1.9,pF[i],cex=0.8,col=1)
 ```{r Fig45c_sept, eval=T, warning=F, include=T, message=F, echo=FALSE,fig.height=2.3,fig.width=2.2,fig.path=dir.Fig,dev=fig}
 escR<-c(rep("Reclprom 1991-2007",1), 
         rep("Reclprom 2008-2012",1),
-        rep("Reclprom 2013-2020",1))
+        rep("Reclprom 2013-2021",1))
 pF<-rep(c("Frms*1","Frms*0.9","Frms*1.1"),3)
 n<-3
 nesc<-c(13,23,33)
@@ -3408,20 +3427,20 @@ yycc <-c(ycc[xcc>=iccc[1]&xcc<=iccc[2]],
 par(mfrow=c(2,2),mar=c(4,4,1,1)+0.5)
 #===============================================================================================================
 # plot captura a la talla
-plot(seq(0,4,1),reps2a$YTP_p0W_proyectada[1,],type="h",main="",lwd=20,ylim=c(0,400000),yaxs= "i",
-     ylab="Captura 2021/2022 a la edad (t)",xlab="Edades",cex.axis=1,cex.main=1,cex.lab=1,col='red2')
+plot(seq(0,4,1),reps2a$YTP_p0W_proyectada[1,],type="h",main="Año 2021/2022",lwd=20,ylim=c(0,400000),yaxs= "i",
+     ylab="Captura  a la edad (t)",xlab="Edades",cex.axis=1,cex.main=1,cex.lab=1,col='red2')
 lines(seq(0,4,1),reps3a$YTP_p0W_proyectada[1,],type="h",col='green2',lwd=15)
 lines(seq(0,4,1),reps1a$YTP_p0W_proyectada[1,],type="h",col='blue2',lwd=10)
 text(rep(0.35,3),c(reps1a$YTP_p0W_proyectada[1,1],reps2a$YTP_p0W_proyectada[1,1],reps3a$YTP_p0W_proyectada[1,1]),c('33%','63%','43%'))
+text(4,380000,'a)')
 
-#text(19,890,'a)')
-
-plot(seq(0,4,1),reps2a$YTP_p0W_proyectada[2,],type="h",main="",lwd=20,ylim=c(0,400000),yaxs= "i",
-     ylab="Captura 2022/2023 a la edad (t)",xlab="Edades",cex.axis=1,cex.main=1,cex.lab=1,col='red2')
+plot(seq(0,4,1),reps2a$YTP_p0W_proyectada[2,],type="h",main="Año 2022/2023 ",lwd=20,ylim=c(0,400000),yaxs= "i",
+     ylab="Captura a la edad (t)",xlab="Edades",cex.axis=1,cex.main=1,cex.lab=1,col='red2')
 lines(seq(0,4,1),reps3a$YTP_p0W_proyectada[2,],type="h",col='green2',lwd=15)
 lines(seq(0,4,1),reps1a$YTP_p0W_proyectada[2,],type="h",col='blue2',lwd=10)
 text(rep(0.35,3),c(reps1a$YTP_p0W_proyectada[2,1],reps2a$YTP_p0W_proyectada[2,1],reps3a$YTP_p0W_proyectada[2,1]),c('38%','48%','43%'))
 text(rep(1.35,3),c(reps1a$YTP_p0W_proyectada[2,2],reps2a$YTP_p0W_proyectada[2,2],reps3a$YTP_p0W_proyectada[2,2]),c('32%','41%','36%'))
+text(4,380000,'b)')
 
 #===============================================================================================================
 # plot densidad de probabilidad CBA
@@ -3437,10 +3456,10 @@ polygon(xxcc,yycc,col=gray(0.8,0.7),border="gray80")
 lines(xcc,ycc,lwd=1,col="green2",lty=1)
 
 legend(90000,8e-06,
-       c(paste("CBA2022_Hito1_R1 = [",round(icca[1],0),"-",round(icca[2],0),"]",sep=" "),
-         paste("CBA2022_Hito1_R2 = [",round(iccb[1],0),"-",round(iccb[2],0),"]",sep=" "),
-         paste("CBA2022_Hito1_R3 = [",round(iccc[1],0),"-",round(iccc[2],0),"]",sep=" ")), lty=c(1,1,1),col=c('blue2',"red2","green2"),bty="n",lwd=1,cex=0.8)
-text(950000,8e-06,'b)')
+       c(paste("CBA2022_R1991-2007 = [",round(icca[1],0),"-",round(icca[2],0),"]",sep=" "),
+         paste("CBA2022_R2008-2012 = [",round(iccb[1],0),"-",round(iccb[2],0),"]",sep=" "),
+         paste("CBA2022_R2013-2021 = [",round(iccc[1],0),"-",round(iccc[2],0),"]",sep=" ")), lty=c(1,1,1),col=c('blue2',"red2","green2"),bty="n",lwd=1,cex=0.8)
+text(950000,8e-06,'c)')
 box()
 
 #===============================================================================================================
@@ -3449,8 +3468,8 @@ plot(seq(10,50,10),CBA_sept[1,],type="o", ylab="CBA 2022 (toneladas)",xlab="Perc
 lines(seq(10,50,10),CBA_sept[2,],type="o",col="red2")
 lines(seq(10,50,10),CBA_sept[3,],type="o",col="green2")
 
-legend(12,8e+05,c("R1","R2","R3"),col=c(4,2,3),pch=c(19,19,19),lwd=1,bty="n",cex=0.8)
-text(49,8e+05,'c)')
+legend(12,8e+05,c("R1991-2007","R2008-2012","R2013-2021"),col=c(4,2,3),pch=c(19,19,19),lwd=1,bty="n",cex=0.8)
+text(49,8e+05,'d)')
 #===============================================================================================================
 # plot resguardo
 
