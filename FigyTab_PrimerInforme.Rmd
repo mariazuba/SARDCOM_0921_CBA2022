@@ -1355,7 +1355,7 @@ jul20  <-paste(dir,"/MAE0720.rep",sep="")
 sept20 <-paste(dir,"/MAE0920.rep",sep="")
 mar21  <-paste(dir.1,"/MAE0321.rep",sep="")
 jul21  <-paste(dir.1,"/MAE0721.rep",sep="")
-
+sept21 <-paste(dir.1,"/MAE0921.rep",sep="")
 #================================================================================#
 rep_sept18 <- reptoRlist(sept18)
 rep_mar19  <- reptoRlist(mar19)
@@ -1366,8 +1366,9 @@ rep_jul20 <- reptoRlist(jul20)
 rep_sept20 <- reptoRlist(sept20)
 rep_mar21  <- reptoRlist(mar21)
 rep_jul21  <- reptoRlist(jul21)
+rep_sept21 <- reptoRlist(sept21)
 #================================================================================#
-years  <- rep_jul21$years
+years  <- rep_sept21$years
 nyears <- length(years)                                                                
 x  <-c(years,rev(years))
 x1 <-c(years[1],years[nyears]+1,nyears+1/2) #xaxp
@@ -1382,7 +1383,8 @@ x2 <-c(years[1]-1,years[nyears]+1) #xlim
                           Rt_jul20=c(rep_jul20$Reclutas,NA),
                           Rt_sept20=c(rep_sept20$Reclutas,NA),
                           Rt_mar21=c(rep_mar21$Reclutas),
-                          Rt_jul21=c(rep_jul21$Reclutas))
+                          Rt_jul21=c(rep_jul21$Reclutas),
+                          Rt_sept21=c(rep_sept21$Reclutas))
  
  SSBtcomp <- data.frame(x=years,
                           SSBt_sept18=c(rep_sept18$SSB,NA,NA,NA),
@@ -1393,7 +1395,8 @@ x2 <-c(years[1]-1,years[nyears]+1) #xlim
                           SSBt_jul20=c(rep_jul20$SSB,NA),
                           SSBt_sept20=c(rep_sept20$SSB,NA),
                           SSBt_mar21=c(rep_mar21$SSB),
-                          SSBt_jul21=c(rep_jul21$SSB))
+                          SSBt_jul21=c(rep_jul21$SSB),
+                          SSBt_sept21=c(rep_sept21$SSB))
  
  Ftcomp <- data.frame(x=years,
                           Ft_sept18=c(rep_sept18$Ftot,NA,NA,NA),
@@ -1404,7 +1407,8 @@ x2 <-c(years[1]-1,years[nyears]+1) #xlim
                           Ft_jul20=c(rep_jul20$Ftot,NA),
                           Ft_sept20=c(rep_sept20$Ftot,NA),
                           Ft_mar21=c(rep_mar21$Ftot),
-                          Ft_jul21=c(rep_jul21$Ftot))
+                          Ft_jul21=c(rep_jul21$Ftot),
+                          Ft_sept21=c(rep_sept21$Ftot))
   
 ```
 
@@ -1412,19 +1416,19 @@ x2 <-c(years[1]-1,years[nyears]+1) #xlim
 
 ```{r Fig32, echo=F, message=FALSE, warning=FALSE, include=T, fig.align="center", fig.height=7, fig.width=7,fig.path=dir.Fig,dev=fig}
 
-year_retros <- c("2021_julio","2021_marzo","2020_sept","2020_julio","2020_marzo","2019_sept")
+year_retros <- c('2021_sept',"2021_julio","2021_marzo","2020_sept","2020_julio","2020_marzo")
 nretros <-6
 
 
 #Retrospectivo tradicional
 Rt <- ggplot(Rtcomp) + 
     geom_ribbon(data=VarPob,aes(ymin=lowerRt1, ymax=upperRt1, x=x, fill = "IC"), alpha = 0.2)+
-    geom_line(aes(y=Rt_sept19, x=x, colour = year_retros[nretros]), size=0.5)+
-    geom_line(aes(y=Rt_mar20, x=x, colour = year_retros[nretros-1]), size=0.5)+
-    geom_line(aes(y=Rt_jul20, x=x, colour = year_retros[nretros-2]), size=0.5)+
-    geom_line(aes(y=Rt_sept20, x=x, colour = year_retros[nretros-3]), size=0.5)+
-    geom_line(aes(y=Rt_mar21, x=x, colour = year_retros[nretros-4]), size=0.5)+
-    geom_line(aes(y=Rt_jul21, x=x, colour = year_retros[nretros-5]), size=0.5)+
+    geom_line(aes(y=Rt_mar20, x=x, colour = year_retros[nretros]), size=0.5)+
+    geom_line(aes(y=Rt_jul20, x=x, colour = year_retros[nretros-1]), size=0.5)+
+    geom_line(aes(y=Rt_sept20, x=x, colour = year_retros[nretros-2]), size=0.5)+
+    geom_line(aes(y=Rt_mar21, x=x, colour = year_retros[nretros-3]), size=0.5)+
+    geom_line(aes(y=Rt_jul21, x=x, colour = year_retros[nretros-4]), size=0.5)+
+    geom_line(aes(y=Rt_sept21, x=x, colour = year_retros[nretros-5]), size=0.5)+
     labs(x = '', y = 'Reclutamientos ',colour='Asesorías')  +
     scale_x_continuous(breaks = seq(from = 1990, to = 2021, by = 5)) +
     scale_colour_manual("",values=c("gray","orange","green","blue","red","black"))+
@@ -1435,12 +1439,12 @@ Rt <- ggplot(Rtcomp) +
 
 BD <- ggplot(SSBtcomp) + 
      geom_ribbon(data=VarPob,aes(ymin=lowerBD1, ymax=upperBD1, x=x, fill = "IC"), alpha = 0.2)+
-     geom_line(aes(y=SSBt_sept19, x=x, colour = year_retros[nretros]), size=0.5)+
-    geom_line(aes(y=SSBt_mar20, x=x, colour = year_retros[nretros-1]), size=0.5)+
-    geom_line(aes(y=SSBt_jul20, x=x, colour = year_retros[nretros-2]), size=0.5)+
-    geom_line(aes(y=SSBt_sept20, x=x, colour = year_retros[nretros-3]), size=0.5)+
-    geom_line(aes(y=SSBt_mar21, x=x, colour = year_retros[nretros-4]), size=0.5)+
-    geom_line(aes(y=SSBt_jul21, x=x, colour = year_retros[nretros-5]), size=0.5)+
+    geom_line(aes(y=SSBt_mar20, x=x, colour = year_retros[nretros]), size=0.5)+
+    geom_line(aes(y=SSBt_jul20, x=x, colour = year_retros[nretros-1]), size=0.5)+
+    geom_line(aes(y=SSBt_sept20, x=x, colour = year_retros[nretros-2]), size=0.5)+
+    geom_line(aes(y=SSBt_mar21, x=x, colour = year_retros[nretros-3]), size=0.5)+
+    geom_line(aes(y=SSBt_jul21, x=x, colour = year_retros[nretros-4]), size=0.5)+
+    geom_line(aes(y=SSBt_sept21, x=x, colour = year_retros[nretros-5]), size=0.5)+
     labs(x = '', y = 'Biomasa desovante (t)',colour='Asesorías')  +
     scale_x_continuous(breaks = seq(from = 1990, to = 2021, by = 5)) +
     scale_colour_manual("",values=c("gray","orange","green","blue","red","black"))+
@@ -1451,12 +1455,12 @@ BD <- ggplot(SSBtcomp) +
 
 Ft <- ggplot(Ftcomp) + 
     geom_ribbon(data=VarPob,aes(ymin=lowerFt1, ymax=upperFt1, x=x, fill = "IC"), alpha = 0.2)+
-    geom_line(aes(y=Ft_sept19, x=x, colour = year_retros[nretros]), size=0.5)+
-    geom_line(aes(y=Ft_mar20, x=x, colour = year_retros[nretros-1]), size=0.5)+
-    geom_line(aes(y=Ft_jul20, x=x, colour = year_retros[nretros-2]), size=0.5)+
-    geom_line(aes(y=Ft_sept20, x=x, colour = year_retros[nretros-3]), size=0.5)+
-    geom_line(aes(y=Ft_mar21, x=x, colour = year_retros[nretros-4]), size=0.5)+
-    geom_line(aes(y=Ft_jul21, x=x, colour = year_retros[nretros-5]), size=0.5)+
+    geom_line(aes(y=Ft_mar20, x=x, colour = year_retros[nretros]), size=0.5)+
+    geom_line(aes(y=Ft_jul20, x=x, colour = year_retros[nretros-1]), size=0.5)+
+    geom_line(aes(y=Ft_sept20, x=x, colour = year_retros[nretros-2]), size=0.5)+
+    geom_line(aes(y=Ft_mar21, x=x, colour = year_retros[nretros-3]), size=0.5)+
+    geom_line(aes(y=Ft_jul21, x=x, colour = year_retros[nretros-4]), size=0.5)+
+    geom_line(aes(y=Ft_sept21, x=x, colour = year_retros[nretros-5]), size=0.5)+
     labs(x = '', y = 'Mortalidad por pesca (1/año)',colour='Asesorías')  +
     scale_x_continuous(breaks = seq(from = 1990, to = 2021, by = 5)) +
     scale_colour_manual("",values=c("gray","orange","green","blue","red","black"))+
@@ -3018,7 +3022,7 @@ Estatusproy_sept("MAE0921",mfyr,escR,year1="2019/20",year2="2020/21",year3="2021
 ```{r Tabla_32c,eval=T, warning=F, include=T, message=F, echo=FALSE}
 setwd(paste(dir.0,"/CBA_sept/",sep=""))
 mfyr<-c(13,23,33)
-escR<-"2013-2020"
+escR<-"2013-2021"
 Estatusproy_sept("MAE0921",mfyr,escR,year1="2019/20",year2="2020/21",year3="2021/22",year4="2022/23")
 ```
 

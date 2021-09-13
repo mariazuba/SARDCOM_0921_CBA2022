@@ -1964,7 +1964,7 @@ El ajuste del modelo a la información de composición de edades en general pres
 #### Comparación con evaluaciones anteriores
 \quad
 
-Se comparan los resultados de los principales indicadores de estatus del modelo base actual (septiembre 2021: MAE0921), con versiones anteriores (julio 2021, marzo 2021, sept 2020, julio 2020, marzo 2020, sept 2019) para evaluar la consistencia de la evaluación presente (\textbf{Figura \ref{Fig32}}). Al respecto, el análisis muestra mayor incertidumbre en los tres últimos años de las series, con una tendencia a subestimar los niveles de biomasa desovante y sobre-estimar los niveles de mortalidad por pesca, no obstante, las diferencias no son significativas.
+Se comparan los resultados de los principales indicadores de estatus del modelo base actual (septiembre 2021: MAE0921), con versiones anteriores (julio 2021, marzo 2021, sept 2020, julio 2020, marzo 2020, sept 2019) para evaluar la consistencia de la evaluación presente (\textbf{Figura \ref{Fig32}}). Al respecto, el análisis no muestra diferencias significativas entre asesorías en términos de reclutamientos y biomasa desovante. Las diferencias observadas en términos de la mortalidad por pesca tiene relación con el supuesto de captura utilizado en las asesorías de marzo, que es corregido en la asesoría de julio y septiembre.
 
 \vspace{0.5cm}
 
@@ -1982,7 +1982,7 @@ Se comparan los resultados de los principales indicadores de estatus del modelo 
 #### Análisis retrospectivo
 \quad
 
-En la \textbf{Figura \ref{Fig33}} se muestra el patrón retrospectivo estándar y relativo de los reclutas, biomasa desovante y de la mortalidad por pesca de sardina común para el caso base de septiembre 2021 (MAE0921). El análisis retrospectivo del modelo de evaluación muestra que en términos de rho (promedio de anomalías retrospectivas) la reducción de información genera un patrón de subestimación de los reclutas y de la biomasa desovante (rho = -0,1 y rho = -0,01, respectivamente), con una sobreestimación de la mortalidad por pesca (rho = +0,04). En general, los últimos años de las series pueden variar sustancialmente entre las sucesivas actualizaciones, mientras que hacia los primeros años tienden a converger a valores estables. La varianza estadística de las variables utilizadas para medidas de manejo tiende a aumentar en los últimos años de la serie, por lo tanto, son considerados estimaciones menos confiables.
+En la \textbf{Figura \ref{Fig33}} se muestra el patrón retrospectivo estándar y relativo de los reclutas, biomasa desovante y de la mortalidad por pesca de sardina común para el caso base de septiembre 2021 (MAE0921). El análisis retrospectivo del modelo de evaluación muestra que en términos de rho (promedio de anomalías retrospectivas) la reducción de información genera un patrón de subestimación de los reclutas y de la biomasa desovante (rho = -0,1 y rho = -0,02, respectivamente), con una sobreestimación de la mortalidad por pesca (rho = +0,05). En general, los últimos años de las series pueden variar sustancialmente entre las sucesivas actualizaciones, mientras que hacia los primeros años tienden a converger a valores estables. La varianza estadística de las variables utilizadas para medidas de manejo tiende a aumentar en los últimos años de la serie, por lo tanto, son considerados estimaciones menos confiables.
 
 ```{=tex}
 \begin{figure}
@@ -1997,7 +1997,8 @@ En la \textbf{Figura \ref{Fig33}} se muestra el patrón retrospectivo estándar 
 #### Perfil de verosimilitud
 \quad
 
-La \textbf{Figura \ref{Fig34}} muestra el perfil de verosimilitud realizado para la asesoría de septiembre 2021 de cada fuente de dato cuyo mínimo representa la estimación máxima a posteriori del reclutamiento medio ($R_0$) para cada fuente de error del caso base. El perfil muestran que los datos cuyos perfiles estuvieron más próximos entre si y la diferencia del log verosimilitud respecto del mínimo se elevó por sobre el criterio estadístico $X^2=1,92$ fueron la biomasa acústica de verano (Reclas), la proporción de edad del crucero de verano (propRecl). Mientras que, el dato proveniente de los cruceros acústicos de otoño no estaría aportando información relevante para la definición del reclutamiento medio.
+La \textbf{Figura \ref{Fig34}} muestra el perfil de verosimilitud realizado para la asesoría de septiembre 2021 de cada fuente de dato cuyo mínimo representa la estimación máxima a posteriori del reclutamiento medio ($R_0$) para cada fuente de error del caso base. El perfil muestran que los datos cuyos perfiles estuvieron más próximos entre si y la diferencia del log verosimilitud respecto del mínimo se elevó por sobre el criterio estadístico $X^2=1,92$ fueron la biomasa acústica de verano (Reclas), la proporción de edad del crucero de verano (propRecl).
+
 
 ```{=tex}
 \begin{figure}
@@ -2020,7 +2021,7 @@ La \textbf{Figura \ref{Fig34}} muestra el perfil de verosimilitud realizado para
 #### Reclutamientos:
 \quad
 
-Las tendencias de los reclutamientos han mostrado importantes fluctuaciones interanuales y en su historia conocida se aprecian tres períodos relevantes, a) Reclutamiento promedio del período 1991-2007 con los niveles más bajos de reclutamientos (114 mil millones de peces), b) Reclutamiento promedio del período 2008-2012 con los más altos niveles de reclutamiento (410 mil millones de peces) y c) Reclutamiento promedio del período 2013-2021 en torno a 180 mil millones de peces. En relación a los tres períodos relevantes, el reclutamiento 2021 es un 94% mayor al Reclutamiento bajo (período 1991-2007), un 46% menor al Reclutamiento alto (período 2008-2012) y un 23% mayor al Reclutamiento medio (2013-2021). Además, se destaca una recuperación importante de la clase anual 2021 respecto de los bajos niveles estimados en los 2 años precedentes (\textbf{Tabla \ref{Tab20b}} y \textbf{Figura \ref{Fig35}}).
+Las tendencias de los reclutamientos han mostrado importantes fluctuaciones interanuales y en su historia conocida se aprecian tres períodos relevantes, a) Reclutamiento promedio del período 1991-2007 con los niveles más bajos de reclutamientos (114 mil millones de peces), b) Reclutamiento promedio del período 2008-2012 con los más altos niveles de reclutamiento (410 mil millones de peces) y c) Reclutamiento promedio del período 2013-2021 en torno a 180 mil millones de peces. En relación a los tres períodos relevantes, el reclutamiento 2021 es un 94% mayor al Reclutamiento bajo (período 1991-2007), un 46% menor al Reclutamiento alto (período 2008-2012) y un 23% mayor al Reclutamiento medio (2013-2021). Además, se destaca una recuperación importante de la clase anual 2021 respecto de los bajos niveles estimados en los 2 años precedentes (\textbf{Tabla \ref{Tab20a}} y \textbf{Figura \ref{Fig35}}).
 
 #### Biomasa total y desovante:
 \quad
@@ -2031,7 +2032,7 @@ La biomasa total de este recurso, es sustentada esencialmente en los grupos de e
 
 \quad
 
-La mortalidad por pesca (Ft) ha sido más bien baja, en general menor a la mortalidad natural (M=1,0 año^-1^), excepto para el año 2004 cuando los niveles de biomasa eran bajos. Esto se ve reflejado en las capturas, que, en promedio, han seguido las fluctuaciones en biomasa con tasas de explotación moderadas (\textbf{Tabla \ref{Tab20b}} y \textbf{Figura \ref{Fig35}}). A partir del año 2005, la mortalidad por pesca ha seguido una tendencia al descenso, acentuada desde el año 2013 bajo el valor de F~RMS~ producto de la aplicación de F60%. Para el año 2020/2021 se estima una Ft=0,33 año^-1^, en torno a un 10% sobre F~RMS~.
+La mortalidad por pesca (Ft) ha sido más bien baja, en general menor a la mortalidad natural (M=1,0 año^-1^), excepto para el año 2004 cuando los niveles de biomasa eran bajos. Esto se ve reflejado en las capturas, que, en promedio, han seguido las fluctuaciones en biomasa con tasas de explotación moderadas (\textbf{Tabla \ref{Tab20a}} y \textbf{Figura \ref{Fig35}}). A partir del año 2005, la mortalidad por pesca ha seguido una tendencia al descenso, acentuada desde el año 2013 bajo el valor de F~RMS~ producto de la aplicación de F60%. Para el año 2020/2021 se estima una Ft=0,33 año^-1^, en torno a un 10% sobre F~RMS~.
 
 #### Selectividades:
 \quad
@@ -2292,6 +2293,90 @@ Año     & $F/F_{RMS_{sept}}$ & $BD/BD_{RMS_{sept}}$ & $Y/BT_{sept}$ & $C/N_{sep
 
 *"Determinar niveles de Captura Biológicamente Aceptable (CBA) que lleven y/o mantenga la pesquería en torno al Rendimiento Máximo Sostenible (RMS), a partir de un análisis de riesgo en condiciones de incertidumbre de no alcanzar los objetivos de conservación y sostenibilidad conforme lo establece la LGPA y contenidos en el Plan de Manejo y/o en el Programa de Recuperación respectivo, según corresponda."*
 
+
+
+### 4.3.2. Proyección del stock (Asesoría de septiembre 2021)
+
+
+
+
+```{=tex}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.95\textwidth]{Figuras/Fig34a-1.pdf}
+\caption{xxx }
+\label{Fig44a}
+\end{figure}
+```
+
+
+
+
+En relación con estatus 2020/21, se proyectó el stock bajo tres escenarios reclutamientos 2021 que representan los períodos más relevantes de la historia conocida de sardina común y con una mortalidad por pesca en torno al F~RMS~ (ponderadores de F~RMS~). Al respecto, si bien la sardina se ha mantenido en una condición de plena-explotación a partir del 2013 a la fecha, la disminución del reclutamiento los años 2019 y 2020 junto a la disminución de la biomasa adulta (1+ años) el 2020 generan una alta probabilidad (100 %) de sobreexplotación y un 42 % de probabilidad de colapso de sardina común para el año 2020/21 (\textbf{Tabla \ref{Tab32}}) independiente de los escenario de reclutamiento futuros y ponderadores de F~RMS~ (\textbf{Figura \ref{Fig44}}). En base a esta proyección, era recomendable considerar un escenario de reclutamiento precautorio en torno al promedio del período de reclutamientos bajos (1991-2007) para la determinación de una captura 2021 biológicamente sustentable para sardina común a la espera de la actualización de marzo y julio 2021.
+
+\vspace{0.5cm}
+
+```{=tex}
+
+\begin{table}[h!]
+\caption{Incertidumbre del estatus previo 2018/19, actual 2019/20 y proyectado 2020/21 bajo tres escenarios de reclutamiento y ponderadores de $F_{RMS}$. \textbf{Asesoría de septiembre 2020}.}
+ \label{Tab32}
+ \small
+    \centering
+    \resizebox{15cm}{!} {
+    \begin{tabular}{|l|l|l|c|c|c|}
+    \hline \rowcolor{Gray3}
+Escenario       & Año         & Probabilidad de  & $F_{RMS}*1,0$ & $F_{RMS}*0,9$ & $F_{RMS}*0,7$ \\  \rowcolor{Gray3}
+Reclutamiento   & biológico   &  Estatus         &               &               &                \\ \hline
+\multirow{6}{1cm}{$R_{1991-2007}$} & \multirow{2}{1cm}{2018/19} &$p(sobre-explotación)$   & 0,00    & 0,00    & 0,00 \\
+                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
+                & \multirow{2}{1cm}{2019/20} & $p(sobre-explotación)$    & 0,26   & 0,26  & 0,26 \\
+                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
+                & \multirow{2}{1cm}{2020/21} & $p(sobre-explotación)$    & 1,00   & 1,00  & 1,00 \\
+                &             & $p(colapso)$     & 0,42          & 0,41  & 0,40 \\ \hline
+\multirow{6}{1cm}{$R_{2008-2012}$} & \multirow{2}{1cm}{2018/19} &$p(sobre-explotación)$   & 0,00    & 0,00    & 0,00 \\
+                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
+                & \multirow{2}{1cm}{2019/20} & $p(sobre-explotación)$    & 0,26   & 0,24  & 0,26 \\
+                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
+                & \multirow{2}{1cm}{2020/21} & $p(sobre-explotación)$    & 1,00   & 1,00  & 1,00 \\
+                &             & $p(colapso)$     & 0,42          & 0,41  & 0,40 \\ \hline
+\multirow{6}{1cm}{$R_{2013-2020}$} & \multirow{2}{1cm}{2018/19} &$p(sobre-explotación)$   & 0,00    & 0,00    & 0,00 \\
+                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
+                & \multirow{2}{1cm}{2019/20} & $p(sobre-explotación)$    & 0,26   & 0,26  & 0,26 \\
+                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
+                & \multirow{2}{1cm}{2020/21} & $p(sobre-explotación)$    & 1,00   & 1,00  & 1,00 \\
+                &             & $p(colapso)$     & 0,42          & 0,41  & 0,40 \\ \hline
+  \end{tabular}}
+        \end{table}
+```
+\vspace{-0.2 cm}
+\scriptsize
+-   p[BD\<0,9BD~RMS~] = probabilidad de sobre-explotación
+-   p[BD\<0,5BD~RMS~] = probabilidad de colapso
+
+\pagebreak
+
+```{=tex}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45a_sept-1.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45a_sept-2.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45a_sept-3.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45b_sept-1.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45b_sept-2.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45b_sept-3.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45c_sept-1.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45c_sept-2.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45c_sept-3.pdf}
+\caption{Diagramas de fases de explotación de la biomasa desovante respecto de la mortalidad por pesca mostrando el estatus de sardina común para el año previo 2019/20 (punto verde), año actual 2020/21 (punto y cruz naranjo) y años proyectados 2021/22 y 2022/23 (punto rojo) bajo un escenario de reclutamiento promedio bajo [1991-2007] (panel superior), reclutamiento promedio alto [2008-2012] (panel intermedio), reclutamiento promedio reciente [2013-2021] (panel inferior) y ponderadores de $F_{RMS}$ (1;0,9 y 1,1) \textbf{Asesoría de septiembre 2021}.}
+\label{Fig44}
+\end{figure}
+```
+
+
+\pagebreak
+\normalsize
+
 ### CBA 2022 Inicial (Asesoría de septiembre 2021)
 
 Para el cálculo CBA 2022 se proyectó la población 2 años biológicos hacia el futuro (julio2020-junio2021 y julio2021-junio2022) en base a tres escenarios de reclutamiento: a) un escenario desfavorable que consiste en el reclutamiento promedio del período 1991-2007 (113 mil millones de ind.), b) un escenario favorable que corresponde al promedio de los reclutamientos del período 2008 - 2012 (411 mil millones de ind.) y un escenario que representa el período reciente entre el 2013-2020 (173 mil millones de ind.) (\textbf{Figura \ref{Fig42}}).
@@ -2364,89 +2449,15 @@ En la secta sesión del CCT-PP 2020 (Acta de Sesión Nº6, octubre 2020 [^6]) se
 : \label{Tab27} CBA inicial 2021 menos el 2\%descarte.
 
 
-\vspace{-0.5cm}
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% | 183.722         | 332.226         | 210.004         |
-| 20% | **201.409**     | 362.690         | 234.980         |
-| 30% | 214.162         | 384.656         | 252.990         |
-| 40% | 225.059         | 403.426         | 268.378         |
-| 50% | 235.244         | 420.970         | 282.761         |
-
-: \label{Tab28} CBA inicial 2021 menos el 6\%descarte.*CBA máxima recomendada por el CCT-PP = 201.409 t.
-\normalsize
-
-\pagebreak
-
-\normalsize
-
-
-\normalsize
-\pagebreak
-
-### 4.3.2. Proyección del stock (Asesoría de septiembre 2021)
-
-En relación con estatus 2020/21, se proyectó el stock bajo tres escenarios reclutamientos 2021 que representan los períodos más relevantes de la historia conocida de sardina común y con una mortalidad por pesca en torno al F~RMS~ (ponderadores de F~RMS~). Al respecto, si bien la sardina se ha mantenido en una condición de plena-explotación a partir del 2013 a la fecha, la disminución del reclutamiento los años 2019 y 2020 junto a la disminución de la biomasa adulta (1+ años) el 2020 generan una alta probabilidad (100 %) de sobreexplotación y un 42 % de probabilidad de colapso de sardina común para el año 2020/21 (\textbf{Tabla \ref{Tab32}}) independiente de los escenario de reclutamiento futuros y ponderadores de F~RMS~ (\textbf{Figura \ref{Fig44}}). En base a esta proyección, era recomendable considerar un escenario de reclutamiento precautorio en torno al promedio del período de reclutamientos bajos (1991-2007) para la determinación de una captura 2021 biológicamente sustentable para sardina común a la espera de la actualización de marzo y julio 2021.
-
-\vspace{0.5cm}
-
-```{=tex}
-
-\begin{table}[h!]
-\caption{Incertidumbre del estatus previo 2018/19, actual 2019/20 y proyectado 2020/21 bajo tres escenarios de reclutamiento y ponderadores de $F_{RMS}$. \textbf{Asesoría de septiembre 2020}.}
- \label{Tab32}
- \small
-    \centering
-    \resizebox{15cm}{!} {
-    \begin{tabular}{|l|l|l|c|c|c|}
-    \hline \rowcolor{Gray3}
-Escenario       & Año         & Probabilidad de  & $F_{RMS}*1,0$ & $F_{RMS}*0,9$ & $F_{RMS}*0,7$ \\  \rowcolor{Gray3}
-Reclutamiento   & biológico   &  Estatus         &               &               &                \\ \hline
-\multirow{6}{1cm}{$R_{1991-2007}$} & \multirow{2}{1cm}{2018/19} &$p(sobre-explotación)$   & 0,00    & 0,00    & 0,00 \\
-                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
-                & \multirow{2}{1cm}{2019/20} & $p(sobre-explotación)$    & 0,26   & 0,26  & 0,26 \\
-                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
-                & \multirow{2}{1cm}{2020/21} & $p(sobre-explotación)$    & 1,00   & 1,00  & 1,00 \\
-                &             & $p(colapso)$     & 0,42          & 0,41  & 0,40 \\ \hline
-\multirow{6}{1cm}{$R_{2008-2012}$} & \multirow{2}{1cm}{2018/19} &$p(sobre-explotación)$   & 0,00    & 0,00    & 0,00 \\
-                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
-                & \multirow{2}{1cm}{2019/20} & $p(sobre-explotación)$    & 0,26   & 0,24  & 0,26 \\
-                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
-                & \multirow{2}{1cm}{2020/21} & $p(sobre-explotación)$    & 1,00   & 1,00  & 1,00 \\
-                &             & $p(colapso)$     & 0,42          & 0,41  & 0,40 \\ \hline
-\multirow{6}{1cm}{$R_{2013-2020}$} & \multirow{2}{1cm}{2018/19} &$p(sobre-explotación)$   & 0,00    & 0,00    & 0,00 \\
-                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
-                & \multirow{2}{1cm}{2019/20} & $p(sobre-explotación)$    & 0,26   & 0,26  & 0,26 \\
-                &             & $p(colapso)$     & 0,00          & 0,00  & 0,00 \\ 
-                & \multirow{2}{1cm}{2020/21} & $p(sobre-explotación)$    & 1,00   & 1,00  & 1,00 \\
-                &             & $p(colapso)$     & 0,42          & 0,41  & 0,40 \\ \hline
-  \end{tabular}}
-        \end{table}
-```
-\vspace{-0.2 cm}
-\scriptsize
--   p[BD\<0,9BD~RMS~] = probabilidad de sobre-explotación
--   p[BD\<0,5BD~RMS~] = probabilidad de colapso
-
-\pagebreak
-
 ```{=tex}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45a_sept-1.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45a_sept-2.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45a_sept-3.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45b_sept-1.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45b_sept-2.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45b_sept-3.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45c_sept-1.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45c_sept-2.pdf}
-\includegraphics[width=0.3\textwidth]{Figuras/Fig45c_sept-3.pdf}
-\caption{Diagramas de fases de explotación de la biomasa desovante respecto de la mortalidad por pesca mostrando el estatus de sardina común para el año previo 2018/19 (punto verde), año actual 2019/20 (punto y cruz naranjo) y año proyectado 2020/21 (punto rojo) bajo un escenario de reclutamiento promedio bajo [1991-2007] (panel superior), reclutamiento promedio alto [2008-2012] (panel intermedio), reclutamiento promedio reciente [2013-2020] (panel inferior) y ponderadores de $F_{RMS}$ (1;0,9 y 0,7) \textbf{Asesoría de septiembre 2020}.}
-\label{Fig44}
+\includegraphics[width=0.95\textwidth]{Figuras/Fig27_CBA-1.pdf}
+\caption{xxx }
+\label{Fig44a}
 \end{figure}
 ```
+
 
 
 \pagebreak
