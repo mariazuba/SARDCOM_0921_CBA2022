@@ -96,18 +96,22 @@ La sardina común (*Strangomera bentincki*) es una especie endémica de las agua
 
 La sardina común es reconocida junto con la anchoveta como especies netamente costeras (distribución longitudinal no supera las 30 millas náuticas de la costa), neríticas (habitan profundidades menores a los 70 ó 50 m, respectivamente), forman cardúmenes altamente densos y son especies fuertemente influenciadas por factores bióticos y abióticos (Aguayo & Soto 1978, Serra *et al*. 1978, Arrizaga & Veloso 1982, Cubillos & Arancibia 1993a, 1993b). La sardina común sostiene una importante actividad pesquera industrial y cerquera artesanal en el litoral de la zona centro-sur de Chile. La pesquería de sardina común, abarca las regiones de Valparaíso (33°S) y Los Lagos (42°S), siendo los principales puertos de desembarque: San Antonio en la Región de Valparaíso; Coronel, San Vicente y Talcahuano en la Región del Biobío; Corral en la Región de Los Ríos; Calbuco y Puerto Montt en la Región de Los Lagos (\textbf{Figura \ref{Fig1}}). Los mayores desembarques (90-95%), se registran entre Valparaíso y Biobío (San Antonio, Talcahuano y Coronel). La actividad pesquera opera en profundidades que no sobrepasan los 50 m y en un margen costero en promedio próximo a las 30 millas náuticas desde la costa.
 
-## 2.2. Unidades de stock
-
-La unidad de stock corresponde al "grupo de peces que se mantiene temporal o espacialmente aislados unos de otros y que son genéticamente distintos, debido a su aislamiento reproductivo". Basados en esta definición Galleguillos *et al*. (1994) desarrollaron un estudio de identificación de stock de los recursos sardina común y anchoveta entre las regiones de Valparaíso y La Araucanía durante abril de 1995 y abril 1996 aplicando i) marcadores genéticos; ii) marcadores biológicos; iii) morfología corporal; iv) fauna parasitaria. Estos autores establecieron que no hay evidencias para adoptar la existencia de subunidades en el área de análisis. Consecuentemente con lo anterior y extendiendo el análisis a la Región de Los Lagos, en este estudio se trabaja la hipótesis de una unidad de stock entre las regiones de Valparaíso y Los Lagos en donde se desarrolla la pesquería.
 
 ```{=tex}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.7\textwidth]{Figuras/Fig1.png}
+\includegraphics[width=0.5\textwidth]{Figuras/Fig1.png}
 \caption{Distribución espacial de datos provenientes del muestreo biológico realizado por IFOP para el monitoreo de la pesquería de sardina común. La línea color café corresponde a la isóbata de los 200 m.}
 \label{Fig1}
 \end{figure}
 ```
+
+\pagebreak
+
+## 2.2. Unidades de stock
+
+La unidad de stock corresponde al "grupo de peces que se mantiene temporal o espacialmente aislados unos de otros y que son genéticamente distintos, debido a su aislamiento reproductivo". Basados en esta definición Galleguillos *et al*. (1994) desarrollaron un estudio de identificación de stock de los recursos sardina común y anchoveta entre las regiones de Valparaíso y La Araucanía durante abril de 1995 y abril 1996 aplicando i) marcadores genéticos; ii) marcadores biológicos; iii) morfología corporal; iv) fauna parasitaria. Estos autores establecieron que no hay evidencias para adoptar la existencia de subunidades en el área de análisis. Consecuentemente con lo anterior y extendiendo el análisis a la Región de Los Lagos, en este estudio se trabaja la hipótesis de una unidad de stock entre las regiones de Valparaíso y Los Lagos en donde se desarrolla la pesquería.
+
 ## 2.3. Pesquería
 
 Durante la década de los noventa, la flota cerquera de la zona centro-sur incrementó significativamente las capturas de sardina común, observándose dos importantes máximos en el año 1991 y 1999, cuando sbrepasa las 400 mil toneladas extraídas. Sin embargo, en los años 1993 y 1995 se registró un fuerte descenso probablemente debido a fallas sucesivas en los reclutamientos. Durante el período 1995 al 2000, la extracción de pequeños pelágicos estuvo marcada por condiciones ambientales "El Niño" 1997-1998 que se tradujo en alteraciones de las comunidades costeras pelágicas, especialmente sobre el jurel, observándose una alta e inusual presencia de ejemplares de tallas pequeñas en la pesquería centro-sur. Este hecho generó la distorsión de los desembarques de sardina y anchoveta durante los años 1999-2001, impulsado por evadir multas y declarar menos jurel (Aranís 2011). Existen antecedentes que señalan que los desembarques del primer semestre 1999 y 2000 resultan ser muy altos para lo que en ese entonces se supone era la población de anchoveta y sardina común. Por lo tanto, la serie de desembarques anuales oficiales fue corregida por investigadores de IFOP, considerando los niveles de sub-reportes de jurel durante los años 1998 - 2001, que indican que del desembarque total informado como sardina común, menos del 27% correspondía efectivamente a este recurso (\textbf{Figura \ref{Fig2}}).
@@ -377,6 +381,8 @@ Respecto los desembarques mensuales registrados por SERNAPESCA durante el primer
 
 ### 3.1.1. Modelo Conceptual
 
+
+
 La conceptualización del modelo biológico considera los siguientes componentes de la dinámica poblacional:
 
 -   Estructura geográfica: Se asume que la población de sardina común entre las Regiones de Valparaíso y Biobío constituye una unidad de stock. Se asume un stock homogéneo al interior de la unidad de pesquería, donde el conjunto de individuos está sujeto a la misma probabilidad de crecimiento y mortalidad, y donde la migración no es importante.
@@ -385,7 +391,12 @@ La conceptualización del modelo biológico considera los siguientes componentes
 -   Tasa de mortalidad natural: La tasa de mortalidad natural se asume invariante y se considera M=1,0 por año para sardina común.
 -   Dinámica del crecimiento: El crecimiento intra-anual es recogido en dos matrices de pesos medios a la edad, las que corresponden respectivamente a las estimaciones a mitad de año (enero) luego de la asignación de la edad, y las estimaciones de pesos iniciales del año (julio).
 
+
+
 El modelo de evaluación de stock de sardina común se basa en un análisis estadístico de la dinámica de estructuras de edad anual que incorpora información biológica y pesquera agregada en año biológico. La información que ingresa al modelo consiste en los desembarques totales obtenidos de los registros oficiales de SERNAPESCA los cuales son convertidos a temporada de pesca considerando la estacionalidad de la pesquería, los datos de composición de edad anual y pesos medios a la edad de la flota son proporcionados por el programa de monitoreo de las pesquerías de peces pelágicos, mientras que las evaluaciones hidroacústicas de verano y otoño proporcionan información de biomasa de reclutas en verano y biomasa vulnerable en otoño junto con sus respectivas composiciones de edad. En base a esta información el modelo estima las variables de estado representadas por la biomasa desovante (BD) y los niveles de mortalidad por pesca (F), que junto a los puntos biológicos de referencia (PBRs), permiten determinar el estatus y calcular la Captura Biológicamente Aceptable (CBA) (\textbf{Figura \ref{Fig11}}).
+
+En la implementación del procedimiento de evaluación de stock se utilizan protocolos científicos basados en la determinación de un sistema de niveles o "tiers" que permiten clasificar la información disponible de las especies y su pesquería, los cuales se han convertido en una herramienta de uso común en la asesoría orientada al manejo pesquero en la actualidad. Para estimar el RMS se utiliza la estrategia de niveles y de acuerdo con la clasificación del estándar de información se definen los PBR o "proxy" que serán usados para determinar el estatus del recurso. La definición de los procedimientos de cálculo de los PBR y del marco de referencia especie específicos se basan en el estudio "Revisión de los puntos Biológicos de referencia (Rendimiento Máximo Sostenible) en las pesquerías nacionales" (Paya *et al*. 2014), en cuyo primer taller, se desarrolló en conjunto con expertos internacionales, un sistema de tres niveles para derivar al RMS específico para las pesquerías en Chile (\textbf{Figura \ref{Fig12}}). Además, para determinar el estatus de los recursos selectos, se considera lo establecido por el Comité Científico Técnico de Pelágicos Pequeños (CCT-PP) sobre los requerimientos técnicos que define los estándares de análisis y evaluación para las pesquerías analizadas, conforme a los niveles de conocimiento, información y calidad de los datos disponibles para esos fines.
+
 
 ```{=tex}
 \begin{figure}[h!]
@@ -396,7 +407,6 @@ El modelo de evaluación de stock de sardina común se basa en un análisis esta
 \end{figure}
 ```
 
-En la implementación del procedimiento de evaluación de stock se utilizan protocolos científicos basados en la determinación de un sistema de niveles o "tiers" que permiten clasificar la información disponible de las especies y su pesquería, los cuales se han convertido en una herramienta de uso común en la asesoría orientada al manejo pesquero en la actualidad. Para estimar el RMS se utiliza la estrategia de niveles y de acuerdo con la clasificación del estándar de información se definen los PBR o "proxy" que serán usados para determinar el estatus del recurso. La definición de los procedimientos de cálculo de los PBR y del marco de referencia especie específicos se basan en el estudio "Revisión de los puntos Biológicos de referencia (Rendimiento Máximo Sostenible) en las pesquerías nacionales" (Paya *et al*. 2014), en cuyo primer taller, se desarrolló en conjunto con expertos internacionales, un sistema de tres niveles para derivar al RMS específico para las pesquerías en Chile (\textbf{Figura \ref{Fig12}}). Además, para determinar el estatus de los recursos selectos, se considera lo establecido por el Comité Científico Técnico de Pelágicos Pequeños (CCT-PP) sobre los requerimientos técnicos que define los estándares de análisis y evaluación para las pesquerías analizadas, conforme a los niveles de conocimiento, información y calidad de los datos disponibles para esos fines.
 
 ```{=tex}
 \begin{figure}[h!]
@@ -406,6 +416,7 @@ En la implementación del procedimiento de evaluación de stock se utilizan prot
 \label{Fig12}
 \end{figure}
 ```
+
 Al respecto, las anchovetas y sardinas son especies con una mortalidad natural (M) alta (viven durante un período máximo de 4-5 años), crecen rápido y maduran tempranamente. El reclutamiento está altamente influenciado por el ambiente. El modelo de evaluación de stock tiene una frecuencia temporal anual. Tanto el modelo y los datos son estructurados a la edad. Se considera una flota comercial en el modelo de evaluación y el patrón de selectividad es asumido constante a través de los años. El modelo de evaluación de stock no incluye una relación S-R, sino reclutamientos aleatorios. Estos antecedentes permiten clasificar a anchoveta y sardina común centro-sur en el Tier 1b.
 
 ### 3.1.2. Datos de entrada al modelo de evaluación de stock
@@ -443,17 +454,10 @@ El Artículo 7°B [^1] de la actual Ley General de Pesca y Acuicultura (LGPA, N�
 
 En este sentido, Zúñiga *et al* (2018b)  exponen algunos escenarios posibles para incorporar el descarte en el modelo de evaluación de stock, que potencialmente representan fuentes de mortalidad por pesca a la fecha no documentada. Estos escenarios fueron revisados por el CCT-PP en la sesión de octubre 2017 (Acta 06/2017 [^2]) donde fue seleccionado el escenario que considera un 4% de descarte para el período 2000/01 - 2015/16, un 2% de descarte para los años siguientes.
 
-En este informe se actualiza el descarte  correspondiente a los años biógicos 2016/2017, 2017/18, 2018/19 y 2019/20, considerando que el modelo de evaluación de stock de sardina común de la zona centro-sur utiliza información en año biológico (Zúñiga *et al*. 2020 y 2021), por lo tanto, se requieren datos de descarte semestrales para la flota total para ser utilizados en la corrección del desembarque en año biológico (\textbf{Tabla \ref{Tab3}}). Para los años en que no se cuente con información se utilizará un supuesto que fue acordado en la primera sesión del CCT-PP (Acta No1 2021, https://www.subpesca.cl/portal/616/articles-110238_documento.pdf) en 4% para sardina común. Estos porcentajes serán utilizados para corregir el desembarque cuando no se tenga información del descarte y para asumir un porcentaje de descarte proyectado para incorporar en la proyección de la CBA (\textbf{Tabla \ref{Tab3b}}). Los supuestos utilizados para anchoveta se describen a continuación:
-
-
-\underline{Supuestos para asesoría de marzo y julio 2021 (2do y 3er Hito CBA 2021):}
-
-- El supuesto 1 de descarte propuesto para la corrección del desembarque 2020/21 para flota total y zona total se obtiene del promedio de los años biológicos 2017/18 - 2019/20 (\textbf{Tabla \ref{Tab3c}}).
-- El supuesto 2 de descarte propuesto para la proyección de la CBA  2021/2022 para la flota total y zona total se obtiene del promedio de los años biológicos 2017/18 - 2019/20 (\textbf{Tabla \ref{Tab3c}}).
+En la asesoría previa se actualizó el descarte  correspondiente a los años biógicos 2016/2017, 2017/18, 2018/19 y 2019/20, considerando que el modelo de evaluación de stock de sardina común de la zona centro-sur utiliza información en año biológico (Zúñiga *et al*. 2020 y 2021), por lo tanto, se requieren datos de descarte semestrales para la flota total para ser utilizados en la corrección del desembarque en año biológico (\textbf{Tablas \ref{Tab3}} y \textbf{\ref{Tab3b}} ). 
 
 [^2]: <http://www.subpesca.cl/portal/616/articles-98715_documento.pdf>
 
-\pagebreak
 
 ```{=tex}
 \vspace{0.2cm} 
@@ -503,13 +507,17 @@ En este informe se actualiza el descarte  correspondiente a los años biógicos 
         \end{table}
 ```
 
+\pagebreak
+
+
+
 ```{=tex}
 \vspace{0.3cm} 
 \begin{table}[h!]
 \caption{Captura total (CT) y descartada (CD) semestral para la zona centro-sur utilizados para obtener el descarte en año biológico (2017/18, 2018/19 y 2019/20).  Se considera la sumatoria de las capturas total y descartada de las tres zonas analizadas.  Para los años/semestres con asteriscos (*) se realizaron consideraciones particulares que se explican bajo la tabla. \textbf{Sardina común centro-sur}.}
  \label{Tab3b}
     \centering
-    \resizebox{9cm}{!} {
+    \resizebox{10cm}{!} {
     \begin{tabular}{|l|c|c|c|c|}
     \hline \rowcolor{Gray3}
                &              & Captura  & Captura     & \%              \\ \rowcolor{Gray3}
@@ -531,7 +539,12 @@ En este informe se actualiza el descarte  correspondiente a los años biógicos 
 + \textbf{2017,5}* = Se utiliza el promedio de la captura total y descartada del segundo semestre 2018 y 2019. El % descarte del segundo semestre 2017 para Región del Biobío no fue considerado por el bajo porcentaje de cobertura (1%), lo cual genera una sobreestimación del descarte.
 + \textbf{2019,0}** = Se utiliza sólo captura total y descartada de la Región del Biobío. Alta incertidumbre en la estimación del descarte de la Región de Los Ríos producto del cierre de plantas. Se considera una condición atípica que puede generar sobreestimación del descarte.
 + \textbf{2020,0}*** = No hay información de descarte por bajos tamaños de muestra por efecto de la pandemia. Se utiliza el promedio de la captura total y descartada del primer semestre 2018 y 2019.  El bajo porcentaje de cobertura de muestreo no permite estimar el descarte.
+
+\vspace{0.5cm} 
+
 \normalsize
+Para los años en que no se cuente con información se utilizará un supuesto que fue acordado en la primera sesión del CCT-PP (Acta No1 2021, https://www.subpesca.cl/portal/616/articles-110238_documento.pdf) en 4% para sardina común. Estos porcentajes serán utilizados para corregir el desembarque cuando no se tenga información del descarte y para asumir un porcentaje de descarte proyectado para incorporar en la proyección de la CBA (\textbf{Tabla \ref{Tab3c}}). 
+
 
 ```{=tex}
 \vspace{0.3cm} 
@@ -539,7 +552,7 @@ En este informe se actualiza el descarte  correspondiente a los años biógicos 
 \caption{Porcentajes de descarte estimados para corregir la serie de desembarques de los  años biológicos 2017/18, 2018/19 y 2019/20. Supuestos transitorios del porcentaje de descarte utilizado en la corrección del desembarque del último año y proyección de la CBA de \textbf{Sardina común centro-sur}.}
  \label{Tab3c}
     \centering
-    \resizebox{12cm}{!} {
+    \resizebox{14cm}{!} {
     \begin{tabular}{|l|c|c|c|c|}
     \hline \rowcolor{Gray3}
                &               & Captura  & Captura     & \%         \\ \rowcolor{Gray3}
@@ -550,12 +563,15 @@ En este informe se actualiza el descarte  correspondiente a los años biógicos 
                & 2019/2020     & 223.625  & 8.943       & 4\% \\ \hline \rowcolor{Gray4}
  Supuestos     &               &          &             &   \\ \hline
  1. Corrección del desembarque & 2020/2021 & Juicio experto & Juicio experto & 4\% \\
- 2. Proyección de la CBA       & 2021/2022 & Juicio experto & Juicio experto & 4\% \\ \hline
+ 2. Proyección de la CBA       & 2021/2022 & Juicio experto & Juicio experto & 4\% \\
+                               & 2022/2023 & Juicio experto & Juicio experto & 4\% \\ \hline
    \end{tabular}}
         \end{table}
 ```
-\vspace{0.5cm}
+
 \normalsize
+
+\pagebreak
 
 #### Seguimiento de la pesquería:
 
@@ -591,6 +607,9 @@ Paso 2: Cálculo de pesos iniciales para grupos de edad 1 a 4
 $w_{(a,t)}^{ini}=vw_{(a-1,t-1)}^{med}*w_{(a,t)}^{med}$
 \end{center}
 ```
+
+\pagebreak
+
 #### Cruceros de evaluación hidroacústica:
 
 \quad
@@ -619,20 +638,14 @@ Para la implementación del procedimiento de evaluación se recoge el conocimien
 
 El modelo de evaluación de stock de sardina común se basa en el análisis estadístico de la dinámica de estructuras de edad anual y pesos medios a la edad estimados del muestreo de tallas de los desembarques (período 1990 - junio 2021) y de los cruceros acústicos de verano (RECLAS, desde 2001 - 2021) y otoño (PELACES, período desde 2007 hasta 2021), de los índices de biomasa de los cruceros acústicos (biomasa de reclutas en verano, período desde 2000 hasta 2021 y biomasa vulnerable en otoño, desde 2003 al 2021 y los desembarques totales (período 1990 - junio 2021), estos últimos convertidos a temporada de pesca considerando la estacionalidad de la pesquería. Las fuentes de información utilizados en la evaluación de sardina común se resumen en la \textbf{Tabla \ref{Tab4}}. Adicionalmente, en la **Sección 3.3.1.** de este informe se detallan los datos y supuestos utilizados en las distintas etapas de estimación de la CBA 2022.
 
-La población de sardina común centro-sur constituye una unidad de stock en la cual las variaciones se explican por capturas, reclutamientos, mortalidad natural y por pesca, la información es agregada en año biológico de manera que los cruceros de verano (enero) representan la situación de la población a mitad del año y los de otoño, a la biomasa poco antes del término del período anual (mayo). Por otra parte, el peso a mitad del año biológico (peso medio) es empleado para generar las estimaciones tanto del crucero de verano como de los desembarques, mientras que el peso calculado a inicios del año biológico (inicios de julio) representaría el peso de la biomasa desovante que ocurre en agosto y los cruceros de otoño que ocurren en mayo (\textbf{Tabla \ref{Tab5}}). En la actualidad el método ha sido empleado bajo un enfoque en edades agrupado en año biológico y que incorpora los siguientes elementos:
-
--   Modelo de dinámica poblacional estructurada por edad (\textbf{Tabla \ref{Tab6}}),
--   Modelos de las observaciones y penalizaciones a priori que permiten relacionar el modelo de dinámica con las observaciones (\textbf{Tabla \ref{Tab7}}),
--   Identificación de la estructura del error a través de funciones de log-verosimilitud negativas (\textbf{Tabla \ref{Tab8}}) y
--   Proceso de estimación de los parámetros desconocidos del modelo de dinámica a través de un algoritmo que minimiza la función objetivo total, contrastando las observaciones con las estimaciones deducidas del modelo de dinámica (\textbf{Tabla \ref{Tab9}}).
 
 ```{=tex}
 \begin{table}[h!]
-\caption{Resumen de los datos e información de entrada al modelo de evaluación de stock de sardina común.}
+\caption{Resumen de los datos e información de entrada al modelo de evaluación de stock.}
  \label{Tab4}
  \small
     \centering
-    \resizebox{16cm}{!} {
+    \resizebox{14cm}{!} {
     \begin{tabular}{|l|l|l|}
     \hline
 Datos de entrada             & Período                            & Fuente de la información                \\ \hline
@@ -640,30 +653,30 @@ Desembarques totales anuales & Desde julio 1990- junio 1991       & Estadística
                              & hasta el año biológico             & sistematizadas por el Servicio            \\ 
                              & julio 2019- junio 2021             & Nacional de Pesca.                         \\ \hline
 \textbf{Composición de talla/edad} &                              &                                             \\
-                             &                                    & \\
 1. Flota                     & Desde julio 1990- junio 1991       & Monitoreo de la pesquería, de sardina común  \\
                              & hasta el año biológico             & de la V-X Regiones realizado por el           \\
                              & julio 2020 - junio 2021             & Proyecto Investigación Situación Pesquerías    \\
                              &                                    & de Peces Pelágicos                              \\ 
 2. Cruceros de verano        & Desde enero 2001 hasta enero 2021  &                                             \\
 3. Cruceros de otoño         & Desde mayo 2007 hasta junio 2021    & Evaluaciones hidroacústicas de los stocks    \\
-                             &                                    & \\
 \textbf{Biomasa acústica}    &                                    & de anchoveta y sardina común entre            \\
-                             &                                    & \\
 1. Cruceros de verano        & Desde enero del 2001               & la V y X regiones.                             \\
                              & hasta enero del 2021               &                                                 \\
 2. Cruceros de otoño         & 2003,2005-2007,2009-2021           &                                                  \\ \hline
-                             &                                    & \\
 Pesos medios a la edad       & Desde julio 1990- junio 1991       & Monitoreo de la pesquería, de sardina común de la \\   
                              & hasta el año biológico             & V-X Regiones realizado por el Proyecto Investigación \\
-                             & julio 2020 - junio 2021             & Situación Pesquerías de Peces Pelágicos               \\ 
-                             &                                    &                                                  \\ \hline
+                             & julio 2020 - junio 2021             & Situación Pesquerías de Peces Pelágicos               \\ \hline
 Madurez sexual a la edad     & Constante                          & Aranís \textit{et al}. (2005)                          \\ \hline
 Mortalidad natural           & Constante                          & Cubillos \textit{et al}. (1998)                         \\ \hline 
   \end{tabular}}
         \end{table}
 ```
+
 \pagebreak
+
+La población de sardina común centro-sur constituye una unidad de stock en la cual las variaciones se explican por capturas, reclutamientos, mortalidad natural y por pesca, la información es agregada en año biológico de manera que los cruceros de verano (enero) representan la situación de la población a mitad del año y los de otoño, a la biomasa poco antes del término del período anual (mayo). Por otra parte, el peso a mitad del año biológico (peso medio) es empleado para generar las estimaciones tanto del crucero de verano como de los desembarques, mientras que el peso calculado a inicios del año biológico (inicios de julio) representaría el peso de la biomasa desovante que ocurre en agosto y los cruceros de otoño que ocurren en mayo (\textbf{Tabla \ref{Tab5}}). 
+
+\vspace{0.5cm}
 
 ```{=tex}
 \begin{table}[h!]
@@ -671,7 +684,7 @@ Mortalidad natural           & Constante                          & Cubillos \te
  \label{Tab5}
  \small
     \centering
-    \resizebox{16cm}{!} {
+    \resizebox{17cm}{!} {
     \begin{tabular}{|l|c|l|}
     \hline
  Datos observados              & Símbolo          & Supuestos                                                            \\ \hline
@@ -709,6 +722,15 @@ Peso medio a inicios del año   & $w_{(a,t)}^{ini}$& Representa al Peso a inicio
         \end{table}
 ```
 \pagebreak
+
+En la actualidad el método ha sido empleado bajo un enfoque en edades agrupado en año biológico y que incorpora los siguientes elementos:
+
+-   Modelo de dinámica poblacional estructurada por edad (\textbf{Tabla \ref{Tab6}}),
+-   Modelos de las observaciones y penalizaciones a priori que permiten relacionar el modelo de dinámica con las observaciones (\textbf{Tabla \ref{Tab7}}),
+-   Identificación de la estructura del error a través de funciones de log-verosimilitud negativas (\textbf{Tabla \ref{Tab8}}) y
+-   Proceso de estimación de los parámetros desconocidos del modelo de dinámica a través de un algoritmo que minimiza la función objetivo total, contrastando las observaciones con las estimaciones deducidas del modelo de dinámica (\textbf{Tabla \ref{Tab9}}).
+
+\vspace{0.5cm}
 
 ```{=tex}
 \begin{table}[h!]
@@ -1175,16 +1197,22 @@ La pesquería de sardina común ha sido manejada históricamente de manera monoe
 
 De acuerdo al ciclo de manejo histórico de esta pesquería (\textbf{Figura \ref{Fig14}}), la recomendación de CBA comienza después de la veda reproductiva, donde se reporta la CBA inicial, y que permitirá al CCT-PP establecer el estatus y recomendar el rango de CBA para el año siguiente. En enero de cada año, el crucero de evaluación hidroacústico permite estimar la abundancia y biomasa de reclutas (crucero de verano, RECLAS), esta información junto a datos provenientes de la pesquería es utilizada para la primera revisión de la CBA. En marzo se inicia el período de extracción y en mayo se realiza el segundo crucero de evaluación acústica (crucero de otoño, PELACES) para actualizar el estatus y revisar una vez más la CBA.
 
-La \textbf{Tabla \ref{Tab13}} detalla la información disponible en cada etapa de cálculo de CBA 2022, destacando que en la primera etapa de estimación (CBA inicial) no se cuenta con información actualizada de los años biológicos 2021-2022 y 2022-2023, por lo tanto, la población debe ser proyectada dos años biológicos hacia el futuro (a inicios de julio de un año a junio del año siguiente) para realizar el cálculo de la CBA 2022 en año calendario. En la segunda etapa (1era revisión) contamos con información parcial del año biológico 2021-2022 y en la tercera etapa (2da revisión) con información casi completa del año biológico 2021-2022. Sin embargo, para realizar el cálculo de la CBA 2022 en año calendario, en ambas etapas es necesario proyectar un año biológico hacia el futuro (2022-2023).
+\vspace{0.8cm}
 
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig14.png}
+\includegraphics[width=1\textwidth]{Figuras/Fig14.png}
 \caption{Procedimiento de manejo actual para sardina común centro-sur.}
 \label{Fig14}
 \end{figure}
 ```
+
+\vspace{0.8cm}
+
+La \textbf{Tabla \ref{Tab13}} detalla la información disponible en cada etapa de cálculo de CBA 2022, destacando que en la primera etapa de estimación (CBA inicial) no se cuenta con información actualizada de los años biológicos 2021-2022 y 2022-2023, por lo tanto, la población debe ser proyectada dos años biológicos hacia el futuro (a inicios de julio de un año a junio del año siguiente) para realizar el cálculo de la CBA 2022 en año calendario. En la segunda etapa (1era revisión) contamos con información parcial del año biológico 2021-2022 y en la tercera etapa (2da revisión) con información casi completa del año biológico 2021-2022. Sin embargo, para realizar el cálculo de la CBA 2022 en año calendario, en ambas etapas es necesario proyectar un año biológico hacia el futuro (2022-2023).
+
+\pagebreak
 
 ```{=tex}
 \begin{table}[h!]
@@ -1246,6 +1274,8 @@ El proceso de cálculo de la CBA 2022 para las tres etapas del ciclo de manejo d
 -   Probabilidad que la captura exceda el objetivo de manejo F~RMS~=F60%BDPR.
 -   Porcentaje de resguardo de la Captura al RMS.
 
+\pagebreak
+
 ```{=tex}
 \begin{table}[h!]
 \caption{Métodos de estimación de la CBA 2022 para las tres etapas del ciclo de manejo de sardina común.}
@@ -1263,6 +1293,7 @@ El proceso de cálculo de la CBA 2022 para las tres etapas del ciclo de manejo d
     \end{table}
 ```
 \normalsize
+\vspace{0.8cm}
 
 #### Paso 1: Captura proyectada (Yp~RMS~) en año biológico aplicando F~RMS~
 
@@ -1286,11 +1317,14 @@ La \textbf{Figura \ref{Fig15}} muestra tres niveles de reclutamiento detectados 
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig15-1.pdf}
+\includegraphics[width=0.7\textwidth]{Figuras/Fig15-1.pdf}
 \caption{Análisis de quiebres de la serie histórica de los reclutamientos de sardina común.}
 \label{Fig15}
 \end{figure}
 ```
+
+\pagebreak
+
 ##### Supuesto de pesos medios a la edad utilizado en la proyección 
 
 \quad
@@ -1303,14 +1337,14 @@ En relación a los pesos medios a la edad utilizados en la proyección del stock
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig16-1.pdf}
+\includegraphics[width=0.7\textwidth]{Figuras/Fig16-1.pdf}
 \caption{ a) Variabilidad de los pesos medios de cada grupo de edad (edad 0 a 4) y b) comparación del supuesto de pesos medios igual al promedio histórico vs peso promedio de los últimos 5 años de la serie.}
 \label{Fig16}
 \end{figure}
 ```
-\pagebreak
 
-Los pasos siguientes son proyectar la población para la estimación de la Captura en número y peso con una estrategia de explotación que consiste en aplicar una tasa de explotación constante, equivalente a la mortalidad por pesca F~RMS~ en año biológico (\textbf{Tabla \ref{Tab15}}). \vspace{0.5cm}
+
+Los pasos siguientes son proyectar la población para la estimación de la Captura en número y peso con una estrategia de explotación que consiste en aplicar una tasa de explotación constante, equivalente a la mortalidad por pesca F~RMS~ en año biológico (\textbf{Tabla \ref{Tab15}}). 
 
 \small
 
@@ -1334,7 +1368,9 @@ Los pasos siguientes son proyectar la población para la estimación de la Captu
 | Captura en peso proyectada                                                                                                            | $Yp_{RMS}=\sum{Cp_{RMS}* w_{5años}^{med}}$                                             |
 +---------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
 
-: \label{Tab15} Proceso de estimación de la Captura ($Yp_{RMS}$) proyectada en año biológico aplicando $F_{RMS}$. \normalsize
+: \label{Tab15} Proceso de estimación de la Captura ($Yp_{RMS}$) proyectada en año biológico aplicando $F_{RMS}$. 
+
+\normalsize
 
 Donde, $N_{naños}$ es la abundancia a la edad del último año de evaluación, $S_{naños}$ es la sobrevivencia del último año de evaluación, $R_p$ corresponde al reclutamiento proyectado al año $t$, sel\_naños es la selectividad edad específica del último año de evaluación, $F_{60}$ corresponde a la mortalidad por pesca que determina el 55%BD0 establecido por el (CCT-PP), $Z_{RMS}$ es la mortalidad total al RMS, $M$ es la mortalidad natural, $Np_{(a=0)}$ es el reclutamiento proyectado, $Np_{(a+1)}$ es la abundancia en número a la edad $a+1$, $Cp_{RMS}$ es la captura proyectada en número, $Yp_{RMS}$ es la captura en peso proyectada y $w_{5años}^{med}$ corresponde al peso promedio de los últimos 5 años.
 
@@ -1359,37 +1395,16 @@ Considerando que el modelo de evaluación de stock de sardina común emplea info
 ```{=tex}
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig17.png}
+\includegraphics[width=0.6\textwidth]{Figuras/Fig17.png}
 \caption{ Serie histórica de la proporción de los desembarques durante el primer semestre. }
 \label{Fig17}
 \end{figure}
 ```
-##### Percentiles de probabilidad de sobrepasar el objetivo de manejo F~RMS~
 
-\quad
-
-Se considera el establecimiento de un percentil entre un 10% - 50% de probabilidad de sobrepasar el objetivo de manejo igual a F~RMS~. El percentil corresponde a una distribución de probabilidad acumulada y representa la probabilidad de estar en sobrepesca (\textbf{Figura \ref{Fig18}}). El CCT-PP determina el rango de CBA seleccionado el percentil de probabilidad y escenario de reclutamiento proyectado. Dado la alta incertidumbre existente en el momento de definir la CBA inicial, el CCT-PP selecciona el escenario de reclutamiento más precautorio y un percentil de probabilidad inferior al 50%. Este percentil de probabilidad es equivalente a un nivel de resguardo que se calcula a partir de la captura estimada para cada percentil de probabilidad y la captura al RMS, de este modo, se tiene un nivel de referencia de cuanto se está resguardando considerando el hito de revisión de CBA o condición del recurso.
-
-```{=tex}
-\vspace{0.5cm}
-\large
-\begin{center} 
-$Resguardo = 1-\frac{Captura(i)}{Captura_{RMS}}, i = percentil.de.captura (10\% ...50\%)$
-\end{center}
-\vspace{0.5cm}
-```
 \normalsize
 
-Donde la Captura(i) es la captura estimada para cada percentil de probabilidad (10% - 50%) y Captura~RMS~ corresponde a la media (50% probabilidad).
 
-```{=tex}
-\begin{figure}
-\centering
-\includegraphics[width=0.8\textwidth]{Figuras/Fig18.png}
-\caption{CBA inicial ante percentiles de captura y bajo dos escenarios de reclutamiento. }
-\label{Fig18}
-\end{figure}
-```
+
 #### Paso 4: Incorporación del descarte en la CBA
 
 \quad
@@ -1399,20 +1414,45 @@ La actual Ley General de Pesca y Acuicultura (LGPA, N° 18.892) persigue la cons
 Para dar cumplimiento a esta normativa se estima una $CBA_{total}$ que da cuenta de toda la mortalidad por pesca incluido el descarte. El CCT-PP debe establecer el rango de CBA que se construye a partir de una CBA máxima ($CBA_{max}$), es decir, el rango por ley es ($0,8*CBA_{max}; CBA_{max}$). Esta $CBA_{max}$, deberá estimarse a partir de la $CBA_{total}$ descontando el porcentaje de descarte supuesto para el año 2022. La proporción del descarte (pd) supuesto para el año 2022 y que deberá ser descontado de la $CBA_{total}$ para establecer la $CBA_{max}$.
 
 ```{=tex}
-\vspace{0.5cm}
 \large
 \begin{center} 
 $CBA_{max}=CBA_{total}-pd*CBA_{total}$
 \end{center}
-\vspace{0.5cm}
 ```
 \normalsize
 
-### 3.3.2. Proyección del stock
+##### Paso 5: Percentiles de probabilidad de sobrepasar el objetivo de manejo F~RMS~
 
-Se analiza las probables trayectorias de la biomasa desovante como consecuencia de la aplicación de mortalidad por pesca igual a F~RMS~ y dos ponderadores de F~RMS~ igual a 0,9 y 0,7, considerando la incertidumbre del estatus (e.g., matriz de varianza/covarianza de ADMB) y los posibles estados de la naturaleza a futuro (e.g., niveles probables de reclutamiento futuro, escenarios de reclutamiento). Lo anterior permite analizar los niveles de riesgo de no alcanzar el objetivo de manejo BD~RMS~ en el mediano plazo (2 años biológicos hacia el futuro), considerando la incertidumbre del estatus (probabilidad de sobre-explotación y/o colapso) y los probables estados de la naturaleza a futuro.
+\quad
+
+Se considera el establecimiento de un percentil entre un 10% - 50% de probabilidad de sobrepasar el objetivo de manejo igual a F~RMS~. El percentil corresponde a una distribución de probabilidad acumulada y representa la probabilidad de estar en sobrepesca (\textbf{Figura \ref{Fig18}}). El CCT-PP determina el rango de CBA seleccionado el percentil de probabilidad y escenario de reclutamiento proyectado. Dado la alta incertidumbre existente en el momento de definir la CBA inicial, el CCT-PP selecciona el escenario de reclutamiento más precautorio y un percentil de probabilidad inferior al 50%. Este percentil de probabilidad es equivalente a un nivel de resguardo que se calcula a partir de la captura estimada para cada percentil de probabilidad y la captura al RMS, de este modo, se tiene un nivel de referencia de cuanto se está resguardando considerando el hito de revisión de CBA o condición del recurso.
+
+```{=tex}
+\large
+\begin{center} 
+$Resguardo = 1-\frac{Captura(i)}{Captura_{RMS}}, i = percentil.de.captura (10\% ...50\%)$
+\end{center}
+```
+\normalsize
+
+Donde la Captura(i) es la captura estimada para cada percentil de probabilidad (10% - 50%) y Captura~RMS~ corresponde a la media (50% probabilidad).
+
+```{=tex}
+\begin{figure}
+\centering
+\includegraphics[width=0.45\textwidth]{Figuras/Fig18.png}
+\caption{CBA inicial ante percentiles de captura y bajo dos escenarios de reclutamiento. }
+\label{Fig18}
+\end{figure}
+```
 
 \pagebreak
+
+### 3.3.2. Proyección del stock
+
+Se analiza las probables trayectorias de la biomasa desovante como consecuencia de la aplicación de mortalidad por pesca igual a F~RMS~ y un ponderador de F~RMS~ igual a 1,1, considerando la incertidumbre del estatus (e.g., matriz de varianza/covarianza de ADMB) y los posibles estados de la naturaleza a futuro (e.g., niveles probables de reclutamiento futuro, escenarios de reclutamiento). Lo anterior permite analizar los niveles de riesgo de no alcanzar el objetivo de manejo BD~RMS~ en el mediano plazo (2 años biológicos hacia el futuro), considerando la incertidumbre del estatus (probabilidad de sobre-explotación y/o colapso) y los probables estados de la naturaleza a futuro.
+
+
 
 ## 3.4. Objetivo específico 4:
 
