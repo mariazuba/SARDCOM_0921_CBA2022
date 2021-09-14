@@ -951,8 +951,8 @@ BcV <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Crucero_verano'
 BcP <- ggplot(base1 %>% filter(Asesoria!='observado', variable=='Crucero_otoño'), 
        aes(yrs,value/1000000)) + 
        geom_line(aes(colour=Asesoria,linetype = Asesoria), size=0.8) +
-       scale_colour_manual(values=c('black'),name="Asesorías") +
-       scale_linetype_manual(values=c("solid"))+
+       scale_colour_manual(values=c('black'),name="Asesoría") +
+       scale_linetype_manual(values=c("solid"),name="Asesoría")+
        geom_point(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_otoño'),
        aes(yrs,value/1000000), shape = 19, colour = 'gray30') +
        geom_errorbar(data = base1 %>% filter(Asesoria=='observado', variable=='Crucero_otoño'),
@@ -1102,8 +1102,8 @@ etcf3_pre <- rep3$pf_pred
           facet_wrap(~year, dir = 'v', as.table = TRUE) + 
           labs(x = 'Edad', y = 'Proporción') +
           geom_line(data = mat %>% filter(type != 'obs'), aes(x = edad, y = value, colour=type,linetype =type)) +
-          scale_colour_manual(values=c('black'),name="Asesorías") +
-          scale_linetype_manual(values=c("solid"))+
+          scale_colour_manual(values=c('black'),name="Asesoría") +
+          scale_linetype_manual(values=c("solid"),name="Asesoría")+
           theme(panel.background = element_rect(fill ="gray99")) + 
           theme(panel.grid=element_line(color=NA)) +
           ggtitle("FLOTA") + theme(plot.title = element_text(size = 12))
@@ -1157,8 +1157,8 @@ etcf3_pre <- rep3$ppred_RECLAS
           geom_bar(aes(x = edad, y = value), stat="identity", fill='gray66', color = 'gray28') + 
           facet_wrap(~year, dir = 'v', as.table = TRUE) + labs(x = 'Edad', y = 'Proporción') +
           geom_line(data = mat %>% filter(type != 'obs'), aes(x = edad, y = value, colour=type,linetype =type)) +
-          scale_colour_manual(values=c('black'),name="Asesorías") +
-          scale_linetype_manual(values=c("solid"))+
+          scale_colour_manual(values=c('black'),name="Asesoría") +
+          scale_linetype_manual(values=c("solid"),name="Asesoría")+
           theme(panel.background = element_rect(fill ="gray99")) + theme(panel.grid=element_line(color=NA)) +
           ggtitle("CRUCEROS DE VERANO") + theme(plot.title = element_text(size = 12))
   fig1
@@ -1210,8 +1210,8 @@ etcf3_pre <- rep3$ppred_PELACES
           geom_bar(aes(x = edad, y = value), stat="identity", fill='gray66', color = 'gray28') + 
           facet_wrap(~year, dir = 'v', as.table = TRUE) + labs(x = 'Edad', y = 'Proporción') +
           geom_line(data = mat %>% filter(type != 'obs'), aes(x = edad, y = value, colour=type,linetype =type)) +
-          scale_colour_manual(values=c('black'),name="Asesorías") +
-          scale_linetype_manual(values=c("solid"))+
+          scale_colour_manual(values=c('black'),name="Asesoría") +
+          scale_linetype_manual(values=c("solid"),name="Asesoría")+
           theme(panel.background = element_rect(fill ="gray99")) + theme(panel.grid=element_line(color=NA)) +
           ggtitle("CRUCEROS DE OTOÑO") + theme(plot.title = element_text(size = 12))
   fig1
@@ -2680,7 +2680,7 @@ DiagramaFase2(name1,
              completo=T)
 
 text(c(SpB1[1]/BRMS1,SpB1[nyears1]/BRMS1,SpB1[nyears1-1]/BRMS1),
-     c(exp(ln_Fyr1[1])/FRMS1-0.05,exp(ln_Fyr1[nyears1])/FRMS1-0.05,exp(ln_Fyr1[nyears1-1])/FRMS1+0.05), c("1990/91","2020/21","2019/20"),cex=1.2)
+     c(exp(ln_Fyr1[1])/FRMS1-0.05,exp(ln_Fyr1[nyears1])/FRMS1-0.05,exp(ln_Fyr1[nyears1-1])/FRMS1+0.05), c("1990/91","2020/21","2019/20"),cex=0.8)
 
 ```
 
