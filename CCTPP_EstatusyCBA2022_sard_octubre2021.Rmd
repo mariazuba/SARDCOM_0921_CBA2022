@@ -1,7 +1,7 @@
 ---
-title: Segunda Revisión del Estatus y  Captura Biológicamente Aceptable 2021 para la sardina común de las Regiones de Valparaíso a Los Lagos.
+title: Estatus y  Captura Biológicamente Aceptable 2022 para la sardina común de las Regiones de Valparaíso a Los Lagos.
 author: "Grupo Pelágicos DER - María José Zúñiga"
-date: 'Sesión N°5: 3-4 de agosto 2021'
+date: 'Sesión N°6: 12-14 de octubre 2021'
 output:
    beamer_presentation:
     colortheme: rose
@@ -19,7 +19,9 @@ institute: INSTITUTO DE FOMENTO PESQUERO
 ```
 # Datos de entrada de sardina común
 
-Datos actualizados 
+\textit{Datos actualizados} 
+
+\small
 
 -   Biomasa del crucero de verano 2021
 -   Composición de edad del crucero de verano 2021
@@ -30,255 +32,343 @@ Datos actualizados
 -   Biomasa del crucero de otoño 2021
 -   Composición de edad del crucero de otoño 2021 
 
-# \small Índices actualizados 2020/21
+# \small Estructura de edad y Pesos medios de la flota actualizados a junio 2020/21
 
 ```{=tex}
+\begin{columns}
+\column{0.5\textwidth}
+
 \begin{figure}
-\centering
-\includegraphics[width=0.45\textwidth]{Figuras/Fig1_anexoI-1.pdf}
+\includegraphics[width=1\textwidth]{Figuras/Fig3_anexoI-1.pdf}
 \end{figure}
+
+\column{0.5\textwidth}
+
+ \tiny
+ 
+  - La composición de edad registrada por la flota comercial a junio 2021, muestra que la captura estuvo sostenida principalmente por peces de edad 0, registrándose una baja proporción de peces capturados de edad 1 a 4 (menos del 10\%).
+
+\vspace{0.25cm}
+
+  - La actualización de los pesos medios a la edad registrados a junio 2021, se observa una disminución de un 13\% en el peso de individuos de edad 1 y una disminución del 2\%  en peces de edad 0.
+
+
+\end{columns}
 ```
 
-# \small  Composición de edad actualizados 2020/21
+# \small Escenarios que evaluan el efecto de la incorporación de nuevos datos
 
 ```{=tex}
-\begin{figure}
-\centering
-\includegraphics[width=0.4\textwidth]{Figuras/Fig2c_anexoI-1.pdf}
-\end{figure}
+\begin{table}[h!]
+    \resizebox{6cm}{!} {
+    \begin{tabular}{|c|l|}
+    \hline 
+ Casos         & Descripción                                            \\ \hline
+ \textbf{$1_{MAE0721b}$} & Caso base asesoría julio 2021                  \\
+ 2             & Actualiza composición de edad de la flota a junio 2021    \\ 
+ 3             & Actualiza pesos medios e iniciales a la edad a junio 2021 \\ \hline
+    \end{tabular}}
+        \end{table}
+        
 ```
 
-# \small  Pesos medios actualizados 2020/21
 
 ```{=tex}
+
+\begin{columns}
+\column{0.7\textwidth}
 \begin{figure}
 \centering
-\includegraphics[width=0.6\textwidth]{Figuras/Fig3_anexoI-1.pdf}
+\includegraphics[width=0.86\textwidth]{Figuras/Fig4_anexoI-1.pdf}
 \end{figure}
+
+\column{0.45\textwidth}
+
+ \tiny
+ 
+  - \textbf{Caso 2} = No tiene efecto significativo en ninguna de las variables analizadas.
+  
+  - \textbf{Caso 3} = Incrementa un 4\%  el reclutamiento. 
+  
+  - \textbf{Caso 3} = Disminuye un 4\%  la BD y $BD/BD_{RMS}$.
+  
+  - \textbf{Caso 3} = Incrementa un 2\%  la mortalidad por pesca.
+  
+  \vspace{0.25cm}
+  
+  - \textit{Las leves diferencias están asociados la disminución de los pesos medios del grupo de edad 1 principalmente}.
+
+
+\end{columns}
+
 ```
-
-# 
-
-\tiny
-
-+---------------+------------------------------------------------------------------------+
-| Casos         | Descripción                                                            |
-+===============+========================================================================+
-| 1 **MAE0321** | Caso base asesoría marzo 2021                                          |
-+---------------+------------------------------------------------------------------------+
-| 2             | Actualiza serie de descarte 2017/18, 2018/19 Y 2019/20                 |
-+---------------+------------------------------------------------------------------------+
-| 3             | Actualiza desembarque 2020/21 + supuesto de descarte 2020/21           |
-+---------------+------------------------------------------------------------------------+
-| 4             | Actualiza composición de edad de la flota del año biológico 2020/21    |
-+---------------+------------------------------------------------------------------------+
-| 5             | Actualiza pesos medios e iniciales a la edad del año biológico 2020/21 |
-+---------------+------------------------------------------------------------------------+
-| 6             | Actualiza biomasa crucero acústico de otoño, año 2021                  |
-+---------------+------------------------------------------------------------------------+
-| 7 **MAE0721** | Actualiza composición de edad crucero acústico de otoño, año 2021      |
-+---------------+------------------------------------------------------------------------+
-
-: \label{Tab2} Escenarios de que permiten evaluar el impacto de la incorporación de datos actualizados en el proceso de actualización
-
-#
-\tiny
-R= Reclutamiento, BD= Biomasa desovante, $BD/BD_{RMS}$= Reducción de la población y F= Mortalidad por pesca.
-
-+-------+-------+-------+---------------+------+--------+---------+--------------------+--------+
-| Casos | R     | BD    | $BD/BD_{RMS}$ | F    | R.diff | BD.diff | $BD/BD_{RMS}$.diff | F.diff |
-+:=====:+:=====:+:=====:+:=============:+:====:+:======:+:=======:+:==================:+:======:+
-| 1     | 257,7 | 430,0 | 0,54          | 0,18 |        |         |                    |        |
-+-------+-------+-------+---------------+------+--------+---------+--------------------+--------+
-| 2     | 262,7 | 448,0 | 0,55          | 0,18 | 0,02   | 0,04    | 0,03               | -0,03  |
-+-------+-------+-------+---------------+------+--------+---------+--------------------+--------+
-| 3     | 280,0 | 447,4 | 0,54          | 0,31 | 0,09   | 0,04    | 0,01               | 0,71   |
-+-------+-------+-------+---------------+------+--------+---------+--------------------+--------+
-| 4     | 265,9 | 464,6 | 0,56          | 0,32 | 0,03   | 0,08    | 0,04               | 0,77   |
-+-------+-------+-------+---------------+------+--------+---------+--------------------+--------+
-| 5     | 232,6 | 510,3 | 0,62          | 0,31 | -0,10  | 0,19    | 0,16               | 0,72   |
-+-------+-------+-------+---------------+------+--------+---------+--------------------+--------+
-| 6     | 225,8 | 525,0 | 0,63          | 0,31 | -0,12  | 0,22    | 0,17               | 0,72   |
-+-------+-------+-------+---------------+------+--------+---------+--------------------+--------+
-| 7     | 220,8 | 511,1 | 0,62          | 0,32 | -0,14  | 0,19    | 0,16               | 0,78   |
-+-------+-------+-------+---------------+------+--------+---------+--------------------+--------+
-
-Estimaciones de las principales variables de estado para el caso 1 (asesoría de marzo 2021, MAE0321) comparado con los resultados según la incorporación de cada pieza de información y en su conjunto (caso 7, asesoría de julio 2021, MAE0721). 
-
-Se presenta el valor de estimación central y la diferencia en términos porcentuales. 
-
-
 
 
 # \small Ajustes del modelo a los datos - sardina común
 
+
 ```{=tex}
-\begin{center}
-\includegraphics[width=0.65\textwidth]{Figuras/Fig26-1.pdf}
-\end{center}
+\begin{columns}
+\column{0.7\textwidth}
+
+\begin{figure}
+\includegraphics[width=0.9\textwidth]{Figuras/Fig26-1.pdf}
+\end{figure}
+
+\column{0.45\textwidth}
+ \small
+ 
+
+ 
+\end{columns}
+
 ```
 
 # \small Ajuste Flota de sardina común
 
 ```{=tex}
-\begin{center}
+\begin{columns}
+\column{0.7\textwidth}
 
-\includegraphics[width=0.8\textwidth]{Figuras/Fig28-1.pdf}
+\begin{figure}
+\includegraphics[width=1\textwidth]{Figuras/Fig28-1.pdf}
+\end{figure}
 
-\end{center}
+\column{0.45\textwidth}
+  \tiny
+ 
+- La pesquería de sardina común está sustentada principalmente por la abundancia del grupo de edad 0, con una proporción en torno al 60-70\% de la captura en número de la flota.
+
+  \vspace{0.25cm}
+  
+- A partir del 2018 el GE 0 muestra una tendencia al incremento, sin embargo, para el 2020/21 su aporte a la abundancia total es inferior al 10\%.
+
+ \end{columns}
+ 
 ```
+
+
 # \small Ajuste Crucero de verano de sardina común
 
+
 ```{=tex}
-\begin{center}
+\begin{columns}
+\column{0.7\textwidth}
 
-\includegraphics[width=0.8\textwidth]{Figuras/Fig29-1.pdf}
+\begin{figure}
+\includegraphics[width=1\textwidth]{Figuras/Fig29-1.pdf}
+\end{figure}
 
-\end{center}
+\column{0.45\textwidth}
+ \tiny
+ 
+- Los cruceros de verano se observa que el grupo de edad 0 representa el 77\% de la captura en número.
+
+- Los resultados del crucero de verano 2021 muestran un incremento significativo en los niveles de abundancia de la fracción recluta (94% individuos de edad 0), a diferencia de los dos años previos.
+
+- La biomasa total del crucero de verano 2021 es sostenido principalmente por la fracción recluta (edad 0), observandose una baja presencia de individuos adultos (edad 1+).
+
+ \end{columns}
+ 
 ```
+
 # \small Ajuste Crucero de otoño de sardina común
 
+
 ```{=tex}
-\begin{center}
 
-\includegraphics[width=0.8\textwidth]{Figuras/Fig30-1.pdf}
+\begin{columns}
+\column{0.7\textwidth}
+ 
+\begin{figure}
+\includegraphics[width=1\textwidth]{Figuras/Fig30-1.pdf}
+\end{figure}
 
-\end{center}
+\column{0.45\textwidth}
+ \tiny
+ 
+ - En el crucero de otoño, el grupo de edad 0 representa el 67% de la captura en número
+
+ - El crucero de otoño 2021, presentó un 83% de individuos de edad 0 y una baja presencia de ejemplares adultos (edad 1+), al igual que el crucero de verano 2021.
+
+
+
+ \end{columns}
+ 
 ```
+
+
 # Indicadores poblacionales de sardina común
 
-```{=tex}
-\begin{center}
-\includegraphics[width=0.9\textwidth]{Figuras/Fig35-1.pdf}
-\end{center}
-```
-
-# \small Indicadores del estado de sardina común
 
 ```{=tex}
-\begin{center}
-\includegraphics[width=0.85\textwidth]{Figuras/Fig39-1.pdf}
-\end{center}
-```
+\begin{columns}
+\column{0.7\textwidth}
 
-# \small Estatus 2019/20 y 2020/21 de sardina común
-
-
-```{=tex}
 \begin{figure}
+\includegraphics[width=1\textwidth]{Figuras/Fig35-1.pdf}
+\end{figure}
+
+\column{0.45\textwidth}
+  \tiny
+ 
+- El reclutamiento 2021 es un 102\% mayor al Reclutamiento bajo (período 1991-2007), un 44\% menor al Reclutamiento alto (período 2008-2012) y un 32\% mayor al Reclutamiento medio (2013-2021). 
+
+\vspace{0.25cm}
+
+- Se destaca una recuperación importante de la clase anual 2021 respecto de los bajos niveles estimados en los 2 años precedentes.
+
+\vspace{0.25cm}
+
+- La biomasa desovante está sustentada principalente por la fracción adulta, correspondiente a individuos de edad 1+, la cual disminuyó su abundancia producto de la disminución del reclutamiento de dos años previos consecutivos 2019 y 2020 junto a la disminución de la biomasa adulta (1+ años) el 2020, provocando que la biomasa desovante del año biológico 2020-21 se reduzca significativamente respecto a años previos.
+
+
+\vspace{0.25cm}
+
+- La mortalidad por pesca 2020/2021 se estima en 0,33 año-1, un 11\% sobre $F_{RMS}$.
+
+  \end{columns}
+ 
+```
+
+
+
+# \small Estatus 2020/21 de sardina común
+
+```{=tex}
+\begin{columns}
+\column{0.6\textwidth}
+\begin{figure}
+\includegraphics[width=1\textwidth]{Figuras/Fig39-1.pdf}
+\end{figure}
+
+\column{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=1\textwidth]{Figuras/Fig40-1.pdf}
+\end{figure}
+\end{columns}
+
+```
+\tiny
+
+-  F~2020/21~  fue un 11% mayor a F~RMS~. 
+
+-  Sardina común se encuentra en una condición de sobreexplotación durante el año 2020/2021, con un 22% de probabilidad de colapso y 51% de sobrepesca.
+
+
+
+# \small Proyección del stock año biológico 2021/22 y 2022/23 
+
+
+
+```{=tex}
+\begin{columns}
+\column{0.6\textwidth}
+
+\begin{figure}[h!]
+\includegraphics[width=0.95\textwidth]{Figuras/Fig34a-1.pdf}
+\end{figure}
+\column{0.5\textwidth}
+  \tiny
+  
+- Independiente del escenario de reclutamiento, la biomasa desovante proyectada al 2021/2022 (755 mil t) se observa un incremento del 53\% respecto al año previo 2020/2021 (492 mil t).
+
+\vspace{0.25cm} 
+
+- Mientras que la biomasa desovante proyectada hacia el 2022/2023 depende del reclutamiento proyectado hacia el 2022 y 2023.
+
+\end{columns}
+
+```
+
+
+
+# \small Estatus proyectado año biológico 2020/21 y 2021/22 de sardina común
+
+
+```{=tex}
+\begin{figure}[h!]
 \centering
-\includegraphics[width=0.345\textwidth]{Figuras/Fig40-1.pdf}
-\includegraphics[width=0.345\textwidth]{Figuras/Fig41-1.pdf}
-\includegraphics[width=0.345\textwidth]{Figuras/Fig41b-1.pdf}
+\includegraphics[width=0.32\textwidth]{Figuras/Fig45a_sept-1.pdf}
+\includegraphics[width=0.32\textwidth]{Figuras/Fig45b_sept-1.pdf}
+\includegraphics[width=0.32\textwidth]{Figuras/Fig45c_sept-1.pdf}
+\end{figure}
+```
+  \tiny
+  
+- Independiente del escenario de reclutamiento, la probabilidad de sobreexplotación disminuye a un 46% para el año biológico 2021/2022.
+
+\vspace{0.25cm}
+
+- Mientras que el estatus 2022/2023 si depende del escenario de reclutamiento. La probabilidad de sobreexplotación puede disminuir a un 26% bajo reclutamientos recientes. Mientras que la probabilidad de sobreexplotación puede aumentar a un 90% si los reclutamientos son bajos (1991-2007).
+
+# 
+
+\small El cálculo de la Captura para el año calendario 2022 se obtiene como el promedio ponderado según la estacionalidad semestral de la pesquería que a la fecha se asume 70\% para el primer semestre y 30\% para el segundo semestre.
+
+
+```{=tex}
+\begin{table}[h!]
+ \small
+    \centering
+    \resizebox{10cm}{!} {
+    \begin{tabular}{|l|ccc|ccc|}
+    \hline 
+                                & \multicolumn{3}{c}{$C_{RMS}$ (mil t)} & \multicolumn{3}{c}{$C_{RMS}-4\%descarte$ (mil t)} \\ 
+  \textit{Escenarios de reclutamiento} & $R_{1991-2007}$ & $R_{2008-2012}$ & $R_{2013-2021}$ & $R_{1991-2007}$ & $R_{2008-2012}$&$R_{2013-2021}$\\ \hline  
+  $C_{2021/2022}$               &  316            & 583             & 376             & 303             &  560             & 361 \\ 
+  $C_{2022/2023}$               &  271            & 765             & 382             & 261             &  735             & 367 \\ \hline
+  $C_{1erSem 2022}$             &  221            & 408             & 263             & 212             &  392             & 253 \\ 
+  $C_{2doSem 2022}$             &  81             & 230             & 115             & 78              &  220             & 110 \\ \hline 
+  $C_{RMS}$ año calendario 2022 &  302            & 638             & 378             & 290             &  612             & 363 \\ \hline
+  \end{tabular}}
+        \end{table}
+        
+```
+
+
+```{=tex}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.75\textwidth]{Figuras/Fig27_CBA-1.pdf}
 \end{figure}
 ```
 
 
-# Incertidumbre del Estatus 2019/20 y 2020/21 de sardina común
-
-```{=tex}
-\begin{table}
-    \centering
-    \resizebox{10cm}{!} {
-    \begin{tabular}{|l|c|c|c|c|c|}
-    \hline
-                            & Sept 2020 & Marzo 2021 & Julio 2021\\
-                            & $Estatus_{2019/20}$ & $Estatus_{2020/21}$  & $Estatus_{2020/21}$ \\ \hline
-   $BD_{last}<BD_{RMS}$     &   0,45    & 1,00 & 1,00\\
-   $F_{last}>F_{RMS}$       &   0,60    & 0,02 & 0,62 \\ \hline
-   Sobre-explotación        &   0,26    & 1,00 & 0,98\\
-   Agotamiento/colapso      &   0,00    & 0,38 & 0,18\\
-   Sobrepesca               &   0,45    & 0,00 & 0,48\\ \hline
-    \end{tabular}}
-    \end{table}
-```
-
-# \small Estatus proyectado año biológico 2020/21 y 2021/22 de sardina común
-
-\begin{columns}
-\column{0.35\textwidth}
-\begin{center} \includegraphics[width=0.9\textwidth]{Figuras/Fig45a_sept-1.pdf}\end{center}
-\column{0.35\textwidth}
-\begin{center} \includegraphics[width=0.9\textwidth]{Figuras/Fig46a_marzo-1.pdf}\end{center}
-\column{0.35\textwidth}
-\begin{center} \includegraphics[width=0.9\textwidth]{Figuras/Fig47a_julio-1.pdf}\end{center}
-\end{columns}
-
-\footnotesize
-## Probabilidad de Estatus proyectado
-- Asesoría septiembre 2020 = 100% de probabilidad de sobre-explotación y 42% de probabilidad de colapso para el año **2020/2021**
-
-- Asesoría marzo 2021 = 27% de probabilidad de sobre-explotación y 4% de probabilidad de colapso para el año **2021/2022**
-
-- Asesoría julio 2021 = 49% de probabilidad de sobre-explotación y 4% de probabilidad de colapso para el año **2021/2022**
-
-
-# Reclutamientos promedios proyectados - sardina común
-
-```{=tex}
-\begin{center}
-\includegraphics[width=0.9\textwidth]{Figuras/Fig15-1.pdf}
-\end{center}
-```
-
-# Rango de la Segunda revisión de la CBA  2021 de sardina común
+# \small Rango de CBA  2022 de sardina común
 
 ## CBA 
 
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| mean|  378.670        | 419.950         | 385.460         |
-| sd  |   22.259        |  28.186         |  25.850         |
-| 10% |  350.144        | 383.828         | 352.332         |
-| 20% |  359.936        | 396.228         | 363.704         |
-| 30% |  366.997        | 405.169         | 371.904         |
-| 40% |  373.031        | 412.809         | 378.911         |
-| 50% |  378.670        | 419.950         | 385.460         |
+```{=tex}
+\begin{table}[h!]
+ \small
+    \centering
+    \resizebox{10cm}{!} {
+    \begin{tabular}{|c|ccc|ccc|}
+    \hline 
+  Percentiles   & \multicolumn{3}{c}{$CBA_{2022}$}                     & \multicolumn{3}{c}{$CBA_{2022}-4\%descarte$}  \\ 
+  de            & \multicolumn{3}{c}{\textit{Escenarios de reclutamiento}}    & \multicolumn{3}{c}{\textit{Escenarios de reclutamiento}}  \\ 
+   $C_{RMS}$    & $R_{1991-2007}$ & $R_{2008-2012}$  & $R_{2013-2021}$ & $R_{1991-2007}$ & $R_{2008-2012}$  & $R_{2013-2021}$\\ \hline 
+  mean          & 302.530         & 637.630          & 377.830         & 290.430         & 612.130          & 362.710  \\ 
+  sd            & 60.685          & 99.903           & 78.870          & 58.258          & 95.907           & 75.716 \\ \hline 
+  10\%          & 224.759         & 509.599          & 276.754         & 215.769         & 489.220          & 265.676 \\ 
+  20\%          & 251.456         & 553.550          & 311.451         & 241.399         & 531.413          & 298.986 \\
+  30\%          & 270.707         & 585.241          & 336.471         & 259.879         & 561.836          & 323.004 \\ 
+  40\%          & 287.156         & 612.320          & 357.849         & 275.671         & 587.832          & 343.528 \\
+  $C_{RMS}$ año calendario 2022  & 302.530         & 637.630          & 377.830         & 290.430         & 612.130          & 362.710 \\ \hline
+  \end{tabular}}
+        \end{table}
+```
 
-#
-## Resguardo de la Captura al RMS 
+\vspace{0.25cm}
 
+\tiny
 
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% | 0,08            | 0,09            | 0,09            |
-| 20% | 0,05            | 0,06            | 0,06            |
-| 30% | 0,03            | 0,04            | 0,04            |
-| 40% | 0,01            | 0,02            | 0,02            |
-| 50% | 0,00            | 0,00            | 0,00            |
+- Considerando como referencia el criterio utilizado en septiembre 2020 (Hito 1), es decir, un percentil del 20% y reclutamientos bajos ($R_{1991-2007}$), la \textbf{CBA 2022} (241 mil t) incrementa un 20% respecto a la CBA inicial 2021 (201 mil t).
 
-#
+\vspace{0.25cm}
 
-## Descuento del 4% descarte - sardina común
-
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% | 336.138         | 368.475         |  338.239        |
-| 20% | 345.539         | 380.379         |  349.156        |
-| 30% | 352.317         | 388.962         |  357.028        |
-| 40% | 358.110         | 396.297         |  363.755        |
-| 50% | 363.523         | 403.152         |  370.042        |
-
-\small
-+ **CBA inicial 2021** = 201.409 toneladas (percentil del 20%, escenario de reclutamiento bajo período 1991-2007 y 6% de descarte)
-
-+ **Primera revisión de CBA 2021** = 251.316 toneladas (percentil del 30%, escenario de reclutamiento recientes período 2013-2021 y 4% de descarte)
-
-# Diferencia porcentual entre CBA inicial - 6%descarte y Segunda revisión de CBA - 4% descarte
-
-## diferencia = 1-(2darevisiónCBA/CBAinicial)*100
-
-
-|     | $R_{1991-2007}$ | $R_{2008-2012}$ | $R_{2013-2021}$ |
-|-----|-----------------|-----------------|-----------------|
-| 10% |   83            | 11              |   61            |
-| 20% |   72            |  5              |   49            |
-| 30% |   65            |  1              |   41            |
-| 40% |   59            | -2              |   36            |
-| 50% |   55            | -4              |   31            |
-
-
+- Considerando como referencia el criterio utilizado en agosto 2021 (Hito 3), es decir, un percentil del 30% y reclutamientos recientes ($R_{2013-2021}$), la \textbf{CBA 2022} (323 mil t) disminuye un 9% respecto a la CBA final 2021 (357 mil t).
 
 
 
@@ -350,15 +440,19 @@ AÑO  & CBA inicial  & 1era revisión CBA  & 2da revisión CBA     & Desembarque
 2018 & 296          & 321                & \textit{statu quo}   & 341 \\
 2019 & 274          & 335                & 337                  & 318 \\
 2020 & 321          & \textit{statu quo} & \textit{statu quo}   & 258   \\ 
-2021 & 201          & 251                & -                    & 306* \\\hline
+2021 & 201          & 251                & 357                  & 306* \\\hline
   \end{tabular}}
         \end{table}
 ```
 
-\scriptsize
-+ \*306 mil t corresponde al desembarque acumulado a junio 2021
+\tiny
++ \*306 mil t corresponde al desembarque acumulado a junio 2021 según base de datos Sernapesca.
+
+\textbf{Nota}: captura acumulada al 22 de septiembre 2021 es 217 mil toneladas según control cuota sernapesca (confirmar con seguimiento!!!). Se ha consumido 61% de la cuota según estos antecedentes. Saldo cuota 2021  según control cuota Sernapesca es 136 mil toneladas (http://www.sernapesca.cl/informacion-utilidad/consumo-de-cuotas)
 
 \vspace{-0.45cm}
+
+# CBAs  por hito de revisión de sardina común
 
 ```{r CCTPP_CBAporHito,include=T, message=F,warning=F,eval=T, echo=FALSE,fig.height=1.8,fig.width=4.5,fig.align="center",fig.path="Figuras/", dev=c('pdf', 'bmp')}
 library(stringr)
@@ -373,7 +467,7 @@ library(knitr)
 year<-    c(2014,2015,2016,2017,2018,2019,2020,2021)
 CBAhito1<-c(373,323,286,273,296,274,321,201)
 CBAhito2<-c(572,356,326,310,321,335,321,251)
-CBAhito3<-c(572,478,326,336,321,337,321,NA)
+CBAhito3<-c(572,478,326,336,321,337,321,357)
 Desembarques <- c(543,430,275,335,341,318,258,306)
 
 
@@ -390,6 +484,53 @@ f1
 
 ```
 
+
+\small 
+
+- El incremento de CBA 2021 entre Hito 1 de septiembre 2020 (201 mil t) y el Hito 3 de agosto 2021 (357 mil t) fue de un 78% apróx.
+
+
+
+
+# Efecto cuota remanente 2020 sobre estatus 2020/21
+
+
+```{=tex}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.35\textwidth]{Figuras/Fig41b-1.pdf}
+\includegraphics[width=0.35\textwidth]{Figuras/Fig41b_Frms202021-1.pdf}
+\end{figure}
+```
+ \tiny 
+
+- La remoción total ocurrida durante el 2020/21 fue de 391 mil t, lo cual equivale a una mortalidad por pesca de 0,326 año^-1^.  $F_{RMS}$ es igual a 0,3 año^-1^. 
+
+- La $F_{2020/21}$ fue un 9% mayor al $F_{RMS}$.  
+
+- La $Captura_{RMS}$ para el año 2020/21 debía ser 344,8 mil t. 
+
+- La captura registrada por Sernapesca durante el segundo semestre 2020 fue de 69,8 mil t, la captura del primer semestre que hubiera permitido estar en $F_{RMS}$, sería 275 mil t. 
+
+- Es decir, la $Captura_{RMS}$ se sobrepasó en 31 mil t, valor muy cercano a la cuota remanente capturada de 30.600 t 
+
+# \small Efecto en el estatus 2021/22 y 2022/23 un incremento del 10% del $F_{RMS}$
+
+
+```{=tex}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45a_sept-3.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45b_sept-3.pdf}
+\includegraphics[width=0.3\textwidth]{Figuras/Fig45c_sept-3.pdf}
+\end{figure}
+```
+
+Se recomienda considerar una captura 2021/2022 inferior a la $C_{RMS}$  para disminuir el riesgo de sobrepesca.
+
+#
+
+GRACIAS POR SU ATENCIÓN
 
 # CBAs inicial de anchoveta y sardina común
 
@@ -423,10 +564,25 @@ text(c(rep(2020,3),rep(2021,3)),c(CBAsard[7],CBAanch[7],CBAmixta2[7],CBAsard[8],
 legend(2016,630,c("CBAanch","CBAsard","CBAanch+sard"),col=c(1,2,3),lwd=1,pch=19,cex=0.7,bty="n")
 ```
 
+# Segunda Revisión de CBAs de anchoveta y sardina común
 
-#
+```{r CCTPP_alternaciaCBA2daRevision,  include=T, message=F, echo=FALSE,fig.height=3,fig.width=4,fig.align="center"}
+year<-seq(2014,2021,1)
+CBAanch<-c(NA,34.4,39.9,58.4,59.5,127.1,162.9,210.2)
+CBAsard<-c(NA,478,NA,336,NA,337,NA,357)
+CBAmixta2<-rowSums(cbind(CBAanch,CBAsard))
 
-GRACIAS POR SU ATENCIÓN
+par(mfrow=c(1,1),mar=c(4,4,1,1))
+plot(year,CBAanch,type="o",ylim=c(40,650),xlim=c(2014,2022),pch=19,ylab="Segunda Revisión de CBA (miles de t)",xlab="Años",cex.lab=0.7,cex.axis=0.7)
+lines(year,CBAsard,col=2,type="o",pch=19)
+lines(year,CBAmixta2,col=3,type="o",pch=19)
+text(c(rep(2020,3),rep(2021,3)),c(CBAsard[7],CBAanch[7],CBAmixta2[7],CBAsard[8],CBAanch[8],CBAmixta2[8])+8,c(CBAsard[7],CBAanch[7],CBAmixta2[7],CBAsard[8],CBAanch[8],CBAmixta2[8]),cex=0.6)
+legend(2016,650,c("CBAanch","CBAsard","CBAanch+sard"),col=c(1,2,3),lwd=1,pch=19,cex=0.7,bty="n")
+```
+
+
+
+
 
 
 # Alternancia en el estatus de anchoveta y sardina común
@@ -449,9 +605,8 @@ lines(years1,rpr_anch,col=1,lwd=2)
 abline(h=c(1,0.5),col=c(3,2))
 legend(1998,2.5,c("anchoveta centro-sur","sardina común"),col=c(1,2),lwd=c(2,2),bty="n",cex=0.7)
 
-
-
 ```
+
 
 #
 ```{r CCTPP_ressguarsoVSstatusambos,include=T, warning=F,message=F,eval=F, echo=FALSE,fig.height=3,fig.width=4,fig.align="center",fig.path="FigurasInforme_Marzo/", dev=c('pdf', 'bmp')}
@@ -514,23 +669,5 @@ f1<-ggplot(ind1) +
      theme(plot.title = element_text(hjust = 0.5),legend.position="none")
 f1
 
-```
-
-
-# Análisis retrospectivo sardina común
-
-```{=tex}
-\begin{center}
-\includegraphics[width=0.7\textwidth]{Figuras/Fig33-1.pdf}
-\end{center}
-```
-
-
-# Comparación con asesorías previas de sardina común
-
-```{=tex}
-\begin{center}
-\includegraphics[width=0.7\textwidth]{Figuras/Fig32-1.pdf}
-\end{center}
 ```
 
