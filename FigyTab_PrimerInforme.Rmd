@@ -2957,7 +2957,7 @@ lines(c(rep1$years,yearProy),
       c(rep1$SSB,bds1),type="o",col=1,pch=19)
 
 abline(v=yearProy[1]-1,lty=2)
-legend(2000,2000000,c("Reclprom 1991-2007","Reclprom 2008-2012","Reclprom 2013-2021"),pch=19,lwd=1,col=c(2,1,3),bty="n")
+legend(2000,2000000,c("Reclprom 1991-2007","Reclprom 2008-2012","Reclprom 2013-2021"),pch=19,lwd=1,col=c(1,2,3),bty="n")
 text(2024,2000000,"b)")
 #=======================================================
 # plot bd/BDrms

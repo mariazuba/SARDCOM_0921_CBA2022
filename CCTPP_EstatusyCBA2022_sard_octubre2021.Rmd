@@ -263,12 +263,12 @@ institute: INSTITUTO DE FOMENTO PESQUERO
 
 ```{=tex}
 \begin{columns}
-\column{0.6\textwidth}
+\column{0.9\textwidth}
 
 \begin{figure}[h!]
 \includegraphics[width=0.95\textwidth]{Figuras/Fig34a-1.pdf}
 \end{figure}
-\column{0.5\textwidth}
+\column{0.2\textwidth}
   \tiny
   
 - Independiente del escenario de reclutamiento, la biomasa desovante proyectada al 2021/2022 (755 mil t) se observa un incremento del 53\% respecto al año previo 2020/2021 (492 mil t).
@@ -448,7 +448,6 @@ AÑO  & CBA inicial  & 1era revisión CBA  & 2da revisión CBA     & Desembarque
 \tiny
 + \*306 mil t corresponde al desembarque acumulado a junio 2021 según base de datos Sernapesca.
 
-\textbf{Nota}: captura acumulada al 22 de septiembre 2021 es 217 mil toneladas según control cuota sernapesca (confirmar con seguimiento!!!). Se ha consumido 61% de la cuota según estos antecedentes. Saldo cuota 2021  según control cuota Sernapesca es 136 mil toneladas (http://www.sernapesca.cl/informacion-utilidad/consumo-de-cuotas)
 
 \vspace{-0.45cm}
 
